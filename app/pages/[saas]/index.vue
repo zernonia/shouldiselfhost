@@ -16,6 +16,11 @@ const daysSince = (iso?: string) => (iso ? Math.floor((Date.now() - +new Date(is
 useHead({ title: () => `Should I self-host ${app.value?.name}?` })
 useSeoMeta({
   description: () => app.value?.verdict_reason ?? `Should you self-host a replacement for ${app.value?.name}? The math, the verdict, the tested compose file.`,
+  ogTitle: () => `Should I self-host ${app.value?.name}?`,
+  ogImage: () => `https://shouldiselfhost.com/og/${app.value?.id}.png`,
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  twitterCard: 'summary_large_image',
 })
 </script>
 

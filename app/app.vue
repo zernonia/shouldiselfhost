@@ -4,6 +4,8 @@
       <div class="container header-row">
         <NuxtLink to="/" class="brand">should<span class="dim">i</span>selfhost<span class="accent">?</span></NuxtLink>
         <nav class="nav">
+          <NuxtLink to="/vs">vs</NuxtLink>
+          <NuxtLink to="/stack">my stack</NuxtLink>
           <NuxtLink to="/methodology">methodology</NuxtLink>
           <a href="/api/apps.json">data</a>
           <a href="/rss.xml">rss</a>

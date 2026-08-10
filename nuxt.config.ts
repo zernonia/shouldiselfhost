@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     ],
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/llms.txt', '/rss.xml', '/api/apps.json'],
+      routes: ['/', '/llms.txt', '/rss.xml', '/sitemap.xml', '/api/apps.json'],
     },
   },
 
@@ -43,6 +43,10 @@ export default defineNuxtConfig({
       ],
       meta: [
         { name: 'description', content: 'They tell you if you can. We tell you if you should. Verdicts, honest math and break-even dates for self-hosting 100 popular SaaS apps.' },
+        { property: 'og:image', content: 'https://shouldiselfhost.com/og/default.png' },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
+        { name: 'twitter:card', content: 'summary_large_image' },
       ],
     },
   },
