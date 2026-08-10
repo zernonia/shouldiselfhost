@@ -1,0 +1,27 @@
+name: Request a verdict
+description: An app is NOT SCORED YET and you want the math done (or want to do it yourself).
+title: "[verdict request] <app>"
+labels: [verdict-request]
+body:
+  - type: input
+    id: app
+    attributes:
+      label: SaaS app
+      description: Name + pricing page URL
+    validations:
+      required: true
+  - type: input
+    id: alternative
+    attributes:
+      label: Best self-hosted alternative you know of
+      description: GitHub repo link if you have one
+  - type: dropdown
+    id: diy
+    attributes:
+      label: Willing to run protocol v1 yourself?
+      description: A timed setup log is the fastest route to a verdict (see CONTRIBUTING.md).
+      options:
+        - "Yes — assign me"
+        - "No — just requesting"
+    validations:
+      required: true

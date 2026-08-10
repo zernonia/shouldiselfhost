@@ -1,0 +1,46 @@
+name: Verdict dispute
+description: Argue a verdict against the rubric, with evidence. (Taste goes in the vote button.)
+title: "[dispute] <app>: <current verdict> is wrong because <rubric input>"
+labels: [verdict-dispute]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Verdicts are computed from four rubric inputs (see CONTRIBUTING.md): capability,
+        economics, effort ceiling, project health. A dispute names the input that's wrong and
+        brings evidence. Disputes without evidence are closed.
+  - type: input
+    id: app
+    attributes:
+      label: App
+      description: The SaaS page in dispute (e.g. `notion`)
+    validations:
+      required: true
+  - type: dropdown
+    id: input
+    attributes:
+      label: Which rubric input is wrong?
+      options:
+        - Capability (jobs coverage)
+        - Economics (price, VPS share, storage, maintenance minutes)
+        - Effort ceiling (setup time)
+        - Project health (abandonment)
+        - Evidence itself (compose/log doesn't reproduce)
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: >
+        A timed log under protocol v1, a dated price source, a concrete capability gap, or a
+        reproduction failure. Links required.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed change
+      description: What field(s) should change, and what the verdict becomes after re-derivation.
+    validations:
+      required: true

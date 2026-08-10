@@ -1,0 +1,9 @@
+node_modules
+.nuxt
+.output
+.wrangler
+.data
+dist
+.env
+.env.*
+*.log
