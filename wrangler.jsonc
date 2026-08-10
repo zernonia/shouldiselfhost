@@ -9,6 +9,10 @@
     "binding": "ASSETS"
   },
   "observability": { "enabled": true },
+  "routes": [
+    { "pattern": "shouldiselfhost.com", "custom_domain": true },
+    { "pattern": "www.shouldiselfhost.com", "custom_domain": true }
+  ],
   "d1_databases": [
     {
       "binding": "DB",
