@@ -15,6 +15,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  issues: write
 
 jobs:
   reverify:
@@ -37,6 +38,11 @@ jobs:
             You are the nightly re-verification bot for shouldiselfhost.com. Read CLAUDE.md and
             CONTRIBUTING.md first — the rubric and protocol v1 are binding.
 
+            0. Release triage first (cheap): scan data/metrics/ for latest_release entries
+               published in the last 24h whose alternative backs a scored verdict. If any
+               release plausibly changes capability, effort, or health, open a GitHub issue
+               listing them with `gh issue create --label verdict-request` (title:
+               "Release triage <date>"). Do not edit verdicts based on triage alone.
             1. Find the 1-2 apps in data/apps/ with a non-null verdict and the oldest
                verified.at dates (skip anything re-verified in the last 11 months).
             2. For each: boot its compose file with `bash scripts/check-compose.sh <file>`,

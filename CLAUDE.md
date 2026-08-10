@@ -78,10 +78,13 @@ layer (verdicts, economics, timings, votes), which is CC BY-SA 4.0. Keep the lay
 ## Automation rules (LOCKED)
 
 - Tier 1 (nightly, $0): stars / last commit / releases / Docker pulls → writes `data/metrics/` only.
-- Tier 2 (nightly, Haiku 4.5, Batch): release triage + price-diff summaries.
-- Tier 3 (nightly, Claude Code, 1–2 apps): full re-verification, opens PRs.
-- **Never both `CLAUDE_CODE_OAUTH_TOKEN` and `ANTHROPIC_API_KEY` in one workflow.** Always
-  `--max-turns`, pinned model, PRs only.
+- Tier 3 (nightly, Claude Code via subscription OAuth): release triage (issues only) + full
+  re-verification of 1–2 apps, opens PRs.
+- **Subscription-only for now**: `CLAUDE_CODE_OAUTH_TOKEN` is the ONLY Claude credential in
+  this repo. No `ANTHROPIC_API_KEY` anywhere (decision 2026-08-10; the dormant
+  `scripts/triage-releases.mjs` becomes a separate API-key workflow only if triage volume
+  ever outgrows the nightly session — and never in the same workflow as the OAuth token).
+- Always `--max-turns`, pinned model, PRs only.
 
 ## Dev
 

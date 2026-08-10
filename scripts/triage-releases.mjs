@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 /**
+ * DORMANT (2026-08-10): the repo is subscription-only — release triage runs inside the
+ * Tier-3 Claude Code session (tier3-reverify.yml, CLAUDE_CODE_OAUTH_TOKEN). Revive this as
+ * its own API-key workflow only if triage volume outgrows the nightly session.
+ *
  * Tier-2 triage: for alternatives that shipped a release in the last 24h, ask Haiku whether
  * the release could plausibly change a verdict (capability/effort/health), and emit a
  * markdown report to stdout. The workflow turns a non-empty report into a GitHub issue for
