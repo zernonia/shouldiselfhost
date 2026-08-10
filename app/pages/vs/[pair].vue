@@ -31,7 +31,8 @@ useSeoMeta({
 
 <template>
   <article v-if="a && b">
-    <h1>{{ a.name }} <span class="dim">vs</span> {{ b.name }}</h1>
+    <span v-reveal class="eyebrow">Head-to-head</span>
+    <h1 v-reveal="1">{{ a.name }} <span class="dim">vs</span> {{ b.name }}</h1>
     <p class="dim">Compared on data, not vibes. Metrics refresh nightly; verdict links carry the math.</p>
 
     <div class="card">

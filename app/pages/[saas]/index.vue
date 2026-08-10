@@ -27,8 +27,9 @@ useSeoMeta({
 <template>
   <article v-if="app">
     <header class="page-head">
-      <h1>Should I self-host <em>{{ app.name }}</em>?</h1>
-      <div class="verdict-row">
+      <span v-reveal class="eyebrow">{{ app.category ?? 'verdict' }}</span>
+      <h1 v-reveal="1">Should I self-host <em>{{ app.name }}</em>?</h1>
+      <div v-reveal="2" class="verdict-row">
         <VerdictBadge :verdict="app.verdict" :stale="app.derived.verdict_stale" />
         <VoteButton :app-id="app.id" />
       </div>
@@ -55,7 +56,7 @@ useSeoMeta({
     <section class="section">
       <h2>Ranked alternatives</h2>
       <div class="alt-list">
-        <div v-for="(alt, i) in alts" :key="alt.id" class="card alt-card">
+        <div v-for="(alt, i) in alts" :key="alt.id" v-reveal="i" class="card alt-card">
           <div class="card-top">
             <strong><NuxtLink :to="`/app/${alt.id}`">{{ i + 1 }}. {{ alt.name }}</NuxtLink></strong>
             <span v-if="alt.metrics && daysSince(alt.metrics.last_commit) != null && daysSince(alt.metrics.last_commit)! > 365" class="badge NOT_REALLY small">⚠️ unmaintained</span>
@@ -119,13 +120,17 @@ useSeoMeta({
 </template>
 
 <style scoped>
-.page-head h1 { margin-bottom: 0.6rem; }
+.page-head { display: flex; flex-direction: column; gap: 0.9rem; align-items: flex-start; margin-bottom: 3rem; }
+.page-head h1 { margin: 0; }
+.page-head h1 em { font-style: normal; color: var(--accent); }
 .verdict-row { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
-.reason { font-size: 1.05rem; margin-top: 0.9rem; }
-.section { margin: 2rem 0; }
-.section h2 { font-size: 1.1rem; }
+.reason { font-size: 1.12rem; margin: 0; max-width: 46rem; color: var(--text); }
+.section { margin: 3.5rem 0; }
+.section h2 { font-size: 1.15rem; margin-bottom: 1rem; }
 .alt-list { display: flex; flex-direction: column; gap: 0.8rem; }
 .card-top { display: flex; justify-content: space-between; gap: 0.6rem; align-items: center; }
 .meta { font-size: 0.82rem; }
 .reason-inline { font-style: italic; }
+ul { padding-left: 1.2rem; }
+ul li { margin: 0.4rem 0; }
 </style>

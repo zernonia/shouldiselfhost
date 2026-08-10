@@ -29,19 +29,14 @@ async function toggle() {
 </script>
 
 <template>
-  <button class="vote" :class="{ voted }" :disabled="busy" @click="toggle">
+  <button class="btn vote" :class="{ voted }" :disabled="busy" @click="toggle">
     ✋ I self-host this
-    <span v-if="count != null" class="num">{{ count }}</span>
+    <span v-if="count != null" class="ico num">{{ count }}</span>
   </button>
 </template>
 
 <style scoped>
-.vote {
-  font: inherit; cursor: pointer; color: var(--text);
-  background: var(--bg-raise); border: 1px solid var(--border); border-radius: 8px;
-  padding: 0.45em 0.9em; display: inline-flex; gap: 0.6em; align-items: center;
-}
-.vote:hover { border-color: var(--accent); }
-.vote.voted { border-color: var(--yes); color: var(--yes); }
-.num { color: var(--accent); }
+.vote.voted { border-color: rgba(52, 211, 153, 0.5); color: var(--yes); }
+.vote.voted .ico { background: rgba(52, 211, 153, 0.15); }
+.vote .ico { width: auto; min-width: 1.9em; padding: 0 0.5em; font-size: 0.82em; }
 </style>

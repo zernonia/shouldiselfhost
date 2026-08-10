@@ -42,7 +42,8 @@ useSeoMeta({
 
 <template>
   <div>
-    <h1>My homelab replaces…</h1>
+    <span v-reveal class="eyebrow">Flex responsibly</span>
+    <h1 v-reveal="1">My homelab replaces…</h1>
     <p class="dim">
       Pick what you actually self-host. The math is the same honest math as everywhere else on
       this site — subscription prices minus server share, storage, and your time at the

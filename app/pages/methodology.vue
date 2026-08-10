@@ -6,7 +6,8 @@ useHead({ title: 'Methodology — how verdicts work and who can never touch them
 
 <template>
   <article class="prose">
-    <h1>Methodology</h1>
+    <span v-reveal class="eyebrow">The rules of the scoreboard</span>
+    <h1 v-reveal="1">Methodology</h1>
     <p>
       Every list site tells you what exists. <a href="https://caniselfhostit.com">caniselfhostit</a>
       tells you how to run it. We answer the question that costs you money and weekends:

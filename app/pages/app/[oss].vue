@@ -14,7 +14,8 @@ useHead({ title: () => `${alt.value?.name} — what it replaces, and whether it'
 <template>
   <article v-if="alt">
     <header class="page-head">
-      <h1>{{ alt.name }}</h1>
+      <span v-reveal class="eyebrow">Open source</span>
+      <h1 v-reveal="1">{{ alt.name }}</h1>
       <p v-if="alt.tagline" class="dim">{{ alt.tagline }}</p>
       <div class="dim meta num">
         <a :href="`https://github.com/${alt.repo}`">{{ alt.repo }}</a>

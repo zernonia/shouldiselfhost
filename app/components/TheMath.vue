@@ -18,7 +18,7 @@ const fmt = (n: number | null, digits = 2) => (n == null ? '—' : `$${n.toFixed
 </script>
 
 <template>
-  <div class="card math">
+  <div v-reveal class="card math">
     <h2>The math <span class="dim">(nothing hidden, including your time)</span></h2>
     <table class="board">
       <tbody>

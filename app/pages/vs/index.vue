@@ -5,7 +5,8 @@ useHead({ title: 'Head-to-head comparisons' })
 
 <template>
   <div>
-    <h1>Head-to-head</h1>
+    <span v-reveal class="eyebrow">Compared on data</span>
+    <h1 v-reveal="1">Head-to-head</h1>
     <p class="dim">
       Two tools competing for the same jobs, compared on data: freshness, resources, and the
       verdict pages each one backs. Currently served by year-old Reddit threads; we'd rather
