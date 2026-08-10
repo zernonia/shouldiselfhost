@@ -1,0 +1,33 @@
+name: tier1-metrics
+# Nightly freshness bot: stars, last commit, releases, Docker pulls → data/metrics/ only.
+# No LLM, $0. Commits directly (metrics are bot territory; humans never touch them, so
+# there is nothing to review). The nightly commit also keeps GitHub from auto-disabling
+# scheduled workflows after 60 days of repo inactivity.
+on:
+  schedule:
+    - cron: '20 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fetch metrics
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/fetch-metrics.mjs
+      - name: Commit
+        run: |
+          git config user.name 'metrics-bot'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add data/metrics
+          git diff --cached --quiet && echo "no changes" && exit 0
+          git commit -m "metrics: nightly refresh"
+          git push

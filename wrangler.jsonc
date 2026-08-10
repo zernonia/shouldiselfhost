@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "shouldiselfhost",
+  "compatibility_date": "2026-08-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": ".output/server/index.mjs",
+  "assets": {
+    "directory": ".output/public",
+    "binding": "ASSETS"
+  },
+  "observability": { "enabled": true },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "shouldiselfhost-votes",
+      // Create with: wrangler d1 create shouldiselfhost-votes ; then paste the id here
+      "database_id": "REPLACE_AFTER_wrangler_d1_create"
+    }
+  ]
+}

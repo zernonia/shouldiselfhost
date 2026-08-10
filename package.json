@@ -1,0 +1,24 @@
+{
+  "name": "shouldiselfhost",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "validate": "node scripts/validate.mjs",
+    "import:seed": "node scripts/import-seed.mjs",
+    "metrics": "node scripts/fetch-metrics.mjs"
+  },
+  "dependencies": {
+    "nuxt": "^4.0.0",
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.0",
+    "ajv-formats": "^3.0.0",
+    "wrangler": "^4.0.0"
+  }
+}

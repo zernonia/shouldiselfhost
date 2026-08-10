@@ -1,0 +1,50 @@
+name: tier3-reverify
+# Nightly Claude Code session: re-run protocol v1 on the 1-2 stalest verdicts (12-month
+# rolling cycle) and open a PR with refreshed measurements. Humans merge.
+#
+# CREDENTIAL RULES (CLAUDE.md §automation — non-negotiable):
+#   - Subscription OAuth token ONLY (CLAUDE_CODE_OAUTH_TOKEN via the official action).
+#     NEVER add ANTHROPIC_API_KEY to this workflow — an inherited key once produced a
+#     documented $1,800 surprise bill. One credential per workflow.
+#   - Pinned model, capped turns, PRs only (no direct pushes to main).
+on:
+  schedule:
+    - cron: '30 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  reverify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - name: Re-verify stalest verdicts
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          claude_args: |
+            --max-turns 60
+            --model claude-sonnet-4-6
+          prompt: |
+            You are the nightly re-verification bot for shouldiselfhost.com. Read CLAUDE.md and
+            CONTRIBUTING.md first — the rubric and protocol v1 are binding.
+
+            1. Find the 1-2 apps in data/apps/ with a non-null verdict and the oldest
+               verified.at dates (skip anything re-verified in the last 11 months).
+            2. For each: boot its compose file with `bash scripts/check-compose.sh <file>`,
+               time it, and re-check the primary alternative's health in data/metrics/.
+            3. Update the app's verified block (new `at`, measured `setup_min`, `by:
+               "tier3-bot"`, refreshed what_broke) and refresh the timed log in logs/.
+               If the rubric outcome changes, update the verdict AND append the
+               data/changelog.json entry with a one-line reason.
+            4. Run `npm run validate` — it must pass.
+            5. Create a branch reverify/<date>, commit, push, and open a PR with
+               `gh pr create` summarizing old vs new measurements. Never push to main.

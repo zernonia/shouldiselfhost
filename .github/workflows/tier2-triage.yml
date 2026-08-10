@@ -1,0 +1,38 @@
+name: tier2-triage
+# Nightly Haiku pass over fresh releases: "does this plausibly change a verdict?"
+# Output is an issue for humans — the bot never edits data.
+# CREDENTIAL RULE: this workflow uses ANTHROPIC_API_KEY and must NEVER also see
+# CLAUDE_CODE_OAUTH_TOKEN (see CLAUDE.md — one credential per workflow, always).
+on:
+  schedule:
+    - cron: '50 3 * * *' # after tier1-metrics lands
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Haiku triage
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/triage-releases.mjs > /tmp/triage.md
+      - name: Open issue if anything flagged
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -s /tmp/triage.md ]; then
+            gh issue create \
+              --title "Release triage $(date -u +%F): possible verdict changes" \
+              --label verdict-request \
+              --body-file /tmp/triage.md
+          else
+            echo "nothing flagged"
+          fi

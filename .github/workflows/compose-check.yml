@@ -1,0 +1,41 @@
+name: compose-check
+# The integrity gate: a compose file that cannot boot to healthy cannot merge.
+# PRs boot only the compose files they touch; the weekly run boots the full matrix
+# so upstream image drift gets caught even when nobody edits anything.
+on:
+  pull_request:
+    paths: ['compose/**']
+  schedule:
+    - cron: '0 4 * * 0' # weekly full matrix, Sunday 04:00 UTC
+  workflow_dispatch:
+
+jobs:
+  changed:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Boot changed compose files to healthy
+        run: |
+          git fetch origin ${{ github.base_ref }} --depth=1
+          CHANGED=$(git diff --name-only --diff-filter=d origin/${{ github.base_ref }}...HEAD -- 'compose/*.yml')
+          [ -z "$CHANGED" ] && echo "no compose changes" && exit 0
+          for f in $CHANGED; do
+            bash scripts/check-compose.sh "$f"
+          done
+
+  full-matrix:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Boot every compose file to healthy
+        run: |
+          FAILED=""
+          for f in compose/*.yml; do
+            bash scripts/check-compose.sh "$f" || FAILED="$FAILED $f"
+          done
+          if [ -n "$FAILED" ]; then
+            echo "::error::compose files no longer boot:$FAILED"
+            exit 1
+          fi

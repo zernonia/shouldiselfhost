@@ -1,0 +1,75 @@
+:root {
+  --bg: #0b0e14;
+  --bg-raise: #121722;
+  --bg-card: #161c29;
+  --border: #232b3d;
+  --text: #e6e9f0;
+  --text-dim: #8b94a7;
+  --yes: #3fd68f;
+  --kinda: #f5b944;
+  --no: #f06a6a;
+  --accent: #6ea8fe;
+  --mono: ui-monospace, 'SF Mono', 'Cascadia Code', Menlo, Consolas, monospace;
+  --sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.55;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code, pre { font-family: var(--mono); font-size: 0.9em; }
+pre {
+  background: var(--bg-raise);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+h1, h2, h3 { line-height: 1.2; }
+
+.container { max-width: 1080px; margin: 0 auto; padding: 0 1.25rem; }
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5em;
+  font-family: var(--mono);
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 0.25em 0.6em;
+  border: 1px solid;
+}
+.badge.small { font-size: 0.75rem; padding: 0.1em 0.45em; }
+.badge.YES { color: var(--yes); border-color: var(--yes); background: rgba(63, 214, 143, 0.08); }
+.badge.KINDA { color: var(--kinda); border-color: var(--kinda); background: rgba(245, 185, 68, 0.08); }
+.badge.NOT_REALLY { color: var(--no); border-color: var(--no); background: rgba(240, 106, 106, 0.08); }
+.badge.UNSCORED { color: var(--text-dim); border-color: var(--border); background: none; }
+.badge.stale { opacity: 0.55; }
+
+.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.dim { color: var(--text-dim); }
+.pos { color: var(--yes); }
+.neg { color: var(--no); }
+
+table.board { border-collapse: collapse; width: 100%; }
+table.board th {
+  text-align: left; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--text-dim); padding: 0.4rem 0.75rem; border-bottom: 1px solid var(--border);
+}
+table.board td { padding: 0.55rem 0.75rem; border-bottom: 1px solid var(--border); }
+table.board tr:last-child td { border-bottom: none; }
+table.board td.r, table.board th.r { text-align: right; }
