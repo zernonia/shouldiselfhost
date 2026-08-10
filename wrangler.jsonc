@@ -13,8 +13,7 @@
     {
       "binding": "DB",
       "database_name": "shouldiselfhost-votes",
-      // Create with: wrangler d1 create shouldiselfhost-votes ; then paste the id here
-      "database_id": "REPLACE_AFTER_wrangler_d1_create"
+      "database_id": "1607b4dd-f122-4550-a518-57fd73752733"
     }
   ]
 }

@@ -1,0 +1,49 @@
+name: deploy
+# Build + deploy to Cloudflare Workers on every push to main that can change the site.
+# Needs one repo secret: CLOUDFLARE_API_TOKEN (Workers Scripts:Edit + D1:Edit).
+# The D1 database (shouldiselfhost-votes) already exists with its schema applied;
+# wrangler.jsonc carries the real database_id.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/**'
+      - 'compose/**'
+      - 'logs/**'
+      - 'app/**'
+      - 'server/**'
+      - 'shared/**'
+      - 'schemas/**'
+      - 'nuxt.config.ts'
+      - 'wrangler.jsonc'
+      - 'package*.json'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      HAS_CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run validate
+      - run: npm run build
+      - name: Deploy to Cloudflare Workers
+        if: env.HAS_CF_TOKEN == 'true'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          command: deploy
+      - name: Deploy skipped
+        if: env.HAS_CF_TOKEN != 'true'
+        run: echo "::notice::Build OK. Deploy skipped — add the CLOUDFLARE_API_TOKEN repo secret (Workers Scripts:Edit + D1:Edit) to enable deploys."
