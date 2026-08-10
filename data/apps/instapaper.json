@@ -11,13 +11,46 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/instapaper"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "save articles to read later",
+    "full-text archive that survives dead links",
+    "mobile/offline reading",
+    "tags & search"
+  ],
+  "verdict": "YES",
   "alternatives": [
     "wallabag"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "wallabag archives the full page — not a bookmark, the page — and syncs to its mobile apps and Kobo/Kindle. The $72/yr was for exactly this.",
+  "what_you_lose": [
+    "Instapaper's typography polish and tilt-scrolling niceties",
+    "Their parser team chasing weird sites — wallabag's extractor occasionally needs a config nudge"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.5,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 10
+  },
+  "hardware_tier": "pi",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 40,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/instapaper-wallabag.md",
+      "compose/instapaper-wallabag.yml"
+    ],
+    "what_broke": [
+      "The image's nginx config hard-binds [::]:80 and crash-loops on kernels booted with ipv6.disable=1 (our verification microVM) — this pair's compose boot is certified by the CI runner",
+      "First boot runs Symfony install + migrations and nginx answers nothing for minutes — a healthcheck without a generous start_period declares it dead while it's warming up",
+      "SQLite default is fine for one reader; switch to the postgres envs before inviting the household"
+    ]
+  },
+  "compose": "compose/instapaper-wallabag.yml"
 }

@@ -11,13 +11,44 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/nordvpn"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "hide traffic from local network/ISP",
+    "blend into a shared exit IP crowd",
+    "geo-shifting to 60 countries",
+    "per-device apps everywhere"
+  ],
+  "verdict": "NOT_REALLY",
   "alternatives": [
     "wg-easy"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "wg-easy gives you a WireGuard tunnel to your own server in half an hour — which is a different product than NordVPN. Your VPS exit IP is more identifying than your home ISP's, not less. Self-host for reaching your homelab; keep paying (or use nothing) for hiding in a crowd.",
+  "what_you_lose": [
+    "The crowd: a single-tenant VPS exit is trivially attributable to you",
+    "Country-hopping — you have exactly one exit, where your server lives"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.5,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 10
+  },
+  "hardware_tier": "pi",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 30,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/nordvpn-wg-easy.md",
+      "compose/nordvpn-wg-easy.yml"
+    ],
+    "what_broke": [
+      "Image is ghcr.io-hosted — CI-verified; needs NET_ADMIN + sysctls, which some container hosts refuse"
+    ]
+  },
+  "compose": "compose/nordvpn-wg-easy.yml"
 }

@@ -11,13 +11,46 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/ghost-pro"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "publishing/blog",
+    "newsletter sending",
+    "memberships/paid subs",
+    "themes"
+  ],
+  "verdict": "YES",
   "alternatives": [
     "ghost"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "It's the same Ghost. $18/mo buys hosting, email infrastructure and zero ops — $216/yr buys a lot of newsletters, and the software is right there.",
+  "what_you_lose": [
+    "Ghost(Pro)'s bundled newsletter deliverability — bring Mailgun for bulk sends",
+    "Automatic upgrades from the people who wrote it (and fund it — Pro revenue pays for the software you're running)"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 1.5,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 20
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 50,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/ghost-pro-ghost.md",
+      "compose/ghost-pro-ghost.yml"
+    ],
+    "what_broke": [
+      "Where IPv6 is disabled Ghost dies with the deeply unhelpful 'Code: -97' — it's EAFNOSUPPORT; set server__host: 0.0.0.0",
+      "MySQL 8's first-boot init answers socket pings while TCP is still down, so a socket-based healthcheck releases Ghost too early into an ECONNREFUSED crash-loop — probe with --protocol=tcp",
+      "Ghost 5 requires MySQL 8 specifically — SQLite and MariaDB are not supported paths"
+    ]
+  },
+  "compose": "compose/ghost-pro-ghost.yml"
 }

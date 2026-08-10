@@ -1,0 +1,48 @@
+# Nextcloud — files + sync + sharing (replaces Dropbox). Apache image + postgres; add a
+# reverse proxy with TLS in production. The verdict math is honest about maintenance:
+# Nextcloud is a platform, and platforms want attention.
+services:
+  nextcloud:
+    image: nextcloud:stable-apache
+    container_name: nextcloud
+    restart: unless-stopped
+    depends_on:
+      nextcloud-db:
+        condition: service_healthy
+    environment:
+      POSTGRES_HOST: nextcloud-db
+      POSTGRES_USER: nextcloud
+      POSTGRES_PASSWORD: nextcloud
+      POSTGRES_DB: nextcloud
+      NEXTCLOUD_ADMIN_USER: admin
+      NEXTCLOUD_ADMIN_PASSWORD: changeme-now # throwaway test value
+      NEXTCLOUD_TRUSTED_DOMAINS: localhost
+    ports:
+      - "8085:80"
+    volumes:
+      - nextcloud-data:/var/www/html
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost/status.php | grep -q '\"installed\":true' || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 36
+      start_period: 60s
+
+  nextcloud-db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: nextcloud
+      POSTGRES_PASSWORD: nextcloud
+      POSTGRES_DB: nextcloud
+    volumes:
+      - nextcloud-pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U nextcloud"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+volumes:
+  nextcloud-data:
+  nextcloud-pg:

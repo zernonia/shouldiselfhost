@@ -1,0 +1,22 @@
+# Trilium Notes (TriliumNext) — hierarchical personal knowledge base (replaces Evernote's
+# desktop half; the mobile + OCR gap is the KINDA)
+services:
+  trilium:
+    image: triliumnext/notes:latest
+    container_name: trilium
+    restart: unless-stopped
+    environment:
+      TRILIUM_DATA_DIR: /home/node/trilium-data
+    ports:
+      - "8091:8080"
+    volumes:
+      - trilium-data:/home/node/trilium-data
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:8080/api/health-check >/dev/null || wget -qO- http://localhost:8080 >/dev/null || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 24
+      start_period: 20s
+
+volumes:
+  trilium-data:

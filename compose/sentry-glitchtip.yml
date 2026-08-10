@@ -1,0 +1,71 @@
+# GlitchTip — Sentry-compatible error tracking that fits on a normal VPS (replaces Sentry's
+# Team plan; Sentry's own self-host wants ~16GB and a dozen containers — GlitchTip is the
+# sane answer)
+services:
+  glitchtip-web:
+    image: glitchtip/glitchtip:latest
+    container_name: glitchtip-web
+    restart: unless-stopped
+    depends_on:
+      glitchtip-db:
+        condition: service_healthy
+      glitchtip-redis:
+        condition: service_healthy
+    environment: &gt-env
+      DATABASE_URL: postgres://glitchtip:glitchtip@glitchtip-db:5432/glitchtip
+      REDIS_URL: redis://glitchtip-redis:6379
+      SECRET_KEY: 2b1e6f9c8d7a5b4c3e2f1a0d9c8b7a6f5e4d3c2b1a0f9e8d # throwaway test value
+      GLITCHTIP_DOMAIN: http://localhost:8088
+      EMAIL_URL: consolemail://
+      ENABLE_USER_REGISTRATION: "true"
+    ports:
+      - "8088:8000" # glitchtip serves on 8000
+    healthcheck:
+      # python-slim image: no curl/wget, but python is right there
+      test: ["CMD-SHELL", "python3 -c \"import urllib.request;urllib.request.urlopen('http://localhost:8000/_health/')\""]
+      interval: 5s
+      timeout: 5s
+      retries: 36
+      start_period: 30s
+
+  glitchtip-worker:
+    image: glitchtip/glitchtip:latest
+    container_name: glitchtip-worker
+    restart: unless-stopped
+    command: ./bin/run-celery-with-beat.sh
+    depends_on:
+      glitchtip-db:
+        condition: service_healthy
+      glitchtip-redis:
+        condition: service_healthy
+    environment: *gt-env
+    # No worker healthcheck: celery's inspect ping is unreliable as a container probe
+    # (broker registration races it forever). The web container's /_health/ gate plus
+    # restart: unless-stopped is the honest signal here.
+
+  glitchtip-db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: glitchtip
+      POSTGRES_PASSWORD: glitchtip
+      POSTGRES_DB: glitchtip
+    volumes:
+      - glitchtip-pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U glitchtip"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  glitchtip-redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli ping | grep PONG"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+volumes:
+  glitchtip-pg:

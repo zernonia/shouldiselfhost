@@ -11,13 +11,48 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/zoom"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "group video calls that just work for guests",
+    "screen share & recording",
+    "calendar integration",
+    "dial-in"
+  ],
+  "verdict": "NOT_REALLY",
   "alternatives": [
     "jitsi"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "Jitsi self-hosts real video calls — and then the calls are only as good as your server's bandwidth, your TURN config, and the day UDP 10000 got blocked. Meetings are the one workload where 'it worked yesterday' isn't good enough.",
+  "what_you_lose": [
+    "Zoom's network doing the heavy lifting — a 2GB VPS handles a handful of participants before the bridge sweats",
+    "Recording, dial-in and calendar flow all become separate projects",
+    "Every meeting is now also a smoke test of your infrastructure"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 4,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 45
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 120,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/zoom-jitsi.md",
+      "compose/zoom-jitsi.yml"
+    ],
+    "what_broke": [
+      "Set ENABLE_IPV6=0 on kernels with ipv6.disable=1 or the templated nginx/prosody binds crash",
+      "Four services must agree on XMPP domains and two shared secrets — one typo and jicofo silently fails to conference; the log line 'Added new videobridge' is the registration proof",
+      "jicofo's REST /about/health wouldn't answer 2xx in our env even with a bridge registered — the compose gates it on a process check instead",
+      "No pgrep/shell tooling in the images — healthchecks lean on curl (web/jicofo images) and /proc greps"
+    ]
+  },
+  "compose": "compose/zoom-jitsi.yml"
 }

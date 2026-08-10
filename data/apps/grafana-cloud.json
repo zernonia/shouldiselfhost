@@ -11,13 +11,44 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/grafana-cloud"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "dashboards over your metrics/logs",
+    "alerting",
+    "team sharing",
+    "plugin ecosystem"
+  ],
+  "verdict": "YES",
   "alternatives": [
     "grafana"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "Grafana OSS is the same dashboards without the per-seat cloud math — the honest catch is that Cloud's bundled Prometheus/Loki storage becomes your problem.",
+  "what_you_lose": [
+    "Managed Prometheus/Loki/Tempo storage — you now run (and size) your own data sources",
+    "Cloud's SLO on the thing that pages you"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 1.5,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 20
+  },
+  "hardware_tier": "pi",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 45,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/grafana-cloud-grafana.md",
+      "compose/grafana-cloud-grafana.yml"
+    ],
+    "what_broke": [
+      "Nothing for Grafana itself — the real setup time is in the data sources it points at"
+    ]
+  },
+  "compose": "compose/grafana-cloud-grafana.yml"
 }

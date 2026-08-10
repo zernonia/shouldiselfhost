@@ -1,0 +1,39 @@
+# Vikunja — self-hosted to-do lists and projects (replaces Todoist)
+services:
+  vikunja:
+    image: vikunja/vikunja:latest
+    container_name: vikunja
+    restart: unless-stopped
+    # The image runs as uid 1000 but fresh named volumes initialize root-owned; without this
+    # the file handler crash-loops on "permission denied".
+    user: "0:0"
+    environment:
+      VIKUNJA_SERVICE_PUBLICURL: http://localhost:3456
+      VIKUNJA_DATABASE_TYPE: sqlite
+      VIKUNJA_DATABASE_PATH: /db/vikunja.db
+      VIKUNJA_SERVICE_ENABLEREGISTRATION: "true" # create your account, then flip to false
+    ports:
+      - "3456:3456"
+    volumes:
+      - vikunja-files:/app/vikunja/files
+      - vikunja-db:/db
+
+  # The vikunja image is distroless — no shell, no wget, nothing to self-probe with.
+  # This sidecar checks the API over the network so `compose up --wait` still proves
+  # the service actually serves, not just that the process exists.
+  vikunja-probe:
+    image: busybox:stable
+    restart: unless-stopped
+    depends_on:
+      - vikunja
+    command: sleep infinity
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://vikunja:3456/api/v1/info >/dev/null || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 24
+      start_period: 15s
+
+volumes:
+  vikunja-files:
+  vikunja-db:

@@ -1,0 +1,52 @@
+# Ghost — the same software Ghost(Pro) hosts for $18/mo (Starter)
+services:
+  ghost:
+    image: ghost:5-alpine
+    container_name: ghost
+    restart: unless-stopped
+    depends_on:
+      ghost-db:
+        condition: service_healthy
+    environment:
+      url: http://localhost:2368
+      # Ghost exits with cryptic "Code: -97" (EAFNOSUPPORT) where IPv6 is disabled; bind IPv4.
+      server__host: 0.0.0.0
+      database__client: mysql
+      database__connection__host: ghost-db
+      database__connection__user: ghost
+      database__connection__password: ghost
+      database__connection__database: ghost
+    ports:
+      - "2368:2368"
+    volumes:
+      - ghost-content:/var/lib/ghost/content
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:2368 >/dev/null || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 36
+      start_period: 30s
+
+  ghost-db:
+    image: mysql:8
+    restart: unless-stopped
+    environment:
+      MYSQL_USER: ghost
+      MYSQL_PASSWORD: ghost
+      MYSQL_DATABASE: ghost
+      MYSQL_ROOT_PASSWORD: root-changeme # throwaway test value
+    volumes:
+      - ghost-db:/var/lib/mysql
+    healthcheck:
+      # Must probe over TCP: during first-boot initialization MySQL runs a temp server that
+      # answers the *socket* ping while port 3306 is still down — a socket-based check lets
+      # dependents start too early and crash-loop on ECONNREFUSED.
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "--protocol=tcp", "-ughost", "-pghost"]
+      interval: 5s
+      timeout: 5s
+      retries: 36
+      start_period: 30s
+
+volumes:
+  ghost-content:
+  ghost-db:

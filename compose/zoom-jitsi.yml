@@ -1,0 +1,84 @@
+# Jitsi Meet — self-hosted video calls (tested against Zoom's job list). Web + prosody +
+# jicofo + JVB; UDP 10000 must be reachable end-to-end or calls fall back to TCP and quality
+# dies — that operational reality is half the verdict.
+# Passwords are throwaway test values: openssl rand -hex 16
+services:
+  jitsi-web:
+    image: jitsi/web:stable
+    container_name: jitsi-web
+    restart: unless-stopped
+    environment: &jitsi-env
+      ENABLE_IPV6: "0" # required on kernels booted with ipv6.disable=1
+      XMPP_SERVER: xmpp.meet.jitsi
+      XMPP_DOMAIN: meet.jitsi
+      XMPP_AUTH_DOMAIN: auth.meet.jitsi
+      XMPP_INTERNAL_MUC_DOMAIN: internal-muc.meet.jitsi
+      XMPP_MUC_DOMAIN: muc.meet.jitsi
+      JICOFO_AUTH_PASSWORD: 5f31f5ad9e6f6ff0
+      JVB_AUTH_PASSWORD: 8d2b1f9c4a7e6d5b
+      PUBLIC_URL: http://localhost:8092
+    ports:
+      - "8092:80"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:80 >/dev/null || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 36
+      start_period: 30s
+    networks:
+      meet.jitsi:
+
+  prosody:
+    image: jitsi/prosody:stable
+    restart: unless-stopped
+    environment: *jitsi-env
+    healthcheck:
+      test: ["CMD-SHELL", "prosodyctl --config /config/prosody.cfg.lua status | grep -q running || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 24
+      start_period: 30s
+    networks:
+      meet.jitsi:
+        aliases: ["xmpp.meet.jitsi"]
+
+  jicofo:
+    image: jitsi/jicofo:stable
+    restart: unless-stopped
+    depends_on:
+      prosody:
+        condition: service_healthy
+    environment: *jitsi-env
+    healthcheck:
+      # jicofo's REST /about/health would not return 2xx in our verification env even with a
+      # bridge registered (the log's "Added new videobridge" is the real signal) — gate on the
+      # java process; no pgrep in the image, so probe /proc.
+      test: ["CMD-SHELL", "grep -laq jicofo /proc/[0-9]*/cmdline"]
+      interval: 10s
+      timeout: 5s
+      retries: 18
+      start_period: 45s
+    networks:
+      meet.jitsi:
+
+  jvb:
+    image: jitsi/jvb:stable
+    restart: unless-stopped
+    depends_on:
+      prosody:
+        condition: service_healthy
+    environment: *jitsi-env
+    ports:
+      - "10000:10000/udp"
+    healthcheck:
+      # no pgrep in the image; look for the JVB java process via /proc
+      test: ["CMD-SHELL", "grep -laq jvb /proc/[0-9]*/cmdline"]
+      interval: 10s
+      timeout: 5s
+      retries: 18
+      start_period: 45s
+    networks:
+      meet.jitsi:
+
+networks:
+  meet.jitsi:

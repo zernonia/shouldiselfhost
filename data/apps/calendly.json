@@ -11,13 +11,45 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/calendly"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "booking pages",
+    "calendar conflict checking (Google/Outlook)",
+    "reminders/emails",
+    "team round-robin"
+  ],
+  "verdict": "KINDA",
   "alternatives": [
     "calcom"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "Cal.com self-hosted does the booking-page job, but it's the heaviest app in our index and the setup is configuration, not compose. Worth it if you're a team with a server habit; a solo calendar link is cheaper to rent.",
+  "what_you_lose": [
+    "Managed Google/Microsoft OAuth — self-host means registering your own apps with both, which is most of the real setup time",
+    "Their deliverability for reminder emails"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 2,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 20
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 150,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/calendly-calcom.md",
+      "compose/calendly-calcom.yml"
+    ],
+    "what_broke": [
+      "Image is enormous — the pull dominated boot time even on a fast link",
+      "Boots healthy without calendar OAuth configured, but the product doesn't do its job until you register apps with Google/Microsoft — budget the weekend for that, not the compose"
+    ]
+  },
+  "compose": "compose/calendly-calcom.yml"
 }

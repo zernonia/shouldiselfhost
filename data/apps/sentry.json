@@ -11,13 +11,46 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/sentry"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "error tracking (Sentry SDKs)",
+    "issue grouping & alerts",
+    "performance traces (basic)",
+    "uptime checks"
+  ],
+  "verdict": "YES",
   "alternatives": [
     "glitchtip"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "GlitchTip speaks the Sentry SDK protocol and fits on a normal VPS. Sentry's own self-host wants 16GB and a small ops team — the honest self-host answer is the compatible lightweight, and it breaks even in about two months.",
+  "what_you_lose": [
+    "Sentry's deep tracing/profiling/replay product — GlitchTip is errors done well, not the whole observability suite",
+    "SaaS-side data retention muscle"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 2.5,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 30
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 90,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/sentry-glitchtip.md",
+      "compose/sentry-glitchtip.yml"
+    ],
+    "what_broke": [
+      "The container serves on 8000, not the 8080 several guides claim — map and probe accordingly",
+      "python-slim image has no curl/wget; the healthcheck probes /_health/ with python urllib",
+      "Celery worker needs its own container with the same env — errors ingest but nothing processes without it; don't healthcheck it with celery inspect ping, which races broker registration forever"
+    ]
+  },
+  "compose": "compose/sentry-glitchtip.yml"
 }

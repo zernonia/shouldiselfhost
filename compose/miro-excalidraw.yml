@@ -1,0 +1,16 @@
+# Excalidraw — the whiteboard (tested against Miro's job list). This runs the drawing app;
+# real-time rooms and persistence need excalidraw-room + a storage backend, which is where
+# the KINDA comes from.
+services:
+  excalidraw:
+    image: excalidraw/excalidraw:latest
+    container_name: excalidraw
+    restart: unless-stopped
+    ports:
+      - "8087:80"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:80 >/dev/null || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 24
+      start_period: 15s

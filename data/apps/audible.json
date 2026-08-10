@@ -11,13 +11,44 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/audible"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "stream a catalog of audiobooks you haven't bought",
+    "original/exclusive content",
+    "whispersync across devices",
+    "podcasts"
+  ],
+  "verdict": "NOT_REALLY",
   "alternatives": [
     "audiobookshelf"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "Audiobookshelf is a gorgeous server for audiobooks you own — and Audible's product is a catalog you don't. Same verdict as Spotify: self-hosting replaces the player, and the player was never the subscription.",
+  "what_you_lose": [
+    "The catalog and the credits model — DRM'd purchases don't move into your server",
+    "Exclusives, period"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.5,
+    "storage_usd_mo": 0.5,
+    "maint_min_mo": 10
+  },
+  "hardware_tier": "pi",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 30,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/audible-audiobookshelf.md",
+      "compose/audible-audiobookshelf.yml"
+    ],
+    "what_broke": [
+      "The image ships wget but not curl — a curl-based healthcheck reports unhealthy forever while the server is fine"
+    ]
+  },
+  "compose": "compose/audible-audiobookshelf.yml"
 }

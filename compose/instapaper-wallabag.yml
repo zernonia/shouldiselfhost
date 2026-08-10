@@ -1,0 +1,25 @@
+# wallabag — read-it-later with full-page archiving (replaces Instapaper)
+services:
+  wallabag:
+    image: wallabag/wallabag:latest
+    container_name: wallabag
+    restart: unless-stopped
+    environment:
+      SYMFONY__ENV__DOMAIN_NAME: http://localhost:8094
+      # SQLite default keeps it one container; use the postgres envs for real multi-user
+    ports:
+      - "8094:80"
+    volumes:
+      - wallabag-data:/var/www/wallabag/data
+      - wallabag-images:/var/www/wallabag/web/assets/images
+    healthcheck:
+      # First boot runs Symfony install + migrations before nginx answers — minutes, not seconds.
+      test: ["CMD-SHELL", "curl -sf http://localhost/api/info || curl -sf http://localhost/login || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 60
+      start_period: 180s
+
+volumes:
+  wallabag-data:
+  wallabag-images:

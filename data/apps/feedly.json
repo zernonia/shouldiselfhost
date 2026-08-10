@@ -11,13 +11,44 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/feedly"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "follow feeds in one reader",
+    "sync read-state across devices",
+    "search & filters",
+    "mobile access"
+  ],
+  "verdict": "YES",
   "alternatives": [
     "freshrss"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "One container, your feeds, no $84/yr for the privilege of reading RSS — the format that was designed to be self-hosted.",
+  "what_you_lose": [
+    "Feedly's AI triage and team boards",
+    "Their server discovering feed URLs for you — FreshRSS makes you paste the URL like it's 2008 (it's fine)"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.5,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 10
+  },
+  "hardware_tier": "pi",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 30,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/feedly-freshrss.md",
+      "compose/feedly-freshrss.yml"
+    ],
+    "what_broke": [
+      "Nothing — image ships with SQLite default and a web installer"
+    ]
+  },
+  "compose": "compose/feedly-freshrss.yml"
 }

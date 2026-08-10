@@ -11,13 +11,44 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/miro"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "whiteboard sketching",
+    "diagrams",
+    "real-time multi-user boards",
+    "board library/templates"
+  ],
+  "verdict": "KINDA",
   "alternatives": [
     "excalidraw"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "Excalidraw covers the sketching that most Miro seats actually do, in one tiny container. Worth it if solo or link-sharing files; live multi-cursor rooms need the extra room server and that's where the weekend goes.",
+  "what_you_lose": [
+    "Persistent boards with access control — vanilla Excalidraw saves .excalidraw files, not a board library",
+    "Miro's template/facilitation ecosystem"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.3,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 5
+  },
+  "hardware_tier": "pi",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 20,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/miro-excalidraw.md",
+      "compose/miro-excalidraw.yml"
+    ],
+    "what_broke": [
+      "None for the drawing app; know that collab rooms are a second project (excalidraw-room + storage)"
+    ]
+  },
+  "compose": "compose/miro-excalidraw.yml"
 }

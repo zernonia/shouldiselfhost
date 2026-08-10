@@ -11,13 +11,46 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/mailchimp"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "subscriber lists & segments",
+    "campaign sending",
+    "templates",
+    "signup forms",
+    "analytics"
+  ],
+  "verdict": "YES",
   "alternatives": [
     "listmonk"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "listmonk runs your lists and campaigns for the cost of a Postgres; pair it with SES at ~$0.10/1k emails and Mailchimp's $156/yr becomes a rounding error. Deliverability is now a skill you own.",
+  "what_you_lose": [
+    "Mailchimp's sender reputation — you'll ride SES/Postmark's instead, and warm-up is real",
+    "The template marketplace and journey builder"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.8,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 20
+  },
+  "hardware_tier": "pi",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 60,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/mailchimp-listmonk.md",
+      "compose/mailchimp-listmonk.yml"
+    ],
+    "what_broke": [
+      "--install must run before first serve (the compose command chains it idempotently)",
+      "Sending anything real requires an SMTP relay — factor ~$1-5/mo for SES into your own math"
+    ]
+  },
+  "compose": "compose/mailchimp-listmonk.yml"
 }

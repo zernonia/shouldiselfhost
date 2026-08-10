@@ -11,13 +11,47 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/dropbox"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "file sync across devices",
+    "sharing links",
+    "mobile photo backup",
+    "version history",
+    "collaborative docs (with apps)"
+  ],
+  "verdict": "KINDA",
   "alternatives": [
     "nextcloud"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "Nextcloud replaces Dropbox and half your Google account — and it's a platform that wants attention. Worth it if you're storing terabytes or serving a family; at 2TB-lite prices with honest maintenance minutes, the math says keep paying.",
+  "what_you_lose": [
+    "Dropbox's sync engine reliability — Nextcloud sync is good, not legendary",
+    "Zero-thought durability: your files are now on disks you own and must back up",
+    "Some maintenance months are 5 minutes; upgrade months are not"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 2.5,
+    "storage_usd_mo": 2,
+    "maint_min_mo": 45
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 90,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/dropbox-nextcloud.md",
+      "compose/dropbox-nextcloud.yml"
+    ],
+    "what_broke": [
+      "First boot takes a minute+ to install before status.php goes green — healthcheck needs the long start_period",
+      "Trusted-domain config bites the moment you access it from a non-localhost hostname"
+    ]
+  },
+  "compose": "compose/dropbox-nextcloud.yml"
 }

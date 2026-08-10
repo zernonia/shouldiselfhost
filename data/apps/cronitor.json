@@ -11,13 +11,44 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/cronitor"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "dead-man-switch cron monitoring",
+    "alerting (email/webhook/Slack)",
+    "status badges",
+    "schedules/grace windows"
+  ],
+  "verdict": "NOT_REALLY",
   "alternatives": [
     "healthchecks"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "Healthchecks is excellent and installs in half an hour. Cronitor's solo tier is $2/mo. If your time is worth anything at all, the subscription wins — and the monitor watching your cron jobs shouldn't share fate with the box running them.",
+  "what_you_lose": [
+    "Independence: self-hosted on the same infra it watches, an outage takes out the alarm too",
+    "$24/yr of not thinking"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.5,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 10
+  },
+  "hardware_tier": "pi",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 35,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/cronitor-healthchecks.md",
+      "compose/cronitor-healthchecks.yml"
+    ],
+    "what_broke": [
+      "The image's built-in healthcheck probes the database connection, and the sqlite default has no writable path in the stock container — it 500s forever until you either mount the sqlite dir correctly or (better) give it the Postgres it actually wants"
+    ]
+  },
+  "compose": "compose/cronitor-healthchecks.yml"
 }

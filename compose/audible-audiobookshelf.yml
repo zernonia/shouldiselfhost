@@ -1,0 +1,23 @@
+# Audiobookshelf — audiobook + podcast server for files you own (tested against Audible's
+# job list; the catalog you don't own is the verdict)
+services:
+  audiobookshelf:
+    image: advplyr/audiobookshelf:latest
+    container_name: audiobookshelf
+    restart: unless-stopped
+    ports:
+      - "13378:80"
+    volumes:
+      - abs-config:/config
+      - abs-metadata:/metadata
+      - ./audiobooks:/audiobooks:ro # point at your library
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:80/healthcheck >/dev/null || exit 1"] # image has wget, not curl
+      interval: 5s
+      timeout: 5s
+      retries: 24
+      start_period: 20s
+
+volumes:
+  abs-config:
+  abs-metadata:

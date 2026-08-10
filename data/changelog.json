@@ -1,12 +1,212 @@
 [
-  { "date": "2026-08-10", "app": "notion", "from": null, "to": "KINDA", "reason": "Initial verdict: docs half moves in an evening, databases and mobile don't move at all." },
-  { "date": "2026-08-10", "app": "uptimerobot", "from": null, "to": "YES", "reason": "Initial verdict: one container does the whole job list, breaks even in under 2 months." },
-  { "date": "2026-08-10", "app": "bitly", "from": null, "to": "YES", "reason": "Initial verdict: purest markup on the site — a redirect table for $120/yr." },
-  { "date": "2026-08-10", "app": "plausible", "from": null, "to": "YES", "reason": "Initial verdict: same software, no pageview cap; margin thinner than it looks (ClickHouse eats RAM)." },
-  { "date": "2026-08-10", "app": "ynab", "from": null, "to": "YES", "reason": "Initial verdict: Actual + SimpleFIN does the method for a tenth of the price." },
-  { "date": "2026-08-10", "app": "1password", "from": null, "to": "NOT_REALLY", "reason": "Initial verdict: never breaks even at any realistic hourly rate, and the stakes are every password you own." },
-  { "date": "2026-08-10", "app": "chatgpt", "from": null, "to": "NOT_REALLY", "reason": "Initial verdict: you'd self-host the wrapper; the model is the product." },
-  { "date": "2026-08-10", "app": "backblaze-personal-backup", "from": null, "to": "NOT_REALLY", "reason": "Initial verdict: your last-resort backup shouldn't depend on your own maintenance discipline." },
-  { "date": "2026-08-10", "app": "slack", "from": null, "to": "KINDA", "reason": "Initial verdict: per-seat math flips hard at ~4 seats, if someone owns the pager." },
-  { "date": "2026-08-10", "app": "spotify", "from": null, "to": "NOT_REALLY", "reason": "Initial verdict: replaces the player, not the catalog — and the catalog is the subscription." }
+  {
+    "date": "2026-08-10",
+    "app": "notion",
+    "from": null,
+    "to": "KINDA",
+    "reason": "Initial verdict: docs half moves in an evening, databases and mobile don't move at all."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "uptimerobot",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: one container does the whole job list, breaks even in under 2 months."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "bitly",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: purest markup on the site — a redirect table for $120/yr."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "plausible",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: same software, no pageview cap; margin thinner than it looks (ClickHouse eats RAM)."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "ynab",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: Actual + SimpleFIN does the method for a tenth of the price."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "1password",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: never breaks even at any realistic hourly rate, and the stakes are every password you own."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "chatgpt",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: you'd self-host the wrapper; the model is the product."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "backblaze-personal-backup",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: your last-resort backup shouldn't depend on your own maintenance discipline."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "slack",
+    "from": null,
+    "to": "KINDA",
+    "reason": "Initial verdict: per-seat math flips hard at ~4 seats, if someone owns the pager."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "spotify",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: replaces the player, not the catalog — and the catalog is the subscription."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "feedly",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: One container, your feeds, no $84/yr for the privilege of reading RSS."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "inoreader",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: Miniflux is 20MB of Go that does the reading part of a $120/yr subscription. Bring your own opinions about minimalism."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "pinboard",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: linkding installs in 25 minutes and runs on a potato. Pinboard costs $22 a YEAR. Five maintenance minutes a month already makes self-hosting the more expensive bookmark box."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "grafana-cloud",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: Grafana OSS is the same dashboards without the per-seat cloud math."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "dropbox",
+    "from": null,
+    "to": "KINDA",
+    "reason": "Initial verdict: Nextcloud replaces Dropbox and half your Google account."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "todoist",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: Vikunja does lists, projects, labels and sharing in one small container."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "umami-cloud",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: Same software as the $20/mo cloud, two containers, no event caps. The rare analytics verdict where capability is 100% by construction."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "mailchimp",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: listmonk runs your lists and campaigns for the cost of a Postgres; pair it with SES at ~$0.10/1k emails and Mailchimp's $156/yr becomes a rounding error. Deliverability is now a skill you own."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "squarespace",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: WordPress + a good theme does the Squarespace job for $25/mo less, and it's the most documented software on earth. Keep auto-updates on and the plugin count low."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "miro",
+    "from": null,
+    "to": "KINDA",
+    "reason": "Initial verdict: Excalidraw covers the sketching that most Miro seats actually do, in one tiny container. Worth it if solo or link-sharing files; live multi-cursor rooms need the extra room server and that's where the weekend goes."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "calendly",
+    "from": null,
+    "to": "KINDA",
+    "reason": "Initial verdict: Cal.com self-hosted does the booking-page job, but it's the heaviest app in our index and the setup is configuration, not compose. Worth it if you're a team with a server habit; a solo calendar link is cheaper to rent."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "ghost-pro",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: It's the same Ghost. $18/mo buys hosting, email infrastructure and zero ops."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "sentry",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: GlitchTip speaks the Sentry SDK protocol and fits on a normal VPS. Sentry's own self-host wants 16GB and a small ops team."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "cronitor",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: Healthchecks is excellent and installs in half an hour. Cronitor's solo tier is $2/mo. If your time is worth anything at all, the subscription wins."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "evernote",
+    "from": null,
+    "to": "KINDA",
+    "reason": "Initial verdict: Trilium's tree-of-notes beats Evernote for structured thinkers on desktop. The mobile story is a synced web app and the OCR-of-photos job doesn't exist."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "audible",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: Audiobookshelf is a gorgeous server for audiobooks you own."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "google-one",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: Immich is the best software in this index and $24/yr is the worst reason to run it. A photos server wants real RAM, real storage and real backups."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "nordvpn",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: wg-easy gives you a WireGuard tunnel to your own server in half an hour."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "zoom",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: Jitsi self-hosts real video calls."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "instapaper",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: wallabag archives the full page."
+  }
 ]

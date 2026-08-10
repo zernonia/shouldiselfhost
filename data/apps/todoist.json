@@ -11,13 +11,46 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/todoist"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "tasks & projects",
+    "labels/filters/due dates",
+    "sharing lists",
+    "mobile capture"
+  ],
+  "verdict": "YES",
   "alternatives": [
     "vikunja"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "Vikunja does lists, projects, labels and sharing in one small container — the $84/yr was for the apps, and the web app plus third-party clients cover enough.",
+  "what_you_lose": [
+    "Todoist's polished native apps and natural-language capture",
+    "Karma, if you liked being graded by your todo list"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.5,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 10
+  },
+  "hardware_tier": "pi",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 35,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/todoist-vikunja.md",
+      "compose/todoist-vikunja.yml"
+    ],
+    "what_broke": [
+      "Fresh named volumes initialize root-owned while the image runs as uid 1000 — file handler crash-loops on permission denied until you set user: or chown",
+      "The image is distroless (no shell, no wget) — the compose ships a busybox sidecar probe so the health gate still proves HTTP serves",
+      "Registration ships open by default — create your account, then flip VIKUNJA_SERVICE_ENABLEREGISTRATION off"
+    ]
+  },
+  "compose": "compose/todoist-vikunja.yml"
 }

@@ -1,0 +1,43 @@
+# Healthchecks — cron job monitoring (tested against Cronitor's job list; see the verdict
+# for why the $2/mo subscription out-competes your own attention)
+services:
+  healthchecks:
+    image: healthchecks/healthchecks:latest
+    container_name: healthchecks
+    restart: unless-stopped
+    depends_on:
+      hc-db:
+        condition: service_healthy
+    environment:
+      SECRET_KEY: 7f3a9c1e5b8d2f6a0c4e8b2d6f0a4c8e # throwaway test value
+      SITE_ROOT: http://localhost:8089
+      ALLOWED_HOSTS: "*"
+      DEBUG: "False"
+      DB: postgres
+      DB_HOST: hc-db
+      DB_NAME: hc
+      DB_USER: hc
+      DB_PASSWORD: hc
+    ports:
+      - "8089:8000"
+    # No healthcheck override: the image ships its own (./fetchstatus.py probes
+    # /api/v3/status/, which checks the DB connection — sqlite without a writable dir
+    # fails it, which is why this compose brings postgres).
+
+  hc-db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: hc
+      POSTGRES_PASSWORD: hc
+      POSTGRES_DB: hc
+    volumes:
+      - hc-pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U hc"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+volumes:
+  hc-pg:

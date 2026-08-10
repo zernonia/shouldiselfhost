@@ -1,0 +1,43 @@
+# Cal.com — scheduling infrastructure (replaces Calendly). The heaviest single app in our
+# index: big image, wants real RAM, and most of the setup time is configuration, not boot.
+# Secrets are throwaway test values: openssl rand -base64 32
+services:
+  calcom:
+    image: calcom/cal.com:latest
+    container_name: calcom
+    restart: unless-stopped
+    depends_on:
+      calcom-db:
+        condition: service_healthy
+    environment:
+      NEXT_PUBLIC_WEBAPP_URL: http://localhost:3003
+      NEXTAUTH_SECRET: 8Yz1kR9nQ2wX5vB7mC4tL6pJ3sD0fG8hK1aN5uE9rT2Y=
+      CALENDSO_ENCRYPTION_KEY: 2FduT8qM7xW3kV9zB5nC1sL4pR6jD0gH8fK2aQ5uE7rY=
+      DATABASE_URL: postgresql://calcom:calcom@calcom-db:5432/calcom
+      DATABASE_DIRECT_URL: postgresql://calcom:calcom@calcom-db:5432/calcom
+    ports:
+      - "3003:3000"
+    healthcheck:
+      test: ["CMD-SHELL", "node -e \"fetch('http://localhost:3000/auth/login').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))\""]
+      interval: 10s
+      timeout: 10s
+      retries: 60
+      start_period: 120s
+
+  calcom-db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: calcom
+      POSTGRES_PASSWORD: calcom
+      POSTGRES_DB: calcom
+    volumes:
+      - calcom-pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U calcom"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+volumes:
+  calcom-pg:

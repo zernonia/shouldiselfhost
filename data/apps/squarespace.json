@@ -11,8 +11,14 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/squarespace"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "marketing site / blog",
+    "templates & theming",
+    "forms",
+    "SEO basics",
+    "commerce (via plugins)"
+  ],
+  "verdict": "YES",
   "alternatives": [
     "wordpress",
     "ghost"
@@ -20,5 +26,31 @@
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "WordPress + a good theme does the Squarespace job for $25/mo less, and it's the most documented software on earth. Keep auto-updates on and the plugin count low — the maintenance minutes assume discipline.",
+  "what_you_lose": [
+    "Squarespace's design taste as a default — WordPress makes ugly possible again",
+    "Not thinking about PHP security advisories, ever"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 1.5,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 30
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 60,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/squarespace-wordpress.md",
+      "compose/squarespace-wordpress.yml"
+    ],
+    "what_broke": [
+      "Nothing at boot — WordPress's risks arrive later, one plugin at a time"
+    ]
+  },
+  "compose": "compose/squarespace-wordpress.yml"
 }

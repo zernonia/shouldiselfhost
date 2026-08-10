@@ -11,13 +11,46 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/evernote"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "notes with hierarchy/links",
+    "web clipping",
+    "search",
+    "mobile capture",
+    "OCR of images/handwriting"
+  ],
+  "verdict": "KINDA",
   "alternatives": [
     "trilium"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "Trilium's tree-of-notes beats Evernote for structured thinkers on desktop. The mobile story is a synced web app and the OCR-of-photos job doesn't exist — worth it if your notes live on a keyboard.",
+  "what_you_lose": [
+    "Native mobile apps with offline + camera capture — Trilium mobile is a web view",
+    "Evernote's OCR on photos and scans",
+    "10GB of someone else's storage"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.8,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 10
+  },
+  "hardware_tier": "pi",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 40,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/evernote-trilium.md",
+      "compose/evernote-trilium.yml"
+    ],
+    "what_broke": [
+      "Project moved: zadam/trilium is archived, TriliumNext is the maintained fork — star counts and docker tags split across the two confuses every comparison"
+    ]
+  },
+  "compose": "compose/evernote-trilium.yml"
 }

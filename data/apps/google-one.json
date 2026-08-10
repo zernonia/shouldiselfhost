@@ -11,8 +11,13 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/google-one"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "photo/video backup from phones",
+    "ML search & faces",
+    "shared albums",
+    "100GB of durable storage"
+  ],
+  "verdict": "NOT_REALLY",
   "alternatives": [
     "immich",
     "nextcloud"
@@ -20,5 +25,32 @@
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "Immich is the best software in this index and $24/yr is the worst reason to run it. A photos server wants real RAM, real storage and real backups — run Immich for ownership and privacy, not to save two dollars a month.",
+  "what_you_lose": [
+    "Google's durability — your photos now live on disks you must 3-2-1 yourself, and 'backup of the backup' is on you",
+    "Storage math: the Immich box + offsite copy costs more than $1.99/mo forever"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 3,
+    "storage_usd_mo": 1,
+    "maint_min_mo": 30
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 60,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/google-one-immich.md",
+      "compose/google-one-immich.yml"
+    ],
+    "what_broke": [
+      "Images are ghcr.io-hosted — this pair's compose boot is verified by the CI runner",
+      "Immich requires its own pgvector-patched Postgres image; a vanilla postgres:16 will not do"
+    ]
+  },
+  "compose": "compose/google-one-immich.yml"
 }

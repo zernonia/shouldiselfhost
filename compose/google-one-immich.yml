@@ -1,0 +1,60 @@
+# Immich — self-hosted photos with ML search (tested against Google One's job list; see the
+# verdict for why $24/yr is not the reason to run it — ownership is).
+# Images are ghcr.io-hosted: boot-verified by the CI runner. Upstream images ship healthchecks.
+services:
+  immich-server:
+    image: ghcr.io/immich-app/immich-server:release
+    container_name: immich-server
+    restart: unless-stopped
+    depends_on:
+      immich-db:
+        condition: service_healthy
+      immich-redis:
+        condition: service_healthy
+    environment: &immich-env
+      DB_HOSTNAME: immich-db
+      DB_USERNAME: immich
+      DB_PASSWORD: immich
+      DB_DATABASE_NAME: immich
+      REDIS_HOSTNAME: immich-redis
+    ports:
+      - "2283:2283"
+    volumes:
+      - immich-upload:/data
+
+  immich-machine-learning:
+    image: ghcr.io/immich-app/immich-machine-learning:release
+    container_name: immich-ml
+    restart: unless-stopped
+    environment: *immich-env
+    volumes:
+      - immich-ml-cache:/cache
+
+  immich-redis:
+    image: valkey/valkey:8-alpine
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "valkey-cli ping | grep PONG"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  immich-db:
+    image: ghcr.io/immich-app/postgres:16-vectorchord0.4.3
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: immich
+      POSTGRES_PASSWORD: immich
+      POSTGRES_DB: immich
+    volumes:
+      - immich-pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U immich"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+volumes:
+  immich-upload:
+  immich-ml-cache:
+  immich-pg:
