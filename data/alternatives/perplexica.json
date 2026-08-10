@@ -1,0 +1,20 @@
+{
+  "id": "perplexica",
+  "name": "Vane",
+  "tagline": "An answering engine with citations, assembled from a SearXNG you run and a model key you already pay for. Renamed from Perplexica in 2026.",
+  "repo": "ItzCrazyKns/Vane",
+  "site": "https://github.com/ItzCrazyKns/Vane",
+  "license": "MIT",
+  "category": "ai-tools",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 2,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

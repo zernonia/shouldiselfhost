@@ -1,0 +1,20 @@
+{
+  "id": "onlyoffice",
+  "name": "ONLYOFFICE Docs",
+  "tagline": "The Word, Excel and PowerPoint half of an office subscription, as a server your own file app hands documents to.",
+  "repo": "ONLYOFFICE/DocumentServer",
+  "site": "https://www.onlyoffice.com",
+  "license": "AGPL-3.0",
+  "category": "files-docs",
+  "resources": {
+    "ram_min_mb": 4096,
+    "disk_gb": 40,
+    "arm64": true,
+    "containers": 1,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

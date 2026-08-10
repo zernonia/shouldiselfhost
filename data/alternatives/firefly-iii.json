@@ -1,0 +1,20 @@
+{
+  "id": "firefly-iii",
+  "name": "Firefly III",
+  "tagline": "A full transaction ledger for household money, with budgets, rules and reports, and imports you drive yourself.",
+  "repo": "firefly-iii/firefly-iii",
+  "site": "https://www.firefly-iii.org",
+  "license": "AGPL-3.0",
+  "category": "money-home",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 3,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

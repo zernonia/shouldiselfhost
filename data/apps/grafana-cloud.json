@@ -1,0 +1,23 @@
+{
+  "id": "grafana-cloud",
+  "name": "Grafana Cloud",
+  "domain": "grafana.com",
+  "category": "monitoring",
+  "price_usd_mo": 19,
+  "price_plan": "Pro",
+  "price_unit": "usage",
+  "price_source": "https://grafana.com/pricing/",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/grafana-cloud"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "grafana"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

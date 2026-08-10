@@ -1,0 +1,24 @@
+{
+  "id": "zendesk",
+  "name": "Zendesk",
+  "domain": "zendesk.com",
+  "category": "comms-scheduling",
+  "price_usd_mo": 19,
+  "price_plan": "Support Team",
+  "price_unit": "per-seat",
+  "price_source": "https://www.zendesk.com/pricing/",
+  "price_checked": "2026-08-07",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/zendesk"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "zammad",
+    "chatwoot"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

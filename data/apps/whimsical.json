@@ -1,0 +1,24 @@
+{
+  "id": "whimsical",
+  "name": "Whimsical",
+  "domain": "whimsical.com",
+  "category": "design-whiteboard",
+  "price_usd_mo": 10,
+  "price_plan": "Pro",
+  "price_unit": "per-seat",
+  "price_source": "https://whimsical.com/pricing",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/whimsical"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "drawio",
+    "excalidraw"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

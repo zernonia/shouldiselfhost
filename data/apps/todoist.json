@@ -1,0 +1,23 @@
+{
+  "id": "todoist",
+  "name": "Todoist",
+  "domain": "todoist.com",
+  "category": "work-pm",
+  "price_usd_mo": 7,
+  "price_plan": "Pro",
+  "price_unit": "flat",
+  "price_source": "https://www.todoist.com/pricing",
+  "price_checked": "2026-08-05",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/todoist"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "vikunja"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

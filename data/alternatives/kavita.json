@@ -1,0 +1,20 @@
+{
+  "id": "kavita",
+  "name": "Kavita",
+  "tagline": "A reading server for the epubs, PDFs and comics you already own, with per-user progress and OPDS on by default.",
+  "repo": "Kareadita/Kavita",
+  "site": "https://www.kavitareader.com",
+  "license": "GPL-3.0",
+  "category": "reading-bookmarks",
+  "resources": {
+    "ram_min_mb": 1024,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 1,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

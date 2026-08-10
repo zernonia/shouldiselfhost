@@ -1,0 +1,24 @@
+{
+  "id": "monday-com",
+  "name": "monday.com",
+  "domain": "monday.com",
+  "category": "work-pm",
+  "price_usd_mo": 12,
+  "price_plan": "Basic",
+  "price_unit": "per-seat",
+  "price_source": "https://monday.com/pricing",
+  "price_checked": "2026-08-07",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/monday-com"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "leantime",
+    "openproject"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

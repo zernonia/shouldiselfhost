@@ -1,0 +1,50 @@
+{
+  "id": "ynab",
+  "name": "YNAB",
+  "domain": "ynab.com",
+  "category": "money",
+  "price_usd_mo": 9.08,
+  "price_plan": "Annual",
+  "price_unit": "flat",
+  "price_source": "https://www.ynab.com/pricing",
+  "price_checked": "2026-08-05",
+  "jobs": [
+    "envelope (zero-based) budgeting",
+    "bank sync",
+    "multi-device sync",
+    "spending reports"
+  ],
+  "verdict": "YES",
+  "verdict_reason": "Actual does zero-based budgeting with your data in a SQLite file you can read, and bank sync via SimpleFIN costs less than one month of YNAB per year.",
+  "what_you_lose": [
+    "YNAB's first-party bank sync — Actual needs SimpleFIN Bridge (~$1.50/mo) or GoCardless for EU banks, one more account to hold",
+    "The YNAB method community, workshops and support humans",
+    "Nobody to email when a sync breaks the night before rent is due"
+  ],
+  "alternatives": ["actual-budget", "firefly-iii"],
+  "economics": {
+    "vps_share_usd_mo": 0.6,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 15
+  },
+  "hardware_tier": "pi",
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  },
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 40,
+    "assistant": "claude-code",
+    "evidence": ["logs/ynab-actual-budget.md", "compose/ynab-actual-budget.yml"],
+    "what_broke": [
+      "Silent exit where IPv6 is disabled: the server binds '::' by default, logs 'Listening' and then exits cleanly — ACTUAL_HOSTNAME=0.0.0.0 fixes it, and the clean exit code makes it a genuinely nasty diagnosis"
+    ]
+  },
+  "compose": "compose/ynab-actual-budget.yml",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/ynab"
+  }
+}

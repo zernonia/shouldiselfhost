@@ -1,0 +1,20 @@
+{
+  "id": "home-assistant",
+  "name": "Home Assistant",
+  "tagline": "Open source home automation on hardware you own, where the automations, the history and every device credential stay put.",
+  "repo": "home-assistant/core",
+  "site": "https://www.home-assistant.io",
+  "license": "Apache-2.0",
+  "category": "money-home",
+  "resources": {
+    "ram_min_mb": 1024,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 1,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "shlink",
+  "name": "Shlink",
+  "tagline": "Your own short-link domain, with visit counts and a REST API the existing apps already speak.",
+  "repo": "shlinkio/shlink",
+  "site": "https://shlink.io",
+  "license": "MIT",
+  "category": "marketing-content",
+  "resources": {
+    "ram_min_mb": 1024,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

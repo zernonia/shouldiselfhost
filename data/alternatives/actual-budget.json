@@ -1,0 +1,20 @@
+{
+  "id": "actual-budget",
+  "name": "Actual Budget",
+  "tagline": "Zero-based envelope budgeting in one container, with the budget file on your disk and no subscription attached to your money.",
+  "repo": "actualbudget/actual",
+  "site": "https://actualbudget.org",
+  "license": "MIT",
+  "category": "money-home",
+  "resources": {
+    "ram_min_mb": 512,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 1,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

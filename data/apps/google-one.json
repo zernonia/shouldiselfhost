@@ -1,0 +1,24 @@
+{
+  "id": "google-one",
+  "name": "Google One",
+  "domain": "one.google.com",
+  "category": "photos-media",
+  "price_usd_mo": 1.99,
+  "price_plan": "Basic (100 GB)",
+  "price_unit": "flat",
+  "price_source": "https://one.google.com/about/plans",
+  "price_checked": "2026-08-05",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/google-one"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "immich",
+    "nextcloud"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

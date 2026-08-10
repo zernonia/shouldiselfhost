@@ -1,0 +1,20 @@
+{
+  "id": "piwigo",
+  "name": "Piwigo",
+  "tagline": "A photo gallery on your own domain, with albums, tags and per-album permissions, and no cap on what you upload.",
+  "repo": "Piwigo/Piwigo",
+  "site": "https://piwigo.org",
+  "license": "GPL-2.0-or-later",
+  "category": "photos-media",
+  "resources": {
+    "ram_min_mb": 1024,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

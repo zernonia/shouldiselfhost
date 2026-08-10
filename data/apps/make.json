@@ -1,0 +1,24 @@
+{
+  "id": "make",
+  "name": "Make",
+  "domain": "make.com",
+  "category": "automation-dev",
+  "price_usd_mo": 9,
+  "price_plan": "Core",
+  "price_unit": "usage",
+  "price_source": "https://www.make.com/en/pricing",
+  "price_checked": "2026-08-07",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/make"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "automatisch",
+    "activepieces"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

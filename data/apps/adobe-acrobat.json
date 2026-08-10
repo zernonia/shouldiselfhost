@@ -1,0 +1,23 @@
+{
+  "id": "adobe-acrobat",
+  "name": "Adobe Acrobat",
+  "domain": "adobe.com",
+  "category": "files-docs",
+  "price_usd_mo": 24.99,
+  "price_plan": "Acrobat Standard",
+  "price_unit": "flat",
+  "price_source": "https://www.adobe.com/acrobat/pricing.html",
+  "price_checked": "2026-08-05",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/adobe-acrobat"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "stirling-pdf"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

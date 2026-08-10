@@ -1,0 +1,20 @@
+{
+  "id": "typebot",
+  "name": "Typebot",
+  "tagline": "Draw a conversation, publish it on your own domain, and keep every answer in a database you own.",
+  "repo": "baptisteArno/typebot.io",
+  "site": "https://typebot.io",
+  "license": "FSL-1.1-ALv2",
+  "category": "marketing-content",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 15,
+    "arm64": true,
+    "containers": 3,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

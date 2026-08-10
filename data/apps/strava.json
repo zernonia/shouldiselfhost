@@ -1,0 +1,23 @@
+{
+  "id": "strava",
+  "name": "Strava",
+  "domain": "strava.com",
+  "category": "money-home",
+  "price_usd_mo": 11.67,
+  "price_plan": "Family",
+  "price_unit": "flat",
+  "price_source": "https://www.strava.com/pricing",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/strava"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "fittrackee"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "keila",
+  "name": "Keila",
+  "tagline": "Signup forms, contacts and campaigns out of one Elixir release and one PostgreSQL, with the sending handed to an SMTP relay you pick.",
+  "repo": "pentacent/keila",
+  "site": "https://www.keila.io",
+  "license": "AGPL-3.0",
+  "category": "marketing-content",
+  "resources": {
+    "ram_min_mb": 1024,
+    "disk_gb": 5,
+    "arm64": false,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

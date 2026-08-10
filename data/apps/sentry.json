@@ -1,0 +1,23 @@
+{
+  "id": "sentry",
+  "name": "Sentry",
+  "domain": "sentry.io",
+  "category": "monitoring",
+  "price_usd_mo": 26,
+  "price_plan": "Team",
+  "price_unit": "usage",
+  "price_source": "https://sentry.io/pricing/",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/sentry"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "glitchtip"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

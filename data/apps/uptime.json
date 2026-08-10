@@ -1,0 +1,25 @@
+{
+  "id": "uptime",
+  "name": "Uptime.com",
+  "domain": "uptime.com",
+  "category": "monitoring",
+  "price_usd_mo": 7,
+  "price_plan": "Real User Monitoring · 50,000 data points",
+  "price_unit": "usage",
+  "price_source": "https://uptime.com/pricing",
+  "price_checked": "2026-08-07",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/uptime"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "kener",
+    "gatus",
+    "uptime-kuma"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

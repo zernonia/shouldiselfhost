@@ -1,0 +1,23 @@
+{
+  "id": "zoom",
+  "name": "Zoom",
+  "domain": "zoom.com",
+  "category": "comms-scheduling",
+  "price_usd_mo": 16.99,
+  "price_plan": "Pro",
+  "price_unit": "per-seat",
+  "price_source": "https://zoom.us/pricing",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/zoom"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "jitsi"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "codesandbox",
+  "name": "CodeSandbox",
+  "domain": "codesandbox.io",
+  "category": "automation-dev",
+  "price_usd_mo": 12,
+  "price_plan": "Pro",
+  "price_unit": "flat",
+  "price_source": "https://codesandbox.io/pricing",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/codesandbox"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "code-server"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

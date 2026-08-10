@@ -1,0 +1,23 @@
+{
+  "id": "audible",
+  "name": "Audible",
+  "domain": "audible.com",
+  "category": "photos-media",
+  "price_usd_mo": 7.95,
+  "price_plan": "Audible Plus",
+  "price_unit": "flat",
+  "price_source": "https://www.audible.com/ep/memberships",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/audible"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "audiobookshelf"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "figma",
+  "name": "Figma",
+  "domain": "figma.com",
+  "category": "design-whiteboard",
+  "price_usd_mo": 20,
+  "price_plan": "Professional",
+  "price_unit": "per-seat",
+  "price_source": "https://www.figma.com/pricing/",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/figma"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "penpot",
+    "excalidraw"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

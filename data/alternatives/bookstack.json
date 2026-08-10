@@ -1,0 +1,20 @@
+{
+  "id": "bookstack",
+  "name": "BookStack",
+  "tagline": "A team wiki organised into shelves, books, chapters and pages, on a hostname you own and a database you can dump.",
+  "repo": "BookStackApp/BookStack",
+  "site": "https://www.bookstackapp.com",
+  "license": "MIT",
+  "category": "notes-wikis",
+  "resources": {
+    "ram_min_mb": 1024,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

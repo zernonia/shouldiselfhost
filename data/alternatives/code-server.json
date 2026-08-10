@@ -1,0 +1,20 @@
+{
+  "id": "code-server",
+  "name": "code-server",
+  "tagline": "VS Code in a browser tab, running on a machine you own, with the terminal and the toolchain that come with it.",
+  "repo": "coder/code-server",
+  "site": "https://coder.com/docs/code-server",
+  "license": "MIT",
+  "category": "automation-dev",
+  "resources": {
+    "ram_min_mb": 1024,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 1,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

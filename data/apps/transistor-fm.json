@@ -1,0 +1,24 @@
+{
+  "id": "transistor-fm",
+  "name": "Transistor",
+  "domain": "transistor.fm",
+  "category": "marketing-content",
+  "price_usd_mo": 19,
+  "price_plan": "Starter",
+  "price_unit": "flat",
+  "price_source": "https://transistor.fm/pricing/",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/transistor-fm"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "castopod",
+    "peertube"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

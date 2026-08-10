@@ -1,0 +1,20 @@
+{
+  "id": "fittrackee",
+  "name": "FitTrackee",
+  "tagline": "A training log on your own server: your .gpx and .fit files, on a map, with the statistics and none of the leaderboard.",
+  "repo": "SamR1/FitTrackee",
+  "site": "https://docs.fittrackee.org",
+  "license": "AGPL-3.0",
+  "category": "money-home",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 10,
+    "arm64": false,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

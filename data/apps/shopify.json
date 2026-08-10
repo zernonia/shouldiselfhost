@@ -1,0 +1,23 @@
+{
+  "id": "shopify",
+  "name": "Shopify",
+  "domain": "shopify.com",
+  "category": "marketing-content",
+  "price_usd_mo": 5,
+  "price_plan": "Starter",
+  "price_unit": "flat",
+  "price_source": "https://www.shopify.com/pricing",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/shopify"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "prestashop"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

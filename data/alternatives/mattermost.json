@@ -1,0 +1,20 @@
+{
+  "id": "mattermost",
+  "name": "Mattermost",
+  "tagline": "Channels, threads and file sharing for a team, on a server you own, with no per-seat meter and no ninety-day history cliff.",
+  "repo": "mattermost/mattermost",
+  "site": "https://mattermost.com",
+  "license": "MIT",
+  "category": "comms-scheduling",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 10,
+    "arm64": false,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "wanderlog-pro",
+  "name": "Wanderlog",
+  "domain": "wanderlog.com",
+  "category": "money-home",
+  "price_usd_mo": 3.33,
+  "price_plan": "Pro",
+  "price_unit": "flat",
+  "price_source": "https://apps.apple.com/us/app/wanderlog/id1476732439",
+  "price_checked": "2026-08-07",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/wanderlog-pro"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "adventurelog"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

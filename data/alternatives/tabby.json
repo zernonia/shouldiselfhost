@@ -1,0 +1,20 @@
+{
+  "id": "tabby",
+  "name": "Tabby",
+  "tagline": "A code-completion server on a GPU you control, so the surrounding file never leaves your building to get an autocomplete.",
+  "repo": "TabbyML/tabby",
+  "site": "https://www.tabbyml.com",
+  "license": "Apache-2.0",
+  "category": "ai-tools",
+  "resources": {
+    "ram_min_mb": 4096,
+    "disk_gb": 20,
+    "arm64": false,
+    "containers": 1,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

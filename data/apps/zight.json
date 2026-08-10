@@ -1,0 +1,23 @@
+{
+  "id": "zight",
+  "name": "Zight",
+  "domain": "zight.com",
+  "category": "files-docs",
+  "price_usd_mo": 9.95,
+  "price_plan": "Create",
+  "price_unit": "per-seat",
+  "price_source": "https://zight.com/plans/",
+  "price_checked": "2026-08-07",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/zight"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "zipline"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

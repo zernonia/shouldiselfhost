@@ -1,0 +1,20 @@
+{
+  "id": "leantime",
+  "name": "Leantime",
+  "tagline": "Goals, boards, timesheets and a wiki from one container plus a database, with no seat minimum and no per-seat bill.",
+  "repo": "Leantime/leantime",
+  "site": "https://leantime.io",
+  "license": "AGPL-3.0",
+  "category": "work-pm",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

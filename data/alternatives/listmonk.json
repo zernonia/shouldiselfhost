@@ -1,0 +1,20 @@
+{
+  "id": "listmonk",
+  "name": "listmonk",
+  "tagline": "Your mailing list, your campaigns and your click stats out of one Go binary, with the sending handed to an SMTP relay you pick.",
+  "repo": "knadh/listmonk",
+  "site": "https://listmonk.app",
+  "license": "AGPL-3.0",
+  "category": "marketing-content",
+  "resources": {
+    "ram_min_mb": 1024,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "plausible",
+  "name": "Plausible Analytics",
+  "domain": "plausible.io",
+  "category": "analytics",
+  "price_usd_mo": 9,
+  "price_plan": "Starter",
+  "price_unit": "flat",
+  "price_source": "https://plausible.io/#pricing",
+  "price_checked": "2026-08-05",
+  "jobs": [
+    "privacy-friendly web analytics",
+    "goals & custom events",
+    "no pageview caps",
+    "email/Slack reports"
+  ],
+  "verdict": "YES",
+  "verdict_reason": "The SaaS and the self-host are the same software — the Community Edition removes the pageview cap and the invoice at once. Margin is thinner than it looks: ClickHouse wants real RAM.",
+  "what_you_lose": [
+    "Their infrastructure absorbing traffic spikes — a front-page day is now your ClickHouse's problem",
+    "Funding the developers whose code you're running (their pricing page will tell you the same, correctly)",
+    "Managed email reports and uptime — small, but it's on your pager now"
+  ],
+  "alternatives": ["plausible", "umami"],
+  "economics": {
+    "vps_share_usd_mo": 2.5,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 15
+  },
+  "hardware_tier": "vps",
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  },
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 40,
+    "assistant": "claude-code",
+    "evidence": ["logs/plausible-plausible.md", "compose/plausible-plausible.yml"],
+    "what_broke": [
+      "CE images live on ghcr.io, not Docker Hub — networks that only mirror Docker Hub (ours, during verification) can't pull them; the compose boot for this pair is verified by the CI runner instead",
+      "First boot must run createdb + migrate before serve — the compose command handles it, but a bare `run` exits confusingly"
+    ]
+  },
+  "compose": "compose/plausible-plausible.yml",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/plausible"
+  }
+}

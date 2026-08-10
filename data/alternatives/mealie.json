@@ -1,0 +1,20 @@
+{
+  "id": "mealie",
+  "name": "Mealie",
+  "tagline": "Your recipe box, meal plans and shopping lists on one container you own, with a Paprika importer and a clipper that reads most recipe sites.",
+  "repo": "mealie-recipes/mealie",
+  "site": "https://docs.mealie.io",
+  "license": "AGPL-3.0",
+  "category": "money-home",
+  "resources": {
+    "ram_min_mb": 1024,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 1,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "wordpress",
+  "name": "WordPress",
+  "tagline": "The CMS most of the web already runs, on a box you rent, with the themes, plugins and media library intact.",
+  "repo": "WordPress/WordPress",
+  "site": "https://wordpress.org",
+  "license": "GPL-2.0-or-later",
+  "category": "marketing-content",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

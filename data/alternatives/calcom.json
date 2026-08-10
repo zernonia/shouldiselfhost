@@ -1,0 +1,20 @@
+{
+  "id": "calcom",
+  "name": "Cal.com",
+  "tagline": "Send someone a link, they pick a slot, the invite lands in both calendars, and none of it runs on a domain you are renting.",
+  "repo": "calcom/cal.diy",
+  "site": "https://cal.com",
+  "license": "AGPL-3.0",
+  "category": "comms-scheduling",
+  "resources": {
+    "ram_min_mb": 4096,
+    "disk_gb": 15,
+    "arm64": true,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

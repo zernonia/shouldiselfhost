@@ -1,0 +1,20 @@
+{
+  "id": "ghost",
+  "name": "Ghost",
+  "tagline": "The same publishing platform Ghost(Pro) hosts, on your own box, with the editor, the themes and the members list intact.",
+  "repo": "TryGhost/Ghost",
+  "site": "https://ghost.org",
+  "license": "MIT",
+  "category": "marketing-content",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

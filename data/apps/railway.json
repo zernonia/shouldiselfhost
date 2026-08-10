@@ -1,0 +1,24 @@
+{
+  "id": "railway",
+  "name": "Railway",
+  "domain": "railway.com",
+  "category": "automation-dev",
+  "price_usd_mo": 5,
+  "price_plan": "Hobby",
+  "price_unit": "flat",
+  "price_source": "https://railway.com/pricing",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/railway"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "dokploy",
+    "coolify"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "miro",
+  "name": "Miro",
+  "domain": "miro.com",
+  "category": "design-whiteboard",
+  "price_usd_mo": 8,
+  "price_plan": "Starter",
+  "price_unit": "per-seat",
+  "price_source": "https://miro.com/pricing/",
+  "price_checked": "2026-08-05",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/miro"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "excalidraw"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

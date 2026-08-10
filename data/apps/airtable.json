@@ -1,0 +1,23 @@
+{
+  "id": "airtable",
+  "name": "Airtable",
+  "domain": "airtable.com",
+  "category": "work-pm",
+  "price_usd_mo": 20,
+  "price_plan": "Team",
+  "price_unit": "per-seat",
+  "price_source": "https://airtable.com/pricing",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/airtable"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "grist"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

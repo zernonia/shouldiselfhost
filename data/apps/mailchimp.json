@@ -1,0 +1,23 @@
+{
+  "id": "mailchimp",
+  "name": "Mailchimp",
+  "domain": "mailchimp.com",
+  "category": "marketing-content",
+  "price_usd_mo": 13,
+  "price_plan": "Essentials",
+  "price_unit": "flat",
+  "price_source": "https://mailchimp.com/pricing/marketing/",
+  "price_checked": "2026-08-05",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/mailchimp"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "listmonk"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

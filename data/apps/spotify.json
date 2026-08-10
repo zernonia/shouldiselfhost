@@ -1,0 +1,51 @@
+{
+  "id": "spotify",
+  "name": "Spotify",
+  "domain": "spotify.com",
+  "category": "media",
+  "price_usd_mo": 11.99,
+  "price_plan": "Premium Individual",
+  "price_unit": "flat",
+  "price_source": "https://www.spotify.com/premium/",
+  "price_checked": "2026-08-10",
+  "jobs": [
+    "stream a ~100M-track catalog",
+    "discovery: recommendations, radio, Discover Weekly",
+    "playlists synced across every device",
+    "offline listening on mobile"
+  ],
+  "verdict": "NOT_REALLY",
+  "verdict_reason": "Navidrome is a lovely server for music you own — and Spotify's product is music you don't. Self-hosting replaces the player, not the catalog, and the catalog is the subscription.",
+  "what_you_lose": [
+    "The catalog: everything you haven't bought — which for most subscribers is everything",
+    "Discovery — Discover Weekly has no self-hosted answer, because the input is everyone else's listening",
+    "Zero-effort availability on every speaker, car and TV that ships a Spotify button"
+  ],
+  "alternatives": ["navidrome"],
+  "economics": {
+    "vps_share_usd_mo": 0.5,
+    "storage_usd_mo": 1,
+    "maint_min_mo": 15
+  },
+  "hardware_tier": "pi",
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  },
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 30,
+    "assistant": "claude-code",
+    "evidence": ["logs/spotify-navidrome.md", "compose/spotify-navidrome.yml"],
+    "what_broke": [
+      "Nothing — Navidrome is a single container that boots in seconds. The economics even pass our rubric. The capability gap is the entire verdict: it can only play files you bring."
+    ]
+  },
+  "compose": "compose/spotify-navidrome.yml",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/spotify"
+  },
+  "notes": "If you already own a serious music library (rips, Bandcamp), flip this to a personal YES — Navidrome + the Subsonic app ecosystem is genuinely better than Spotify for owned music. Our verdict answers the question most subscribers are asking."
+}

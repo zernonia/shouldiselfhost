@@ -1,0 +1,20 @@
+{
+  "id": "invokeai",
+  "name": "InvokeAI",
+  "tagline": "Text-to-image on a card you own, with the checkpoint, the gallery and the electricity bill all in one building.",
+  "repo": "invoke-ai/InvokeAI",
+  "site": "https://invoke.ai",
+  "license": "Apache-2.0",
+  "category": "ai-tools",
+  "resources": {
+    "ram_min_mb": 16384,
+    "disk_gb": 40,
+    "arm64": false,
+    "containers": 1,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

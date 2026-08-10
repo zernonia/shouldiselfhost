@@ -1,0 +1,24 @@
+{
+  "id": "tolgee-cloud",
+  "name": "Tolgee",
+  "domain": "tolgee.io",
+  "category": "automation-dev",
+  "price_usd_mo": 49,
+  "price_plan": "Team",
+  "price_unit": "flat",
+  "price_source": "https://tolgee.io/pricing",
+  "price_checked": "2026-08-07",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/tolgee-cloud"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "tolgee",
+    "weblate"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

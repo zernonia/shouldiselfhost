@@ -1,0 +1,20 @@
+{
+  "id": "espocrm",
+  "name": "EspoCRM",
+  "tagline": "A whole sales CRM on your own hostname: pipelines, contacts, activities and a REST API, with nobody counting seats.",
+  "repo": "espocrm/espocrm",
+  "site": "https://www.espocrm.com",
+  "license": "AGPL-3.0",
+  "category": "work-pm",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 4,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

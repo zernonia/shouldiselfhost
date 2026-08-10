@@ -1,0 +1,23 @@
+{
+  "id": "nordvpn",
+  "name": "NordVPN",
+  "domain": "nordvpn.com",
+  "category": "passwords-security",
+  "price_usd_mo": 12.99,
+  "price_plan": "Basic",
+  "price_unit": "flat",
+  "price_source": "https://gizmodo.com/best-vpn/nordvpn/pricing",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/nordvpn"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "wg-easy"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

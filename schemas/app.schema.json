@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://shouldiselfhost.com/schemas/app.schema.json",
+  "title": "SaaS app record (data/apps/*.json)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "category", "price_usd_mo", "price_source", "price_checked", "jobs", "verdict", "alternatives", "provenance"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "name": { "type": "string", "minLength": 1 },
+    "domain": { "type": "string" },
+    "category": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "price_usd_mo": { "type": "number", "minimum": 0, "description": "Monthly-billed price of the reference plan. INPUT — savings/break-even are derived, never stored." },
+    "price_plan": { "type": "string", "description": "Which plan price_usd_mo refers to" },
+    "price_unit": { "enum": ["flat", "per-seat", "usage", "custom"], "description": "How the reference plan is priced" },
+    "price_source": { "type": "string", "format": "uri" },
+    "price_checked": { "type": "string", "format": "date" },
+    "jobs": { "type": "array", "items": { "type": "string" }, "description": "What people actually pay this SaaS for. Capability = alternative covers >=80% of these. May be empty only while NOT SCORED YET." },
+    "verdict": { "enum": ["YES", "KINDA", "NOT_REALLY", null], "description": "null = NOT SCORED YET (page renders a call for a PR)" },
+    "verdict_reason": { "type": "string", "description": "One quotable line. Required when verdict is non-null." },
+    "what_you_lose": { "type": "array", "items": { "type": "string" }, "description": "The moat: mobile apps, sharing links, OCR quality..." },
+    "alternatives": { "type": "array", "items": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" }, "description": "Ranked, first = primary. Each id must exist in data/alternatives/." },
+    "economics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["vps_share_usd_mo", "maint_min_mo"],
+      "properties": {
+        "vps_share_usd_mo": { "type": "number", "minimum": 0, "description": "This app's share of a shared VPS bill" },
+        "storage_usd_mo": { "type": "number", "minimum": 0, "default": 0 },
+        "maint_min_mo": { "type": "number", "minimum": 0, "description": "Honest minutes/month: updates, backups checks, the 2am poke" }
+      }
+    },
+    "hardware_tier": { "enum": ["pi", "old-laptop", "vps"], "description": "Cheapest hardware the primary alternative comfortably runs on" },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["decision_layer"],
+      "properties": {
+        "capability_seed": { "enum": ["caniselfhostit", "awesome-selfhosted", null], "description": "Where the app->alternative capability pairing came from (MIT/CC seed), null = original" },
+        "decision_layer": { "const": "original", "description": "Verdicts/economics/timings are always ours, CC BY-SA 4.0" }
+      }
+    },
+    "verified": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["by", "at", "protocol", "setup_min", "evidence"],
+      "properties": {
+        "by": { "type": "string" },
+        "at": { "type": "string", "format": "date" },
+        "protocol": { "const": "v1" },
+        "setup_min": { "type": "number", "exclusiveMinimum": 0, "description": "Measured wall-clock minutes to core workflow working. INPUT for break-even derivation." },
+        "assistant": { "type": "string", "description": "AI assistant used (protocol v1 allows and states it), e.g. claude-code" },
+        "evidence": { "type": "array", "items": { "type": "string" }, "minItems": 1, "description": "Repo paths: logs/*.md, compose/*.yml" },
+        "what_broke": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "compose": { "type": "string", "pattern": "^compose/[a-z0-9-]+\\.yml$" },
+    "links": {
+      "type": "object",
+      "additionalProperties": { "type": "string", "format": "uri" },
+      "description": "Cross-links, e.g. caniselfhostit page for the guided install"
+    },
+    "notes": { "type": "string" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "verdict": { "enum": ["YES", "KINDA", "NOT_REALLY"] } } },
+      "then": {
+        "required": ["verdict_reason", "economics", "verified"],
+        "properties": { "jobs": { "minItems": 1 } }
+      }
+    }
+  ]
+}

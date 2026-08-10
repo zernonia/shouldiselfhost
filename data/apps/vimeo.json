@@ -1,0 +1,23 @@
+{
+  "id": "vimeo",
+  "name": "Vimeo",
+  "domain": "vimeo.com",
+  "category": "photos-media",
+  "price_usd_mo": 20,
+  "price_plan": "Starter",
+  "price_unit": "flat",
+  "price_source": "https://vimeo.com/upgrade",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/vimeo"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "peertube"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

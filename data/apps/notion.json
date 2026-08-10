@@ -1,0 +1,55 @@
+{
+  "id": "notion",
+  "name": "Notion",
+  "domain": "notion.com",
+  "category": "notes-wikis",
+  "price_usd_mo": 12,
+  "price_plan": "Plus",
+  "price_unit": "per-seat",
+  "price_source": "https://www.notion.com/pricing",
+  "price_checked": "2026-08-05",
+  "jobs": [
+    "docs & wiki with nested pages",
+    "full-text search",
+    "real-time collaboration",
+    "databases with views, relations and rollups",
+    "mobile apps",
+    "public sharing links"
+  ],
+  "verdict": "KINDA",
+  "verdict_reason": "The docs half moves in an evening and the math is per-seat — but Notion's databases and mobile apps don't move at all. Worth it if you write more than you rollup.",
+  "what_you_lose": [
+    "Databases: views, relations, rollups — Outline has none of it, and that's half of many workspaces",
+    "Native mobile apps (Outline's mobile web is fine, not great)",
+    "Notion AI and the template ecosystem",
+    "Sign-in needs an auth provider you run or configure (magic-link SMTP or OIDC)"
+  ],
+  "alternatives": ["outline", "docmost"],
+  "economics": {
+    "vps_share_usd_mo": 1.5,
+    "storage_usd_mo": 0.2,
+    "maint_min_mo": 30
+  },
+  "hardware_tier": "old-laptop",
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  },
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 75,
+    "assistant": "claude-code",
+    "evidence": ["logs/notion-outline.md", "compose/notion-outline.yml"],
+    "what_broke": [
+      "maildev (the first mail catcher we tried) crash-loops wherever IPv6 is disabled — it insists on binding '::'; swapped to mailpit",
+      "Outline boots healthy without SMTP but magic-link sign-in silently goes nowhere — the compose ships mailpit so the workflow is completable locally"
+    ]
+  },
+  "compose": "compose/notion-outline.yml",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/notion"
+  },
+  "notes": "At one seat the time cost eats the saving; at 3+ seats (Plus is per-seat) the math flips fast. The database gap is the real decision, not the money."
+}

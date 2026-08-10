@@ -1,0 +1,20 @@
+{
+  "id": "zammad",
+  "name": "Zammad",
+  "tagline": "A shared support desk with agents, groups, escalation clocks and a customer portal, on your own hostname, with nobody counting seats.",
+  "repo": "zammad/zammad",
+  "site": "https://zammad.org",
+  "license": "AGPL-3.0",
+  "category": "comms-scheduling",
+  "resources": {
+    "ram_min_mb": 6144,
+    "disk_gb": 20,
+    "arm64": true,
+    "containers": 7,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

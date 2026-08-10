@@ -1,0 +1,23 @@
+{
+  "id": "intercom",
+  "name": "Intercom",
+  "domain": "intercom.com",
+  "category": "comms-scheduling",
+  "price_usd_mo": 35,
+  "price_plan": "Copilot",
+  "price_unit": "per-seat",
+  "price_source": "https://www.intercom.com/pricing",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/intercom"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "chatwoot"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

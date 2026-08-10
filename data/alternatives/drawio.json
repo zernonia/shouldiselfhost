@@ -1,0 +1,20 @@
+{
+  "id": "drawio",
+  "name": "draw.io",
+  "tagline": "The structured-diagram editor as one container on a hostname you own, with every cloud storage backend switched off.",
+  "repo": "jgraph/drawio",
+  "site": "https://www.drawio.com",
+  "license": "Apache-2.0",
+  "category": "design-whiteboard",
+  "resources": {
+    "ram_min_mb": 1024,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 1,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

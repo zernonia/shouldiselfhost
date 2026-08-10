@@ -1,0 +1,20 @@
+{
+  "id": "chatwoot",
+  "name": "Chatwoot",
+  "tagline": "A website chat widget feeding a shared agent inbox you run yourself, with no per-seat meter and no per-resolution bill.",
+  "repo": "chatwoot/chatwoot",
+  "site": "https://www.chatwoot.com",
+  "license": "MIT",
+  "category": "comms-scheduling",
+  "resources": {
+    "ram_min_mb": 4096,
+    "disk_gb": 20,
+    "arm64": true,
+    "containers": 4,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

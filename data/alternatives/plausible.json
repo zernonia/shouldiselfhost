@@ -1,0 +1,20 @@
+{
+  "id": "plausible",
+  "name": "Plausible CE",
+  "tagline": "The same privacy-first analytics dashboard the vendor sells, on your own domain, with no pageview meter counting against you.",
+  "repo": "plausible/analytics",
+  "site": "https://plausible.io",
+  "license": "AGPL-3.0",
+  "category": "analytics",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 3,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "wg-easy",
+  "name": "wg-easy",
+  "tagline": "A WireGuard server with a web interface that hands your phone a QR code and gets out of the way.",
+  "repo": "wg-easy/wg-easy",
+  "site": "https://wg-easy.github.io/wg-easy/latest/",
+  "license": "AGPL-3.0",
+  "category": "passwords-security",
+  "resources": {
+    "ram_min_mb": 512,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 1,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

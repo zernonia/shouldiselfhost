@@ -1,0 +1,49 @@
+{
+  "id": "bitly",
+  "name": "Bitly",
+  "domain": "bitly.com",
+  "category": "links",
+  "price_usd_mo": 10,
+  "price_plan": "Core",
+  "price_unit": "flat",
+  "price_source": "https://bitly.com/pages/pricing",
+  "price_checked": "2026-08-05",
+  "jobs": [
+    "short links on a custom domain",
+    "click analytics",
+    "QR codes",
+    "link management API"
+  ],
+  "verdict": "YES",
+  "verdict_reason": "$10/mo for a URL redirect table is the purest markup on this site. Shlink does the whole job list from SQLite on the smallest box you own.",
+  "what_you_lose": [
+    "The bit.ly domain itself — recognizable short links are their real moat; yours is only as trusted as your domain",
+    "Their uptime SLA: a dead redirect server breaks every link you ever shared"
+  ],
+  "alternatives": ["shlink"],
+  "economics": {
+    "vps_share_usd_mo": 0.5,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 10
+  },
+  "hardware_tier": "pi",
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  },
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 35,
+    "assistant": "claude-code",
+    "evidence": ["logs/bitly-shlink.md", "compose/bitly-shlink.yml"],
+    "what_broke": [
+      "Shlink wants DEFAULT_DOMAIN set at first boot; changing it later means regenerating existing short URLs"
+    ]
+  },
+  "compose": "compose/bitly-shlink.yml",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/bitly"
+  }
+}

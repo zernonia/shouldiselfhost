@@ -1,0 +1,23 @@
+{
+  "id": "everand",
+  "name": "Everand",
+  "domain": "everand.com",
+  "category": "reading-bookmarks",
+  "price_usd_mo": 11.99,
+  "price_plan": "Standard",
+  "price_unit": "flat",
+  "price_source": "https://support.scribd.com/hc/en-us/articles/40678839226644-Everand-plans-Standard-Plus-and-Deluxe",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/everand"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "kavita"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

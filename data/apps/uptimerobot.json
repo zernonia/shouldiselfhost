@@ -1,0 +1,46 @@
+{
+  "id": "uptimerobot",
+  "name": "UptimeRobot",
+  "domain": "uptimerobot.com",
+  "category": "status-uptime",
+  "price_usd_mo": 10,
+  "price_plan": "Solo",
+  "price_unit": "flat",
+  "price_source": "https://uptimerobot.com/pricing/",
+  "price_checked": "2026-08-05",
+  "jobs": [
+    "HTTP/keyword/port/ping monitors",
+    "public status pages",
+    "alerting: email, webhook, Telegram, Slack",
+    "response-time history"
+  ],
+  "verdict": "YES",
+  "verdict_reason": "One container, every monitor type UptimeRobot charges for, and it pays for itself before the second invoice.",
+  "what_you_lose": [
+    "Monitoring from someone else's network — if your VPS is down, so is the thing that tells you your VPS is down. Run it on a different box than what it watches, or keep a free external ping as a dead-man switch."
+  ],
+  "alternatives": ["uptime-kuma"],
+  "economics": {
+    "vps_share_usd_mo": 1,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 10
+  },
+  "hardware_tier": "pi",
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  },
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 25,
+    "assistant": "claude-code",
+    "evidence": ["logs/uptimerobot-uptime-kuma.md", "compose/uptimerobot-uptime-kuma.yml"],
+    "what_broke": []
+  },
+  "compose": "compose/uptimerobot-uptime-kuma.yml",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/uptimerobot"
+  }
+}

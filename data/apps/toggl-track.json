@@ -1,0 +1,23 @@
+{
+  "id": "toggl-track",
+  "name": "Toggl Track",
+  "domain": "toggl.com",
+  "category": "work-pm",
+  "price_usd_mo": 12,
+  "price_plan": "Starter",
+  "price_unit": "per-seat",
+  "price_source": "https://toggl.com/track/pricing/",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/toggl-track"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "kimai"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

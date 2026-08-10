@@ -1,0 +1,23 @@
+{
+  "id": "microsoft-365-personal",
+  "name": "Microsoft 365 Personal",
+  "domain": "microsoft.com",
+  "category": "files-docs",
+  "price_usd_mo": 1.99,
+  "price_plan": "Basic",
+  "price_unit": "flat",
+  "price_source": "https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products",
+  "price_checked": "2026-08-07",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/microsoft-365-personal"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "onlyoffice"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

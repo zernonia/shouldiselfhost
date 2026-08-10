@@ -1,0 +1,24 @@
+{
+  "id": "amplitude",
+  "name": "Amplitude",
+  "domain": "amplitude.com",
+  "category": "analytics",
+  "price_usd_mo": 49,
+  "price_plan": "Plus",
+  "price_unit": "usage",
+  "price_source": "https://amplitude.com/pricing",
+  "price_checked": "2026-08-07",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/amplitude"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "countly",
+    "matomo"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "countly",
+  "name": "Countly Lite",
+  "tagline": "Sessions, custom events and crashes from your own apps, collected on a hostname you own, with no monthly event meter.",
+  "repo": "Countly/countly-server",
+  "site": "https://countly.com",
+  "license": "AGPL-3.0",
+  "category": "analytics",
+  "resources": {
+    "ram_min_mb": 4096,
+    "disk_gb": 20,
+    "arm64": false,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

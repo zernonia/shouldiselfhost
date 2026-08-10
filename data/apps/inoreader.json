@@ -1,0 +1,24 @@
+{
+  "id": "inoreader",
+  "name": "Inoreader",
+  "domain": "inoreader.com",
+  "category": "reading-bookmarks",
+  "price_usd_mo": 9.99,
+  "price_plan": "Pro",
+  "price_unit": "flat",
+  "price_source": "https://www.inoreader.com/pricing",
+  "price_checked": "2026-08-07",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/inoreader"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "miniflux",
+    "freshrss"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

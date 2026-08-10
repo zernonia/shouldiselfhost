@@ -1,0 +1,54 @@
+{
+  "id": "slack",
+  "name": "Slack",
+  "domain": "slack.com",
+  "category": "team-chat",
+  "price_usd_mo": 8.75,
+  "price_plan": "Pro",
+  "price_unit": "per-seat",
+  "price_source": "https://slack.com/pricing",
+  "price_checked": "2026-08-05",
+  "jobs": [
+    "channels & DMs",
+    "mobile apps with reliable push",
+    "search across full history",
+    "integrations & incoming webhooks",
+    "huddles/calls"
+  ],
+  "verdict": "KINDA",
+  "verdict_reason": "Per-seat pricing means the math flips hard around 4 seats — a 10-person team escapes $1,050/yr for one weekend of setup. Worth it if someone genuinely owns the pager; chat is the one service your team notices being down within 90 seconds.",
+  "what_you_lose": [
+    "Slack's mobile push reliability — Mattermost push routes through their relay or you build your own, and half-working push kills adoption",
+    "The integration directory: webhooks exist, but every SaaS ships a Slack app and maybe a Mattermost one",
+    "Huddles-grade calls without extra setup",
+    "Message history import is one-way and lossy — the escape is easier before the archive matters"
+  ],
+  "alternatives": ["mattermost"],
+  "economics": {
+    "vps_share_usd_mo": 2,
+    "storage_usd_mo": 0.5,
+    "maint_min_mo": 45
+  },
+  "hardware_tier": "vps",
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  },
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 65,
+    "assistant": "claude-code",
+    "evidence": ["logs/slack-mattermost.md", "compose/slack-mattermost.yml"],
+    "what_broke": [
+      "The image ships no shell, curl or wget, so a CMD-SHELL healthcheck fails forever while the server is fine — exec-form mmctl system status --local (with local mode enabled) is the probe that works",
+      "First admin account creation is a UI step — plan it into the rollout, whoever clicks first owns the workspace"
+    ]
+  },
+  "compose": "compose/slack-mattermost.yml",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/slack"
+  },
+  "notes": "The economics inputs above are for ONE seat, which is the honest per-person floor — multiply the price by your seat count and the self-host cost barely moves. That asymmetry is the whole argument."
+}

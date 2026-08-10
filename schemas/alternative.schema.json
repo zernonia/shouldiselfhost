@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://shouldiselfhost.com/schemas/alternative.schema.json",
+  "title": "OSS alternative record (data/alternatives/*.json)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "repo", "category", "provenance"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "name": { "type": "string", "minLength": 1 },
+    "tagline": { "type": "string" },
+    "repo": { "type": "string", "pattern": "^[\\w.-]+/[\\w.-]+$", "description": "GitHub owner/repo — Tier-1 metrics bot reads this" },
+    "site": { "type": "string", "format": "uri" },
+    "docker_image": { "type": "string", "description": "Docker Hub image (namespace/name) for pull-count metrics" },
+    "license": { "type": "string" },
+    "category": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "resources": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ram_min_mb": { "type": "number", "minimum": 0 },
+        "disk_gb": { "type": "number", "minimum": 0 },
+        "arm64": { "type": "boolean" },
+        "containers": { "type": "integer", "minimum": 1 },
+        "external_db": { "type": "boolean" }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["decision_layer"],
+      "properties": {
+        "capability_seed": { "enum": ["caniselfhostit", "awesome-selfhosted", null] },
+        "decision_layer": { "const": "original" }
+      }
+    },
+    "notes": { "type": "string" }
+  }
+}

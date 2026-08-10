@@ -1,0 +1,20 @@
+{
+  "id": "linkstack",
+  "name": "LinkStack",
+  "tagline": "Your own link-in-bio page, with an admin panel, themes and a QR code, on a domain you keep.",
+  "repo": "linkstackorg/linkstack",
+  "site": "https://linkstack.org",
+  "license": "AGPL-3.0",
+  "category": "marketing-content",
+  "resources": {
+    "ram_min_mb": 512,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 1,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

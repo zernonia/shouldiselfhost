@@ -1,0 +1,24 @@
+{
+  "id": "pinboard",
+  "name": "Pinboard",
+  "domain": "pinboard.in",
+  "category": "reading-bookmarks",
+  "price_usd_mo": 1.83,
+  "price_plan": "Standard",
+  "price_unit": "flat",
+  "price_source": "https://pinboard.in/faq/",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/pinboard"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "linkding",
+    "linkwarden"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

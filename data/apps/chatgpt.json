@@ -1,0 +1,53 @@
+{
+  "id": "chatgpt",
+  "name": "ChatGPT",
+  "domain": "chatgpt.com",
+  "category": "ai-assistants",
+  "price_usd_mo": 8,
+  "price_plan": "Go",
+  "price_unit": "flat",
+  "price_source": "https://openai.com/chatgpt/pricing/",
+  "price_checked": "2026-08-05",
+  "jobs": [
+    "frontier-model answers",
+    "image generation",
+    "voice conversations",
+    "memory & custom instructions",
+    "chat UI with history"
+  ],
+  "verdict": "NOT_REALLY",
+  "verdict_reason": "LibreChat self-hosts the chat window, not the intelligence. You'll bring API keys (still paying, now per-token) or a GPU whose electricity bill reads like a subscription. The model was the product all along.",
+  "what_you_lose": [
+    "The frontier model itself — local models on consumer hardware are years behind what the subscription buys",
+    "Voice, image generation, and memory unless you wire up (and pay for) each provider separately",
+    "Predictable pricing: API metering can beat $8/mo for light use, or wildly exceed it"
+  ],
+  "alternatives": ["librechat"],
+  "economics": {
+    "vps_share_usd_mo": 1,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 20
+  },
+  "hardware_tier": "old-laptop",
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  },
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 50,
+    "assistant": "claude-code",
+    "evidence": ["logs/chatgpt-librechat.md", "compose/chatgpt-librechat.yml"],
+    "what_broke": [
+      "Images are ghcr.io-hosted — Docker-Hub-only mirrors can't pull them; this pair's compose boot is verified by the CI runner",
+      "Boots healthy with zero API keys configured — which demonstrates the verdict: a working chat UI with nothing to talk to"
+    ]
+  },
+  "compose": "compose/chatgpt-librechat.yml",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/chatgpt"
+  },
+  "notes": "The KINDA hiding inside: heavy API users with existing keys get a better UI and per-token pricing from LibreChat. For everyone else the subscription is the cheap option."
+}

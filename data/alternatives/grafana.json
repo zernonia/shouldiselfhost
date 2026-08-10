@@ -1,0 +1,20 @@
+{
+  "id": "grafana",
+  "name": "Grafana OSS",
+  "tagline": "Dashboards and alert rules over data you already have, from one container, with no active-series quota and no per-user bill.",
+  "repo": "grafana/grafana",
+  "site": "https://grafana.com/oss/grafana/",
+  "license": "AGPL-3.0",
+  "category": "monitoring",
+  "resources": {
+    "ram_min_mb": 512,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 1,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

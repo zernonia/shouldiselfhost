@@ -1,0 +1,20 @@
+{
+  "id": "kimai",
+  "name": "Kimai",
+  "tagline": "Timesheets with customers, projects, hourly rates and invoices, on a server that never asks how many seats you have.",
+  "repo": "kimai/kimai",
+  "site": "https://www.kimai.org",
+  "license": "AGPL-3.0",
+  "category": "work-pm",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

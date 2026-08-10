@@ -1,0 +1,23 @@
+{
+  "id": "evernote",
+  "name": "Evernote",
+  "domain": "evernote.com",
+  "category": "notes-wikis",
+  "price_usd_mo": 14.99,
+  "price_plan": "Starter",
+  "price_unit": "flat",
+  "price_source": "https://evernote.com/compare-plans",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/evernote"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "trilium"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

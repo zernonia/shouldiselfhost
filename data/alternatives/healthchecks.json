@@ -1,0 +1,20 @@
+{
+  "id": "healthchecks",
+  "name": "Healthchecks",
+  "tagline": "A dead-man's switch for every cron job you own, with no monitor quota and no per-check billing.",
+  "repo": "healthchecks/healthchecks",
+  "site": "https://healthchecks.io",
+  "license": "BSD-3-Clause",
+  "category": "monitoring",
+  "resources": {
+    "ram_min_mb": 1024,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 1,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

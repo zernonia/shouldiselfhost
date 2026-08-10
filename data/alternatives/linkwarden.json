@@ -1,0 +1,20 @@
+{
+  "id": "linkwarden",
+  "name": "Linkwarden",
+  "tagline": "Bookmarks that keep their own copy of the page, so a dead link is still readable years later.",
+  "repo": "linkwarden/linkwarden",
+  "site": "https://linkwarden.app",
+  "license": "AGPL-3.0",
+  "category": "reading-bookmarks",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 20,
+    "arm64": true,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

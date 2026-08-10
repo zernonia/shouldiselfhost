@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://shouldiselfhost.com/schemas/metrics.schema.json",
+  "title": "Freshness metrics (data/metrics/*.json) — BOT-WRITTEN ONLY",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "fetched_at"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$", "description": "alternative id" },
+    "stars": { "type": ["integer", "null"], "minimum": 0 },
+    "last_commit": { "type": ["string", "null"], "format": "date-time" },
+    "latest_release": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "tag": { "type": "string" },
+        "published_at": { "type": "string", "format": "date-time" },
+        "url": { "type": "string", "format": "uri" }
+      }
+    },
+    "docker_pulls": { "type": ["integer", "null"], "minimum": 0 },
+    "open_issues": { "type": ["integer", "null"], "minimum": 0 },
+    "fetched_at": { "type": "string", "format": "date-time" }
+  }
+}

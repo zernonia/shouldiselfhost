@@ -1,0 +1,23 @@
+{
+  "id": "pipedrive",
+  "name": "Pipedrive",
+  "domain": "pipedrive.com",
+  "category": "work-pm",
+  "price_usd_mo": 24,
+  "price_plan": "Lite",
+  "price_unit": "per-seat",
+  "price_source": "https://www.pipedrive.com/en/pricing",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/pipedrive"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "espocrm"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

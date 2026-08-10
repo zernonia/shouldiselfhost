@@ -1,0 +1,20 @@
+{
+  "id": "tolgee",
+  "name": "Tolgee",
+  "tagline": "Translation keys, in-context editing and an API your own app calls, on a hostname you own, with no key quota and no seat count.",
+  "repo": "tolgee/tolgee-platform",
+  "site": "https://tolgee.io",
+  "license": "Apache-2.0",
+  "category": "automation-dev",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

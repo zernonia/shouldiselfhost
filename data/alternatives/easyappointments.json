@@ -1,0 +1,20 @@
+{
+  "id": "easyappointments",
+  "name": "Easy!Appointments",
+  "tagline": "A front-desk diary on your own domain: services, providers, working hours, and customers who book without creating an account.",
+  "repo": "alextselegidis/easyappointments",
+  "site": "https://easyappointments.org",
+  "license": "GPL-3.0",
+  "category": "comms-scheduling",
+  "resources": {
+    "ram_min_mb": 1536,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

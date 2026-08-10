@@ -1,0 +1,12 @@
+[
+  { "date": "2026-08-10", "app": "notion", "from": null, "to": "KINDA", "reason": "Initial verdict: docs half moves in an evening, databases and mobile don't move at all." },
+  { "date": "2026-08-10", "app": "uptimerobot", "from": null, "to": "YES", "reason": "Initial verdict: one container does the whole job list, breaks even in under 2 months." },
+  { "date": "2026-08-10", "app": "bitly", "from": null, "to": "YES", "reason": "Initial verdict: purest markup on the site — a redirect table for $120/yr." },
+  { "date": "2026-08-10", "app": "plausible", "from": null, "to": "YES", "reason": "Initial verdict: same software, no pageview cap; margin thinner than it looks (ClickHouse eats RAM)." },
+  { "date": "2026-08-10", "app": "ynab", "from": null, "to": "YES", "reason": "Initial verdict: Actual + SimpleFIN does the method for a tenth of the price." },
+  { "date": "2026-08-10", "app": "1password", "from": null, "to": "NOT_REALLY", "reason": "Initial verdict: never breaks even at any realistic hourly rate, and the stakes are every password you own." },
+  { "date": "2026-08-10", "app": "chatgpt", "from": null, "to": "NOT_REALLY", "reason": "Initial verdict: you'd self-host the wrapper; the model is the product." },
+  { "date": "2026-08-10", "app": "backblaze-personal-backup", "from": null, "to": "NOT_REALLY", "reason": "Initial verdict: your last-resort backup shouldn't depend on your own maintenance discipline." },
+  { "date": "2026-08-10", "app": "slack", "from": null, "to": "KINDA", "reason": "Initial verdict: per-seat math flips hard at ~4 seats, if someone owns the pager." },
+  { "date": "2026-08-10", "app": "spotify", "from": null, "to": "NOT_REALLY", "reason": "Initial verdict: replaces the player, not the catalog — and the catalog is the subscription." }
+]

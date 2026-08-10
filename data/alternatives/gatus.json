@@ -1,0 +1,20 @@
+{
+  "id": "gatus",
+  "name": "Gatus",
+  "tagline": "A public status page whose entire configuration is one YAML file you own: the checks, the pass conditions and the alerting, declared once and served as a page.",
+  "repo": "TwiN/gatus",
+  "site": "https://gatus.io",
+  "license": "Apache-2.0",
+  "category": "monitoring",
+  "resources": {
+    "ram_min_mb": 512,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 1,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "adobe-lightroom",
+  "name": "Adobe Lightroom",
+  "domain": "adobe.com",
+  "category": "photos-media",
+  "price_usd_mo": 9.99,
+  "price_plan": "Photography plan (20GB)",
+  "price_unit": "flat",
+  "price_source": "https://www.adobe.com/products/photoshop-lightroom/plans.html",
+  "price_checked": "2026-08-07",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/adobe-lightroom"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "photoprism",
+    "immich"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

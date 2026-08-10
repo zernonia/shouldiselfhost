@@ -1,0 +1,20 @@
+{
+  "id": "formbricks",
+  "name": "Formbricks",
+  "tagline": "Link surveys and in-product feedback on your own domain, with no monthly response cap deciding your bill.",
+  "repo": "formbricks/formbricks",
+  "site": "https://formbricks.com",
+  "license": "AGPL-3.0",
+  "category": "marketing-content",
+  "resources": {
+    "ram_min_mb": 4096,
+    "disk_gb": 20,
+    "arm64": true,
+    "containers": 7,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

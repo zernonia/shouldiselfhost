@@ -1,0 +1,23 @@
+{
+  "id": "midjourney",
+  "name": "Midjourney",
+  "domain": "midjourney.com",
+  "category": "ai-tools",
+  "price_usd_mo": 10,
+  "price_plan": "Basic",
+  "price_unit": "flat",
+  "price_source": "https://docs.midjourney.com/hc/en-us/articles/27870484040333",
+  "price_checked": "2026-08-07",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/midjourney"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "invokeai"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

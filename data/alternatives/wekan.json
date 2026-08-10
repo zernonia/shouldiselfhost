@@ -1,0 +1,20 @@
+{
+  "id": "wekan",
+  "name": "WeKan",
+  "tagline": "Trello-shaped boards with swimlanes, checklists and attachments, on a hostname you own and a database you can dump.",
+  "repo": "wekan/wekan",
+  "site": "https://wekan.fi",
+  "license": "MIT",
+  "category": "work-pm",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

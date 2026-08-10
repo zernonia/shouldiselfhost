@@ -1,0 +1,24 @@
+{
+  "id": "umami-cloud",
+  "name": "Umami Cloud",
+  "domain": "umami.is",
+  "category": "analytics",
+  "price_usd_mo": 20,
+  "price_plan": "Pro",
+  "price_unit": "flat",
+  "price_source": "https://umami.is/pricing",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/umami-cloud"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "umami",
+    "plausible"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

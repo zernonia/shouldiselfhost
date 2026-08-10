@@ -1,0 +1,24 @@
+{
+  "id": "activecampaign",
+  "name": "ActiveCampaign",
+  "domain": "activecampaign.com",
+  "category": "marketing-content",
+  "price_usd_mo": 19,
+  "price_plan": "Starter",
+  "price_unit": "flat",
+  "price_source": "https://www.activecampaign.com/pricing",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/activecampaign"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "mautic",
+    "listmonk"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "baserow",
+  "name": "Baserow",
+  "tagline": "The same grids, forms, formulas and API Baserow's cloud sells, from one container on your own server.",
+  "repo": "baserow/baserow",
+  "site": "https://baserow.io",
+  "license": "MIT",
+  "category": "work-pm",
+  "resources": {
+    "ram_min_mb": 4096,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 1,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "box-personal-pro",
+  "name": "Box",
+  "domain": "box.com",
+  "category": "files-docs",
+  "price_usd_mo": 7,
+  "price_plan": "Business Starter",
+  "price_unit": "per-seat",
+  "price_source": "https://www.box.com/pricing/individual",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/box-personal-pro"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "seafile",
+    "nextcloud"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

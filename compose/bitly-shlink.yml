@@ -1,0 +1,23 @@
+# Shlink — self-hosted link shortener (replaces Bitly)
+# SQLite backend: zero extra containers. GeoLite / QR extras not enabled here.
+services:
+  shlink:
+    image: shlinkio/shlink:stable
+    container_name: shlink
+    restart: unless-stopped
+    environment:
+      DEFAULT_DOMAIN: "localhost:8082"
+      IS_HTTPS_ENABLED: "false"
+    ports:
+      - "8082:8080"
+    volumes:
+      - shlink-data:/etc/shlink/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8080/rest/health || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 24
+      start_period: 20s
+
+volumes:
+  shlink-data:

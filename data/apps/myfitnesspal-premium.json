@@ -1,0 +1,24 @@
+{
+  "id": "myfitnesspal-premium",
+  "name": "MyFitnessPal Premium",
+  "domain": "myfitnesspal.com",
+  "category": "money-home",
+  "price_usd_mo": 19.99,
+  "price_plan": "Premium",
+  "price_unit": "flat",
+  "price_source": "https://www.myfitnesspal.com/premium",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/myfitnesspal-premium"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "wger",
+    "fittrackee"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

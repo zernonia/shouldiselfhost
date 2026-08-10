@@ -1,0 +1,20 @@
+{
+  "id": "docmost",
+  "name": "Docmost",
+  "tagline": "Spaces, nested pages and an editor two people can type in at once, with every word in a Postgres you can dump.",
+  "repo": "docmost/docmost",
+  "site": "https://docmost.com",
+  "license": "AGPL-3.0",
+  "category": "notes-wikis",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 3,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

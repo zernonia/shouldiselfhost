@@ -1,0 +1,22 @@
+{
+  "id": "outline",
+  "name": "Outline",
+  "tagline": "A fast, collaborative wiki that covers the half of Notion most teams actually live in.",
+  "repo": "outline/outline",
+  "site": "https://www.getoutline.com",
+  "docker_image": "outlinewiki/outline",
+  "license": "BUSL-1.1",
+  "category": "notes-wikis",
+  "resources": {
+    "ram_min_mb": 1024,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 3,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": null,
+    "decision_layer": "original"
+  },
+  "notes": "Requires an auth provider: OIDC/Slack/Google, or magic-link email via SMTP. Our compose ships maildev so the workflow is completable locally."
+}

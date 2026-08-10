@@ -1,0 +1,24 @@
+{
+  "id": "baserow-cloud",
+  "name": "Baserow",
+  "domain": "baserow.io",
+  "category": "work-pm",
+  "price_usd_mo": 12,
+  "price_plan": "Premium",
+  "price_unit": "per-seat",
+  "price_source": "https://baserow.io/pricing",
+  "price_checked": "2026-08-07",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/baserow-cloud"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "baserow",
+    "grist"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

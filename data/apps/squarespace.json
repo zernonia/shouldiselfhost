@@ -1,0 +1,24 @@
+{
+  "id": "squarespace",
+  "name": "Squarespace",
+  "domain": "squarespace.com",
+  "category": "marketing-content",
+  "price_usd_mo": 25,
+  "price_plan": "Basic",
+  "price_unit": "flat",
+  "price_source": "https://www.squarespace.com/pricing",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/squarespace"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "wordpress",
+    "ghost"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

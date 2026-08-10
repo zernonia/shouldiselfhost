@@ -1,0 +1,23 @@
+{
+  "id": "zapier",
+  "name": "Zapier",
+  "domain": "zapier.com",
+  "category": "automation-dev",
+  "price_usd_mo": 29.99,
+  "price_plan": "Professional",
+  "price_unit": "usage",
+  "price_source": "https://zapier.com/pricing",
+  "price_checked": "2026-08-05",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/zapier"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "activepieces"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

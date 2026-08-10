@@ -1,0 +1,23 @@
+{
+  "id": "canny",
+  "name": "Canny",
+  "domain": "canny.io",
+  "category": "work-pm",
+  "price_usd_mo": 99,
+  "price_plan": "Pro",
+  "price_unit": "usage",
+  "price_source": "https://canny.io/pricing",
+  "price_checked": "2026-08-07",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/canny"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "fider"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

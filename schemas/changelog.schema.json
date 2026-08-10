@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://shouldiselfhost.com/schemas/changelog.schema.json",
+  "title": "Verdict changelog (data/changelog.json) — feeds RSS",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["date", "app", "from", "to", "reason"],
+    "properties": {
+      "date": { "type": "string", "format": "date" },
+      "app": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+      "from": { "enum": ["YES", "KINDA", "NOT_REALLY", null] },
+      "to": { "enum": ["YES", "KINDA", "NOT_REALLY", null] },
+      "reason": { "type": "string", "minLength": 1 }
+    }
+  }
+}

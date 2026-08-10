@@ -1,0 +1,20 @@
+{
+  "id": "photoprism",
+  "name": "PhotoPrism",
+  "tagline": "A photo library that indexes what is in the picture, so twenty years of files become something you can search.",
+  "repo": "photoprism/photoprism",
+  "site": "https://www.photoprism.app",
+  "license": "AGPL-3.0",
+  "category": "photos-media",
+  "resources": {
+    "ram_min_mb": 3072,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

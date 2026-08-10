@@ -1,0 +1,24 @@
+{
+  "id": "flickr-pro",
+  "name": "Flickr Pro",
+  "domain": "flickr.com",
+  "category": "photos-media",
+  "price_usd_mo": 6.17,
+  "price_plan": "2-year plan",
+  "price_unit": "flat",
+  "price_source": "https://www.flickr.com/account/upgrade/pro",
+  "price_checked": "2026-08-07",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/flickr-pro"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "piwigo",
+    "immich"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

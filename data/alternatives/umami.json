@@ -1,0 +1,20 @@
+{
+  "id": "umami",
+  "name": "Umami",
+  "tagline": "Pageviews, referrers and custom events on a hostname you own, from one container and a PostgreSQL, with no monthly event meter.",
+  "repo": "umami-software/umami",
+  "site": "https://umami.is",
+  "license": "MIT",
+  "category": "analytics",
+  "resources": {
+    "ram_min_mb": 1024,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

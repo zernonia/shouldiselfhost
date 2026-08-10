@@ -1,0 +1,44 @@
+# LibreChat — self-hosted chat UI (tested against ChatGPT's job list; see the verdict for
+# why the UI was never the thing you were paying for)
+# Note: without provider API keys this boots and serves, but answers require either paid API
+# keys (you're still paying, per-token) or a local model server + GPU. That IS the verdict.
+services:
+  librechat:
+    image: ghcr.io/danny-avila/librechat:latest
+    container_name: librechat
+    restart: unless-stopped
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    environment:
+      HOST: 0.0.0.0
+      PORT: "3080"
+      MONGO_URI: mongodb://mongodb:27017/LibreChat
+      CREDS_KEY: f34be427ebb29de8d88c107a71546019685ed8b241d8f2ed00c3df97ad2566f0
+      CREDS_IV: e2341419ec3dd3d19b13a1a87fafcbfb
+      JWT_SECRET: 16f8c0ef4a5d391b26034086c628469d3f9f497f08163ab9b40137092f2909ef
+      JWT_REFRESH_SECRET: eaa5191f2914e30b9387fd84e254e4ba6fc51b4654968a9b0803b456a54b8418
+    ports:
+      - "3080:3080"
+    healthcheck:
+      test: ["CMD-SHELL", "node -e \"fetch('http://localhost:3080/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))\""]
+      interval: 5s
+      timeout: 5s
+      retries: 36
+      start_period: 30s
+
+  mongodb:
+    image: mongo:7
+    restart: unless-stopped
+    command: mongod --noauth
+    volumes:
+      - librechat-mongo:/data/db
+    healthcheck:
+      test: ["CMD-SHELL", "mongosh --quiet --eval 'db.runCommand({ping:1}).ok' | grep 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 24
+      start_period: 15s
+
+volumes:
+  librechat-mongo:

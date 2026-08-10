@@ -1,0 +1,20 @@
+{
+  "id": "wger",
+  "name": "wger",
+  "tagline": "A gym log and a food diary on one server: routines, body measurements, and a barcode lookup that asks Open Food Facts instead of a subscription.",
+  "repo": "wger-project/wger",
+  "site": "https://wger.de",
+  "license": "AGPL-3.0",
+  "category": "money-home",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 4,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "grammarly",
+  "name": "Grammarly",
+  "domain": "grammarly.com",
+  "category": "ai-tools",
+  "price_usd_mo": 12,
+  "price_plan": "Pro",
+  "price_unit": "flat",
+  "price_source": "https://www.grammarly.com/plans",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/grammarly"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "languagetool"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

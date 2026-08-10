@@ -1,0 +1,20 @@
+{
+  "id": "linkding",
+  "name": "linkding",
+  "tagline": "A tag-first bookmark manager in one container: save the link, type the tags, find it again in a year.",
+  "repo": "sissbruecker/linkding",
+  "site": "https://linkding.link",
+  "license": "MIT",
+  "category": "reading-bookmarks",
+  "resources": {
+    "ram_min_mb": 512,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 1,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

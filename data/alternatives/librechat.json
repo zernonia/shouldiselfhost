@@ -1,0 +1,20 @@
+{
+  "id": "librechat",
+  "name": "LibreChat",
+  "tagline": "One chat window in front of Anthropic, OpenAI and Google, with the conversation history in a database you own.",
+  "repo": "danny-avila/LibreChat",
+  "site": "https://www.librechat.ai",
+  "license": "MIT",
+  "category": "ai-tools",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 3,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

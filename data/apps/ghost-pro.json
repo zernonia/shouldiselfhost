@@ -1,0 +1,23 @@
+{
+  "id": "ghost-pro",
+  "name": "Ghost(Pro)",
+  "domain": "ghost.org",
+  "category": "marketing-content",
+  "price_usd_mo": 18,
+  "price_plan": "Starter",
+  "price_unit": "flat",
+  "price_source": "https://ghost.org/pricing/",
+  "price_checked": "2026-08-05",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/ghost-pro"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "ghost"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

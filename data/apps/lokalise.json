@@ -1,0 +1,24 @@
+{
+  "id": "lokalise",
+  "name": "Lokalise",
+  "domain": "lokalise.com",
+  "category": "automation-dev",
+  "price_usd_mo": 144,
+  "price_plan": "Explorer",
+  "price_unit": "flat",
+  "price_source": "https://lokalise.com/pricing",
+  "price_checked": "2026-08-07",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/lokalise"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "weblate",
+    "tolgee"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

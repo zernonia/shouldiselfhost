@@ -1,0 +1,20 @@
+{
+  "id": "immich",
+  "name": "Immich",
+  "tagline": "Your camera roll uploads itself to a server you own, and search still finds the dog on the beach.",
+  "repo": "immich-app/immich",
+  "site": "https://immich.app",
+  "license": "AGPL-3.0",
+  "category": "photos-media",
+  "resources": {
+    "ram_min_mb": 6144,
+    "disk_gb": 20,
+    "arm64": true,
+    "containers": 4,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

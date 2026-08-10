@@ -1,0 +1,20 @@
+{
+  "id": "kener",
+  "name": "Kener",
+  "tagline": "A public status page with the incidents, the maintenance windows and the monitors behind it, all managed in a browser rather than a config file.",
+  "repo": "rajnandan1/kener",
+  "site": "https://kener.ing",
+  "license": "MIT",
+  "category": "monitoring",
+  "resources": {
+    "ram_min_mb": 1024,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

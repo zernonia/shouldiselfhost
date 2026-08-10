@@ -1,0 +1,20 @@
+{
+  "id": "jitsi",
+  "name": "Jitsi Meet",
+  "tagline": "Video meetings on your own hostname, with no participant tier and no 40-minute cut-off.",
+  "repo": "jitsi/docker-jitsi-meet",
+  "site": "https://jitsi.github.io/handbook/",
+  "license": "Apache-2.0",
+  "category": "comms-scheduling",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 4,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

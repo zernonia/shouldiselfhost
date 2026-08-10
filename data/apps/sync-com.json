@@ -1,0 +1,24 @@
+{
+  "id": "sync-com",
+  "name": "Sync.com",
+  "domain": "sync.com",
+  "category": "files-docs",
+  "price_usd_mo": 4,
+  "price_plan": "Personal 150GB",
+  "price_unit": "flat",
+  "price_source": "https://www.sync.com/pricing/",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/sync-com"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "syncthing",
+    "nextcloud"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

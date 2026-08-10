@@ -1,0 +1,20 @@
+{
+  "id": "mautic",
+  "name": "Mautic",
+  "tagline": "Contacts, segments, drip campaigns, forms and site tracking on your own hostname, with the sending handed to a relay you pick.",
+  "repo": "mautic/mautic",
+  "site": "https://www.mautic.org",
+  "license": "GPL-3.0-or-later",
+  "category": "marketing-content",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 3,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

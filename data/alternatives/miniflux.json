@@ -1,0 +1,20 @@
+{
+  "id": "miniflux",
+  "name": "Miniflux",
+  "tagline": "A feed reader with nothing in it but feeds: one Go binary, one database, and a Google Reader API the phone apps already speak.",
+  "repo": "miniflux/v2",
+  "site": "https://miniflux.app",
+  "license": "Apache-2.0",
+  "category": "reading-bookmarks",
+  "resources": {
+    "ram_min_mb": 1024,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

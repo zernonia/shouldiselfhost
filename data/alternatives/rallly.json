@@ -1,0 +1,20 @@
+{
+  "id": "rallly",
+  "name": "Rallly",
+  "tagline": "Send a group a link, let them tick the times that work, and pick the winner, with no cap on how many people answer.",
+  "repo": "lukevella/rallly",
+  "site": "https://rallly.co",
+  "license": "AGPL-3.0",
+  "category": "comms-scheduling",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

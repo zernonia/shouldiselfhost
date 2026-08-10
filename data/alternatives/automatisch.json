@@ -1,0 +1,20 @@
+{
+  "id": "automatisch",
+  "name": "Automatisch",
+  "tagline": "Trigger-and-action flows on your own box, with a connector list you can count and no credit meter.",
+  "repo": "automatisch/automatisch",
+  "site": "https://automatisch.io",
+  "license": "AGPL-3.0",
+  "category": "automation-dev",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 4,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

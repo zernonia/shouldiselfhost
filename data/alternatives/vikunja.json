@@ -1,0 +1,20 @@
+{
+  "id": "vikunja",
+  "name": "Vikunja",
+  "tagline": "One container holding every task, project and due date, with no project cap and no per-seat bill.",
+  "repo": "go-vikunja/vikunja",
+  "site": "https://vikunja.io",
+  "license": "AGPL-3.0",
+  "category": "work-pm",
+  "resources": {
+    "ram_min_mb": 512,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 1,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

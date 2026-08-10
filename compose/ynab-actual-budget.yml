@@ -1,0 +1,23 @@
+# Actual Budget — local-first budgeting server (replaces YNAB)
+services:
+  actual:
+    image: actualbudget/actual-server:latest
+    container_name: actual
+    restart: unless-stopped
+    environment:
+      # The server binds "::" by default and exits silently where IPv6 is disabled
+      # (CI runners, some VPS images). Bind IPv4 explicitly.
+      ACTUAL_HOSTNAME: 0.0.0.0
+    ports:
+      - "5006:5006"
+    volumes:
+      - actual-data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "node -e \"fetch('http://localhost:5006').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))\""]
+      interval: 5s
+      timeout: 5s
+      retries: 24
+      start_period: 20s
+
+volumes:
+  actual-data:

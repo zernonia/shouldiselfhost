@@ -1,0 +1,24 @@
+{
+  "id": "surveymonkey",
+  "name": "SurveyMonkey",
+  "domain": "surveymonkey.com",
+  "category": "marketing-content",
+  "price_usd_mo": 30,
+  "price_plan": "Team Advantage",
+  "price_unit": "per-seat",
+  "price_source": "https://www.surveymonkey.com/pricing/",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/surveymonkey"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "limesurvey",
+    "formbricks"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

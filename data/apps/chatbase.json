@@ -1,0 +1,23 @@
+{
+  "id": "chatbase",
+  "name": "Chatbase",
+  "domain": "chatbase.co",
+  "category": "marketing-content",
+  "price_usd_mo": 40,
+  "price_plan": "Hobby",
+  "price_unit": "flat",
+  "price_source": "https://www.chatbase.co/pricing",
+  "price_checked": "2026-08-07",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/chatbase"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "typebot"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

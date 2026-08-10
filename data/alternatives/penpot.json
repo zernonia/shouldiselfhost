@@ -1,0 +1,20 @@
+{
+  "id": "penpot",
+  "name": "Penpot",
+  "tagline": "Components, prototyping and more than one cursor on the same board, on a domain you own and with no per-seat bill.",
+  "repo": "penpot/penpot",
+  "site": "https://penpot.app",
+  "license": "MPL-2.0",
+  "category": "design-whiteboard",
+  "resources": {
+    "ram_min_mb": 4096,
+    "disk_gb": 20,
+    "arm64": true,
+    "containers": 5,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "kitchenowl",
+  "name": "KitchenOwl",
+  "tagline": "A shared grocery list your household's phones open from their own app stores, pointed at a server you run.",
+  "repo": "TomBursch/kitchenowl",
+  "site": "https://kitchenowl.org",
+  "license": "AGPL-3.0",
+  "category": "money-home",
+  "resources": {
+    "ram_min_mb": 1024,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 1,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

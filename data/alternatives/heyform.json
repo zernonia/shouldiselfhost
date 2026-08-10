@@ -1,0 +1,20 @@
+{
+  "id": "heyform",
+  "name": "HeyForm",
+  "tagline": "A drag-and-drop form builder on your own hostname, with file uploads, logic and no monthly submission cap.",
+  "repo": "heyform/heyform",
+  "site": "https://heyform.net",
+  "license": "AGPL-3.0",
+  "category": "marketing-content",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 3,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

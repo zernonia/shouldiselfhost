@@ -1,0 +1,20 @@
+{
+  "id": "openproject",
+  "name": "OpenProject",
+  "tagline": "Classic project management with work packages, Gantt charts and time tracking, on a server you own and with no per-seat bill.",
+  "repo": "opf/openproject",
+  "site": "https://www.openproject.org",
+  "license": "GPL-3.0",
+  "category": "work-pm",
+  "resources": {
+    "ram_min_mb": 4096,
+    "disk_gb": 20,
+    "arm64": true,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

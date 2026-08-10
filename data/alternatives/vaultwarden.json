@@ -1,0 +1,21 @@
+{
+  "id": "vaultwarden",
+  "name": "Vaultwarden",
+  "tagline": "A Bitwarden-compatible password server small enough to run on the cheapest VPS you can rent.",
+  "repo": "dani-garcia/vaultwarden",
+  "site": "https://github.com/dani-garcia/vaultwarden",
+  "docker_image": "vaultwarden/server",
+  "license": "AGPL-3.0",
+  "category": "passwords-security",
+  "resources": {
+    "ram_min_mb": 512,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 1,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

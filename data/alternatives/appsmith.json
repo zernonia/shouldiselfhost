@@ -1,0 +1,20 @@
+{
+  "id": "appsmith",
+  "name": "Appsmith",
+  "tagline": "Drag-and-drop internal tools over your own databases and APIs, with no per-builder seat and no second meter for the people who only use them.",
+  "repo": "appsmithorg/appsmith",
+  "site": "https://www.appsmith.com",
+  "license": "Apache-2.0",
+  "category": "automation-dev",
+  "resources": {
+    "ram_min_mb": 8192,
+    "disk_gb": 20,
+    "arm64": true,
+    "containers": 1,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "docusign",
+  "name": "DocuSign",
+  "domain": "docusign.com",
+  "category": "files-docs",
+  "price_usd_mo": 15,
+  "price_plan": "Personal",
+  "price_unit": "flat",
+  "price_source": "https://ecom.docusign.com/plans-and-pricing/esignature",
+  "price_checked": "2026-08-05",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/docusign"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "docuseal"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

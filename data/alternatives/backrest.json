@@ -1,0 +1,20 @@
+{
+  "id": "backrest",
+  "name": "Backrest",
+  "tagline": "A web UI and a scheduler over restic, so the backups you keep meaning to set up have somewhere to be configured and something to watch them.",
+  "repo": "garethgeorge/backrest",
+  "site": "https://garethgeorge.github.io/backrest/",
+  "license": "GPL-3.0",
+  "category": "files-docs",
+  "resources": {
+    "ram_min_mb": 1024,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 1,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

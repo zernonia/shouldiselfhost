@@ -1,0 +1,80 @@
+# Outline — the docs/wiki half of Notion. THE worked example (see logs/notion-outline.md).
+# Sign-in is magic-link email: mailpit catches the mail locally so the core workflow is
+# completable without any external SMTP or OIDC provider. In production point SMTP_* at a real
+# mailbox (or configure OIDC) and put the whole thing behind TLS.
+# Secrets below are throwaway test values — generate your own: openssl rand -hex 32
+services:
+  outline:
+    image: outlinewiki/outline:latest
+    container_name: outline
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      URL: http://localhost:3000
+      PORT: "3000"
+      SECRET_KEY: 5f31f5ad9e6f6ff0c1b52c11a03f5f4b7b1b4a4f3f2ce9d6be2c8f4d7a91d2e3
+      UTILS_SECRET: 8d2b1f9c4a7e6d5b3c2a1f0e9d8c7b6a5f4e3d2c1b0a9f8e7d6c5b4a3f2e1d0c
+      DATABASE_URL: postgres://outline:outline@postgres:5432/outline
+      PGSSLMODE: disable
+      REDIS_URL: redis://redis:6379
+      FILE_STORAGE: local
+      FILE_STORAGE_LOCAL_ROOT_DIR: /var/lib/outline/data
+      SMTP_HOST: mailpit
+      SMTP_PORT: "1025"
+      SMTP_FROM_EMAIL: outline@localhost.test
+      SMTP_SECURE: "false"
+    ports:
+      - "3000:3000"
+    volumes:
+      - outline-data:/var/lib/outline/data
+    healthcheck:
+      test: ["CMD-SHELL", "node -e \"fetch('http://localhost:3000/_health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))\""]
+      interval: 5s
+      timeout: 5s
+      retries: 36
+      start_period: 30s
+
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: outline
+      POSTGRES_PASSWORD: outline
+      POSTGRES_DB: outline
+    volumes:
+      - outline-pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U outline"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli ping | grep PONG"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  mailpit:
+    # (maildev crashes where IPv6 is disabled — it insists on binding "::". Mailpit doesn't.)
+    image: axllent/mailpit:latest
+    restart: unless-stopped
+    ports:
+      - "1080:8025" # web UI to read the magic-link mail
+    healthcheck:
+      test: ["CMD", "/mailpit", "readyz"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+volumes:
+  outline-data:
+  outline-pg:

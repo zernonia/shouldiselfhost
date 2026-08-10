@@ -1,0 +1,23 @@
+{
+  "id": "github-copilot",
+  "name": "GitHub Copilot",
+  "domain": "github.com",
+  "category": "ai-tools",
+  "price_usd_mo": 10,
+  "price_plan": "Pro",
+  "price_unit": "flat",
+  "price_source": "https://github.com/features/copilot/plans",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/github-copilot"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "tabby"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

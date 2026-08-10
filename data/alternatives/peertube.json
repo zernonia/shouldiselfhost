@@ -1,0 +1,20 @@
+{
+  "id": "peertube",
+  "name": "PeerTube",
+  "tagline": "A video site of your own, with the player, the embed codes and the transcoding, on a server whose bandwidth bill is yours.",
+  "repo": "Chocobozzz/PeerTube",
+  "site": "https://joinpeertube.org",
+  "license": "AGPL-3.0",
+  "category": "photos-media",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 40,
+    "arm64": true,
+    "containers": 3,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

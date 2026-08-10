@@ -1,0 +1,23 @@
+{
+  "id": "buffer",
+  "name": "Buffer",
+  "domain": "buffer.com",
+  "category": "marketing-content",
+  "price_usd_mo": 5,
+  "price_plan": "Essentials",
+  "price_unit": "usage",
+  "price_source": "https://buffer.com/pricing",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/buffer"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "postiz"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

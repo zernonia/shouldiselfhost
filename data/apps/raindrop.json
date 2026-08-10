@@ -1,0 +1,23 @@
+{
+  "id": "raindrop",
+  "name": "Raindrop.io",
+  "domain": "raindrop.io",
+  "category": "reading-bookmarks",
+  "price_usd_mo": 3,
+  "price_plan": "Pro",
+  "price_unit": "flat",
+  "price_source": "https://raindrop.io/pro/",
+  "price_checked": "2026-08-05",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/raindrop"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "linkwarden"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

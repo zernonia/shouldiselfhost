@@ -1,0 +1,20 @@
+{
+  "id": "xwiki",
+  "name": "XWiki",
+  "tagline": "A structured enterprise wiki with spaces, macros and per-page rights, on a hostname you own and a database you can dump.",
+  "repo": "xwiki/xwiki-platform",
+  "site": "https://www.xwiki.org",
+  "license": "LGPL-2.1-or-later",
+  "category": "notes-wikis",
+  "resources": {
+    "ram_min_mb": 3072,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

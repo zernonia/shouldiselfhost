@@ -1,0 +1,21 @@
+{
+  "id": "castopod",
+  "name": "Castopod",
+  "tagline": "Podcast hosting on a domain you own: your feed, your audio files, your download numbers, and no monthly download meter.",
+  "repo": "ad-aures/castopod",
+  "site": "https://castopod.org",
+  "docker_image": "castopod/castopod",
+  "license": "AGPL-3.0",
+  "category": "marketing-content",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 3,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

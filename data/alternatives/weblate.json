@@ -1,0 +1,20 @@
+{
+  "id": "weblate",
+  "name": "Weblate",
+  "tagline": "Continuous localization that lives in your git repositories: translators work in a browser, Weblate commits the result back.",
+  "repo": "WeblateOrg/weblate",
+  "site": "https://weblate.org",
+  "license": "GPL-3.0",
+  "category": "automation-dev",
+  "resources": {
+    "ram_min_mb": 3072,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 3,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

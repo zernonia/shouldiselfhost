@@ -1,0 +1,25 @@
+{
+  "id": "confluence",
+  "name": "Confluence",
+  "domain": "atlassian.com",
+  "category": "notes-wikis",
+  "price_usd_mo": 6.7,
+  "price_plan": "Standard",
+  "price_unit": "per-seat",
+  "price_source": "https://www.atlassian.com/software/confluence/pricing",
+  "price_checked": "2026-08-07",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/confluence"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "xwiki",
+    "docmost",
+    "bookstack"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

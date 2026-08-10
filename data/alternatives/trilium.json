@@ -1,0 +1,20 @@
+{
+  "id": "trilium",
+  "name": "Trilium",
+  "tagline": "A personal knowledge base with a note tree, relations and scripting, keeping every note in one SQLite file you can copy.",
+  "repo": "TriliumNext/Trilium",
+  "site": "https://triliumnotes.org",
+  "license": "AGPL-3.0",
+  "category": "notes-wikis",
+  "resources": {
+    "ram_min_mb": 1024,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 1,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

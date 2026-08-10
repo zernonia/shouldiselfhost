@@ -1,0 +1,20 @@
+{
+  "id": "fider",
+  "name": "Fider",
+  "tagline": "A feedback board on your own domain: customers post ideas, everyone votes, and nobody bills you per tracked user.",
+  "repo": "getfider/fider",
+  "site": "https://fider.io",
+  "license": "AGPL-3.0",
+  "category": "work-pm",
+  "resources": {
+    "ram_min_mb": 1024,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

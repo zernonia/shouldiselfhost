@@ -1,0 +1,20 @@
+{
+  "id": "navidrome",
+  "name": "Navidrome",
+  "tagline": "A music server for the files you already own, and the phone apps that make them worth owning.",
+  "repo": "navidrome/navidrome",
+  "site": "https://www.navidrome.org",
+  "license": "GPL-3.0",
+  "category": "photos-media",
+  "resources": {
+    "ram_min_mb": 512,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 1,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

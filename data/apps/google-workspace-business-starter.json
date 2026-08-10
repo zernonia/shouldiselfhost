@@ -1,0 +1,24 @@
+{
+  "id": "google-workspace-business-starter",
+  "name": "Google Workspace",
+  "domain": "workspace.google.com",
+  "category": "files-docs",
+  "price_usd_mo": 8.4,
+  "price_plan": "Business Starter",
+  "price_unit": "per-seat",
+  "price_source": "https://knowledge.workspace.google.com/admin/billing/flexible-plan",
+  "price_checked": "2026-08-07",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/google-workspace-business-starter"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "collabora",
+    "onlyoffice"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

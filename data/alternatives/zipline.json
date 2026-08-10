@@ -1,0 +1,20 @@
+{
+  "id": "zipline",
+  "name": "Zipline",
+  "tagline": "The upload endpoint behind the screenshot key: drop a file, get a link, on a hostname you own.",
+  "repo": "diced/zipline",
+  "site": "https://zipline.diced.sh",
+  "license": "MIT",
+  "category": "files-docs",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

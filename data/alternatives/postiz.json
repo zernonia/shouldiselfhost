@@ -1,0 +1,20 @@
+{
+  "id": "postiz",
+  "name": "Postiz",
+  "tagline": "One calendar for every social account, on your server, with the network API keys registered in your own name.",
+  "repo": "gitroomhq/postiz-app",
+  "site": "https://postiz.com",
+  "license": "AGPL-3.0",
+  "category": "marketing-content",
+  "resources": {
+    "ram_min_mb": 4096,
+    "disk_gb": 20,
+    "arm64": true,
+    "containers": 5,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

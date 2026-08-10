@@ -1,0 +1,23 @@
+{
+  "id": "vercel",
+  "name": "Vercel",
+  "domain": "vercel.com",
+  "category": "automation-dev",
+  "price_usd_mo": 20,
+  "price_plan": "Pro",
+  "price_unit": "per-seat",
+  "price_source": "https://vercel.com/pricing",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/vercel"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "coolify"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

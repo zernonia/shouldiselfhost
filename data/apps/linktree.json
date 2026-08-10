@@ -1,0 +1,23 @@
+{
+  "id": "linktree",
+  "name": "Linktree",
+  "domain": "linktr.ee",
+  "category": "marketing-content",
+  "price_usd_mo": 8,
+  "price_plan": "Starter",
+  "price_unit": "flat",
+  "price_source": "https://linktr.ee/s/pricing/",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/linktree"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "linkstack"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

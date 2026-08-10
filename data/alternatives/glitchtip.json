@@ -1,0 +1,20 @@
+{
+  "id": "glitchtip",
+  "name": "GlitchTip",
+  "tagline": "Error tracking that speaks the Sentry SDK protocol, so your code keeps its instrumentation and changes one DSN.",
+  "repo": "burke-software/GlitchTip",
+  "site": "https://glitchtip.com",
+  "license": "MIT",
+  "category": "monitoring",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 20,
+    "arm64": true,
+    "containers": 3,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

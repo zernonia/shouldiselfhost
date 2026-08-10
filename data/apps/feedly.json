@@ -1,0 +1,23 @@
+{
+  "id": "feedly",
+  "name": "Feedly",
+  "domain": "feedly.com",
+  "category": "reading-bookmarks",
+  "price_usd_mo": 6.99,
+  "price_plan": "Pro",
+  "price_unit": "flat",
+  "price_source": "https://feedly.com/i/pricing",
+  "price_checked": "2026-08-05",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/feedly"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "freshrss"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

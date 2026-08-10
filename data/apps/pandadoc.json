@@ -1,0 +1,24 @@
+{
+  "id": "pandadoc",
+  "name": "PandaDoc",
+  "domain": "pandadoc.com",
+  "category": "files-docs",
+  "price_usd_mo": 35,
+  "price_plan": "Starter",
+  "price_unit": "per-seat",
+  "price_source": "https://www.pandadoc.com/pricing/",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/pandadoc"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "documenso",
+    "docuseal"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "freshrss",
+  "name": "FreshRSS",
+  "tagline": "A feed reader in one container, with your subscriptions, your read history and your refresh schedule on your own disk.",
+  "repo": "FreshRSS/FreshRSS",
+  "site": "https://freshrss.org",
+  "license": "AGPL-3.0",
+  "category": "reading-bookmarks",
+  "resources": {
+    "ram_min_mb": 512,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 1,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "trello",
+  "name": "Trello",
+  "domain": "trello.com",
+  "category": "work-pm",
+  "price_usd_mo": 6,
+  "price_plan": "Standard",
+  "price_unit": "per-seat",
+  "price_source": "https://trello.com/pricing",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/trello"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "wekan"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

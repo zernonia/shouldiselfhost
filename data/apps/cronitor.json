@@ -1,0 +1,23 @@
+{
+  "id": "cronitor",
+  "name": "Cronitor",
+  "domain": "cronitor.io",
+  "category": "monitoring",
+  "price_usd_mo": 2,
+  "price_plan": "Business",
+  "price_unit": "usage",
+  "price_source": "https://cronitor.io/pricing",
+  "price_checked": "2026-08-05",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/cronitor"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "healthchecks"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "day-one",
+  "name": "Day One",
+  "domain": "dayoneapp.com",
+  "category": "notes-wikis",
+  "price_usd_mo": 6.25,
+  "price_plan": "Gold",
+  "price_unit": "flat",
+  "price_source": "https://dayoneapp.com/pricing/",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/day-one"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "memos"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

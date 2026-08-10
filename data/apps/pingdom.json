@@ -1,0 +1,24 @@
+{
+  "id": "pingdom",
+  "name": "Pingdom",
+  "domain": "pingdom.com",
+  "category": "monitoring",
+  "price_usd_mo": 18,
+  "price_plan": "Synthetic Monitoring · 10 uptime checks",
+  "price_unit": "usage",
+  "price_source": "https://www.pingdom.com/pricing/",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/pingdom"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "gatus",
+    "uptime-kuma"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "matomo",
+  "name": "Matomo",
+  "tagline": "The full Google-Analytics-shaped suite on your own hostname, with visitor profiles, funnels and no monthly hit meter.",
+  "repo": "matomo-org/matomo",
+  "site": "https://matomo.org",
+  "license": "GPL-3.0",
+  "category": "analytics",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 3,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

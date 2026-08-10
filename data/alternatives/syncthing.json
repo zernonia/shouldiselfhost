@@ -1,0 +1,20 @@
+{
+  "id": "syncthing",
+  "name": "Syncthing",
+  "tagline": "Your files sync between your own devices, with the always-on server holding ciphertext it cannot read.",
+  "repo": "syncthing/syncthing",
+  "site": "https://syncthing.net",
+  "license": "MPL-2.0",
+  "category": "files-docs",
+  "resources": {
+    "ram_min_mb": 512,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 1,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

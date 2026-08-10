@@ -1,0 +1,24 @@
+{
+  "id": "matomo-cloud",
+  "name": "Matomo Cloud",
+  "domain": "matomo.org",
+  "category": "analytics",
+  "price_usd_mo": 26,
+  "price_plan": "Business · 50,000 hits/month",
+  "price_unit": "usage",
+  "price_source": "https://matomo.org/pricing/",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/matomo-cloud"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "matomo",
+    "plausible"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

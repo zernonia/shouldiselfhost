@@ -1,0 +1,20 @@
+{
+  "id": "akaunting",
+  "name": "Akaunting",
+  "tagline": "Invoices, bills, expenses and a client portal on your own domain, with the double-entry ledger sold as a paid app.",
+  "repo": "akaunting/akaunting",
+  "site": "https://akaunting.com",
+  "license": "BUSL-1.1",
+  "category": "money-home",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

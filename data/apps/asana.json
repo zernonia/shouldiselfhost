@@ -1,0 +1,23 @@
+{
+  "id": "asana",
+  "name": "Asana",
+  "domain": "asana.com",
+  "category": "work-pm",
+  "price_usd_mo": 13.49,
+  "price_plan": "Starter",
+  "price_unit": "per-seat",
+  "price_source": "https://asana.com/pricing",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/asana"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "openproject"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

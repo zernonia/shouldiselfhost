@@ -1,0 +1,23 @@
+{
+  "id": "instapaper",
+  "name": "Instapaper",
+  "domain": "instapaper.com",
+  "category": "reading-bookmarks",
+  "price_usd_mo": 5.99,
+  "price_plan": "Premium",
+  "price_unit": "flat",
+  "price_source": "https://www.instapaper.com/premium",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/instapaper"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "wallabag"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

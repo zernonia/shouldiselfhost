@@ -1,0 +1,24 @@
+{
+  "id": "doodle",
+  "name": "Doodle",
+  "domain": "doodle.com",
+  "category": "comms-scheduling",
+  "price_usd_mo": 10.95,
+  "price_plan": "Pro",
+  "price_unit": "per-seat",
+  "price_source": "https://doodle.com/en/premium",
+  "price_checked": "2026-08-07",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/doodle"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "rallly",
+    "calcom"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

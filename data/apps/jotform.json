@@ -1,0 +1,25 @@
+{
+  "id": "jotform",
+  "name": "Jotform",
+  "domain": "jotform.com",
+  "category": "marketing-content",
+  "price_usd_mo": 39,
+  "price_plan": "Bronze",
+  "price_unit": "flat",
+  "price_source": "https://www.jotform.com/pricing/",
+  "price_checked": "2026-08-07",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/jotform"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "heyform",
+    "formbricks",
+    "limesurvey"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

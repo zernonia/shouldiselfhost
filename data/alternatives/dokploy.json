@@ -1,0 +1,20 @@
+{
+  "id": "dokploy",
+  "name": "Dokploy",
+  "tagline": "Push to a git repository and get a running container, on a server you rent flat instead of a meter you watch.",
+  "repo": "Dokploy/dokploy",
+  "site": "https://dokploy.com",
+  "license": "Apache-2.0",
+  "category": "automation-dev",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 30,
+    "arm64": true,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

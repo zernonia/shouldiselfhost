@@ -1,0 +1,20 @@
+{
+  "id": "limesurvey",
+  "name": "LimeSurvey",
+  "tagline": "Research-grade questionnaires on a hostname you own, with branching logic, quotas and no monthly response meter.",
+  "repo": "LimeSurvey/LimeSurvey",
+  "site": "https://www.limesurvey.org",
+  "license": "GPL-2.0-or-later",
+  "category": "marketing-content",
+  "resources": {
+    "ram_min_mb": 1024,
+    "disk_gb": 5,
+    "arm64": true,
+    "containers": 2,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "monarch-money",
+  "name": "Monarch Money",
+  "domain": "monarch.com",
+  "category": "money-home",
+  "price_usd_mo": 14.99,
+  "price_plan": "Core",
+  "price_unit": "flat",
+  "price_source": "https://www.monarch.com/pricing",
+  "price_checked": "2026-08-07",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/monarch-money"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "firefly-iii",
+    "actual-budget"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

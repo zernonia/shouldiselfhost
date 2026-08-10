@@ -1,0 +1,20 @@
+{
+  "id": "invoice-ninja",
+  "name": "Invoice Ninja",
+  "tagline": "Invoices, quotes, expenses and a client portal on your own domain, with no cap on how many clients you bill.",
+  "repo": "invoiceninja/invoiceninja",
+  "site": "https://invoiceninja.com",
+  "license": "Elastic-2.0",
+  "category": "money-home",
+  "resources": {
+    "ram_min_mb": 3072,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 4,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

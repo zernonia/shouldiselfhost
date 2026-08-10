@@ -1,0 +1,20 @@
+{
+  "id": "libretranslate",
+  "name": "LibreTranslate",
+  "tagline": "Machine translation on your own box, with no per-character meter and nothing sent to a vendor, at Argos model quality rather than DeepL's.",
+  "repo": "LibreTranslate/LibreTranslate",
+  "site": "https://libretranslate.com",
+  "license": "AGPL-3.0",
+  "category": "ai-tools",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 1,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

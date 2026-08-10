@@ -1,0 +1,20 @@
+{
+  "id": "excalidraw",
+  "name": "Excalidraw",
+  "tagline": "A hand-drawn-style whiteboard that runs as one static container and keeps every drawing in the browser that drew it.",
+  "repo": "excalidraw/excalidraw",
+  "site": "https://excalidraw.com",
+  "license": "MIT",
+  "category": "design-whiteboard",
+  "resources": {
+    "ram_min_mb": 256,
+    "disk_gb": 2,
+    "arm64": true,
+    "containers": 1,
+    "external_db": false
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

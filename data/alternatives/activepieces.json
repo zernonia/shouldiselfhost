@@ -1,0 +1,20 @@
+{
+  "id": "activepieces",
+  "name": "Activepieces",
+  "tagline": "Trigger-and-action automation with a visual builder, run on your own box, with no task meter.",
+  "repo": "activepieces/activepieces",
+  "site": "https://www.activepieces.com",
+  "license": "MIT",
+  "category": "automation-dev",
+  "resources": {
+    "ram_min_mb": 4096,
+    "disk_gb": 20,
+    "arm64": true,
+    "containers": 3,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

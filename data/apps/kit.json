@@ -1,0 +1,24 @@
+{
+  "id": "kit",
+  "name": "Kit",
+  "domain": "kit.com",
+  "category": "marketing-content",
+  "price_usd_mo": 39,
+  "price_plan": "Creator",
+  "price_unit": "flat",
+  "price_source": "https://kit.com/pricing",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/kit"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "keila",
+    "listmonk"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

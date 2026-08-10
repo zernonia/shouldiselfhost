@@ -1,0 +1,23 @@
+{
+  "id": "calendly",
+  "name": "Calendly",
+  "domain": "calendly.com",
+  "category": "comms-scheduling",
+  "price_usd_mo": 12,
+  "price_plan": "Standard",
+  "price_unit": "per-seat",
+  "price_source": "https://calendly.com/pricing",
+  "price_checked": "2026-08-05",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/calendly"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "calcom"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

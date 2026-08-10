@@ -1,0 +1,20 @@
+{
+  "id": "adventurelog",
+  "name": "AdventureLog",
+  "tagline": "A travel journal on your own server: the trips, the photographs, the map, and the countries you have actually stood in.",
+  "repo": "seanmorley15/AdventureLog",
+  "site": "https://adventurelog.app",
+  "license": "GPL-3.0",
+  "category": "money-home",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 10,
+    "arm64": false,
+    "containers": 3,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

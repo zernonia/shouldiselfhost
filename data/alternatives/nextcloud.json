@@ -1,0 +1,20 @@
+{
+  "id": "nextcloud",
+  "name": "Nextcloud",
+  "tagline": "Files, calendars and contacts on hardware you control, with the desktop and mobile clients pointed at it instead of somebody else's cloud.",
+  "repo": "nextcloud/server",
+  "site": "https://nextcloud.com",
+  "license": "AGPL-3.0",
+  "category": "files-docs",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 4,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

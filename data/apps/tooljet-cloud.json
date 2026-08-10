@@ -1,0 +1,24 @@
+{
+  "id": "tooljet-cloud",
+  "name": "ToolJet",
+  "domain": "tooljet.com",
+  "category": "automation-dev",
+  "price_usd_mo": 79,
+  "price_plan": "Pro",
+  "price_unit": "per-seat",
+  "price_source": "https://www.tooljet.ai/pricing",
+  "price_checked": "2026-08-07",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/tooljet-cloud"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "tooljet",
+    "appsmith"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

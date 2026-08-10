@@ -1,0 +1,20 @@
+{
+  "id": "seafile",
+  "name": "Seafile",
+  "tagline": "File sync and share on a box you own, with versioned libraries and clients that move only the blocks that changed.",
+  "repo": "haiwen/seafile",
+  "site": "https://www.seafile.com",
+  "license": "AGPL-3.0-only",
+  "category": "files-docs",
+  "resources": {
+    "ram_min_mb": 2048,
+    "disk_gb": 10,
+    "arm64": true,
+    "containers": 3,
+    "external_db": true
+  },
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

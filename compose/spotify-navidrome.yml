@@ -1,0 +1,21 @@
+# Navidrome — music streaming server for music YOU OWN (tested against Spotify's job list;
+# see the verdict for why owning zero files changes the answer)
+services:
+  navidrome:
+    image: deluan/navidrome:latest
+    container_name: navidrome
+    restart: unless-stopped
+    ports:
+      - "4533:4533"
+    volumes:
+      - navidrome-data:/data
+      - ./music:/music:ro # point at your library
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:4533/ping || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 24
+      start_period: 20s
+
+volumes:
+  navidrome-data:

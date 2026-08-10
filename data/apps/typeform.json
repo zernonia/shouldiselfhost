@@ -1,0 +1,23 @@
+{
+  "id": "typeform",
+  "name": "Typeform",
+  "domain": "typeform.com",
+  "category": "marketing-content",
+  "price_usd_mo": 39,
+  "price_plan": "Basic",
+  "price_unit": "flat",
+  "price_source": "https://www.typeform.com/pricing/",
+  "price_checked": "2026-08-06",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/typeform"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "formbricks"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "anylist-complete",
+  "name": "AnyList",
+  "domain": "anylist.com",
+  "category": "money-home",
+  "price_usd_mo": 0.83,
+  "price_plan": "Complete (individual)",
+  "price_unit": "flat",
+  "price_source": "https://www.anylist.com/complete",
+  "price_checked": "2026-08-07",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/anylist-complete"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "kitchenowl",
+    "mealie"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

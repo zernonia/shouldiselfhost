@@ -1,0 +1,23 @@
+{
+  "id": "dropbox",
+  "name": "Dropbox",
+  "domain": "dropbox.com",
+  "category": "files-docs",
+  "price_usd_mo": 11.99,
+  "price_plan": "Plus",
+  "price_unit": "flat",
+  "price_source": "https://www.dropbox.com/plans",
+  "price_checked": "2026-08-05",
+  "links": {
+    "caniselfhostit": "https://caniselfhostit.com/dropbox"
+  },
+  "jobs": [],
+  "verdict": null,
+  "alternatives": [
+    "nextcloud"
+  ],
+  "provenance": {
+    "capability_seed": "caniselfhostit",
+    "decision_layer": "original"
+  }
+}

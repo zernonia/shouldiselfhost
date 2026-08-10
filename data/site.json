@@ -1,0 +1,15 @@
+{
+  "hourly_rate_usd": 20,
+  "break_even_window_mo": 18,
+  "reference_env": "Fresh Debian 12, Docker + Compose preinstalled, 2 GB RAM / 2 vCPU ($5-class VPS)",
+  "attribution": {
+    "caniselfhostit": {
+      "name": "caniselfhostit.com",
+      "url": "https://caniselfhostit.com",
+      "repo": "https://github.com/caniselfhostit/caniselfhostit",
+      "license": "MIT",
+      "author": "Jashanpreet Singh",
+      "note": "Capability data (app → replacement pairings, pricing snapshots) seeded from this dataset. They answer 'can you run it, and how' — go there for guided installs."
+    }
+  }
+}

@@ -1,0 +1,55 @@
+# Mattermost Team Edition — self-hosted team chat (replaces Slack)
+services:
+  mattermost:
+    image: mattermost/mattermost-team-edition:latest
+    container_name: mattermost
+    restart: unless-stopped
+    depends_on:
+      mm-postgres:
+        condition: service_healthy
+    environment:
+      MM_SQLSETTINGS_DRIVERNAME: postgres
+      MM_SQLSETTINGS_DATASOURCE: postgres://mmuser:mmpass@mm-postgres:5432/mattermost?sslmode=disable&connect_timeout=10
+      MM_SERVICESETTINGS_SITEURL: http://localhost:8065
+      MM_SERVICESETTINGS_ENABLELOCALMODE: "true"
+    ports:
+      - "8065:8065"
+    volumes:
+      - mm-data:/mattermost/data
+      - mm-logs:/mattermost/logs
+      - mm-config:/mattermost/config
+      - mm-plugins:/mattermost/plugins
+      - mm-client-plugins:/mattermost/client/plugins
+      - mm-bleve:/mattermost/bleve-indexes
+    healthcheck:
+      # The image ships no shell, curl or wget — exec-form mmctl over the local socket
+      # is the only probe that works (requires MM_SERVICESETTINGS_ENABLELOCALMODE above).
+      test: ["CMD", "/mattermost/bin/mmctl", "system", "status", "--local"]
+      interval: 5s
+      timeout: 10s
+      retries: 36
+      start_period: 30s
+
+  mm-postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: mmuser
+      POSTGRES_PASSWORD: mmpass
+      POSTGRES_DB: mattermost
+    volumes:
+      - mm-pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mmuser"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+volumes:
+  mm-data:
+  mm-logs:
+  mm-config:
+  mm-plugins:
+  mm-client-plugins:
+  mm-bleve:
+  mm-pg:
