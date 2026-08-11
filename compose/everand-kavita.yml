@@ -1,0 +1,26 @@
+# Kavita — ebook/comic server. .NET image without curl/wget: sidecar probes it.
+services:
+  kavita:
+    image: jvmilazz0/kavita:latest
+    container_name: kavita
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    volumes:
+      - kavita-data:/kavita/config
+
+  probe:
+    image: busybox:stable
+    network_mode: "service:kavita"
+    depends_on:
+      - kavita
+    command: sh -c 'while true; do sleep 30; done'
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z localhost 5000 || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 40
+      start_period: 20s
+
+volumes:
+  kavita-data:

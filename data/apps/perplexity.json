@@ -11,8 +11,12 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/perplexity"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "AI answers with citations",
+    "web search synthesis",
+    "follow-up threads"
+  ],
+  "verdict": "NOT_REALLY",
   "alternatives": [
     "perplexica",
     "librechat"
@@ -20,5 +24,25 @@
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
+  },
+  "verdict_reason": "Perplexica reproduces the interface, but every answer still burns metered LLM API tokens on your key. Heavy use costs more à la carte than the $20 bundle; light use doesn't justify the stack. You'd be self-hosting the wrapper while renting the brain.",
+  "what_you_lose": [
+    "Subsidized frontier-model access — the subscription is the cheap part"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.5,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 20
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 15,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/perplexity.md"
+    ]
   }
 }

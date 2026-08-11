@@ -11,13 +11,37 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/zight"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "screen capture & recording",
+    "instant share links",
+    "annotations"
+  ],
+  "verdict": "NOT_REALLY",
   "alternatives": [
     "zipline"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
+  },
+  "verdict_reason": "Zight is a capture app with hosting attached. Zipline hosts files fine, but the screenshot-annotate-share flow lives in the client app — which stays subscription-bound. Self-hosting the storage half of a $9.95 tool solves the cheap half.",
+  "what_you_lose": [
+    "The capture/annotation apps — the part you actually use all day"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.3,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 10
+  },
+  "hardware_tier": "pi",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 15,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/zight.md"
+    ]
   }
 }

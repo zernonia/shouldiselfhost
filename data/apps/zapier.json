@@ -11,13 +11,45 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/zapier"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "app-to-app automations",
+    "triggers & actions",
+    "multi-step workflows",
+    "webhooks"
+  ],
+  "verdict": "YES",
   "alternatives": [
     "activepieces"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "Activepieces runs your automations on your box with a visual builder and hundreds of pieces. Zapier's task-based pricing means success gets expensive; self-hosted, a busy month costs the same as a quiet one.",
+  "what_you_lose": [
+    "Zapier's long tail of 6000+ integrations — check your critical apps against the pieces list first",
+    "Their reliability team; failed runs are now your logs to read"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 1.0,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 30
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 45,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/zapier.md",
+      "compose/zapier-activepieces.yml"
+    ],
+    "what_broke": [
+      "First boot syncs its pieces catalog over the network — in a proxied/airgapped environment that sync fails and the API never comes up; plan for npm egress on first start",
+      "Not boot-verified in this session — compose is CI-gated (weekly compose-check must pass before this claim hardens)"
+    ]
+  },
+  "compose": "compose/zapier-activepieces.yml"
 }

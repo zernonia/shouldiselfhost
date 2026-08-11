@@ -11,8 +11,12 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/sync-com"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "encrypted cloud storage",
+    "file sync",
+    "sharing links"
+  ],
+  "verdict": "NOT_REALLY",
   "alternatives": [
     "syncthing",
     "nextcloud"
@@ -20,5 +24,25 @@
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
+  },
+  "verdict_reason": "$4/mo for 2TB of e2e-encrypted storage is cheaper than the raw disk it would take to replicate — before you count your time. Syncthing is superb for device-to-device sync (no server!) and complements rather than replaces a storage subscription.",
+  "what_you_lose": [
+    "2TB of replicated storage for less than storage costs — the price is the moat"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 1.0,
+    "storage_usd_mo": 4.0,
+    "maint_min_mo": 20
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 15,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/sync-com.md"
+    ]
   }
 }

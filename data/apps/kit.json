@@ -11,8 +11,13 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/kit"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "email campaigns",
+    "subscriber segmentation",
+    "automation sequences",
+    "landing forms"
+  ],
+  "verdict": "YES",
   "alternatives": [
     "keila",
     "listmonk"
@@ -20,5 +25,28 @@
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "Kit (ConvertKit) at $39/mo for 1k subscribers is the classic listmonk win: campaigns, sequences and segmentation from a two-container setup verified on this scoreboard, plus an SES account measured in cents.",
+  "what_you_lose": [
+    "Kit's creator-network recommendations engine",
+    "Landing pages and commerce come from elsewhere in your stack"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.5,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 30
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 40,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/kit.md",
+      "compose/mailchimp-listmonk.yml"
+    ]
+  },
+  "compose": "compose/mailchimp-listmonk.yml"
 }

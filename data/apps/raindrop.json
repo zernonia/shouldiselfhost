@@ -11,13 +11,38 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/raindrop"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "bookmark manager",
+    "collections & tags",
+    "full-text search",
+    "highlights"
+  ],
+  "verdict": "NOT_REALLY",
   "alternatives": [
     "linkwarden"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
+  },
+  "verdict_reason": "$3/mo, and the free tier is generous. Linkwarden is a genuinely nice bookmark manager with previews — and the same verdict as linkding applies: at this price your setup evening never pays back. Run it for ownership if you want; the wallet argument isn't there.",
+  "what_you_lose": [
+    "Raindrop's polished apps and full-text search tier"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.3,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 10
+  },
+  "hardware_tier": "pi",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 15,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/raindrop.md"
+    ]
   }
 }

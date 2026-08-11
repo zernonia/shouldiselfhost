@@ -1,0 +1,18 @@
+# Uptime Kuma — status monitoring; image ships its own healthcheck binary
+services:
+  uptime-kuma:
+    image: louislam/uptime-kuma:1
+    container_name: uptime-kuma
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    volumes:
+      - kuma-data:/app/data
+    healthcheck:
+      test: ["CMD", "extra/healthcheck"]
+      interval: 5s
+      timeout: 30s
+      retries: 30
+      start_period: 30s
+volumes:
+  kuma-data:

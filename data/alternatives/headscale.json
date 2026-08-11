@@ -1,0 +1,12 @@
+{
+  "id": "headscale",
+  "name": "Headscale",
+  "repo": "juanfont/headscale",
+  "category": "networking",
+  "tagline": "Self-hosted, open-source implementation of the Tailscale control server",
+  "license": "BSD-3-Clause",
+  "site": "https://headscale.net",
+  "provenance": {
+    "decision_layer": "original"
+  }
+}

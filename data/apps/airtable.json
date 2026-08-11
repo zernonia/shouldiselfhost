@@ -11,13 +11,44 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/airtable"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "relational tables & views",
+    "formula columns & linked records",
+    "forms into tables",
+    "API & automations"
+  ],
+  "verdict": "YES",
   "alternatives": [
     "grist"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "Grist is the closest thing to a self-hosted Airtable that actually exists: formula columns, linked records, views, API — sqlite-backed, one container. Per-seat pricing dies the day you move.",
+  "what_you_lose": [
+    "Airtable's automations marketplace and native integrations",
+    "Interface designer and the mobile apps"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.5,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 20
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 26,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/airtable.md",
+      "compose/airtable-grist.yml"
+    ],
+    "what_broke": [
+      "Boot to healthy measured at 33s on the 2GB reference env"
+    ]
+  },
+  "compose": "compose/airtable-grist.yml"
 }

@@ -11,8 +11,13 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/activecampaign"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "email marketing",
+    "drip automations",
+    "CRM-lite",
+    "segmentation"
+  ],
+  "verdict": "KINDA",
   "alternatives": [
     "mautic",
     "listmonk"
@@ -20,5 +25,28 @@
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "The email+automation core moves to listmonk (newsletters) or Mautic (drip logic) — but ActiveCampaign is genuinely an automation suite, and Mautic is the ops-heaviest thing in this category. Worth it if your flows are simple; if you live in their journey builder, the migration will hurt.",
+  "what_you_lose": [
+    "Journey-builder depth Mautic approximates but doesn't match",
+    "Deliverability babysitting becomes your job"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 1.0,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 45
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 60,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/activecampaign.md",
+      "compose/mailchimp-listmonk.yml"
+    ]
+  },
+  "compose": "compose/mailchimp-listmonk.yml"
 }

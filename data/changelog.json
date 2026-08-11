@@ -208,5 +208,495 @@
     "from": null,
     "to": "YES",
     "reason": "Initial verdict: wallabag archives the full page."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "fathom-analytics",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: Fathom charges $15/mo for privacy-friendly analytics; Plausible and Umami are the same promise as software you."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "tailscale",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: For individuals, Tailscale's free tier IS the product — 100 devices, 3 users, $0."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "airtable",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: Grist is the closest thing to a self-hosted Airtable that actually exists: formula columns, linked records, vi."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "pingdom",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: Uptime Kuma boots in seconds, checks HTTP/TCP/DNS/ping, pages you through ntfy or Telegram, and replaces the e."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "uptime",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: Same story as Pingdom, smaller bill: Uptime Kuma covers the checks and the status page in one quick setup (Gat."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "matomo-cloud",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: It is literally the same software."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "amplitude",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: For product analytics at Amplitude's $49+/mo entry point, Matomo (or Countly) covers events, funnels and reten."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "toggl-track",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: Kimai is a grown-up time tracker: projects, rates, invoices, per-client exports, team support."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "docusign",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: DocuSeal does signatures, templates, audit trails and email flows from one sqlite-backed container."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "pandadoc",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: Same jobs as DocuSign at $35/mo — proposals, sign-offs, templates."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "adobe-acrobat",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: Stirling-PDF is the whole Acrobat toolbox — merge, split, OCR, compress, redact, sign — behind one port, with ."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "typeform",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: Formbricks covers forms, surveys, logic jumps and webhooks with a modern editor."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "jotform",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: Same shape as Typeform: $39/mo for form limits that Formbricks (or LimeSurvey for research-grade needs) remove."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "surveymonkey",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: SurveyMonkey's $30/mo Advantage plan is the same job Formbricks does for a database's rent — and LimeSurvey ex."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "zendesk",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: Chatwoot gives you shared inboxes, live chat widgets, canned responses and automations — the Zendesk core — pe."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "intercom",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: Intercom starts at $35/seat and climbs fast; Chatwoot does the messenger widget, inbox and campaigns without t."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "pipedrive",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: EspoCRM covers pipelines, contacts, activities and email-in for the cost of a MariaDB."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "retool",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: Appsmith's all-in-one container builds the same internal CRUD panels Retool charges per-builder-per-month for."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "tooljet-cloud",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: ToolJet publishes the software; the cloud plan charges $79/mo to run it for you."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "zapier",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: Activepieces runs your automations on your box with a visual builder and hundreds of pieces."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "kit",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: Kit (ConvertKit) at $39/mo for 1k subscribers is the classic listmonk win: campaigns, sequences and segmentati."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "lokalise",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: At $144/mo, Lokalise is one of the widest gaps on the whole scoreboard: Weblate and Tolgee are mature, transla."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "tolgee-cloud",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: Same software, different bill: Tolgee's cloud is $49/mo, the container is free and ships an embedded Postgres ."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "baserow-cloud",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: The cloud plan charges $12/user for the open-source software's hosted convenience."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "canny",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: Canny wants $99/mo for a feedback board."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "doodle",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: Rallly does the one Doodle job — find a time that works for everyone — with a clean UI, no ads around your pol."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "acuity-scheduling",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: Acuity is Squarespace's $20/mo booking page; Cal.com is the same booking page with routing forms and workflows."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "transistor-fm",
+    "from": null,
+    "to": "KINDA",
+    "reason": "Initial verdict: Castopod hosts your podcast with analytics, an RSS feed you own, and fediverse comments — and audio bandwidth ."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "whimsical",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: Flowcharts go to draw.io (stateless, boots instantly), whiteboards go to Excalidraw (verified earlier on this ."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "roam-research",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: Roam still charges $15/mo for backlinked notes."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "monarch-money",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: Actual Budget is the best self-hosted budgeting tool ever made: local-first, envelope budgeting, fast sync ser."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "home-assistant-cloud",
+    "from": null,
+    "to": "YES",
+    "reason": "Initial verdict: You're already self-hosting Home Assistant — Nabu Casa is a $6.50 relay for remote access and voice."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "make",
+    "from": null,
+    "to": "KINDA",
+    "reason": "Initial verdict: Make's $9/mo entry is far cheaper than Zapier, which softens the math — but operations pricing still scales wi."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "activecampaign",
+    "from": null,
+    "to": "KINDA",
+    "reason": "Initial verdict: The email+automation core moves to listmonk (newsletters) or Mautic (drip logic) — but ActiveCampaign is genui."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "grammarly",
+    "from": null,
+    "to": "KINDA",
+    "reason": "Initial verdict: LanguageTool's server boots in seconds and the browser extension points at it with one setting — grammar and s."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "day-one",
+    "from": null,
+    "to": "KINDA",
+    "reason": "Initial verdict: Memos booted in seconds and journaling in it is genuinely pleasant."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "codesandbox",
+    "from": null,
+    "to": "KINDA",
+    "reason": "Initial verdict: code-server puts real VS Code on your VPS and it boots instantly."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "figma",
+    "from": null,
+    "to": "KINDA",
+    "reason": "Initial verdict: Penpot is the real thing — components, prototyping, dev handoff, SVG-native."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "confluence",
+    "from": null,
+    "to": "KINDA",
+    "reason": "Initial verdict: Per-seat wiki pricing adds up fast, and BookStack/Docmost/XWiki are all credible team wikis."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "slab",
+    "from": null,
+    "to": "KINDA",
+    "reason": "Initial verdict: Slab is a lovely wiki at $6.67/seat; BookStack is a solid wiki at $0/seat."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "asana",
+    "from": null,
+    "to": "KINDA",
+    "reason": "Initial verdict: OpenProject is the heavyweight that genuinely covers Asana-and-beyond (Gantt, agile boards, time)."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "monday-com",
+    "from": null,
+    "to": "KINDA",
+    "reason": "Initial verdict: Same per-seat math and same replacement as Asana: OpenProject (or Leantime for something lighter)."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "trello",
+    "from": null,
+    "to": "KINDA",
+    "reason": "Initial verdict: Wekan does kanban fine (verified boot) and per-seat Trello money is real money for teams."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "freshbooks",
+    "from": null,
+    "to": "KINDA",
+    "reason": "Initial verdict: Invoice Ninja covers invoicing, expenses and payments credibly, and freelancer money is exactly the money wort."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "vimeo",
+    "from": null,
+    "to": "KINDA",
+    "reason": "Initial verdict: PeerTube is excellent software, but video is the one medium where bandwidth math bites back: transcodes eat CP."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "deepl-pro",
+    "from": null,
+    "to": "KINDA",
+    "reason": "Initial verdict: LibreTranslate gives you an unlimited private translation API for the cost of a beefy-ish container."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "chatbase",
+    "from": null,
+    "to": "KINDA",
+    "reason": "Initial verdict: Typebot builds the chat flows; your own OpenAI/Anthropic key powers the answers — usually cheaper than Chatbas."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "obsidian-sync",
+    "from": null,
+    "to": "KINDA",
+    "reason": "Initial verdict: The LiveSync community plugin against your own CouchDB replaces the $5/mo sync — end-to-end encrypted, works w."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "myfitnesspal-premium",
+    "from": null,
+    "to": "KINDA",
+    "reason": "Initial verdict: wger handles workouts, routines and body metrics well."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "vercel",
+    "from": null,
+    "to": "KINDA",
+    "reason": "Initial verdict: Coolify (or Dokploy) turns any VPS into your own deploy platform: git-push previews, SSL, one dashboard."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "railway",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: Railway's $5 hobby plan is the VPS."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "everand",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: Everand is a catalog subscription — the books aren't yours either way."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "quickbooks-online",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: The software is replaceable; the accountant isn't."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "anylist-complete",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: AnyList costs $10 a YEAR."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "microsoft-365-personal",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: $1.99/mo including 100GB and real Office compatibility."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "google-workspace-business-starter",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: The docs and drive parts self-host fine (OnlyOffice, Nextcloud — both on this scoreboard)."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "box-personal-pro",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: $7/mo for 100GB with sync apps and zero ops."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "sync-com",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: $4/mo for 2TB of e2e-encrypted storage is cheaper than the raw disk it would take to replicate — before you co."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "raindrop",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: $3/mo, and the free tier is generous."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "linktree",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: It's one page of links."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "buffer",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: Buffer's $5/channel is cheap, and the real cost of Postiz (fine software) is maintenance: every social network."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "strava",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: FitTrackee logs your runs beautifully."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "flickr-pro",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: $6.17/mo for unlimited hosting plus the last real photo community."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "adobe-lightroom",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: PhotoPrism and Immich organize and search photos brilliantly."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "github-copilot",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: Tabby self-hosts code completion competently — on a GPU you have to rent or own."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "midjourney",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: InvokeAI + open models on your own GPU is a genuine creative stack — for people who own the GPU for other reas."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "perplexity",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: Perplexica reproduces the interface, but every answer still burns metered LLM API tokens on your key."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "shopify",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: PrestaShop can run a store."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "zight",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: Zight is a capture app with hosting attached."
+  },
+  {
+    "date": "2026-08-10",
+    "app": "wanderlog-pro",
+    "from": null,
+    "to": "NOT_REALLY",
+    "reason": "Initial verdict: $3.33/mo."
   }
 ]

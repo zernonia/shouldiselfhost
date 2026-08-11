@@ -1,0 +1,75 @@
+# Chatwoot — support inbox; rails web + sidekiq + postgres(pgvector) + redis
+x-cw-env: &cw-env
+  SECRET_KEY_BASE: 0123456789abcdef0123456789abcdef0123456789abcdef
+  FRONTEND_URL: http://localhost:3006
+  POSTGRES_HOST: cw-db
+  POSTGRES_USERNAME: chatwoot
+  POSTGRES_PASSWORD: chatwoot
+  POSTGRES_DATABASE: chatwoot
+  REDIS_URL: redis://cw-cache:6379
+  RAILS_ENV: production
+  NODE_ENV: production
+  INSTALLATION_ENV: docker
+services:
+  chatwoot-web:
+    image: chatwoot/chatwoot:latest
+    container_name: chatwoot-web
+    restart: unless-stopped
+    depends_on:
+      cw-db:
+        condition: service_healthy
+      cw-cache:
+        condition: service_healthy
+    environment: *cw-env
+    entrypoint: docker/entrypoints/rails.sh
+    command: sh -c 'bundle exec rails db:chatwoot_prepare && bundle exec rails s -p 3000 -b 0.0.0.0'
+    ports:
+      - "3006:3000"
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:3000/api >/dev/null || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 60
+      start_period: 120s
+  chatwoot-worker:
+    image: chatwoot/chatwoot:latest
+    container_name: chatwoot-worker
+    restart: unless-stopped
+    depends_on:
+      cw-db:
+        condition: service_healthy
+      cw-cache:
+        condition: service_healthy
+    environment: *cw-env
+    entrypoint: docker/entrypoints/rails.sh
+    command: sh -c 'bundle exec sidekiq -C config/sidekiq.yml'
+    healthcheck:
+      test: ["CMD-SHELL", "ps aux | grep -q '[s]idekiq' || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 60s
+  cw-db:
+    image: pgvector/pgvector:pg16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: chatwoot
+      POSTGRES_PASSWORD: chatwoot
+      POSTGRES_DB: chatwoot
+    volumes:
+      - cw-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U chatwoot"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+  cw-cache:
+    image: redis:7-alpine
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+volumes:
+  cw-db:

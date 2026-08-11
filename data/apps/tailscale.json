@@ -1,0 +1,46 @@
+{
+  "id": "tailscale",
+  "name": "Tailscale",
+  "domain": "tailscale.com",
+  "category": "networking",
+  "price_usd_mo": 6,
+  "price_plan": "Personal Plus",
+  "price_unit": "flat",
+  "price_source": "https://tailscale.com/pricing",
+  "price_checked": "2026-08-10",
+  "links": {},
+  "jobs": [
+    "mesh VPN between devices",
+    "ACLs & SSO",
+    "MagicDNS",
+    "exit nodes"
+  ],
+  "alternatives": [
+    "headscale"
+  ],
+  "provenance": {
+    "decision_layer": "original"
+  },
+  "verdict": "NOT_REALLY",
+  "verdict_reason": "For individuals, Tailscale's free tier IS the product — 100 devices, 3 users, $0. Headscale is a superb control-plane replacement, but you'd be self-hosting to avoid a bill that doesn't exist. It earns its place only when team pricing or compliance says the coordination server must be yours.",
+  "what_you_lose": [
+    "Tailscale's DERP relay fleet — your headscale needs its own relays or direct connectivity",
+    "MagicDNS/SSO polish and their security team watching the control plane"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.3,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 20
+  },
+  "hardware_tier": "pi",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 15,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/tailscale.md"
+    ]
+  }
+}

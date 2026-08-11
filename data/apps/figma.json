@@ -11,8 +11,13 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/figma"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "UI design",
+    "components & libraries",
+    "prototyping",
+    "dev handoff"
+  ],
+  "verdict": "KINDA",
   "alternatives": [
     "penpot",
     "excalidraw"
@@ -20,5 +25,26 @@
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
+  },
+  "verdict_reason": "Penpot is the real thing — components, prototyping, dev handoff, SVG-native. For solo work and internal tools it's a clean yes. What keeps this at KINDA is everyone else: client files, plugins, and the fact that design collaboration happens where the other designers are.",
+  "what_you_lose": [
+    "Figma's plugin ecosystem and multiplayer ubiquity",
+    "Auto-layout parity is close but not identical — test your patterns"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 2.0,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 40
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 15,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/figma.md"
+    ]
   }
 }

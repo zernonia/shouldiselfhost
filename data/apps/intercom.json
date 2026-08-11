@@ -11,13 +11,41 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/intercom"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "in-app messenger",
+    "shared inbox",
+    "outbound messages",
+    "help articles"
+  ],
+  "verdict": "YES",
   "alternatives": [
     "chatwoot"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "Intercom starts at $35/seat and climbs fast; Chatwoot does the messenger widget, inbox and campaigns without the per-seat meter. Same replacement and evidence as the Zendesk verdict.",
+  "what_you_lose": [
+    "Intercom's product-tour and outbound-message machinery",
+    "Fin AI agent — their answer bot is genuinely ahead"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 2.0,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 45
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 42,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/intercom.md",
+      "compose/zendesk-chatwoot.yml"
+    ]
+  },
+  "compose": "compose/zendesk-chatwoot.yml"
 }

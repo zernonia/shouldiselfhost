@@ -11,13 +11,38 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/home-assistant-cloud"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "remote access to Home Assistant",
+    "voice assistant integration",
+    "TLS without port-forwarding"
+  ],
+  "verdict": "YES",
   "alternatives": [
     "home-assistant"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
+  },
+  "verdict_reason": "You're already self-hosting Home Assistant — Nabu Casa is a $6.50 relay for remote access and voice. A reverse proxy or Tailscale replaces the relay in an afternoon. Counterpoint worth stating: that subscription is also how HA's development gets funded.",
+  "what_you_lose": [
+    "Alexa/Google voice skills without manual token surgery",
+    "Funding the project — consider a donation if you drop the sub"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.0,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 10
+  },
+  "hardware_tier": "pi",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 15,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/home-assistant-cloud.md"
+    ]
   }
 }

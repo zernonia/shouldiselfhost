@@ -1,0 +1,18 @@
+# Appsmith — internal tool builder; official all-in-one image
+services:
+  appsmith:
+    image: appsmith/appsmith-ce:latest
+    container_name: appsmith
+    restart: unless-stopped
+    ports:
+      - "8108:80"
+    volumes:
+      - appsmith-data:/appsmith-stacks
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:80/api/v1/health >/dev/null || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 60
+      start_period: 120s
+volumes:
+  appsmith-data:

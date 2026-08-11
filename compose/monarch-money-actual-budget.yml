@@ -1,0 +1,20 @@
+# Actual Budget — local-first budgeting with a sync server
+services:
+  actual:
+    image: actualbudget/actual-server:latest
+    container_name: actual
+    restart: unless-stopped
+    environment:
+      ACTUAL_HOSTNAME: 0.0.0.0 # node binds :: by default and exits cleanly on ipv6-disabled kernels
+    ports:
+      - "5006:5006"
+    volumes:
+      - actual-data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "node -e \"require('http').get('http://localhost:5006/',r=>process.exit(r.statusCode<500?0:1)).on('error',()=>process.exit(1))\" || exit 1"]
+      interval: 5s
+      timeout: 10s
+      retries: 24
+      start_period: 15s
+volumes:
+  actual-data:

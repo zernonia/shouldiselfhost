@@ -11,13 +11,38 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/wanderlog-pro"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "trip itineraries",
+    "collaborative planning",
+    "maps & routes",
+    "offline access"
+  ],
+  "verdict": "NOT_REALLY",
   "alternatives": [
     "adventurelog"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
+  },
+  "verdict_reason": "$3.33/mo. AdventureLog is a charming trip journal, but Wanderlog's value is collaborative planning with live maps and imports — and the cheap-subscription pattern applies in full: the setup evening costs more than years of the subscription.",
+  "what_you_lose": [
+    "Collaborative itineraries with non-self-hosting travel companions"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.3,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 10
+  },
+  "hardware_tier": "pi",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 15,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/wanderlog-pro.md"
+    ]
   }
 }

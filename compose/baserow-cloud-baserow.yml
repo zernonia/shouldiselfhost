@@ -1,0 +1,20 @@
+# Baserow — all-in-one image (embedded postgres+redis) for the test protocol
+services:
+  baserow:
+    image: baserow/baserow:1.30.1
+    container_name: baserow
+    restart: unless-stopped
+    environment:
+      BASEROW_PUBLIC_URL: http://localhost:8104
+    ports:
+      - "8104:80"
+    volumes:
+      - baserow-data:/baserow/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:80/api/_health/ >/dev/null || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 60
+      start_period: 90s
+volumes:
+  baserow-data:

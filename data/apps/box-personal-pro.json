@@ -11,8 +11,12 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/box-personal-pro"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "cloud file storage",
+    "sync & sharing",
+    "mobile access"
+  ],
+  "verdict": "NOT_REALLY",
   "alternatives": [
     "seafile",
     "nextcloud"
@@ -20,5 +24,25 @@
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
+  },
+  "verdict_reason": "$7/mo for 100GB with sync apps and zero ops. Seafile and Nextcloud replace the software easily — then you're paying for storage, backups and bandwidth anyway, arriving at roughly the same money with pager duty included. Dropbox got a KINDA at $11.99; Box at $7 doesn't clear the bar.",
+  "what_you_lose": [
+    "Their sync client reliability record"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 1.0,
+    "storage_usd_mo": 2.0,
+    "maint_min_mo": 30
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 15,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/box-personal-pro.md"
+    ]
   }
 }

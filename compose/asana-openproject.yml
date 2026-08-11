@@ -1,0 +1,24 @@
+# OpenProject — heavyweight PM; all-in-one image (slow first boot, seeds its DB)
+services:
+  openproject:
+    image: openproject/openproject:16
+    container_name: openproject
+    restart: unless-stopped
+    environment:
+      OPENPROJECT_HOST__NAME: localhost:8110
+      OPENPROJECT_HTTPS: "false"
+      OPENPROJECT_SECRET_KEY_BASE: 0123456789abcdef0123456789abcdef0123456789abcdef
+    ports:
+      - "8110:80"
+    volumes:
+      - openproject-data:/var/openproject/assets
+      - openproject-db:/var/openproject/pgdata
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:80/health_check >/dev/null || exit 1"]
+      interval: 15s
+      timeout: 15s
+      retries: 60
+      start_period: 180s
+volumes:
+  openproject-data:
+  openproject-db:

@@ -11,13 +11,44 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/docusign"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "e-signatures",
+    "signing templates",
+    "audit trails",
+    "multi-party flows"
+  ],
+  "verdict": "YES",
   "alternatives": [
     "docuseal"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "DocuSeal does signatures, templates, audit trails and email flows from one sqlite-backed container. DocuSign's $15/mo Personal plan caps you at 5 sends a month; your own instance doesn't count.",
+  "what_you_lose": [
+    "Court-tested brand recognition — counterparties know DocuSign",
+    "Qualified e-signature (QES) tiers for regulated industries"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.3,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 15
+  },
+  "hardware_tier": "pi",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 11,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/docusign.md",
+      "compose/docusign-docuseal.yml"
+    ],
+    "what_broke": [
+      "Boot to healthy measured at 26s on the 2GB reference env"
+    ]
+  },
+  "compose": "compose/docusign-docuseal.yml"
 }

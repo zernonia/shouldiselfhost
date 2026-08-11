@@ -11,13 +11,45 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/pipedrive"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "deal pipelines",
+    "contact management",
+    "activity tracking",
+    "email integration"
+  ],
+  "verdict": "YES",
   "alternatives": [
     "espocrm"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "EspoCRM covers pipelines, contacts, activities and email-in for the cost of a MariaDB. It's dated-looking and endlessly capable — which is also a fair description of most CRMs people actually pay for.",
+  "what_you_lose": [
+    "Pipedrive's polish and their marketplace of sales tools",
+    "Built-in calling and email sync take config work in Espo"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.5,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 30
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 45,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/pipedrive.md",
+      "compose/pipedrive-espocrm.yml"
+    ],
+    "what_broke": [
+      "First-run installer rebuilds the app inside the container and blew straight through a 15-minute health window on the 2GB reference box — budget real time for the first boot, or pre-warm the volume",
+      "Not boot-verified in this session — compose is CI-gated (weekly compose-check must pass before this claim hardens)"
+    ]
+  },
+  "compose": "compose/pipedrive-espocrm.yml"
 }

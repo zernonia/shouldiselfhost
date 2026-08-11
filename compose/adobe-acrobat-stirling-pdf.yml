@@ -1,0 +1,20 @@
+# Stirling-PDF — the whole Acrobat toolbox behind one port
+services:
+  stirling-pdf:
+    image: stirlingtools/stirling-pdf:latest
+    container_name: stirling-pdf
+    restart: unless-stopped
+    environment:
+      DISABLE_ADDITIONAL_FEATURES: "true"
+    ports:
+      - "8092:8080"
+    volumes:
+      - stirling-data:/usr/share/tessdata
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8080/api/v1/info/status || exit 1"]
+      interval: 5s
+      timeout: 10s
+      retries: 40
+      start_period: 30s
+volumes:
+  stirling-data:

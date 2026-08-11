@@ -1,0 +1,48 @@
+# Fider — feedback board; Go binary + postgres. Sidecar probes it.
+services:
+  fider:
+    image: getfider/fider:stable
+    container_name: fider
+    restart: unless-stopped
+    depends_on:
+      fider-db:
+        condition: service_healthy
+    environment:
+      BASE_URL: http://localhost:3003
+      DATABASE_URL: postgres://fider:fider@fider-db:5432/fider?sslmode=disable
+      JWT_SECRET: change-me-please-0123456789abcdef0123456789abcdef
+      EMAIL_NOREPLY: noreply@example.com
+      # Fider panics at boot without an SMTP host — any value works, configure real mail later
+      EMAIL_SMTP_HOST: localhost
+      EMAIL_SMTP_PORT: "25"
+    ports:
+      - "3003:3000"
+
+  probe:
+    image: busybox:stable
+    network_mode: "service:fider"
+    depends_on:
+      - fider
+    command: sh -c 'while true; do sleep 30; done'
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z localhost 3000 || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 40
+      start_period: 15s
+  fider-db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: fider
+      POSTGRES_PASSWORD: fider
+      POSTGRES_DB: fider
+    volumes:
+      - fider-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U fider"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+volumes:
+  fider-db:

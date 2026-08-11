@@ -11,13 +11,45 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/typeform"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "forms & surveys",
+    "logic jumps",
+    "response collection",
+    "webhooks & integrations"
+  ],
+  "verdict": "YES",
   "alternatives": [
     "formbricks"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "Formbricks covers forms, surveys, logic jumps and webhooks with a modern editor. Typeform's $39/mo Basic caps responses; your Postgres doesn't. One app container plus a database and you're collecting.",
+  "what_you_lose": [
+    "Typeform's distinctive one-question-at-a-time UX polish",
+    "Their template gallery and integrations marketplace"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.5,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 20
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 40,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/typeform.md",
+      "compose/typeform-formbricks.yml"
+    ],
+    "what_broke": [
+      "The image runs `pnpm prisma migrate deploy` at first boot and corepack downloads pnpm from npm at runtime — behind a TLS-intercepting proxy this dies with SELF_SIGNED_CERT_IN_CHAIN; on a normal box it just works, but airgapped/proxied environments should know",
+      "Not boot-verified in this session — compose is CI-gated (weekly compose-check must pass before this claim hardens)"
+    ]
+  },
+  "compose": "compose/typeform-formbricks.yml"
 }

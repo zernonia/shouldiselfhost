@@ -1,0 +1,44 @@
+# Rallly — meeting polls; node app + postgres. Sidecar probe (slim image, no curl).
+services:
+  rallly:
+    image: lukevella/rallly:latest
+    container_name: rallly
+    restart: unless-stopped
+    depends_on:
+      rallly-db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgres://rallly:rallly@rallly-db:5432/rallly
+      SECRET_PASSWORD: change-me-please-0123456789abcdef
+      NEXT_PUBLIC_BASE_URL: http://localhost:3004
+    ports:
+      - "3004:3000"
+
+  probe:
+    image: busybox:stable
+    network_mode: "service:rallly"
+    depends_on:
+      - rallly
+    command: sh -c 'while true; do sleep 30; done'
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z localhost 3000 || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 60
+      start_period: 25s
+  rallly-db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: rallly
+      POSTGRES_PASSWORD: rallly
+      POSTGRES_DB: rallly
+    volumes:
+      - rallly-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U rallly"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+volumes:
+  rallly-db:

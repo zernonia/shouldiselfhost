@@ -11,13 +11,44 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/asana"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "task & project tracking",
+    "boards & timelines",
+    "assignees & due dates",
+    "status reporting"
+  ],
+  "verdict": "KINDA",
   "alternatives": [
     "openproject"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "OpenProject is the heavyweight that genuinely covers Asana-and-beyond (Gantt, agile boards, time). Its all-in-one container seeds a full Postgres on first boot — this is a real ops commitment for a team tool your whole team depends on. Worth it for seat counts where the invoice stings.",
+  "what_you_lose": [
+    "Asana's lightness — OpenProject is powerful, not nimble",
+    "Native mobile apps and the integrations directory"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 2.0,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 60
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 47,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/asana.md",
+      "compose/asana-openproject.yml"
+    ],
+    "what_broke": [
+      "Boot to healthy measured at 116s on the 2GB reference env"
+    ]
+  },
+  "compose": "compose/asana-openproject.yml"
 }

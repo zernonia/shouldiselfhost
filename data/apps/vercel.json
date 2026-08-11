@@ -11,13 +11,39 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/vercel"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "git-push deploys",
+    "preview environments",
+    "serverless/edge hosting",
+    "custom domains"
+  ],
+  "verdict": "KINDA",
   "alternatives": [
     "coolify"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
+  },
+  "verdict_reason": "Coolify (or Dokploy) turns any VPS into your own deploy platform: git-push previews, SSL, one dashboard. Vercel's free tier is generous though — this only pays once you're buying seats or bandwidth. Note: it installs via script, not a single compose file, so our weekly CI covers it differently.",
+  "what_you_lose": [
+    "Vercel's edge network and zero-thought scaling",
+    "Preview-deploy speed and DX polish"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 4.0,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 45
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 15,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/vercel.md"
+    ]
   }
 }

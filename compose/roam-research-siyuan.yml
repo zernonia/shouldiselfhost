@@ -1,0 +1,27 @@
+# SiYuan — local-first block-based notes with backlinks
+services:
+  siyuan:
+    image: b3log/siyuan:latest
+    container_name: siyuan
+    restart: unless-stopped
+    command: ["serve", "--workspace=/siyuan/workspace/", "--accessAuthCode=changeme123"] # v3.7+ needs the serve subcommand
+    ports:
+      - "6806:6806"
+    volumes:
+      - siyuan-data:/siyuan/workspace
+
+  probe:
+    image: busybox:stable
+    network_mode: "service:siyuan"
+    depends_on:
+      - siyuan
+    command: sh -c 'while true; do sleep 30; done'
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z localhost 6806 || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 40
+      start_period: 15s
+
+volumes:
+  siyuan-data:

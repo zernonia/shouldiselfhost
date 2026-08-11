@@ -11,13 +11,44 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/day-one"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "journaling",
+    "photo entries",
+    "sync across devices",
+    "on-this-day resurfacing"
+  ],
+  "verdict": "KINDA",
   "alternatives": [
     "memos"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "Memos booted in seconds and journaling in it is genuinely pleasant. But Day One is $6.25/mo and its apps are excellent — the math is thin and this is a category where owning the data is the real argument, not saving money. Worth it if a journal you own outlives any subscription; otherwise keep paying.",
+  "what_you_lose": [
+    "Day One's polished apps, photo layouts, and On This Day",
+    "End-to-end encrypted sync without running your own"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.3,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 10
+  },
+  "hardware_tier": "pi",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 11,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/day-one.md",
+      "compose/day-one-memos.yml"
+    ],
+    "what_broke": [
+      "Boot to healthy measured at 14s on the 2GB reference env"
+    ]
+  },
+  "compose": "compose/day-one-memos.yml"
 }

@@ -11,13 +11,44 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/canny"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "feature-request board",
+    "user voting",
+    "roadmap & statuses",
+    "changelog"
+  ],
+  "verdict": "YES",
   "alternatives": [
     "fider"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "Canny wants $99/mo for a feedback board. Fider is a feedback board. It has voting, statuses, comments and SSO, boots with one Postgres, and the entire category is a solved problem.",
+  "what_you_lose": [
+    "Canny's roadmap-view polish and changelog hosting",
+    "Autopilot dedup/AI features"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.5,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 15
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 12,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/canny.md",
+      "compose/canny-fider.yml"
+    ],
+    "what_broke": [
+      "Boot to healthy measured at 62s on the 2GB reference env"
+    ]
+  },
+  "compose": "compose/canny-fider.yml"
 }

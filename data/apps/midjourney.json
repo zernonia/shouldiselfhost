@@ -11,13 +11,36 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/midjourney"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "text-to-image generation",
+    "style control",
+    "upscaling & variations"
+  ],
+  "verdict": "NOT_REALLY",
   "alternatives": [
     "invokeai"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
+  },
+  "verdict_reason": "InvokeAI + open models on your own GPU is a genuine creative stack — for people who own the GPU for other reasons. Renting one to avoid a $10/mo subscription is negative-sum, and Midjourney's model quality is the product anyway. Same GPU-economics pattern as Copilot.",
+  "what_you_lose": [
+    "Midjourney's models and the zero-setup pipeline"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.0,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 30
+  },
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 15,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/midjourney.md"
+    ]
   }
 }

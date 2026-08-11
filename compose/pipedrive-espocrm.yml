@@ -1,0 +1,46 @@
+# EspoCRM — full CRM; apache image + mariadb (first boot installs the app — allow ~15 min)
+services:
+  espocrm:
+    image: espocrm/espocrm:latest
+    container_name: espocrm
+    restart: unless-stopped
+    depends_on:
+      espocrm-db:
+        condition: service_healthy
+    environment:
+      ESPOCRM_DATABASE_PLATFORM: Mysql
+      ESPOCRM_DATABASE_HOST: espocrm-db
+      ESPOCRM_DATABASE_NAME: espocrm
+      ESPOCRM_DATABASE_USER: espocrm
+      ESPOCRM_DATABASE_PASSWORD: espocrm
+      ESPOCRM_ADMIN_USERNAME: admin
+      ESPOCRM_ADMIN_PASSWORD: changeme123
+      ESPOCRM_SITE_URL: http://localhost:8101
+    ports:
+      - "8101:80"
+    volumes:
+      - espocrm-data:/var/www/html
+    healthcheck:
+      test: ["CMD-SHELL", "php -r 'exit(@file_get_contents(\"http://localhost:80/\")!==false?0:1);'"]
+      interval: 10s
+      timeout: 10s
+      retries: 90
+      start_period: 120s
+  espocrm-db:
+    image: mariadb:11
+    restart: unless-stopped
+    environment:
+      MARIADB_DATABASE: espocrm
+      MARIADB_USER: espocrm
+      MARIADB_PASSWORD: espocrm
+      MARIADB_ROOT_PASSWORD: espocrm-root
+    volumes:
+      - espocrm-db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+volumes:
+  espocrm-data:
+  espocrm-db:

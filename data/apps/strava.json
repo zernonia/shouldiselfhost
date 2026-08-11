@@ -11,13 +11,38 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/strava"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "GPS activity tracking",
+    "segments & leaderboards",
+    "social feed",
+    "training log"
+  ],
+  "verdict": "NOT_REALLY",
   "alternatives": [
     "fittrackee"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
+  },
+  "verdict_reason": "FitTrackee logs your runs beautifully. But Strava at $11.67/mo isn't a GPS log — it's the feed, segments, and the fact that your friends are on it. The network is the product (same pattern as Spotify's catalog), and a self-hosted feed of one is just a diary.",
+  "what_you_lose": [
+    "Segments, kudos, and everyone you ride with"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.3,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 15
+  },
+  "hardware_tier": "pi",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 15,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/strava.md"
+    ]
   }
 }

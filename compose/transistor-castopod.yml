@@ -1,0 +1,42 @@
+# Castopod — podcast hosting; php app + mariadb + redis
+services:
+  castopod:
+    image: castopod/castopod:latest
+    container_name: castopod
+    restart: unless-stopped
+    depends_on:
+      castopod-db:
+        condition: service_healthy
+    environment:
+      CP_BASEURL: http://localhost:8107
+      CP_ANALYTICS_SALT: change-me-please-0123456789abcdef
+      CP_CACHE_HANDLER: file # redis handler demands CP_REDIS_PASSWORD; file cache is fine at this scale
+      CP_DATABASE_HOSTNAME: castopod-db
+      CP_DATABASE_NAME: castopod
+      CP_DATABASE_USERNAME: castopod
+      CP_DATABASE_PASSWORD: castopod
+    ports:
+      - "8107:8080"
+    healthcheck:
+      test: ["CMD-SHELL", "php -r 'exit(@file_get_contents(\"http://localhost:8080/\")!==false?0:1);'"]
+      interval: 10s
+      timeout: 10s
+      retries: 40
+      start_period: 40s
+  castopod-db:
+    image: mariadb:11
+    restart: unless-stopped
+    environment:
+      MARIADB_DATABASE: castopod
+      MARIADB_USER: castopod
+      MARIADB_PASSWORD: castopod
+      MARIADB_ROOT_PASSWORD: castopod-root
+    volumes:
+      - castopod-db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+volumes:
+  castopod-db:

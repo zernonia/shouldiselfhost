@@ -11,8 +11,13 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/quickbooks-online"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "bookkeeping",
+    "invoicing",
+    "bank feeds",
+    "accountant hand-off"
+  ],
+  "verdict": "NOT_REALLY",
   "alternatives": [
     "akaunting",
     "invoice-ninja"
@@ -20,5 +25,25 @@
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
+  },
+  "verdict_reason": "The software is replaceable; the accountant isn't. QuickBooks is the file format your CPA speaks, and 'my books are in a self-hosted Akaunting instance' is a sentence that costs you billable hours every April. Keep paying — this lock-in runs through people, not code.",
+  "what_you_lose": [
+    "Nothing technical — Akaunting and Invoice Ninja are capable; the ecosystem lock-in is the product"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.5,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 30
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 15,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/quickbooks-online.md"
+    ]
   }
 }

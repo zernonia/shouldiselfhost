@@ -11,13 +11,37 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/linktree"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "link-in-bio page",
+    "click analytics",
+    "themes"
+  ],
+  "verdict": "NOT_REALLY",
   "alternatives": [
     "linkstack"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
+  },
+  "verdict_reason": "It's one page of links. You don't need to self-host an app for that — you need 40 lines of HTML on any static host, free. LinkStack exists and works; recommending a PHP container to replace a static page is how self-hosting gets its reputation.",
+  "what_you_lose": [
+    "Nothing — write the HTML file, or use Linktree's free tier"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.0,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 0
+  },
+  "hardware_tier": "pi",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 15,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/linktree.md"
+    ]
   }
 }

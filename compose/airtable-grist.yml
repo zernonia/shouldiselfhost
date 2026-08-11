@@ -1,0 +1,21 @@
+# Grist — the Airtable-shaped spreadsheet-database, sqlite-backed single container
+services:
+  grist:
+    image: gristlabs/grist:latest
+    container_name: grist
+    restart: unless-stopped
+    environment:
+      GRIST_SESSION_SECRET: change-me
+      APP_HOME_URL: http://localhost:8484
+    ports:
+      - "8484:8484"
+    volumes:
+      - grist-data:/persist
+    healthcheck:
+      test: ["CMD-SHELL", "python3 -c \"import urllib.request;urllib.request.urlopen('http://localhost:8484/status')\" || exit 1"]
+      interval: 5s
+      timeout: 10s
+      retries: 30
+      start_period: 20s
+volumes:
+  grist-data:

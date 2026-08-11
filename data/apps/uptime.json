@@ -11,8 +11,12 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/uptime"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "uptime monitoring",
+    "status pages",
+    "incident notifications"
+  ],
+  "verdict": "YES",
   "alternatives": [
     "kener",
     "gatus",
@@ -21,5 +25,30 @@
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "Same story as Pingdom, smaller bill: Uptime Kuma covers the checks and the status page in one quick setup (Gatus if you want config-as-code — we verified both). At $7/mo the math is thinner but the effort is so close to zero it still clears the bar.",
+  "what_you_lose": [
+    "Hosted status page on someone else's infrastructure — host Kuma's status page off-site or it dies with the thing it reports on"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.3,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 10
+  },
+  "hardware_tier": "pi",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 11,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/uptime.md",
+      "compose/uptime-gatus.yml"
+    ],
+    "what_broke": [
+      "Boot to healthy measured at 14s on the 2GB reference env"
+    ]
+  },
+  "compose": "compose/uptime-gatus.yml"
 }

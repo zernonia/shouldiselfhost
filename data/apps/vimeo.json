@@ -11,13 +11,39 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/vimeo"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "ad-free video hosting",
+    "embeddable player",
+    "privacy controls",
+    "review workflows"
+  ],
+  "verdict": "KINDA",
   "alternatives": [
     "peertube"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
+  },
+  "verdict_reason": "PeerTube is excellent software, but video is the one medium where bandwidth math bites back: transcodes eat CPU, storage grows forever, and egress on a popular video can exceed the subscription. Worth it for a modest catalog behind your own domain; not for scale.",
+  "what_you_lose": [
+    "Vimeo's player CDN — global delivery you don't think about",
+    "Privacy/review workflows for client video"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 4.0,
+    "storage_usd_mo": 2.5,
+    "maint_min_mo": 45
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 15,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/vimeo.md"
+    ]
   }
 }

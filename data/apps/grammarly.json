@@ -11,13 +11,43 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/grammarly"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "grammar & spelling checks",
+    "style suggestions",
+    "browser integration"
+  ],
+  "verdict": "KINDA",
   "alternatives": [
     "languagetool"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "LanguageTool's server boots in seconds and the browser extension points at it with one setting — grammar and style rules without shipping every keystroke to a cloud. But Grammarly's AI rewrites are genuinely a tier above. Worth it if privacy is the point; not if the AI editor is.",
+  "what_you_lose": [
+    "GrammarlyGO rewriting and tone suggestions",
+    "The premium rule-sets (LanguageTool's own premium exists for that)"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.5,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 10
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 11,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/grammarly.md",
+      "compose/grammarly-languagetool.yml"
+    ],
+    "what_broke": [
+      "Boot to healthy measured at 20s on the 2GB reference env"
+    ]
+  },
+  "compose": "compose/grammarly-languagetool.yml"
 }

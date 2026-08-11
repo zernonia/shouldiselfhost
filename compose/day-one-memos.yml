@@ -1,0 +1,18 @@
+# Memos — journaling/notes; single Go binary on sqlite
+services:
+  memos:
+    image: neosmemo/memos:stable
+    container_name: memos
+    restart: unless-stopped
+    ports:
+      - "5230:5230"
+    volumes:
+      - memos-data:/var/opt/memos
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:5230/healthz >/dev/null || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 24
+      start_period: 10s
+volumes:
+  memos-data:

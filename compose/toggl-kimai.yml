@@ -1,0 +1,38 @@
+# Kimai — time tracking; apache image + mariadb
+services:
+  kimai:
+    image: kimai/kimai2:apache
+    container_name: kimai
+    restart: unless-stopped
+    depends_on:
+      kimai-db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: mysql://kimai:kimai@kimai-db:3306/kimai?charset=utf8mb4&serverVersion=11.4.2-MariaDB
+      ADMINMAIL: admin@example.com
+      ADMINPASS: changeme123
+    ports:
+      - "8001:8001"
+    healthcheck:
+      test: ["CMD-SHELL", "php -r 'exit(@file_get_contents(\"http://localhost:8001/\")!==false?0:1);'"]
+      interval: 10s
+      timeout: 10s
+      retries: 36
+      start_period: 60s
+  kimai-db:
+    image: mariadb:11
+    restart: unless-stopped
+    environment:
+      MARIADB_DATABASE: kimai
+      MARIADB_USER: kimai
+      MARIADB_PASSWORD: kimai
+      MARIADB_ROOT_PASSWORD: kimai-root
+    volumes:
+      - kimai-db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+volumes:
+  kimai-db:

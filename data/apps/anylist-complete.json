@@ -11,8 +11,12 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/anylist-complete"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "shared grocery lists",
+    "recipes",
+    "meal planning"
+  ],
+  "verdict": "NOT_REALLY",
   "alternatives": [
     "kitchenowl",
     "mealie"
@@ -20,5 +24,25 @@
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
+  },
+  "verdict_reason": "AnyList costs $10 a YEAR. Ten dollars. KitchenOwl and Mealie are lovely, but valuing your setup evening at literally any hourly rate puts break-even past 2030. The purest example of the cheap-subscription pattern on the whole scoreboard.",
+  "what_you_lose": [
+    "Nothing — this is the cheapest verdict we track; buy the subscription and cook something"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.3,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 10
+  },
+  "hardware_tier": "pi",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 15,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/anylist-complete.md"
+    ]
   }
 }

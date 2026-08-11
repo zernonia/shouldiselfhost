@@ -11,13 +11,38 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/buffer"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "social post scheduling",
+    "multi-account publishing",
+    "queue management",
+    "analytics"
+  ],
+  "verdict": "NOT_REALLY",
   "alternatives": [
     "postiz"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
+  },
+  "verdict_reason": "Buffer's $5/channel is cheap, and the real cost of Postiz (fine software) is maintenance: every social network rotates tokens and breaks APIs on their schedule, making your scheduler a part-time job. The subscription outsources exactly the annoying part.",
+  "what_you_lose": [
+    "Someone else re-fixing the Twitter/X API every quarter"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.5,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 45
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 15,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/buffer.md"
+    ]
   }
 }

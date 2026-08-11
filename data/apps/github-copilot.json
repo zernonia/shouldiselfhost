@@ -11,13 +11,36 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/github-copilot"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "AI code completion",
+    "chat in editor",
+    "multi-file suggestions"
+  ],
+  "verdict": "NOT_REALLY",
   "alternatives": [
     "tabby"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
+  },
+  "verdict_reason": "Tabby self-hosts code completion competently — on a GPU you have to rent or own. $10/mo buys frontier-model completions; a capable inference GPU runs multiples of that in electricity alone. The math inverts only if idle GPU hardware already exists in your house.",
+  "what_you_lose": [
+    "Frontier model quality at a subsidized price — Copilot is cheaper than the compute it uses"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.0,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 30
+  },
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 15,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/github-copilot.md"
+    ]
   }
 }

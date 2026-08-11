@@ -11,13 +11,38 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/microsoft-365-personal"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "Word/Excel/PowerPoint",
+    "OneDrive storage",
+    "Outlook mail"
+  ],
+  "verdict": "NOT_REALLY",
   "alternatives": [
     "onlyoffice"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
+  },
+  "verdict_reason": "$1.99/mo including 100GB and real Office compatibility. OnlyOffice self-hosts well, but nothing self-hosted opens a tracked-changes .docx from a lawyer with guaranteed fidelity. Keep paying.",
+  "what_you_lose": [
+    "Office format fidelity when documents leave your house",
+    "1TB OneDrive at the family tier is absurdly cheap storage"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 1.0,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 30
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 15,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/microsoft-365-personal.md"
+    ]
   }
 }

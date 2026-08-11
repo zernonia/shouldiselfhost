@@ -11,13 +11,44 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/toggl-track"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "time tracking",
+    "projects & clients",
+    "reports & exports",
+    "team timesheets"
+  ],
+  "verdict": "YES",
   "alternatives": [
     "kimai"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "Kimai is a grown-up time tracker: projects, rates, invoices, per-client exports, team support. The apache image plus MariaDB boots in a coffee break and the per-seat subscription becomes zero.",
+  "what_you_lose": [
+    "Toggl's one-click browser button polish and Track reminders",
+    "Native mobile apps are community, not first-party"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.5,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 20
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 22,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/toggl-track.md",
+      "compose/toggl-kimai.yml"
+    ],
+    "what_broke": [
+      "Boot to healthy measured at 69s on the 2GB reference env"
+    ]
+  },
+  "compose": "compose/toggl-kimai.yml"
 }

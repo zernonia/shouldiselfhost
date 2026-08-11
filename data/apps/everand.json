@@ -11,13 +11,42 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/everand"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "ebook & audiobook streaming catalog",
+    "reading apps",
+    "recommendations"
+  ],
+  "verdict": "NOT_REALLY",
   "alternatives": [
     "kavita"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "Everand is a catalog subscription — the books aren't yours either way. Kavita beautifully serves media you own (and we verified it boots), but it cannot conjure Everand's library. Third member of the catalog-is-the-product pattern, after Spotify and Audible.",
+  "what_you_lose": [
+    "Nothing — if you own your ebooks, run Kavita for them regardless; it just doesn't replace the subscription"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.3,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 10
+  },
+  "hardware_tier": "pi",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 11,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/everand.md",
+      "compose/everand-kavita.yml"
+    ],
+    "what_broke": [
+      "Boot to healthy measured at 32s on the 2GB reference env"
+    ]
+  },
+  "compose": "compose/everand-kavita.yml"
 }

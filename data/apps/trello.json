@@ -11,13 +11,44 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/trello"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "kanban boards",
+    "cards & checklists",
+    "labels & due dates",
+    "power-ups"
+  ],
+  "verdict": "KINDA",
   "alternatives": [
     "wekan"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "Wekan does kanban fine (verified boot) and per-seat Trello money is real money for teams. For individuals, Trello's free tier already covers you — don't self-host what's free. Worth it for paying teams comfortable with a plainer board.",
+  "what_you_lose": [
+    "Trello's power-ups, butler automations and mobile apps",
+    "The free tier — seriously, check if you even pay"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.5,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 20
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 11,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/trello.md",
+      "compose/trello-wekan.yml"
+    ],
+    "what_broke": [
+      "Boot to healthy measured at 52s on the 2GB reference env"
+    ]
+  },
+  "compose": "compose/trello-wekan.yml"
 }

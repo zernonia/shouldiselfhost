@@ -11,8 +11,13 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/transistor-fm"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "podcast hosting",
+    "RSS feed management",
+    "episode analytics",
+    "multi-show support"
+  ],
+  "verdict": "KINDA",
   "alternatives": [
     "castopod",
     "peertube"
@@ -20,5 +25,33 @@
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "Castopod hosts your podcast with analytics, an RSS feed you own, and fediverse comments — and audio bandwidth is modest, so the economics work. It sits at KINDA because Castopod would not boot to healthy on our reference box (port and cache-config maze); until the weekly CI proves a clean install, we won't claim the ≤2h a YES requires.",
+  "what_you_lose": [
+    "Transistor's dynamic ad insertion and their distribution dashboard",
+    "You babysit your own feed's uptime — podcast apps cache aggressively, which helps"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 1.0,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 30
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 45,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/transistor-fm.md",
+      "compose/transistor-castopod.yml"
+    ],
+    "what_broke": [
+      "The redis cache handler refuses to start without CP_REDIS_PASSWORD — undocumented in most guides; file cache removes a whole container",
+      "Even with cache fixed and ports corrected, the container never reported healthy on the 2GB reference env inside 7 minutes — the claim stays CI-gated until a clean boot is proven",
+      "Not boot-verified in this session — compose is CI-gated (weekly compose-check must pass before this claim hardens)"
+    ]
+  },
+  "compose": "compose/transistor-castopod.yml"
 }

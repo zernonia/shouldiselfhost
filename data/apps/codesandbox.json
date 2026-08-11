@@ -11,13 +11,44 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/codesandbox"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "cloud dev environments",
+    "instant sandboxes",
+    "collaboration",
+    "GitHub integration"
+  ],
+  "verdict": "KINDA",
   "alternatives": [
     "code-server"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
-  }
+  },
+  "verdict_reason": "code-server puts real VS Code on your VPS and it boots instantly. What it doesn't do is CodeSandbox's instant throwaway environments and live collab. Worth it as your persistent cloud IDE; not a sandbox factory.",
+  "what_you_lose": [
+    "Instant ephemeral sandboxes per branch/PR",
+    "Live multiplayer editing"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 1.0,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 15
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 11,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/codesandbox.md",
+      "compose/codesandbox-code-server.yml"
+    ],
+    "what_broke": [
+      "Boot to healthy measured at 25s on the 2GB reference env"
+    ]
+  },
+  "compose": "compose/codesandbox-code-server.yml"
 }

@@ -11,13 +11,38 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/shopify"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "online storefront",
+    "checkout & payments",
+    "inventory",
+    "order management"
+  ],
+  "verdict": "NOT_REALLY",
   "alternatives": [
     "prestashop"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
+  },
+  "verdict_reason": "PrestaShop can run a store. But your checkout's uptime is revenue, PCI is real, and Shopify's $5 starter buys a payments-and-fraud team you cannot hire for that money. E-commerce is infrastructure where downtime bills you directly — keep paying.",
+  "what_you_lose": [
+    "Payments, fraud handling, PCI scope, and a checkout that's up at 3am"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 2.0,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 60
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 15,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/shopify.md"
+    ]
   }
 }

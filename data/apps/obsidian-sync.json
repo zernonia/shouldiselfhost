@@ -11,13 +11,38 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/obsidian-sync"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "encrypted vault sync",
+    "multi-device notes",
+    "version history"
+  ],
+  "verdict": "KINDA",
   "alternatives": [
     "obsidian-livesync"
   ],
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
+  },
+  "verdict_reason": "The LiveSync community plugin against your own CouchDB replaces the $5/mo sync — end-to-end encrypted, works well once set up. It's the setup that's fiddly, and $5 also funds Obsidian itself. Worth it if you already run a server; guilt-free either way.",
+  "what_you_lose": [
+    "Zero-config official sync and version history",
+    "Funding the app you presumably love"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.3,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 15
+  },
+  "hardware_tier": "pi",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 15,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/obsidian-sync.md"
+    ]
   }
 }

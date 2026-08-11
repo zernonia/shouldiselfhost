@@ -1,0 +1,33 @@
+# Gatus — config-as-code status page. Distroless image: busybox sidecar probes it.
+configs:
+  gatus-config:
+    content: |
+      endpoints:
+        - name: self
+          url: http://localhost:8080/health
+          interval: 30s
+          conditions:
+            - "[STATUS] == 200"
+services:
+  gatus:
+    image: twinproduction/gatus:latest
+    container_name: gatus
+    restart: unless-stopped
+    configs:
+      - source: gatus-config
+        target: /config/config.yaml
+    ports:
+      - "8099:8080"
+
+  probe:
+    image: busybox:stable
+    network_mode: "service:gatus"
+    depends_on:
+      - gatus
+    command: sh -c 'while true; do sleep 30; done'
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z localhost 8080 || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 40
+      start_period: 15s

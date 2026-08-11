@@ -1,0 +1,30 @@
+# Tolgee — localization platform; standalone image with embedded postgres
+services:
+  tolgee:
+    image: tolgee/tolgee:latest
+    container_name: tolgee
+    restart: unless-stopped
+    environment:
+      TOLGEE_AUTHENTICATION_ENABLED: "true"
+      TOLGEE_AUTHENTICATION_INITIAL_PASSWORD: changeme123
+      TOLGEE_POSTGRES_AUTOSTART_ENABLED: "true"
+    ports:
+      - "8105:8080"
+    volumes:
+      - tolgee-data:/data
+
+  probe:
+    image: busybox:stable
+    network_mode: "service:tolgee"
+    depends_on:
+      - tolgee
+    command: sh -c 'while true; do sleep 30; done'
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z localhost 8080 || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 60
+      start_period: 60s
+
+volumes:
+  tolgee-data:

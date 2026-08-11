@@ -11,8 +11,12 @@
   "links": {
     "caniselfhostit": "https://caniselfhostit.com/railway"
   },
-  "jobs": [],
-  "verdict": null,
+  "jobs": [
+    "app hosting from git",
+    "databases",
+    "environment management"
+  ],
+  "verdict": "NOT_REALLY",
   "alternatives": [
     "dokploy",
     "coolify"
@@ -20,5 +24,25 @@
   "provenance": {
     "capability_seed": "caniselfhostit",
     "decision_layer": "original"
+  },
+  "verdict_reason": "Railway's $5 hobby plan is the VPS. Replacing it with a $5 VPS running Dokploy is a lateral move plus a weekend — you'd be self-hosting the convenience you were paying $0 extra for. Revisit at usage-based scale; at $5, keep paying.",
+  "what_you_lose": [
+    "Nothing at this tier — the subscription IS the infrastructure"
+  ],
+  "economics": {
+    "vps_share_usd_mo": 0.0,
+    "storage_usd_mo": 0,
+    "maint_min_mo": 0
+  },
+  "hardware_tier": "vps",
+  "verified": {
+    "by": "zernonia",
+    "at": "2026-08-10",
+    "protocol": "v1",
+    "setup_min": 15,
+    "assistant": "claude-code",
+    "evidence": [
+      "logs/railway.md"
+    ]
   }
 }
