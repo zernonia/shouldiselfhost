@@ -2,6 +2,8 @@
 // Stack flex page: pick what you self-host, get the number, share the URL.
 // Selection lives in the query string (?apps=a,b,c) so a share link reproduces the stack —
 // no accounts, no server state. r/selfhosted's favorite genre, given a scoreboard.
+import { dk } from '~/composables/deskClasses'
+
 const { data } = await useFetch('/api/data/apps')
 const route = useRoute()
 const router = useRouter()
@@ -41,69 +43,49 @@ useSeoMeta({
 </script>
 
 <template>
-  <section class="row hero-row">
-    <div class="gutter">
-      <div class="sec-no">MY</div>
-      <div class="sec-name">STACK</div>
+  <section :class="dk.row" class="pt-[54px]!">
+    <div :class="dk.gutter">
+      <div :class="dk.secNo">MY</div>
+      <div :class="dk.secName">STACK</div>
     </div>
-    <div class="body">
-    <div class="roll-title big">My homelab replaces…</div>
-    <p class="roll-sub">
+    <div :class="dk.body">
+    <div class="font-display text-[clamp(26px,3vw,40px)] font-medium tracking-[-1.5px] text-t1">My homelab replaces…</div>
+    <p :class="dk.rollSub">
       Pick what you actually self-host. The math is the same honest math as everywhere else on
       this site — subscription prices minus server share, storage, and your time at the
       reference rate. Share link carries your whole stack.
     </p>
 
-    <div class="summary">
-      <div class="stat">
-        <span class="dim">subscriptions escaped</span>
-        <strong class="num pos">${{ totalPrice.toFixed(2) }}/mo</strong>
+    <div class="sticky top-2 z-10 flex flex-wrap items-center gap-8 border border-line bg-surface px-[18px] py-4">
+      <div class="flex flex-col">
+        <span class="font-mono text-[11px] uppercase tracking-[1px] text-t3">subscriptions escaped</span>
+        <strong class="font-display text-[1.4rem] tabular-nums text-yes">${{ totalPrice.toFixed(2) }}/mo</strong>
       </div>
-      <div class="stat">
-        <span class="dim">honest self-host cost</span>
-        <strong class="num">−${{ totalCost.toFixed(2) }}/mo</strong>
+      <div class="flex flex-col">
+        <span class="font-mono text-[11px] uppercase tracking-[1px] text-t3">honest self-host cost</span>
+        <strong class="font-display text-[1.4rem] tabular-nums text-t1">−${{ totalCost.toFixed(2) }}/mo</strong>
       </div>
-      <div class="stat">
-        <span class="dim">net saving</span>
-        <strong class="num" :class="totalSaving > 0 ? 'pos' : 'neg'">${{ totalSaving.toFixed(2) }}/mo</strong>
+      <div class="flex flex-col">
+        <span class="font-mono text-[11px] uppercase tracking-[1px] text-t3">net saving</span>
+        <strong class="font-display text-[1.4rem] tabular-nums" :class="totalSaving > 0 ? 'text-yes' : 'text-no'">${{ totalSaving.toFixed(2) }}/mo</strong>
       </div>
-      <button class="share" :disabled="!picked.length" @click="share">
+      <button class="ml-auto cursor-pointer rounded-[6px] border border-yes bg-transparent px-[1.1em] py-[0.6em] font-mono text-[12px] text-yes disabled:cursor-default disabled:opacity-40" :disabled="!picked.length" @click="share">
         {{ copied ? 'copied ✓' : '⧉ copy flex' }}
       </button>
     </div>
 
-    <div class="grid">
+    <div class="grid grid-cols-[repeat(auto-fill,minmax(210px,1fr))] gap-[0.6rem]">
       <button
         v-for="a in apps" :key="a.id"
-        class="card app-pick" :class="{ on: selected.has(a.id) }"
+        class="flex cursor-pointer justify-between gap-2 rounded-[6px] border bg-transparent px-[0.9rem] py-[0.6rem] text-left text-[13.5px] transition-colors"
+        :class="selected.has(a.id) ? 'border-yes bg-yes/5 text-t1' : 'border-line text-t1 hover:border-faint'"
         @click="toggle(a.id)"
       >
-        <span class="name">{{ a.name }}</span>
-        <span class="num dim">${{ a.price_usd_mo }}/mo</span>
+        <span>{{ selected.has(a.id) ? '✋ ' : '' }}{{ a.name }}</span>
+        <span class="font-mono tabular-nums text-t3">${{ a.price_usd_mo }}/mo</span>
       </button>
     </div>
     </div>
   </section>
 </template>
 
-<style scoped>
-.hero-row { padding-top: 54px; }
-.roll-title.big { font-size: clamp(26px, 3vw, 40px); letter-spacing: -1.5px; }
-.summary { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; padding: 16px 18px; background: var(--d-surface); border: 1px solid var(--d-border); position: sticky; top: 0.5rem; z-index: 2; }
-.stat { display: flex; flex-direction: column; }
-.stat strong { font-size: 1.4rem; font-family: var(--display); }
-.stat span { font-size: 11px; font-family: var(--mono); letter-spacing: 1px; text-transform: uppercase; color: var(--d-t3); }
-.share {
-  margin-left: auto; font-family: var(--mono); font-size: 12px; cursor: pointer; color: var(--yes);
-  background: none; border: 1px solid var(--yes); border-radius: 6px; padding: 0.6em 1.1em;
-}
-.share:disabled { opacity: 0.4; cursor: default; }
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 0.6rem; }
-.app-pick {
-  font: inherit; text-align: left; cursor: pointer; color: var(--d-t1);
-  background: none; border: 1px solid var(--d-border); border-radius: 6px;
-  display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.6rem 0.9rem;
-}
-.app-pick.on { border-color: var(--yes); background: #34D3990D; }
-.app-pick.on .name::before { content: '✋ '; }
-</style>

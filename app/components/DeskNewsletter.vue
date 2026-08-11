@@ -1,5 +1,6 @@
 <script setup lang="ts">
 // Desk-styled newsletter signup — same D1-backed /api/subscribe as before.
+import { dk } from '~/composables/deskClasses'
 const email = ref('')
 const state = ref<'idle' | 'busy' | 'done' | 'error'>('idle')
 const msg = ref('')
@@ -7,7 +8,7 @@ const msg = ref('')
 async function subscribe() {
   const value = email.value.trim().toLowerCase()
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value)) {
-    state.value = 'error'; msg.value = 'That doesn’t look like an email.'; return
+    state.value = 'error'; msg.value = 'That doesn\u2019t look like an email.'; return
   }
   state.value = 'busy'
   try {
@@ -20,30 +21,16 @@ async function subscribe() {
 </script>
 
 <template>
-  <div class="dispatch">
-    <div class="roll-title">Worthy news only</div>
-    <p class="roll-sub">New rating actions, price hikes turned into break-even math, and the occasional honest “keep paying”. We email when something is worth your weekend — which is rarer than newsletters like to admit. Unsubscribe is one click.</p>
-    <form v-if="state !== 'done'" class="dispatch-row" @submit.prevent="subscribe">
-      <label class="lookup">
-        <span class="prompt">&gt;</span>
-        <input v-model="email" type="email" placeholder="you@yourdomain.tld" autocomplete="email" :disabled="state === 'busy'" class="dispatch-input" />
+  <div class="flex max-w-[620px] flex-col gap-4">
+    <div :class="dk.rollTitle">Worthy news only</div>
+    <p :class="dk.rollSub">New rating actions, price hikes turned into break-even math, and the occasional honest “keep paying”. We email when something is worth your weekend — which is rarer than newsletters like to admit. Unsubscribe is one click.</p>
+    <form v-if="state !== 'done'" class="flex gap-[10px] max-[560px]:flex-col" @submit.prevent="subscribe">
+      <label class="flex flex-1 items-center gap-[10px] border border-line bg-surface px-4 py-[14px] font-mono">
+        <span class="text-sm font-bold text-yes">&gt;</span>
+        <input v-model="email" type="email" placeholder="you@yourdomain.tld" autocomplete="email" :disabled="state === 'busy'" class="flex-1 border-none bg-transparent p-0 font-mono text-sm text-t1 outline-none placeholder:text-t3" />
       </label>
-      <button class="chip submit" type="submit" :disabled="state === 'busy'">subscribe</button>
+      <button :class="dk.chip" class="border-yes! bg-yes font-semibold text-bg! hover:text-bg!" type="submit" :disabled="state === 'busy'">subscribe</button>
     </form>
-    <p v-if="msg" class="feedback num" :class="state">{{ msg }}</p>
+    <p v-if="msg" class="m-0 font-mono text-[12px]" :class="state === 'done' ? 'text-yes' : 'text-no'">{{ msg }}</p>
   </div>
 </template>
-
-<style scoped>
-.dispatch { display: flex; flex-direction: column; gap: 16px; max-width: 620px; }
-.dispatch .roll-sub { margin: 0; }
-.dispatch-row { display: flex; gap: 10px; }
-.dispatch-row .lookup { flex: 1; }
-.dispatch-input { flex: 1; background: none; border: none; outline: none; color: var(--d-t1); font-family: var(--mono); font-size: 14px; padding: 0; border-radius: 0; }
-.dispatch-input::placeholder { color: var(--d-t3); }
-.chip.submit { cursor: pointer; background: var(--yes); border-color: var(--yes); color: var(--d-bg); font-weight: 600; }
-.feedback { font-size: 12px; margin: 0; }
-.feedback.done { color: var(--yes); }
-.feedback.error { color: var(--no); }
-@media (max-width: 560px) { .dispatch-row { flex-direction: column; } }
-</style>

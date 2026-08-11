@@ -1,9 +1,6 @@
-/* ─────────────────────────────────────────────────────────────────────
-   shouldiselfhost — Rating Desk design system on Tailwind v4.
-   Tokens from untitled.pen's variable table; editorial patterns as
-   @layer components so templates stay terse and the system stays legible.
-   Content column: max 1240px (110px gutter + 42px gap + 1088px body).
-   ───────────────────────────────────────────────────────────────────── */
+/* shouldiselfhost — Rating Desk on Tailwind v4.
+   Tokens from untitled.pen's variable table; all styling lives in templates
+   as utilities. This file is imports + theme + base only. */
 @import '@fontsource/space-grotesk/400.css';
 @import '@fontsource/space-grotesk/500.css';
 @import '@fontsource/space-grotesk/700.css';
@@ -32,25 +29,23 @@
   --font-body: 'Plus Jakarta Sans Variable', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
   --ease-desk: cubic-bezier(0.32, 0.72, 0, 1);
+  --animate-blink: blink 1.1s steps(1) infinite;
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
 }
 
-/* Legacy var aliases so existing scoped styles keep resolving */
 :root {
-  --d-bg: var(--color-bg); --d-surface: var(--color-surface); --d-surface-2: var(--color-surface-2);
-  --d-border: var(--color-line); --d-t1: var(--color-t1); --d-t2: var(--color-t2);
-  --d-t3: var(--color-t3); --d-faint: var(--color-faint); --d-dim: var(--color-dim);
-  --yes: var(--color-yes); --kinda: var(--color-kinda); --no: var(--color-no);
-  --mono: var(--font-mono); --sans: var(--font-body); --display: var(--font-display);
-  --ease: var(--ease-desk);
-  /* content grid */
-  --page-max: 1240px;
-  --gutter-w: 110px;
-  --gutter-gap: 42px;
-  --page-pad: 20px;
-  --cap-left: max(var(--page-pad), 50% - var(--page-max) / 2);
+  /* 1240px content cap: 110px gutter + 42px gap + 1088px body.
+     --cap-left feeds the backdrop gridlines (postcss-calc chokes on nested
+     max() inside calc(), so the indirection is load-bearing). */
+  --cap-left: max(20px, 50% - 620px);
 }
 
 html { background: var(--color-bg); scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
 body {
   margin: 0;
   font-family: var(--font-body);
@@ -59,243 +54,4 @@ body {
   line-height: 1.6;
   font-size: 15.5px;
   -webkit-font-smoothing: antialiased;
-}
-.num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
-
-@layer components {
-  /* ── Section scaffold: full-bleed hairline, content capped at 1240px.
-        Grid columns: [pad] [gutter 110] [body ≤1088] [pad] — the gutter and
-        body land inside the cap while the border spans the whole row. */
-  .row {
-    display: grid;
-    grid-template-columns:
-      minmax(var(--page-pad), 1fr)
-      var(--gutter-w)
-      minmax(0, calc(var(--page-max) - var(--gutter-w) - var(--gutter-gap)))
-      minmax(var(--page-pad), 1fr);
-    column-gap: var(--gutter-gap);
-    padding-block: 66px;
-    border-bottom: 1px solid var(--color-line);
-  }
-  .row.tinted { background: #0b0c0fb3; }
-  .row > .gutter { grid-column: 2; }
-  .row > .body { grid-column: 3; min-width: 0; display: flex; flex-direction: column; gap: 34px; }
-
-  .gutter { display: flex; flex-direction: column; gap: 7px; align-self: stretch; }
-  .sec-no { @apply font-mono text-[15px] font-bold tracking-[0.4px] text-yes; }
-  .sec-name { @apply font-mono text-[10px] tracking-[1.3px] text-t3; }
-  .sec-sub { @apply font-mono text-[10px] tracking-[1.3px] text-dim; }
-  .gutter-rule { @apply font-mono text-[12px] text-dim; }
-
-  .micro-label { @apply font-mono text-[10px] font-semibold tracking-[1.5px] text-t3; }
-  .rule-h { height: 1px; background: var(--color-line); }
-  .roll-title { @apply font-display text-[28px] font-medium tracking-[-0.9px] text-t1; }
-  .roll-sub { @apply text-sm leading-[1.65] text-t2 m-0; }
-  .live-note { @apply font-mono text-[11.5px] text-t3 m-0; }
-
-  /* Masthead */
-  .page-cap { max-width: var(--page-max); margin-inline: auto; padding-inline: var(--page-pad); }
-  .masthead-row { @apply flex flex-wrap items-center justify-between gap-10 border-b border-line py-[19px]; }
-  .logo { @apply font-mono text-[15px] font-bold tracking-[-0.3px] text-t1; }
-  .logo .q { color: var(--color-yes); }
-  .rule-v { @apply w-px h-[15px] bg-line; }
-  .strapline { @apply font-mono text-[11px] text-t3; }
-  .running-head { @apply flex flex-wrap justify-between gap-x-[30px] gap-y-1 border-b border-line py-[9px] font-mono text-[10px] tracking-[1.3px] text-t3; }
-  .ticker { @apply flex items-center overflow-x-auto py-[11px] font-mono; scrollbar-width: none; }
-  .ticker-lead { @apply inline-flex items-center gap-2 pr-5 text-[10px] font-semibold tracking-[1.3px] text-t2 whitespace-nowrap; }
-  .live-dot { @apply size-[5px] rounded-full bg-yes; }
-  .tick { @apply inline-flex items-center gap-[7px] px-[13px] whitespace-nowrap; }
-  .tick-mark { @apply size-[5px]; }
-  .tick-mark.YES { background: var(--color-yes); }
-  .tick-mark.KINDA { background: var(--color-kinda); }
-  .tick-mark.NOT_REALLY { background: var(--color-no); }
-  .tick-app { @apply text-[10px] tracking-[0.9px] text-t2; }
-  .tick-grade { @apply text-[10px] tracking-[0.9px]; }
-  .tick-grade.YES { color: var(--color-yes); }
-  .tick-grade.KINDA { color: var(--color-kinda); }
-  .tick-grade.NOT_REALLY { color: var(--color-no); }
-  .sep { color: var(--color-dim); }
-
-  /* Chips */
-  .chip { @apply inline-flex cursor-pointer items-center gap-[7px] rounded-[6px] border border-line bg-transparent px-[13px] py-2 font-mono text-[11.5px] text-t2; }
-  .chip:hover { border-color: var(--color-faint); color: var(--color-t1); }
-  .chip.active { @apply border-yes bg-yes font-semibold text-bg; }
-  .chip.active .chip-count { color: var(--color-bg); }
-  .chip-count { @apply text-[10.5px] text-faint; }
-
-  /* Entity + marks */
-  .entity-row { @apply flex flex-wrap items-center justify-between gap-10; }
-  .entity { @apply flex items-center gap-[14px]; }
-  .entity-name { @apply font-display text-[21px] font-semibold tracking-[-0.6px]; }
-  .entity-meta { @apply font-mono text-[11.5px] text-t3; }
-  .names { @apply flex flex-col gap-[3px]; }
-  .marks { @apply flex items-center gap-[34px]; }
-  .mark-block { @apply flex flex-col gap-[7px]; }
-  .mark-label { @apply font-mono text-[9.5px] tracking-[1.3px] text-dim; }
-
-  /* Rationale / conditions */
-  .rationale { @apply flex min-w-0 max-w-[660px] flex-1 flex-col gap-[22px]; }
-  .rationale p { @apply m-0 text-[14.5px] leading-[1.72] text-t2; }
-  .micro-label.change { color: var(--color-yes); }
-  .condition { @apply flex gap-[14px]; }
-  .condition .idx { @apply text-[12px] text-yes; }
-  .condition p { @apply text-[13.5px] leading-[1.65]; }
-
-  /* Model column */
-  .model-col { @apply flex w-[452px] shrink-0 flex-col border-l border-line pl-7; }
-  .model-col .micro-label { margin-bottom: 8px; }
-  .mrow { @apply flex items-center justify-between gap-4 border-b border-surface-2 py-[11px] text-[13px] text-t2; }
-  .mrow.total { @apply border-line font-semibold text-t1; }
-  .mrow .v { @apply text-[13.5px] font-semibold; }
-  .mrow .v.strong { @apply text-[14.5px] font-bold text-t1; }
-  .mrow .v.neg { color: var(--color-no); }
-  .mrow .v.pos { color: var(--color-yes); }
-  .model-footer { @apply flex flex-col gap-5 pt-6; }
-  .outlook-note { @apply m-0 text-[12px] leading-[1.6] text-t3; }
-  .review-meta { @apply flex justify-between gap-5; }
-  .meta-label { @apply mb-[5px] font-mono text-[9.5px] tracking-[1.2px] text-dim; }
-  .meta-value { @apply text-[11.5px] text-t2; }
-
-  /* Roll table */
-  .roll-header { @apply flex flex-wrap items-end justify-between gap-10; }
-  .roll-copy { @apply flex max-w-[700px] flex-col gap-[10px]; }
-  .view-all { @apply inline-flex items-center gap-2 rounded-[7px] border border-line px-[15px] py-[10px] font-mono text-[11.5px] text-t2; }
-  .roll-table { @apply flex flex-col overflow-x-auto; }
-  .thead, .trow { @apply flex min-w-[900px] items-center gap-[22px]; }
-  .thead { @apply border-b border-line pb-[13px] font-mono text-[9.5px] tracking-[1.3px] text-faint; }
-  .trow { @apply border-b border-surface-2 py-[15px] text-t1; }
-  .trow:hover .ename { color: var(--color-yes); }
-  .c-entity { @apply w-[322px] shrink-0; }
-  .entity-cell { @apply flex items-center gap-3; }
-  .entity-cell .names { gap: 2px; }
-  .ename { @apply text-[14.5px] font-semibold text-t1 transition-colors; }
-  .alt { @apply font-mono text-[11px] text-t3; }
-  .c-rating { @apply w-[120px] shrink-0; }
-  .c-outlook { @apply w-[118px] shrink-0; }
-  .c-bar { @apply w-[150px] shrink-0; }
-  .bar-track { @apply block h-[5px] bg-[#181B21]; }
-  .bar-fill { @apply block h-full; }
-  .bar-fill.YES { background: var(--color-yes); }
-  .bar-fill.KINDA { background: var(--color-kinda); }
-  .bar-fill.NOT_REALLY { background: var(--color-no); }
-  .c-ratio { @apply w-[58px] shrink-0 text-[13.5px] font-bold text-t1; }
-  .c-break { @apply w-[84px] shrink-0 text-[12.5px] text-t2; }
-  .c-rev { @apply w-[78px] shrink-0 text-[12px] text-t3; }
-  .c-swap { @apply w-[70px] shrink-0 text-[13px] font-bold text-t1; }
-
-  /* Abstract / odometer / scale / quote / model — homepage patterns */
-  .headline { @apply m-0 font-display text-[clamp(34px,4vw,56px)] font-medium tracking-[-2.2px] leading-[1.05] text-t1; }
-  .dashes { @apply mx-[6px] inline-flex gap-[7px]; }
-  .dashes i { @apply inline-block h-[6px] w-7 bg-yes; }
-  .abstract-copy { @apply flex max-w-[700px] flex-col gap-[30px]; }
-  .statement { @apply m-0 max-w-[620px] text-base leading-[1.68] text-t2; }
-  .lookup { @apply flex max-w-[620px] items-center gap-[10px] border border-line bg-surface px-4 py-[14px] font-mono; }
-  .prompt { @apply text-sm font-bold text-yes; }
-  .caret { @apply h-[17px] w-2 bg-yes; animation: blink 1.1s steps(1) infinite; }
-  .count { @apply text-[11.5px] text-dim; }
-  .odometer { @apply flex flex-wrap items-end justify-between gap-10 border-t border-line pt-[34px]; }
-  .odo-left { @apply flex flex-col gap-[13px]; }
-  .odo-right { @apply flex flex-col items-end gap-[9px]; }
-  .digits { @apply flex items-center gap-2; }
-  .glyph { @apply font-display text-[30px] font-bold tracking-[-1px] text-t3; }
-  .tile { @apply inline-flex h-16 w-[46px] items-center justify-center rounded-[3px] border border-line bg-surface font-display text-[34px] font-bold tracking-[-1px] text-yes; }
-  .permo { @apply font-mono text-sm text-t3; }
-  .odo-note { @apply font-mono text-[11.5px] text-t3; }
-  .counter-line { @apply font-display text-[22px] font-semibold tracking-[-0.8px] text-t1; }
-  .scale-intro { @apply m-0 max-w-[820px] text-[15px] leading-[1.68] text-t2; }
-  .scale-cols { @apply grid grid-cols-3 gap-8 max-[900px]:grid-cols-1; }
-  .scale-col { @apply flex flex-col gap-4 border-t-2 pt-5; }
-  .scale-col.YES { border-color: var(--color-yes); }
-  .scale-col.KINDA { border-color: var(--color-kinda); }
-  .scale-col.NOT_REALLY { border-color: var(--color-no); }
-  .count-row { @apply flex items-end gap-[9px]; }
-  .big-count { @apply font-display text-[46px] font-semibold leading-none tracking-[-2px] text-t1; }
-  .of { @apply font-mono text-[11.5px] text-t3; }
-  .share-track { @apply h-1 bg-[#181B21]; }
-  .share-fill { @apply block h-full; }
-  .share-fill.YES { background: var(--color-yes); }
-  .share-fill.KINDA { background: var(--color-kinda); }
-  .share-fill.NOT_REALLY { background: var(--color-no); }
-  .definition { @apply m-0 text-[13.5px] leading-[1.65] text-t2; }
-  .examples { @apply m-0 font-mono text-[11.5px] leading-[1.6] text-t3; }
-  .action-headline { @apply flex flex-wrap items-center gap-[11px] font-display text-[clamp(22px,2.4vw,30px)] font-medium tracking-[-1px]; }
-  .action-headline .grade { font-weight: 600; }
-  .action-headline .grade.YES { color: var(--color-yes); }
-  .action-headline .grade.KINDA { color: var(--color-kinda); }
-  .action-headline .grade.NOT_REALLY { color: var(--color-no); }
-  .action-split { @apply flex gap-12 max-[1000px]:flex-col; }
-  .quote-row { padding-block: 86px; }
-  .pull-quote { @apply font-display text-[clamp(30px,4vw,54px)] font-medium tracking-[-2px] leading-[1.14]; }
-  .pq-no { color: var(--color-no); }
-  .quote-note { @apply mt-[26px] font-mono text-[13px] text-t3; }
-  .escape-hatch { @apply flex flex-wrap items-center justify-between gap-6 border border-yes bg-[#34D3990D] px-[18px] py-[14px]; }
-  .escape-copy { @apply flex flex-wrap items-baseline gap-[9px]; }
-  .escape-count { @apply font-mono text-[12.5px] font-bold text-yes; }
-  .escape-body { @apply text-[13.5px] text-t2; }
-  .live-header { @apply flex items-end justify-between gap-10; }
-  .live-cols { @apply flex flex-wrap gap-10; }
-  .live-col { @apply flex w-[280px] flex-col gap-[14px]; }
-  .live-col.wide { width: 480px; }
-  .col-head { @apply font-mono text-[9.5px] font-semibold tracking-[1.3px] text-faint; }
-  .stub { @apply border border-dashed border-line px-4 py-[14px]; }
-  .stub p { @apply m-0 text-[12.5px] leading-[1.6] text-t3; }
-  .swap-row { @apply flex items-center gap-3 border-b border-surface-2 py-[9px]; }
-  .swap-row .rank { @apply text-[11.5px] text-faint; }
-  .swap-row .app { @apply flex-1 text-[13px] font-medium text-t1; }
-  .swap-row .v { @apply text-[13px] font-bold text-yes; }
-  .wide-title { @apply max-w-[820px] leading-[1.25]; }
-  .formula { @apply flex flex-col gap-4 overflow-x-auto rounded-[10px] border border-line bg-surface p-[30px]; }
-  .eq1 { @apply whitespace-nowrap text-[17px] font-semibold tracking-[-0.2px] text-t1; }
-  .eq2 { @apply whitespace-nowrap text-sm text-t2; }
-  .constants { @apply grid grid-cols-4 gap-6 max-[900px]:grid-cols-1; }
-  .const { @apply flex flex-col gap-[9px] border-t border-line pt-[18px]; }
-  .const-label { @apply font-mono text-[9.5px] tracking-[1.3px] text-t3; }
-  .const-value { @apply font-display text-[21px] font-semibold tracking-[-0.6px] text-t1; }
-  .const-note { @apply text-[12.5px] leading-[1.55] text-t3; }
-  .sensitivity { @apply flex flex-col gap-[11px] border-l-2 border-kinda py-[2px] pl-6; }
-  .sens-label { @apply font-mono text-[10px] font-semibold tracking-[1.3px] text-kinda; }
-  .sens-body { @apply m-0 max-w-[880px] text-[14.5px] leading-[1.7] text-t2; }
-  .model-links { @apply flex flex-wrap gap-[10px]; }
-
-  /* Colophon */
-  .colophon { @apply flex flex-col gap-9 pb-11 pt-[54px]; }
-  .colophon-top { @apply flex flex-wrap justify-between gap-x-20 gap-y-8; }
-  .colophon-brand { @apply flex max-w-[460px] flex-col gap-[14px]; }
-  .colophon-brand p { @apply m-0 text-[13px] leading-[1.65] text-t3; }
-  .colophon-links { @apply flex flex-wrap gap-[60px]; }
-  .colophon-links .col { @apply flex flex-col gap-3; }
-  .colophon-links a { @apply text-[13px] text-t2; }
-  .colophon-links a:hover { color: var(--color-t1); }
-  .appeals { @apply flex flex-wrap items-baseline gap-[14px]; }
-  .appeals-label { @apply font-mono text-[9.5px] tracking-[1.3px] text-yes; }
-  .appeals p { @apply m-0 max-w-[820px] text-[13px] leading-[1.65] text-t3; }
-  .colophon-bottom { @apply flex flex-wrap justify-between gap-10 font-mono text-[11px] text-faint; }
-
-  /* Backdrop: gridlines track the 1240 container so the gutter rules span the
-     page's full height at the exact gutter/body boundaries. */
-  .backdrop { @apply pointer-events-none absolute inset-0; }
-  .glow { @apply absolute rounded-full; }
-  .glow-hero { width: 1240px; height: 1020px; top: -380px; left: 50%; transform: translateX(-50%); background: radial-gradient(closest-side, #34d3991f, #34d39900); }
-  .glow-lower { width: 1100px; height: 900px; bottom: -200px; right: -300px; background: radial-gradient(closest-side, #fb718514, #fb718500); }
-  .gridline { @apply absolute inset-y-0 w-px; }
-  .g1 { left: var(--cap-left); background: #1c212a; }
-  .g2 { left: calc(var(--cap-left) + var(--gutter-w)); background: #12161c; }
-  .g3 { left: calc(var(--cap-left) + var(--gutter-w) + var(--gutter-gap)); background: #1c212a; }
-  .g4 { right: var(--cap-left); background: #1a1f27; }
-}
-
-@keyframes blink { 50% { opacity: 0; } }
-@media (prefers-reduced-motion: reduce) {
-  .caret { animation: none; }
-  html { scroll-behavior: auto; }
-}
-
-@media (max-width: 900px) {
-  .row {
-    display: flex; flex-direction: column; gap: 20px;
-    padding: 44px var(--page-pad);
-  }
-  .gutter { flex-direction: row; align-items: baseline; width: auto; }
-  .model-col { width: 100%; padding-left: 0; border-left: none; border-top: 1px solid var(--color-line); padding-top: 20px; }
-  .gridline { display: none; }
 }

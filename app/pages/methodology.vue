@@ -1,17 +1,19 @@
 <script setup lang="ts">
+import { dk } from '~/composables/deskClasses'
+
 const { data } = await useFetch('/api/data/apps')
 const site = computed(() => data.value?.site)
 useHead({ title: 'Methodology — how verdicts work and who can never touch them' })
 </script>
 
 <template>
-  <section class="row hero-row">
-    <div class="gutter">
-      <div class="sec-no">§</div>
-      <div class="sec-name">THE STANDARD</div>
+  <section :class="dk.row" class="pt-[54px]!">
+    <div :class="dk.gutter">
+      <div :class="dk.secNo">§</div>
+      <div :class="dk.secName">THE STANDARD</div>
     </div>
-    <article class="body prose">
-    <h1 class="std-h1">Methodology</h1>
+    <article :class="dk.body" class="prose-desk max-w-[760px] text-[14.5px] leading-[1.7] text-t2 gap-0!">
+    <h1 class="font-display text-[clamp(26px,3vw,40px)] font-medium tracking-[-1.5px] text-t1">Methodology</h1>
     <p>
       Every list site tells you what exists. <a href="https://caniselfhostit.com">caniselfhostit</a>
       tells you how to run it. We answer the question that costs you money and weekends:
@@ -69,13 +71,11 @@ useHead({ title: 'Methodology — how verdicts work and who can never touch them
   </section>
 </template>
 
-<style scoped>
-.hero-row { padding-top: 54px; }
-.std-h1 { font-family: var(--display); font-size: clamp(26px, 3vw, 40px); font-weight: 500; letter-spacing: -1.5px; color: var(--d-t1); }
-.prose { color: var(--d-t2); font-size: 14.5px; line-height: 1.7; }
-.prose :deep(h2) { font-family: var(--mono); font-size: 11px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--d-t3); margin-top: 2.6rem; }
-.prose :deep(strong) { color: var(--d-t1); }
-.prose { max-width: 760px; }
-.prose h2 { font-size: 1.15rem; margin-top: 2rem; }
-.prose li { margin: 0.4rem 0; }
+<style>
+/* prose-desk: typographic defaults for the standard's long-form body —
+   the one place element selectors beat repeating utilities on 40 tags. */
+.prose-desk h2 { font-family: var(--font-mono); font-size: 11px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--color-t3); margin-top: 2.6rem; }
+.prose-desk strong { color: var(--color-t1); }
+.prose-desk a { color: var(--color-t2); text-decoration: underline; }
+.prose-desk li { margin: 0.5rem 0; }
 </style>

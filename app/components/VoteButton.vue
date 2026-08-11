@@ -29,21 +29,13 @@ async function toggle() {
 </script>
 
 <template>
-  <button class="vote" :class="{ voted }" :disabled="busy" @click="toggle">
+  <button
+    class="inline-flex cursor-pointer items-center gap-[9px] rounded-[6px] border px-[13px] py-[9px] font-mono text-[10.5px] font-semibold tracking-[1px] transition-colors"
+    :class="voted ? 'border-yes bg-yes/5 text-yes' : 'border-line text-t2 hover:border-yes hover:text-t1'"
+    :disabled="busy"
+    @click="toggle"
+  >
     ✋ I SWAPPED THIS
-    <span v-if="count != null" class="count num">{{ count }}</span>
+    <span v-if="count != null" class="font-mono tabular-nums font-bold text-yes">{{ count }}</span>
   </button>
 </template>
-
-<style scoped>
-.vote {
-  display: inline-flex; align-items: center; gap: 9px; cursor: pointer;
-  font-family: var(--mono); font-size: 10.5px; font-weight: 600; letter-spacing: 1px;
-  color: var(--d-t2); background: none;
-  border: 1px solid var(--d-border); border-radius: 6px; padding: 9px 13px;
-  transition: border-color 0.3s var(--ease), color 0.3s var(--ease);
-}
-.vote:hover { border-color: var(--yes); color: var(--d-t1); }
-.vote.voted { border-color: var(--yes); color: var(--yes); background: #34D3990D; }
-.vote .count { color: var(--yes); font-weight: 700; }
-</style>
