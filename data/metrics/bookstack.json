@@ -1,0 +1,13 @@
+{
+  "id": "bookstack",
+  "stars": 18980,
+  "last_commit": "2026-08-10T18:19:01Z",
+  "latest_release": {
+    "tag": "v26.05.3",
+    "published_at": "2026-07-29T09:44:05Z",
+    "url": "https://github.com/BookStackApp/BookStack/releases/tag/v26.05.3"
+  },
+  "docker_pulls": null,
+  "open_issues": 1,
+  "fetched_at": "2026-08-11T03:55:17.522Z"
+}
