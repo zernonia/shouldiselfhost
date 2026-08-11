@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Vercel logo">
+  <rect width="48" height="48" rx="12" fill="#000000" fill-opacity="0.14"/>
+  <rect width="48" height="48" rx="12" fill="none" stroke="rgba(255,255,255,0.1)"/>
+  <g transform="translate(11,11)"><path transform="scale(1.0833)" fill="#f2f3f5" d="m12 1.608 12 20.784H0Z"/></g>
+</svg>
