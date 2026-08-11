@@ -15,7 +15,7 @@ useHead({ title: () => `${alt.value?.name} — what it replaces, and whether it'
   <article v-if="alt">
     <header class="page-head">
       <span v-reveal class="eyebrow">Open source</span>
-      <h1 v-reveal="1">{{ alt.name }}</h1>
+      <div v-reveal="1" class="oss-head"><ToolLogo :id="alt.id" :name="alt.name" :size="56" /><h1>{{ alt.name }}</h1></div>
       <p v-if="alt.tagline" class="dim">{{ alt.tagline }}</p>
       <div class="dim meta num">
         <a :href="`https://github.com/${alt.repo}`">{{ alt.repo }}</a>
@@ -29,6 +29,10 @@ useHead({ title: () => `${alt.value?.name} — what it replaces, and whether it'
         ⚠️ unmaintained — last commit over a year ago
       </p>
     </header>
+
+    <section class="section">
+      <UiShot :id="alt.id" :name="alt.name" />
+    </section>
 
     <section class="section">
       <h2>One tool, {{ replaces.length }} subscription{{ replaces.length === 1 ? '' : 's' }}</h2>
@@ -46,6 +50,8 @@ useHead({ title: () => `${alt.value?.name} — what it replaces, and whether it'
 </template>
 
 <style scoped>
+.oss-head { display: flex; align-items: center; gap: 1rem; }
+.oss-head h1 { margin: 0; }
 .section { margin: 2rem 0; }
 .section h2 { font-size: 1.1rem; }
 .meta { font-size: 0.85rem; margin: 0.4rem 0 0.8rem; }

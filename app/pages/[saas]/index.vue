@@ -28,6 +28,11 @@ useSeoMeta({
   <article v-if="app">
     <header class="page-head">
       <span v-reveal class="eyebrow">{{ app.category ?? 'verdict' }}</span>
+      <div v-reveal="1" class="pairing">
+        <AppTile :id="app.id" :name="app.name" :size="56" />
+        <span class="pair-arrow">→</span>
+        <ToolLogo v-if="alts[0]" :id="alts[0].id" :name="alts[0].name" :size="56" />
+      </div>
       <h1 v-reveal="1">Should I self-host <em>{{ app.name }}</em>?</h1>
       <div v-reveal="2" class="verdict-row">
         <VerdictBadge :verdict="app.verdict" :stale="app.derived.verdict_stale" />
@@ -53,12 +58,16 @@ useSeoMeta({
       <ul><li v-for="job in app.jobs" :key="job">{{ job }}</li></ul>
     </section>
 
+    <section v-if="alts[0]" class="section">
+      <UiShot :id="alts[0].id" :name="alts[0].name" />
+    </section>
+
     <section class="section">
       <h2>Ranked alternatives</h2>
       <div class="alt-list">
         <div v-for="(alt, i) in alts" :key="alt.id" v-reveal="i" class="card alt-card">
           <div class="card-top">
-            <strong><NuxtLink :to="`/app/${alt.id}`">{{ i + 1 }}. {{ alt.name }}</NuxtLink></strong>
+            <span class="alt-name"><ToolLogo :id="alt.id" :name="alt.name" :size="36" /><strong><NuxtLink :to="`/app/${alt.id}`">{{ i + 1 }}. {{ alt.name }}</NuxtLink></strong></span>
             <span v-if="alt.metrics && daysSince(alt.metrics.last_commit) != null && daysSince(alt.metrics.last_commit)! > 365" class="badge NOT_REALLY small">⚠️ unmaintained</span>
           </div>
           <p v-if="alt.tagline" class="dim">{{ alt.tagline }}</p>
@@ -129,6 +138,9 @@ useSeoMeta({
 .section h2 { font-size: 1.15rem; margin-bottom: 1rem; }
 .alt-list { display: flex; flex-direction: column; gap: 0.8rem; }
 .card-top { display: flex; justify-content: space-between; gap: 0.6rem; align-items: center; }
+.alt-name { display: inline-flex; align-items: center; gap: 0.65rem; }
+.pairing { display: flex; align-items: center; gap: 0.9rem; }
+.pair-arrow { font-size: 1.5rem; color: var(--text-faint); }
 .meta { font-size: 0.82rem; }
 .reason-inline { font-style: italic; }
 ul { padding-left: 1.2rem; }

@@ -32,7 +32,7 @@ useSeoMeta({
 <template>
   <article v-if="a && b">
     <span v-reveal class="eyebrow">Head-to-head</span>
-    <h1 v-reveal="1">{{ a.name }} <span class="dim">vs</span> {{ b.name }}</h1>
+    <h1 v-reveal="1" class="vs-title"><ToolLogo :id="a.id" :name="a.name" :size="44" /> {{ a.name }} <span class="dim">vs</span> <ToolLogo :id="b.id" :name="b.name" :size="44" /> {{ b.name }}</h1>
     <p class="dim">Compared on data, not vibes. Metrics refresh nightly; verdict links carry the math.</p>
 
     <div class="card">
@@ -77,6 +77,7 @@ useSeoMeta({
 </template>
 
 <style scoped>
+.vs-title { display: flex; align-items: center; gap: 0.7rem; flex-wrap: wrap; }
 .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
 .side h2 { font-size: 1.15rem; margin-bottom: 0.3rem; }
 .small { font-size: 0.85rem; }

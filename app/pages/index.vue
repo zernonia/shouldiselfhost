@@ -69,7 +69,10 @@ useHead({ title: 'Should I self-host it?' })
       <div class="grid">
         <NuxtLink v-for="(a, i) in honestNos" :key="a.id" v-reveal="(i % 4) + 1" :to="`/${a.id}`" class="shell">
           <div class="core">
-            <div class="card-top"><strong class="app-name">{{ a.name }}</strong><VerdictBadge :verdict="a.verdict" small /></div>
+            <div class="card-top">
+              <span class="name-row"><AppTile :id="a.id" :name="a.name" :size="34" /><strong class="app-name">{{ a.name }}</strong></span>
+              <VerdictBadge :verdict="a.verdict" small />
+            </div>
             <p class="dim reason">{{ a.verdict_reason }}</p>
           </div>
         </NuxtLink>
@@ -131,7 +134,10 @@ useHead({ title: 'Should I self-host it?' })
       <div class="grid tight">
         <NuxtLink v-for="a in filtered" :key="a.id" :to="`/${a.id}`" class="shell">
           <div class="core">
-            <div class="card-top"><strong class="app-name">{{ a.name }}</strong><VerdictBadge :verdict="a.verdict" small :stale="a.derived.verdict_stale" /></div>
+            <div class="card-top">
+              <span class="name-row"><AppTile :id="a.id" :name="a.name" :size="34" /><strong class="app-name">{{ a.name }}</strong></span>
+              <VerdictBadge :verdict="a.verdict" small :stale="a.derived.verdict_stale" />
+            </div>
             <div class="dim meta num">${{ a.price_usd_mo }}/mo<template v-if="a.derived.break_even_months != null"> · breaks even in {{ a.derived.break_even_months.toFixed(1) }} mo</template></div>
           </div>
         </NuxtLink>
@@ -173,6 +179,7 @@ useHead({ title: 'Should I self-host it?' })
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.9rem; }
 .grid.tight { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
 .card-top { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; }
+.name-row { display: inline-flex; align-items: center; gap: 0.6rem; min-width: 0; }
 .app-name { font-family: var(--display); font-weight: 500; font-size: 1.02rem; }
 .reason { font-size: 0.82rem; margin: 0.5rem 0 0; }
 .meta { font-size: 0.78rem; margin-top: 0.45rem; }
