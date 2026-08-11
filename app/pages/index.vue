@@ -141,6 +141,11 @@ useHead({ title: 'Should I self-host it?' })
         <a href="https://github.com/zernonia/shouldiselfhost/blob/main/CONTRIBUTING.md">evidence-backed PR</a> away.
       </p>
     </section>
+
+    <!-- Newsletter -->
+    <section v-reveal class="section">
+      <NewsletterCard />
+    </section>
   </div>
 </template>
 
