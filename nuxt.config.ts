@@ -1,6 +1,8 @@
 import { fileURLToPath } from 'node:url'
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
+  vite: { plugins: [tailwindcss()] },
   compatibilityDate: '2026-08-01',
 
   nitro: {
@@ -52,5 +54,5 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ['~/assets/css/main.css', '~/assets/css/desk.css'],
+  css: ['~/assets/css/main.css'],
 })
