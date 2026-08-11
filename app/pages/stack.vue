@@ -41,16 +41,20 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
-    <span v-reveal class="eyebrow">Flex responsibly</span>
-    <h1 v-reveal="1">My homelab replaces…</h1>
-    <p class="dim">
+  <section class="row hero-row">
+    <div class="gutter">
+      <div class="sec-no">MY</div>
+      <div class="sec-name">STACK</div>
+    </div>
+    <div class="body">
+    <div class="roll-title big">My homelab replaces…</div>
+    <p class="roll-sub">
       Pick what you actually self-host. The math is the same honest math as everywhere else on
       this site — subscription prices minus server share, storage, and your time at the
       reference rate. Share link carries your whole stack.
     </p>
 
-    <div class="card summary">
+    <div class="summary">
       <div class="stat">
         <span class="dim">subscriptions escaped</span>
         <strong class="num pos">${{ totalPrice.toFixed(2) }}/mo</strong>
@@ -78,23 +82,28 @@ useSeoMeta({
         <span class="num dim">${{ a.price_usd_mo }}/mo</span>
       </button>
     </div>
-  </div>
+    </div>
+  </section>
 </template>
 
 <style scoped>
-.summary { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; margin: 1.2rem 0 1.5rem; position: sticky; top: 0.5rem; z-index: 2; }
+.hero-row { padding-top: 54px; }
+.roll-title.big { font-size: clamp(26px, 3vw, 40px); letter-spacing: -1.5px; }
+.summary { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; padding: 16px 18px; background: var(--d-surface); border: 1px solid var(--d-border); position: sticky; top: 0.5rem; z-index: 2; }
 .stat { display: flex; flex-direction: column; }
-.stat strong { font-size: 1.4rem; }
+.stat strong { font-size: 1.4rem; font-family: var(--display); }
+.stat span { font-size: 11px; font-family: var(--mono); letter-spacing: 1px; text-transform: uppercase; color: var(--d-t3); }
 .share {
-  margin-left: auto; font: inherit; cursor: pointer; color: var(--text);
-  background: var(--bg-raise); border: 1px solid var(--accent); border-radius: 8px; padding: 0.5em 1em;
+  margin-left: auto; font-family: var(--mono); font-size: 12px; cursor: pointer; color: var(--yes);
+  background: none; border: 1px solid var(--yes); border-radius: 6px; padding: 0.6em 1.1em;
 }
 .share:disabled { opacity: 0.4; cursor: default; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 0.6rem; }
 .app-pick {
-  font: inherit; text-align: left; cursor: pointer; color: var(--text);
+  font: inherit; text-align: left; cursor: pointer; color: var(--d-t1);
+  background: none; border: 1px solid var(--d-border); border-radius: 6px;
   display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.6rem 0.9rem;
 }
-.app-pick.on { border-color: var(--yes); background: rgba(63, 214, 143, 0.07); }
+.app-pick.on { border-color: var(--yes); background: #34D3990D; }
 .app-pick.on .name::before { content: '✋ '; }
 </style>

@@ -20,6 +20,7 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
+    '/desk': { redirect: '/' },
     // Everything static + CDN-cached; only the vote plane stays on the Worker.
     '/**': { prerender: true },
     '/api/**': { prerender: false },
@@ -51,5 +52,5 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/main.css', '~/assets/css/desk.css'],
 })

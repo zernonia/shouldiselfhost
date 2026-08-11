@@ -1,140 +1,109 @@
 <script setup lang="ts">
-const menuOpen = ref(false)
-const route = useRoute()
-watch(() => route.path, () => { menuOpen.value = false })
-watch(menuOpen, (v) => {
-  if (import.meta.client) document.documentElement.style.overflow = v ? 'hidden' : ''
-})
-const links = [
-  { to: '/desk', label: 'the desk' },
-  { to: '/vs', label: 'versus' },
-  { to: '/stack', label: 'my stack' },
-  { to: '/methodology', label: 'methodology' },
-  { href: '/api/apps.json', label: 'data' },
-  { href: 'https://github.com/zernonia/shouldiselfhost', label: 'github' },
-]
+// Desk chrome — masthead, running head, live actions ticker, colophon.
+// Structure and values from frame UJL2k in untitled.pen; nav labels from the
+// Facts Panel frame's header. All pages render inside this.
+const { data } = await useFetch('/api/data/apps')
+const apps = computed<any[]>(() => data.value?.apps ?? [])
+const scored = computed(() => apps.value.filter((a: any) => a.verdict))
+const issueNo = computed(() => String(scored.value.length).padStart(3, '0'))
+const latest = computed(() =>
+  [...scored.value].sort((a: any, b: any) => String(b.verified?.at ?? '').localeCompare(String(a.verified?.at ?? ''))))
+const ticker = computed(() => latest.value.slice(0, 9))
+const fmtDate = (iso?: string) =>
+  iso ? new Date(iso + 'T00:00:00Z').toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric', timeZone: 'UTC' }).toUpperCase() : '—'
 </script>
 
 <template>
-  <div class="site">
-    <div class="mesh" aria-hidden="true" />
-    <div class="grain" aria-hidden="true" />
+  <div class="desk">
+    <div class="backdrop" aria-hidden="true">
+      <div class="glow glow-hero" />
+      <div class="glow glow-lower" />
+      <div class="gridline g1" /><div class="gridline g2" /><div class="gridline g3" /><div class="gridline g4" />
+    </div>
 
-    <!-- Floating glass pill nav -->
-    <header class="nav-wrap">
-      <nav class="island">
-        <NuxtLink to="/" class="brand">should<span class="brand-dim">i</span>selfhost<span class="brand-q">?</span></NuxtLink>
-        <div class="nav-links">
-          <template v-for="l in links" :key="l.label">
-            <NuxtLink v-if="l.to" :to="l.to">{{ l.label }}</NuxtLink>
-            <a v-else :href="l.href">{{ l.label }}</a>
-          </template>
+    <header class="masthead">
+      <div class="masthead-row">
+        <div class="brand-row">
+          <NuxtLink to="/" class="logo">shouldiselfhost<span class="q">?</span></NuxtLink>
+          <span class="rule-v" />
+          <span class="strapline">they tell you if you can — we tell you if you should</span>
         </div>
-        <button class="burger" :class="{ open: menuOpen }" aria-label="Menu" @click="menuOpen = !menuOpen">
-          <span /><span />
-        </button>
-      </nav>
+        <nav class="masthead-meta">
+          <NuxtLink to="/" class="navlink">The roll</NuxtLink>
+          <NuxtLink to="/vs" class="navlink">Compare</NuxtLink>
+          <NuxtLink to="/stack" class="navlink">My stack</NuxtLink>
+          <NuxtLink to="/methodology" class="navlink">The standard</NuxtLink>
+          <a href="/api/apps.json" class="navlink">Data</a>
+          <span class="sep">·</span>
+          <span>ISSUE {{ issueNo }}</span>
+        </nav>
+      </div>
+      <div class="running-head">
+        <span>THE DECISION LAYER FOR SELF-HOSTING</span>
+        <span>{{ apps.length }} APPS UNDER COVERAGE</span>
+        <span>PROTOCOL v1</span>
+        <span>NO VENDOR HAS EVER PAID FOR A RATING</span>
+      </div>
+      <div class="ticker">
+        <span class="ticker-lead"><span class="live-dot" />RECENT ACTIONS</span>
+        <template v-for="(t, i) in ticker" :key="t.id">
+          <span v-if="i" class="sep">·</span>
+          <NuxtLink :to="`/${t.id}`" class="tick">
+            <span class="tick-mark" :class="t.verdict" />
+            <span class="tick-app">{{ t.name.toUpperCase() }}</span>
+            <span class="tick-grade" :class="t.verdict">{{ t.verdict === 'NOT_REALLY' ? 'NOT REALLY' : t.verdict }}</span>
+          </NuxtLink>
+        </template>
+      </div>
     </header>
 
-    <!-- Full-screen glass menu, staggered mask reveal -->
-    <Transition name="veil">
-      <div v-if="menuOpen" class="veil" @click.self="menuOpen = false">
-        <div class="veil-links">
-          <template v-for="(l, i) in links" :key="l.label">
-            <NuxtLink v-if="l.to" :to="l.to" class="veil-link" :style="{ transitionDelay: `${100 + i * 60}ms` }">{{ l.label }}</NuxtLink>
-            <a v-else :href="l.href" class="veil-link" :style="{ transitionDelay: `${100 + i * 60}ms` }">{{ l.label }}</a>
-          </template>
-        </div>
-      </div>
-    </Transition>
-
-    <main class="container main">
+    <main>
       <slot />
     </main>
 
-    <footer class="site-footer">
-      <div class="container foot-grid">
-        <div>
-          <div class="foot-brand">shouldiselfhost<span class="brand-q">?</span></div>
-          <p class="dim">Not a directory — a scoreboard. Verdicts follow a <NuxtLink to="/methodology">published rubric</NuxtLink>; votes and sponsors never touch them.</p>
+    <footer class="colophon">
+      <div class="colophon-top">
+        <div class="colophon-brand">
+          <div class="logo">shouldiselfhost<span class="q">?</span></div>
+          <p>An independent ratings desk for self-hosted software. Ratings are opinions about cost, not advice about your infrastructure — and certainly not about your weekends.</p>
+          <p class="ecosystem">The third leg of the stool: <a href="https://canivibecodeit.com">canivibecodeit</a> asks “can AI rebuild it?” · <a href="https://caniselfhostit.com">caniselfhostit</a> asks “can you run it?” · we ask “is it worth it?” Capability data seeded from <a href="https://github.com/caniselfhostit/caniselfhostit">caniselfhostit.com</a> (MIT, © Jashanpreet Singh).</p>
         </div>
-        <div class="dim foot-meta">
-          <p>The third leg of the stool: <a href="https://canivibecodeit.com">canivibecodeit</a> asks “can AI rebuild it?” · <a href="https://caniselfhostit.com">caniselfhostit</a> asks “can you run it?” · we ask <em>“is it worth it?”</em></p>
-          <p>Capability data seeded from <a href="https://github.com/caniselfhostit/caniselfhostit">caniselfhostit.com</a> (MIT, © Jashanpreet Singh) — thank you. Decision-layer data <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · site code <a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL-3.0</a>.</p>
+        <div class="colophon-links">
+          <div class="col">
+            <div class="col-head">RATINGS</div>
+            <NuxtLink to="/">The roll</NuxtLink>
+            <NuxtLink to="/vs">Head-to-head</NuxtLink>
+            <NuxtLink to="/stack">My stack</NuxtLink>
+          </div>
+          <div class="col">
+            <div class="col-head">METHOD</div>
+            <NuxtLink to="/methodology">The standard · protocol v1</NuxtLink>
+            <a href="/api/apps.json">The data (JSON)</a>
+            <a href="https://github.com/zernonia/shouldiselfhost/blob/main/data/changelog.json">Changelog</a>
+          </div>
+          <div class="col">
+            <div class="col-head">DESK</div>
+            <a href="https://github.com/zernonia/shouldiselfhost/issues/new">Request a review</a>
+            <a href="https://github.com/zernonia/shouldiselfhost/issues/new">File an appeal</a>
+            <a href="https://github.com/zernonia/shouldiselfhost">Source (AGPL-3.0)</a>
+          </div>
         </div>
+      </div>
+      <div class="rule-h" />
+      <div class="appeals">
+        <span class="appeals-label">APPEALS</span>
+        <p>No vendor has ever paid for a rating and none ever will. A vendor who believes a rating is wrong may file for re-review with their own figures; we publish the outcome either way, including the times we were wrong.</p>
+      </div>
+      <div class="colophon-bottom">
+        <span>Ratings data CC BY-SA 4.0 · site code AGPL-3.0</span>
+        <span>they tell you if you can — we tell you if you should</span>
       </div>
     </footer>
   </div>
 </template>
 
 <style scoped>
-.site { min-height: 100dvh; display: flex; flex-direction: column; }
-
-.nav-wrap {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 40;
-  display: flex; justify-content: center;
-  padding: 1.4rem 1rem 0;
-  pointer-events: none;
-}
-.island {
-  pointer-events: auto;
-  display: flex; align-items: center; gap: 1.6rem;
-  background: rgba(10, 10, 12, 0.55);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid var(--hairline);
-  border-radius: 999px;
-  padding: 0.55rem 1.5rem;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.06);
-}
-.brand { font-family: var(--display); font-weight: 700; font-size: 1.02rem; letter-spacing: -0.01em; color: var(--text); }
-.brand:hover { color: var(--text); }
-.brand-dim { color: var(--text-faint); }
-.brand-q { color: var(--accent); }
-.nav-links { display: flex; gap: 1.25rem; font-size: 0.86rem; }
-.nav-links a { color: var(--text-dim); }
-.nav-links a:hover, .nav-links a.router-link-active { color: var(--text); }
-
-.burger { display: none; position: relative; width: 34px; height: 34px; background: none; border: none; cursor: pointer; }
-.burger span {
-  position: absolute; left: 7px; right: 7px; height: 1.5px; background: var(--text);
-  transition: transform 0.55s var(--ease), top 0.55s var(--ease);
-}
-.burger span:nth-child(1) { top: 13px; }
-.burger span:nth-child(2) { top: 20px; }
-.burger.open span:nth-child(1) { top: 16px; transform: rotate(45deg); }
-.burger.open span:nth-child(2) { top: 16px; transform: rotate(-45deg); }
-
-.veil {
-  position: fixed; inset: 0; z-index: 30;
-  background: rgba(5, 5, 5, 0.82);
-  backdrop-filter: blur(28px);
-  -webkit-backdrop-filter: blur(28px);
-  display: flex; align-items: center; justify-content: center;
-}
-.veil-links { display: flex; flex-direction: column; gap: 1.6rem; text-align: center; }
-.veil-link {
-  font-family: var(--display); font-size: 2rem; font-weight: 500; color: var(--text);
-  opacity: 0; transform: translateY(28px);
-  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
-}
-.veil-enter-active .veil-link, .veil .veil-link { opacity: 1; transform: translateY(0); }
-.veil-enter-from .veil-link { opacity: 0; transform: translateY(28px); }
-.veil-enter-active, .veil-leave-active { transition: opacity 0.5s var(--ease); }
-.veil-enter-from, .veil-leave-to { opacity: 0; }
-
-.main { flex: 1; padding: 7.5rem 1.25rem 5rem; width: 100%; }
-
-.site-footer { border-top: 1px solid var(--hairline-soft); padding: 3.5rem 0 4rem; font-size: 0.85rem; }
-.foot-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 3rem; }
-.foot-brand { font-family: var(--display); font-weight: 700; margin-bottom: 0.5rem; }
-.foot-meta p { margin: 0 0 0.8rem; }
-
-@media (max-width: 768px) {
-  .nav-links { display: none; }
-  .burger { display: block; }
-  .island { gap: 0.8rem; padding: 0.45rem 0.6rem 0.45rem 1.2rem; }
-  .main { padding: 6.5rem 1rem 3.5rem; }
-  .foot-grid { grid-template-columns: 1fr; gap: 1.2rem; }
-}
+.navlink { font-size: 11.5px; letter-spacing: 0.4px; color: var(--d-t2); }
+.navlink:hover, .navlink.router-link-active { color: var(--d-t1); }
+.ecosystem { font-size: 12px !important; }
 </style>
