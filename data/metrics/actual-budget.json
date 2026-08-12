@@ -1,13 +1,13 @@
 {
   "id": "actual-budget",
-  "stars": 28076,
-  "last_commit": "2026-08-10T21:39:33Z",
+  "stars": 28094,
+  "last_commit": "2026-08-11T20:41:02Z",
   "latest_release": {
     "tag": "v26.8.1",
     "published_at": "2026-08-07T21:17:24Z",
     "url": "https://github.com/actualbudget/actual/releases/tag/v26.8.1"
   },
   "docker_pulls": null,
-  "open_issues": 230,
-  "fetched_at": "2026-08-11T03:55:15.985Z"
+  "open_issues": 219,
+  "fetched_at": "2026-08-12T04:03:45.273Z"
 }

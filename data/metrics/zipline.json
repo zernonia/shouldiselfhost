@@ -1,6 +1,6 @@
 {
   "id": "zipline",
-  "stars": 3344,
+  "stars": 3351,
   "last_commit": "2026-08-11T02:37:40Z",
   "latest_release": {
     "tag": "v4.6.5",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 4,
-  "fetched_at": "2026-08-11T03:55:35.105Z"
+  "fetched_at": "2026-08-12T04:04:08.437Z"
 }
