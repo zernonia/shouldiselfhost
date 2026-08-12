@@ -33,8 +33,9 @@ jobs:
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           claude_args: |
-            --max-turns 60
+            --max-turns 100
             --model claude-sonnet-4-6
+            --allowedTools "Read,Glob,Grep,Write,Edit,Bash(git checkout:*),Bash(git switch:*),Bash(git add:*),Bash(git commit:*),Bash(git push:*),Bash(git status:*),Bash(git diff:*),Bash(git log:*),Bash(gh pr create:*),Bash(gh pr list:*),Bash(gh issue create:*),Bash(gh issue list:*),Bash(bash scripts/check-compose.sh:*),Bash(docker compose:*),Bash(docker ps:*),Bash(docker logs:*),Bash(npm run validate:*),Bash(node scripts/:*),Bash(ls:*),Bash(cat:*),Bash(date:*)"
           prompt: |
             You are the nightly re-verification bot for shouldiselfhost.com. Read CLAUDE.md and
             CONTRIBUTING.md first — the rubric and protocol v1 are binding.
