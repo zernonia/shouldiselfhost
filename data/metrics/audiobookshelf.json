@@ -1,6 +1,6 @@
 {
   "id": "audiobookshelf",
-  "stars": 13945,
+  "stars": 13954,
   "last_commit": "2026-08-03T22:14:55Z",
   "latest_release": {
     "tag": "v2.36.0",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 1127,
-  "fetched_at": "2026-08-12T04:03:46.193Z"
+  "fetched_at": "2026-08-13T04:04:15.131Z"
 }
