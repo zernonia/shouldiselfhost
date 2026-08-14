@@ -1,6 +1,6 @@
 {
   "id": "keila",
-  "stars": 2183,
+  "stars": 2186,
   "last_commit": "2026-08-01T10:01:52Z",
   "latest_release": {
     "tag": "v0.30.2",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 76,
-  "fetched_at": "2026-08-13T04:04:26.931Z"
+  "fetched_at": "2026-08-14T04:03:48.205Z"
 }

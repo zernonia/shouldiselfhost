@@ -1,6 +1,6 @@
 {
   "id": "calcom",
-  "stars": 47492,
+  "stars": 47553,
   "last_commit": "2026-08-08T17:13:42Z",
   "latest_release": {
     "tag": "v6.2.0",
@@ -8,6 +8,6 @@
     "url": "https://github.com/calcom/cal.diy/releases/tag/v6.2.0"
   },
   "docker_pulls": null,
-  "open_issues": 1397,
-  "fetched_at": "2026-08-13T04:04:16.368Z"
+  "open_issues": 1411,
+  "fetched_at": "2026-08-14T04:03:39.477Z"
 }

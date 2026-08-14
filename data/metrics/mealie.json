@@ -1,7 +1,7 @@
 {
   "id": "mealie",
-  "stars": 12963,
-  "last_commit": "2026-08-12T17:24:38Z",
+  "stars": 12973,
+  "last_commit": "2026-08-13T22:22:12Z",
   "latest_release": {
     "tag": "v3.22.0",
     "published_at": "2026-07-28T00:52:21Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 218,
-  "fetched_at": "2026-08-13T04:04:31.123Z"
+  "fetched_at": "2026-08-14T04:03:52.859Z"
 }

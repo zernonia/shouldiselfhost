@@ -1,6 +1,6 @@
 {
   "id": "perplexica",
-  "stars": 36113,
+  "stars": 36127,
   "last_commit": "2026-04-11T14:33:06Z",
   "latest_release": {
     "tag": "v1.12.2",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 346,
-  "fetched_at": "2026-08-13T04:04:34.541Z"
+  "fetched_at": "2026-08-14T04:03:55.396Z"
 }

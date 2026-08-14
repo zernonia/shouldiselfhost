@@ -1,7 +1,7 @@
 {
   "id": "uptime-kuma",
-  "stars": 90127,
-  "last_commit": "2026-08-13T00:14:12Z",
+  "stars": 90157,
+  "last_commit": "2026-08-14T00:14:25Z",
   "latest_release": {
     "tag": "2.5.0",
     "published_at": "2026-08-01T16:35:53Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 787,
-  "fetched_at": "2026-08-13T04:04:39.999Z"
+  "fetched_at": "2026-08-14T04:04:00.267Z"
 }

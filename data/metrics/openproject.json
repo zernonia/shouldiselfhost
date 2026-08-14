@@ -1,13 +1,13 @@
 {
   "id": "openproject",
-  "stars": 15835,
-  "last_commit": "2026-08-13T03:54:48Z",
+  "stars": 15844,
+  "last_commit": "2026-08-14T04:00:13Z",
   "latest_release": {
-    "tag": "v17.7.1",
-    "published_at": "2026-08-06T12:11:20Z",
-    "url": "https://github.com/opf/openproject/releases/tag/v17.7.1"
+    "tag": "v17.7.2",
+    "published_at": "2026-08-13T12:25:20Z",
+    "url": "https://github.com/opf/openproject/releases/tag/v17.7.2"
   },
   "docker_pulls": null,
-  "open_issues": 186,
-  "fetched_at": "2026-08-13T04:04:33.478Z"
+  "open_issues": 197,
+  "fetched_at": "2026-08-14T04:03:54.442Z"
 }
