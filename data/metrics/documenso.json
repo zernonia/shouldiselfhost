@@ -1,7 +1,7 @@
 {
   "id": "documenso",
-  "stars": 14416,
-  "last_commit": "2026-08-14T02:54:07Z",
+  "stars": 14455,
+  "last_commit": "2026-08-15T02:23:03Z",
   "latest_release": {
     "tag": "v2.15.0",
     "published_at": "2026-07-21T04:44:55Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 246,
-  "fetched_at": "2026-08-14T04:03:41.502Z"
+  "fetched_at": "2026-08-15T03:34:00.023Z"
 }

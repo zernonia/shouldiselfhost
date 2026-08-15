@@ -1,13 +1,13 @@
 {
   "id": "mautic",
-  "stars": 10330,
-  "last_commit": "2026-08-13T20:16:51Z",
+  "stars": 10338,
+  "last_commit": "2026-08-14T15:04:33Z",
   "latest_release": {
     "tag": "7.1.3",
     "published_at": "2026-07-07T14:49:18Z",
     "url": "https://github.com/mautic/mautic/releases/tag/7.1.3"
   },
   "docker_pulls": null,
-  "open_issues": 187,
-  "fetched_at": "2026-08-14T04:03:52.630Z"
+  "open_issues": 189,
+  "fetched_at": "2026-08-15T03:34:08.297Z"
 }
