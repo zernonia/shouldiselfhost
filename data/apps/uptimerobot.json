@@ -31,8 +31,8 @@
     "decision_layer": "original"
   },
   "verified": {
-    "by": "zernonia",
-    "at": "2026-08-10",
+    "by": "tier3-bot",
+    "at": "2026-08-15",
     "protocol": "v1",
     "setup_min": 25,
     "assistant": "claude-code",

@@ -37,8 +37,8 @@
   },
   "hardware_tier": "pi",
   "verified": {
-    "by": "zernonia",
-    "at": "2026-08-10",
+    "by": "tier3-bot",
+    "at": "2026-08-15",
     "protocol": "v1",
     "setup_min": 30,
     "assistant": "claude-code",
@@ -46,9 +46,7 @@
       "logs/feedly-freshrss.md",
       "compose/feedly-freshrss.yml"
     ],
-    "what_broke": [
-      "Nothing — image ships with SQLite default and a web installer"
-    ]
+    "what_broke": []
   },
   "compose": "compose/feedly-freshrss.yml"
 }
