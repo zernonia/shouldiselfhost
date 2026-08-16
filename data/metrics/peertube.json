@@ -1,6 +1,6 @@
 {
   "id": "peertube",
-  "stars": 15267,
+  "stars": 15268,
   "last_commit": "2026-08-14T14:41:16Z",
   "latest_release": {
     "tag": "v8.2.4",
@@ -8,6 +8,6 @@
     "url": "https://github.com/Chocobozzz/PeerTube/releases/tag/v8.2.4"
   },
   "docker_pulls": null,
-  "open_issues": 686,
-  "fetched_at": "2026-08-15T03:34:10.173Z"
+  "open_issues": 689,
+  "fetched_at": "2026-08-16T03:36:14.027Z"
 }

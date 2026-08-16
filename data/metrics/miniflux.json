@@ -1,6 +1,6 @@
 {
   "id": "miniflux",
-  "stars": 9580,
+  "stars": 9586,
   "last_commit": "2026-08-12T22:32:27Z",
   "latest_release": {
     "tag": "2.3.3",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 277,
-  "fetched_at": "2026-08-15T03:34:08.898Z"
+  "fetched_at": "2026-08-16T03:36:12.200Z"
 }

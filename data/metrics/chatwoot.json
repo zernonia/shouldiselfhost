@@ -1,6 +1,6 @@
 {
   "id": "chatwoot",
-  "stars": 35883,
+  "stars": 35897,
   "last_commit": "2026-08-14T12:33:45Z",
   "latest_release": {
     "tag": "v4.16.2",
@@ -8,6 +8,6 @@
     "url": "https://github.com/chatwoot/chatwoot/releases/tag/v4.16.2"
   },
   "docker_pulls": null,
-  "open_issues": 1331,
-  "fetched_at": "2026-08-15T03:33:58.946Z"
+  "open_issues": 1338,
+  "fetched_at": "2026-08-16T03:35:58.491Z"
 }
