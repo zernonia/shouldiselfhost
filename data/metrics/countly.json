@@ -1,6 +1,6 @@
 {
   "id": "countly",
-  "stars": 5887,
+  "stars": 5886,
   "last_commit": "2026-08-14T18:56:15Z",
   "latest_release": {
     "tag": "25.03.51",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 91,
-  "fetched_at": "2026-08-16T03:35:59.844Z"
+  "fetched_at": "2026-08-17T03:36:24.423Z"
 }

@@ -1,6 +1,6 @@
 {
   "id": "postiz",
-  "stars": 34710,
+  "stars": 34750,
   "last_commit": "2026-08-15T14:13:37Z",
   "latest_release": {
     "tag": "v2.23.0",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 251,
-  "fetched_at": "2026-08-16T03:36:15.886Z"
+  "fetched_at": "2026-08-17T03:36:36.661Z"
 }

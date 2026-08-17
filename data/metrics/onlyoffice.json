@@ -1,6 +1,6 @@
 {
   "id": "onlyoffice",
-  "stars": 6819,
+  "stars": 6826,
   "last_commit": "2026-07-22T09:43:52Z",
   "latest_release": {
     "tag": "v9.4.0",
@@ -8,6 +8,6 @@
     "url": "https://github.com/ONLYOFFICE/DocumentServer/releases/tag/v9.4.0"
   },
   "docker_pulls": null,
-  "open_issues": 1121,
-  "fetched_at": "2026-08-16T03:36:13.219Z"
+  "open_issues": 1122,
+  "fetched_at": "2026-08-17T03:36:34.611Z"
 }

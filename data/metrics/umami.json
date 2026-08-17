@@ -1,6 +1,6 @@
 {
   "id": "umami",
-  "stars": 38202,
+  "stars": 38216,
   "last_commit": "2026-08-14T17:32:16Z",
   "latest_release": {
     "tag": "v3.3.0",
@@ -8,6 +8,6 @@
     "url": "https://github.com/umami-software/umami/releases/tag/v3.3.0"
   },
   "docker_pulls": null,
-  "open_issues": 99,
-  "fetched_at": "2026-08-16T03:36:19.624Z"
+  "open_issues": 102,
+  "fetched_at": "2026-08-17T03:36:39.331Z"
 }
