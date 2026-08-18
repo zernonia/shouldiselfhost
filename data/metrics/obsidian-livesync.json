@@ -1,6 +1,6 @@
 {
   "id": "obsidian-livesync",
-  "stars": 12042,
+  "stars": 12055,
   "last_commit": "2026-08-15T15:32:19Z",
   "latest_release": {
     "tag": "1.0.15",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 339,
-  "fetched_at": "2026-08-17T03:36:34.443Z"
+  "fetched_at": "2026-08-18T03:35:25.924Z"
 }

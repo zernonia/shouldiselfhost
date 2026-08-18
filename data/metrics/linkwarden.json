@@ -1,13 +1,13 @@
 {
   "id": "linkwarden",
-  "stars": 19512,
-  "last_commit": "2026-08-16T23:32:25Z",
+  "stars": 19522,
+  "last_commit": "2026-08-17T21:21:09Z",
   "latest_release": {
-    "tag": "v2.16.0",
-    "published_at": "2026-07-28T12:49:25Z",
-    "url": "https://github.com/linkwarden/linkwarden/releases/tag/v2.16.0"
+    "tag": "v2.16.1",
+    "published_at": "2026-08-17T20:09:53Z",
+    "url": "https://github.com/linkwarden/linkwarden/releases/tag/v2.16.1"
   },
   "docker_pulls": null,
-  "open_issues": 651,
-  "fetched_at": "2026-08-17T03:36:32.458Z"
+  "open_issues": 649,
+  "fetched_at": "2026-08-18T03:35:23.494Z"
 }

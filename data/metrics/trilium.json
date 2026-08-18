@@ -1,7 +1,7 @@
 {
   "id": "trilium",
-  "stars": 37456,
-  "last_commit": "2026-08-17T00:29:56Z",
+  "stars": 37468,
+  "last_commit": "2026-08-18T00:31:14Z",
   "latest_release": {
     "tag": "v0.104.1",
     "published_at": "2026-07-25T14:07:54Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 672,
-  "fetched_at": "2026-08-17T03:36:38.740Z"
+  "fetched_at": "2026-08-18T03:35:30.454Z"
 }

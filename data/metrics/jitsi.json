@@ -1,13 +1,13 @@
 {
   "id": "jitsi",
-  "stars": 3598,
-  "last_commit": "2026-08-10T15:45:43Z",
+  "stars": 3597,
+  "last_commit": "2026-08-17T08:28:43Z",
   "latest_release": {
-    "tag": "stable-11146-1",
-    "published_at": "2026-08-05T13:58:34Z",
-    "url": "https://github.com/jitsi/docker-jitsi-meet/releases/tag/stable-11146-1"
+    "tag": "stable-11146-2",
+    "published_at": "2026-08-17T08:28:41Z",
+    "url": "https://github.com/jitsi/docker-jitsi-meet/releases/tag/stable-11146-2"
   },
   "docker_pulls": null,
-  "open_issues": 16,
-  "fetched_at": "2026-08-17T03:36:29.771Z"
+  "open_issues": 15,
+  "fetched_at": "2026-08-18T03:35:20.645Z"
 }

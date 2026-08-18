@@ -1,13 +1,13 @@
 {
   "id": "immich",
-  "stars": 110790,
-  "last_commit": "2026-08-17T02:18:28Z",
+  "stars": 111256,
+  "last_commit": "2026-08-18T00:29:26Z",
   "latest_release": {
     "tag": "v3.1.0",
     "published_at": "2026-07-29T14:20:10Z",
     "url": "https://github.com/immich-app/immich/releases/tag/v3.1.0"
   },
   "docker_pulls": null,
-  "open_issues": 738,
-  "fetched_at": "2026-08-17T03:36:29.217Z"
+  "open_issues": 742,
+  "fetched_at": "2026-08-18T03:35:19.862Z"
 }

@@ -1,13 +1,13 @@
 {
   "id": "listmonk",
-  "stars": 22916,
-  "last_commit": "2026-08-14T17:55:58Z",
+  "stars": 22961,
+  "last_commit": "2026-08-18T03:01:37Z",
   "latest_release": {
     "tag": "v6.2.0",
     "published_at": "2026-06-26T10:24:34Z",
     "url": "https://github.com/knadh/listmonk/releases/tag/v6.2.0"
   },
   "docker_pulls": null,
-  "open_issues": 111,
-  "fetched_at": "2026-08-17T03:36:32.621Z"
+  "open_issues": 105,
+  "fetched_at": "2026-08-18T03:35:23.670Z"
 }

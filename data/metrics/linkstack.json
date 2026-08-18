@@ -1,6 +1,6 @@
 {
   "id": "linkstack",
-  "stars": 3750,
+  "stars": 3773,
   "last_commit": "2026-07-21T12:40:17Z",
   "latest_release": {
     "tag": "v4.8.6",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 47,
-  "fetched_at": "2026-08-17T03:36:32.265Z"
+  "fetched_at": "2026-08-18T03:35:23.262Z"
 }
