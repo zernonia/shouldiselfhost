@@ -1,13 +1,13 @@
 {
   "id": "linkding",
-  "stars": 11067,
-  "last_commit": "2026-08-17T21:47:32Z",
+  "stars": 11072,
+  "last_commit": "2026-08-18T21:08:57Z",
   "latest_release": {
-    "tag": "v1.46.1",
-    "published_at": "2026-08-14T05:59:58Z",
-    "url": "https://github.com/sissbruecker/linkding/releases/tag/v1.46.1"
+    "tag": "v1.46.2",
+    "published_at": "2026-08-18T21:07:05Z",
+    "url": "https://github.com/sissbruecker/linkding/releases/tag/v1.46.2"
   },
   "docker_pulls": null,
-  "open_issues": 197,
-  "fetched_at": "2026-08-18T03:35:23.030Z"
+  "open_issues": 195,
+  "fetched_at": "2026-08-19T03:35:43.509Z"
 }

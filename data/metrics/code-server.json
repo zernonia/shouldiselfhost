@@ -1,6 +1,6 @@
 {
   "id": "code-server",
-  "stars": 78916,
+  "stars": 78937,
   "last_commit": "2026-08-18T00:01:59Z",
   "latest_release": {
     "tag": "v4.133.0",
@@ -8,6 +8,6 @@
     "url": "https://github.com/coder/code-server/releases/tag/v4.133.0"
   },
   "docker_pulls": null,
-  "open_issues": 162,
-  "fetched_at": "2026-08-18T03:35:13.895Z"
+  "open_issues": 164,
+  "fetched_at": "2026-08-19T03:35:33.420Z"
 }

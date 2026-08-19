@@ -1,6 +1,6 @@
 {
   "id": "wger",
-  "stars": 6674,
+  "stars": 6692,
   "last_commit": "2026-08-17T21:30:02Z",
   "latest_release": {
     "tag": "2.6",
@@ -8,6 +8,6 @@
     "url": "https://github.com/wger-project/wger/releases/tag/2.6"
   },
   "docker_pulls": null,
-  "open_issues": 273,
-  "fetched_at": "2026-08-18T03:35:32.713Z"
+  "open_issues": 274,
+  "fetched_at": "2026-08-19T03:35:53.985Z"
 }

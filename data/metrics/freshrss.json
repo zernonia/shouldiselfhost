@@ -1,13 +1,13 @@
 {
   "id": "freshrss",
-  "stars": 15797,
-  "last_commit": "2026-08-17T20:13:09Z",
+  "stars": 15801,
+  "last_commit": "2026-08-18T07:36:04Z",
   "latest_release": {
     "tag": "1.29.1",
     "published_at": "2026-05-20T17:58:03Z",
     "url": "https://github.com/FreshRSS/FreshRSS/releases/tag/1.29.1"
   },
   "docker_pulls": null,
-  "open_issues": 660,
-  "fetched_at": "2026-08-18T03:35:17.576Z"
+  "open_issues": 659,
+  "fetched_at": "2026-08-19T03:35:37.477Z"
 }

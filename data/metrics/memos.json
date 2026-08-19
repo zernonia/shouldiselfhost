@@ -1,13 +1,13 @@
 {
   "id": "memos",
-  "stars": 62311,
-  "last_commit": "2026-08-18T01:16:40Z",
+  "stars": 62347,
+  "last_commit": "2026-08-19T01:18:59Z",
   "latest_release": {
     "tag": "v0.30.0",
     "published_at": "2026-07-26T15:46:00Z",
     "url": "https://github.com/usememos/memos/releases/tag/v0.30.0"
   },
   "docker_pulls": null,
-  "open_issues": 46,
-  "fetched_at": "2026-08-18T03:35:24.992Z"
+  "open_issues": 45,
+  "fetched_at": "2026-08-19T03:35:45.443Z"
 }

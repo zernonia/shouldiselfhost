@@ -1,13 +1,13 @@
 {
   "id": "heyform",
   "stars": 8938,
-  "last_commit": "2026-08-13T06:04:59Z",
+  "last_commit": "2026-08-19T03:10:36Z",
   "latest_release": {
     "tag": "v3.0.1",
     "published_at": "2026-08-13T06:05:20Z",
     "url": "https://github.com/heyform/heyform/releases/tag/v3.0.1"
   },
   "docker_pulls": null,
-  "open_issues": 9,
-  "fetched_at": "2026-08-18T03:35:19.322Z"
+  "open_issues": 7,
+  "fetched_at": "2026-08-19T03:35:39.436Z"
 }
