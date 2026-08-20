@@ -1,7 +1,7 @@
 {
   "id": "coolify",
-  "stars": 60728,
-  "last_commit": "2026-08-18T22:19:55Z",
+  "stars": 60771,
+  "last_commit": "2026-08-19T21:48:15Z",
   "latest_release": {
     "tag": "v4.3.9",
     "published_at": "2026-08-18T21:50:01Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 745,
-  "fetched_at": "2026-08-19T03:35:33.967Z"
+  "fetched_at": "2026-08-20T03:35:10.054Z"
 }
