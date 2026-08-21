@@ -1,13 +1,13 @@
 {
   "id": "kavita",
-  "stars": 11507,
-  "last_commit": "2026-08-19T20:07:06Z",
+  "stars": 11513,
+  "last_commit": "2026-08-20T21:04:56Z",
   "latest_release": {
     "tag": "v0.9.0.2",
     "published_at": "2026-05-14T14:04:05Z",
     "url": "https://github.com/Kareadita/Kavita/releases/tag/v0.9.0.2"
   },
   "docker_pulls": null,
-  "open_issues": 165,
-  "fetched_at": "2026-08-20T03:35:16.095Z"
+  "open_issues": 167,
+  "fetched_at": "2026-08-21T03:37:35.787Z"
 }

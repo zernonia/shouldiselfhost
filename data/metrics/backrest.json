@@ -1,6 +1,6 @@
 {
   "id": "backrest",
-  "stars": 7162,
+  "stars": 7172,
   "last_commit": "2026-08-17T13:24:34Z",
   "latest_release": {
     "tag": "v1.14.1",
@@ -8,6 +8,6 @@
     "url": "https://github.com/garethgeorge/backrest/releases/tag/v1.14.1"
   },
   "docker_pulls": null,
-  "open_issues": 344,
-  "fetched_at": "2026-08-20T03:35:08.263Z"
+  "open_issues": 346,
+  "fetched_at": "2026-08-21T03:37:24.885Z"
 }

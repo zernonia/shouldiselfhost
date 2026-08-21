@@ -1,7 +1,7 @@
 {
   "id": "rallly",
-  "stars": 5217,
-  "last_commit": "2026-08-20T02:00:22Z",
+  "stars": 5219,
+  "last_commit": "2026-08-21T00:50:20Z",
   "latest_release": {
     "tag": "v4.12.3",
     "published_at": "2026-08-14T12:21:41Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 6,
-  "fetched_at": "2026-08-20T03:35:23.251Z"
+  "fetched_at": "2026-08-21T03:37:46.182Z"
 }

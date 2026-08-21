@@ -1,13 +1,13 @@
 {
   "id": "grist",
-  "stars": 11502,
-  "last_commit": "2026-08-19T12:59:19Z",
+  "stars": 11565,
+  "last_commit": "2026-08-20T22:29:36Z",
   "latest_release": {
     "tag": "v1.7.17",
     "published_at": "2026-07-29T20:25:32Z",
     "url": "https://github.com/gristlabs/grist-core/releases/tag/v1.7.17"
   },
   "docker_pulls": null,
-  "open_issues": 698,
-  "fetched_at": "2026-08-20T03:35:14.191Z"
+  "open_issues": 699,
+  "fetched_at": "2026-08-21T03:37:33.082Z"
 }

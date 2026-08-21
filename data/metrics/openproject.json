@@ -1,13 +1,13 @@
 {
   "id": "openproject",
-  "stars": 15891,
-  "last_commit": "2026-08-20T03:26:37Z",
+  "stars": 15901,
+  "last_commit": "2026-08-21T03:34:02Z",
   "latest_release": {
     "tag": "v17.7.2",
     "published_at": "2026-08-13T12:25:20Z",
     "url": "https://github.com/opf/openproject/releases/tag/v17.7.2"
   },
   "docker_pulls": null,
-  "open_issues": 224,
-  "fetched_at": "2026-08-20T03:35:20.968Z"
+  "open_issues": 222,
+  "fetched_at": "2026-08-21T03:37:43.171Z"
 }

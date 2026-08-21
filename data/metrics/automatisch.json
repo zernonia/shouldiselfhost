@@ -1,6 +1,6 @@
 {
   "id": "automatisch",
-  "stars": 13937,
+  "stars": 13938,
   "last_commit": "2026-02-11T19:53:04Z",
   "latest_release": {
     "tag": "v0.15.0",
@@ -8,6 +8,6 @@
     "url": "https://github.com/automatisch/automatisch/releases/tag/v0.15.0"
   },
   "docker_pulls": null,
-  "open_issues": 288,
-  "fetched_at": "2026-08-20T03:35:08.086Z"
+  "open_issues": 287,
+  "fetched_at": "2026-08-21T03:37:24.610Z"
 }

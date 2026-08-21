@@ -1,13 +1,13 @@
 {
   "id": "countly",
   "stars": 5888,
-  "last_commit": "2026-08-20T01:59:17Z",
+  "last_commit": "2026-08-21T01:22:54Z",
   "latest_release": {
     "tag": "25.03.51",
     "published_at": "2026-08-03T15:16:35Z",
     "url": "https://github.com/Countly/countly-server/releases/tag/25.03.51"
   },
   "docker_pulls": null,
-  "open_issues": 90,
-  "fetched_at": "2026-08-20T03:35:10.263Z"
+  "open_issues": 87,
+  "fetched_at": "2026-08-21T03:37:27.639Z"
 }

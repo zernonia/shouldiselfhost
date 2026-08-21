@@ -1,6 +1,6 @@
 {
   "id": "adventurelog",
-  "stars": 3580,
+  "stars": 3589,
   "last_commit": "2026-08-17T12:28:43Z",
   "latest_release": {
     "tag": "v0.13.0",
@@ -8,6 +8,6 @@
     "url": "https://github.com/seanmorley15/AdventureLog/releases/tag/v0.13.0"
   },
   "docker_pulls": null,
-  "open_issues": 214,
-  "fetched_at": "2026-08-20T03:35:07.236Z"
+  "open_issues": 215,
+  "fetched_at": "2026-08-21T03:37:23.358Z"
 }

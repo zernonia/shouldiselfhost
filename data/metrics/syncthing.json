@@ -1,7 +1,7 @@
 {
   "id": "syncthing",
-  "stars": 87804,
-  "last_commit": "2026-08-19T22:41:50Z",
+  "stars": 87832,
+  "last_commit": "2026-08-21T02:19:15Z",
   "latest_release": {
     "tag": "v2.1.3",
     "published_at": "2026-08-05T13:06:38Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 375,
-  "fetched_at": "2026-08-20T03:35:24.338Z"
+  "fetched_at": "2026-08-21T03:37:47.670Z"
 }
