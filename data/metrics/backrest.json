@@ -1,6 +1,6 @@
 {
   "id": "backrest",
-  "stars": 7172,
+  "stars": 7181,
   "last_commit": "2026-08-17T13:24:34Z",
   "latest_release": {
     "tag": "v1.14.1",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 346,
-  "fetched_at": "2026-08-21T03:37:24.885Z"
+  "fetched_at": "2026-08-22T03:34:41.107Z"
 }
