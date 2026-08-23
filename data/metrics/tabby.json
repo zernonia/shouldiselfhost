@@ -1,6 +1,6 @@
 {
   "id": "tabby",
-  "stars": 33832,
+  "stars": 33833,
   "last_commit": "2026-06-30T20:38:02Z",
   "latest_release": {
     "tag": "v0.32.0",
@@ -8,6 +8,6 @@
     "url": "https://github.com/TabbyML/tabby/releases/tag/v0.32.0"
   },
   "docker_pulls": null,
-  "open_issues": 329,
-  "fetched_at": "2026-08-22T03:34:56.243Z"
+  "open_issues": 330,
+  "fetched_at": "2026-08-23T03:37:24.224Z"
 }

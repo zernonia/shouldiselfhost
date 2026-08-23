@@ -1,7 +1,7 @@
 {
   "id": "chatwoot",
-  "stars": 36055,
-  "last_commit": "2026-08-22T01:53:03Z",
+  "stars": 36076,
+  "last_commit": "2026-08-23T01:12:16Z",
   "latest_release": {
     "tag": "v4.17.0",
     "published_at": "2026-08-20T00:04:42Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 1353,
-  "fetched_at": "2026-08-22T03:34:42.172Z"
+  "fetched_at": "2026-08-23T03:37:09.515Z"
 }

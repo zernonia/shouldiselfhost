@@ -1,9 +1,9 @@
 {
   "id": "languagetool",
-  "stars": 14848,
-  "last_commit": "2026-08-21T16:06:47Z",
+  "stars": 14852,
+  "last_commit": "2026-08-22T20:39:29Z",
   "latest_release": null,
   "docker_pulls": null,
-  "open_issues": 2147,
-  "fetched_at": "2026-08-22T03:34:49.173Z"
+  "open_issues": 2148,
+  "fetched_at": "2026-08-23T03:37:17.050Z"
 }

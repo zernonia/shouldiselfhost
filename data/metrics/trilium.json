@@ -1,13 +1,13 @@
 {
   "id": "trilium",
-  "stars": 37537,
-  "last_commit": "2026-08-22T00:33:37Z",
+  "stars": 37552,
+  "last_commit": "2026-08-23T00:34:23Z",
   "latest_release": {
     "tag": "v0.105.0",
     "published_at": "2026-08-19T18:19:34Z",
     "url": "https://github.com/TriliumNext/Trilium/releases/tag/v0.105.0"
   },
   "docker_pulls": null,
-  "open_issues": 687,
-  "fetched_at": "2026-08-22T03:34:56.791Z"
+  "open_issues": 697,
+  "fetched_at": "2026-08-23T03:37:24.764Z"
 }

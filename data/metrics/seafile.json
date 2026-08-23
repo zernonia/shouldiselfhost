@@ -1,6 +1,6 @@
 {
   "id": "seafile",
-  "stars": 15156,
+  "stars": 15160,
   "last_commit": "2026-08-08T02:47:29Z",
   "latest_release": {
     "tag": "v9.0.5",
@@ -8,6 +8,6 @@
     "url": "https://github.com/haiwen/seafile/releases/tag/v9.0.5"
   },
   "docker_pulls": null,
-  "open_issues": 89,
-  "fetched_at": "2026-08-22T03:34:55.116Z"
+  "open_issues": 90,
+  "fetched_at": "2026-08-23T03:37:23.199Z"
 }
