@@ -1,6 +1,6 @@
 {
   "id": "baserow",
-  "stars": 5657,
+  "stars": 5673,
   "last_commit": "2026-08-21T14:31:06Z",
   "latest_release": {
     "tag": "2.3.3",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 1219,
-  "fetched_at": "2026-08-23T03:37:08.645Z"
+  "fetched_at": "2026-08-24T03:39:36.282Z"
 }

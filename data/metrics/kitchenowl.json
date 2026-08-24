@@ -1,6 +1,6 @@
 {
   "id": "kitchenowl",
-  "stars": 3638,
+  "stars": 3639,
   "last_commit": "2026-07-26T18:13:20Z",
   "latest_release": {
     "tag": "v0.7.10",
@@ -8,6 +8,6 @@
     "url": "https://github.com/TomBursch/kitchenowl/releases/tag/v0.7.10"
   },
   "docker_pulls": null,
-  "open_issues": 336,
-  "fetched_at": "2026-08-23T03:37:16.856Z"
+  "open_issues": 338,
+  "fetched_at": "2026-08-24T03:39:47.793Z"
 }

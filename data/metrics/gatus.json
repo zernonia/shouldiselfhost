@@ -1,6 +1,6 @@
 {
   "id": "gatus",
-  "stars": 11882,
+  "stars": 11889,
   "last_commit": "2026-08-18T01:22:58Z",
   "latest_release": {
     "tag": "v5.36.0",
@@ -8,6 +8,6 @@
     "url": "https://github.com/TwiN/gatus/releases/tag/v5.36.0"
   },
   "docker_pulls": null,
-  "open_issues": 372,
-  "fetched_at": "2026-08-23T03:37:13.468Z"
+  "open_issues": 373,
+  "fetched_at": "2026-08-24T03:39:42.940Z"
 }

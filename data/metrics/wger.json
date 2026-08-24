@@ -1,7 +1,7 @@
 {
   "id": "wger",
-  "stars": 6735,
-  "last_commit": "2026-08-21T23:23:40Z",
+  "stars": 6744,
+  "last_commit": "2026-08-23T18:25:59Z",
   "latest_release": {
     "tag": "2.6",
     "published_at": "2026-06-17T07:47:47Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 270,
-  "fetched_at": "2026-08-23T03:37:26.672Z"
+  "fetched_at": "2026-08-24T03:40:02.272Z"
 }

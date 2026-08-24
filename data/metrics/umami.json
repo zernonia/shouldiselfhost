@@ -1,6 +1,6 @@
 {
   "id": "umami",
-  "stars": 38323,
+  "stars": 38335,
   "last_commit": "2026-08-20T18:26:22Z",
   "latest_release": {
     "tag": "v3.3.1",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 102,
-  "fetched_at": "2026-08-23T03:37:25.171Z"
+  "fetched_at": "2026-08-24T03:40:00.021Z"
 }

@@ -1,6 +1,6 @@
 {
   "id": "kener",
-  "stars": 5124,
+  "stars": 5126,
   "last_commit": "2026-08-20T14:37:59Z",
   "latest_release": {
     "tag": "v4.1.2",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 76,
-  "fetched_at": "2026-08-23T03:37:16.479Z"
+  "fetched_at": "2026-08-24T03:39:47.295Z"
 }

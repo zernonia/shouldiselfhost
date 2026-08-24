@@ -1,6 +1,6 @@
 {
   "id": "collabora",
-  "stars": 3323,
+  "stars": 3324,
   "last_commit": "2026-08-18T13:45:37Z",
   "latest_release": {
     "tag": "25.04.7-mobile",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 973,
-  "fetched_at": "2026-08-23T03:37:10.360Z"
+  "fetched_at": "2026-08-24T03:39:38.067Z"
 }
