@@ -1,6 +1,6 @@
 {
   "id": "perplexica",
-  "stars": 36418,
+  "stars": 36447,
   "last_commit": "2026-04-11T14:33:06Z",
   "latest_release": {
     "tag": "v1.12.2",
@@ -8,6 +8,6 @@
     "url": "https://github.com/ItzCrazyKns/Vane/releases/tag/v1.12.2"
   },
   "docker_pulls": null,
-  "open_issues": 347,
-  "fetched_at": "2026-08-24T03:39:55.045Z"
+  "open_issues": 348,
+  "fetched_at": "2026-08-25T03:36:18.091Z"
 }
