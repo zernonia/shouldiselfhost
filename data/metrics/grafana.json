@@ -1,13 +1,13 @@
 {
   "id": "grafana",
-  "stars": 76395,
-  "last_commit": "2026-08-25T03:24:41Z",
+  "stars": 76422,
+  "last_commit": "2026-08-26T03:07:24Z",
   "latest_release": {
     "tag": "v13.2.0",
     "published_at": "2026-08-18T12:48:13Z",
     "url": "https://github.com/grafana/grafana/releases/tag/v13.2.0"
   },
   "docker_pulls": null,
-  "open_issues": 3300,
-  "fetched_at": "2026-08-25T03:36:10.285Z"
+  "open_issues": 3318,
+  "fetched_at": "2026-08-26T03:39:46.606Z"
 }

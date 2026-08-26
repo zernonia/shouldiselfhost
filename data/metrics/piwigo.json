@@ -1,7 +1,7 @@
 {
   "id": "piwigo",
   "stars": 3844,
-  "last_commit": "2026-08-24T05:11:40Z",
+  "last_commit": "2026-08-25T04:34:13Z",
   "latest_release": {
     "tag": "16.4.0",
     "published_at": "2026-05-03T14:54:31Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 748,
-  "fetched_at": "2026-08-25T03:36:18.540Z"
+  "fetched_at": "2026-08-26T03:39:56.655Z"
 }

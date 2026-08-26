@@ -1,6 +1,6 @@
 {
   "id": "seafile",
-  "stars": 15164,
+  "stars": 15170,
   "last_commit": "2026-08-08T02:47:29Z",
   "latest_release": {
     "tag": "v9.0.5",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 90,
-  "fetched_at": "2026-08-25T03:36:19.754Z"
+  "fetched_at": "2026-08-26T03:39:58.029Z"
 }

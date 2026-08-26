@@ -1,7 +1,7 @@
 {
   "id": "fittrackee",
-  "stars": 1155,
-  "last_commit": "2026-08-24T06:49:39Z",
+  "stars": 1154,
+  "last_commit": "2026-08-25T13:28:30Z",
   "latest_release": {
     "tag": "v1.3.4",
     "published_at": "2026-07-29T22:14:39Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 1,
-  "fetched_at": "2026-08-25T03:36:08.924Z"
+  "fetched_at": "2026-08-26T03:39:45.121Z"
 }
