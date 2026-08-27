@@ -1,13 +1,13 @@
 {
   "id": "code-server",
-  "stars": 79069,
-  "last_commit": "2026-08-24T22:00:51Z",
+  "stars": 79081,
+  "last_commit": "2026-08-26T22:54:54Z",
   "latest_release": {
     "tag": "v4.134.0",
     "published_at": "2026-08-24T21:42:57Z",
     "url": "https://github.com/coder/code-server/releases/tag/v4.134.0"
   },
   "docker_pulls": null,
-  "open_issues": 151,
-  "fetched_at": "2026-08-26T03:39:41.663Z"
+  "open_issues": 150,
+  "fetched_at": "2026-08-27T05:07:32.499Z"
 }

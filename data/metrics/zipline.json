@@ -1,13 +1,13 @@
 {
   "id": "zipline",
-  "stars": 3388,
-  "last_commit": "2026-08-25T21:36:58Z",
+  "stars": 3387,
+  "last_commit": "2026-08-27T03:33:24Z",
   "latest_release": {
     "tag": "v4.7.0",
     "published_at": "2026-08-16T21:49:15Z",
     "url": "https://github.com/diced/zipline/releases/tag/v4.7.0"
   },
   "docker_pulls": null,
-  "open_issues": 5,
-  "fetched_at": "2026-08-26T03:40:03.616Z"
+  "open_issues": 4,
+  "fetched_at": "2026-08-27T05:07:51.635Z"
 }

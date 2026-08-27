@@ -1,13 +1,13 @@
 {
   "id": "mattermost",
-  "stars": 38902,
-  "last_commit": "2026-08-26T02:56:49Z",
+  "stars": 38910,
+  "last_commit": "2026-08-27T03:54:42Z",
   "latest_release": {
     "tag": "v11.10.1",
     "published_at": "2026-08-24T07:07:00Z",
     "url": "https://github.com/mattermost/mattermost/releases/tag/v11.10.1"
   },
   "docker_pulls": null,
-  "open_issues": 975,
-  "fetched_at": "2026-08-26T03:39:53.073Z"
+  "open_issues": 978,
+  "fetched_at": "2026-08-27T05:07:42.305Z"
 }

@@ -1,6 +1,6 @@
 {
   "id": "pocketbase",
-  "stars": 60805,
+  "stars": 60833,
   "last_commit": "2026-08-24T15:16:58Z",
   "latest_release": {
     "tag": "v0.40.1",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 19,
-  "fetched_at": "2026-08-26T03:39:57.133Z"
+  "fetched_at": "2026-08-27T05:07:46.165Z"
 }

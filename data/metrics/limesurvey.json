@@ -1,9 +1,9 @@
 {
   "id": "limesurvey",
-  "stars": 3702,
-  "last_commit": "2026-08-25T19:16:30Z",
+  "stars": 3703,
+  "last_commit": "2026-08-26T13:22:23Z",
   "latest_release": null,
   "docker_pulls": null,
-  "open_issues": 113,
-  "fetched_at": "2026-08-26T03:39:51.414Z"
+  "open_issues": 107,
+  "fetched_at": "2026-08-27T05:07:40.880Z"
 }
