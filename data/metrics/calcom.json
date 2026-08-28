@@ -1,6 +1,6 @@
 {
   "id": "calcom",
-  "stars": 47949,
+  "stars": 47963,
   "last_commit": "2026-08-08T17:13:42Z",
   "latest_release": {
     "tag": "v6.2.0",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 1427,
-  "fetched_at": "2026-08-27T05:07:31.775Z"
+  "fetched_at": "2026-08-28T06:01:16.327Z"
 }

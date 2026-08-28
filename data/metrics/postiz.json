@@ -1,13 +1,13 @@
 {
   "id": "postiz",
-  "stars": 35169,
-  "last_commit": "2026-08-27T03:40:28Z",
+  "stars": 35212,
+  "last_commit": "2026-08-28T02:47:59Z",
   "latest_release": {
     "tag": "v2.23.0",
     "published_at": "2026-08-04T06:53:15Z",
     "url": "https://github.com/gitroomhq/postiz-app/releases/tag/v2.23.0"
   },
   "docker_pulls": null,
-  "open_issues": 274,
-  "fetched_at": "2026-08-27T05:07:46.350Z"
+  "open_issues": 272,
+  "fetched_at": "2026-08-28T06:01:33.474Z"
 }

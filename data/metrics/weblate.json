@@ -1,7 +1,7 @@
 {
   "id": "weblate",
-  "stars": 6041,
-  "last_commit": "2026-08-27T00:17:25Z",
+  "stars": 6043,
+  "last_commit": "2026-08-28T05:06:37Z",
   "latest_release": {
     "tag": "weblate-2026.8.1",
     "published_at": "2026-08-07T10:56:39Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 500,
-  "fetched_at": "2026-08-27T05:07:50.242Z"
+  "fetched_at": "2026-08-28T06:01:37.747Z"
 }

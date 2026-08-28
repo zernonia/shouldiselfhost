@@ -1,13 +1,13 @@
 {
   "id": "siyuan",
-  "stars": 45996,
-  "last_commit": "2026-08-27T03:52:29Z",
+  "stars": 46017,
+  "last_commit": "2026-08-28T06:01:12Z",
   "latest_release": {
     "tag": "v3.8.1",
     "published_at": "2026-08-18T11:15:08Z",
     "url": "https://github.com/siyuan-note/siyuan/releases/tag/v3.8.1"
   },
   "docker_pulls": null,
-  "open_issues": 51,
-  "fetched_at": "2026-08-27T05:07:47.507Z"
+  "open_issues": 48,
+  "fetched_at": "2026-08-28T06:01:34.704Z"
 }
