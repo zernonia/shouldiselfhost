@@ -1,6 +1,6 @@
 {
   "id": "code-server",
-  "stars": 79095,
+  "stars": 79104,
   "last_commit": "2026-08-27T19:46:23Z",
   "latest_release": {
     "tag": "v4.135.0",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 150,
-  "fetched_at": "2026-08-28T06:01:17.108Z"
+  "fetched_at": "2026-08-29T03:29:56.215Z"
 }

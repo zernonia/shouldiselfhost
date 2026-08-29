@@ -1,6 +1,6 @@
 {
   "id": "gatus",
-  "stars": 11917,
+  "stars": 11922,
   "last_commit": "2026-08-27T21:05:18Z",
   "latest_release": {
     "tag": "v5.36.0",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 379,
-  "fetched_at": "2026-08-28T06:01:21.197Z"
+  "fetched_at": "2026-08-29T03:29:59.389Z"
 }

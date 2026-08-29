@@ -1,6 +1,6 @@
 {
   "id": "typebot",
-  "stars": 10294,
+  "stars": 10297,
   "last_commit": "2026-08-24T13:00:12Z",
   "latest_release": {
     "tag": "v3.18.0",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 14,
-  "fetched_at": "2026-08-28T06:01:36.348Z"
+  "fetched_at": "2026-08-29T03:30:11.694Z"
 }

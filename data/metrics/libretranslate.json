@@ -1,6 +1,6 @@
 {
   "id": "libretranslate",
-  "stars": 16143,
+  "stars": 16151,
   "last_commit": "2026-08-23T22:47:34Z",
   "latest_release": {
     "tag": "v1.9.6",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 124,
-  "fetched_at": "2026-08-28T06:01:26.578Z"
+  "fetched_at": "2026-08-29T03:30:03.577Z"
 }

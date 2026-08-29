@@ -1,13 +1,13 @@
 {
   "id": "prestashop",
-  "stars": 9202,
-  "last_commit": "2026-08-27T13:38:35Z",
+  "stars": 9201,
+  "last_commit": "2026-08-28T07:41:31Z",
   "latest_release": {
     "tag": "9.1.5",
     "published_at": "2026-08-18T08:23:25Z",
     "url": "https://github.com/PrestaShop/PrestaShop/releases/tag/9.1.5"
   },
   "docker_pulls": null,
-  "open_issues": 2033,
-  "fetched_at": "2026-08-28T06:01:33.723Z"
+  "open_issues": 2032,
+  "fetched_at": "2026-08-29T03:30:09.334Z"
 }

@@ -1,7 +1,7 @@
 {
   "id": "matomo",
-  "stars": 21814,
-  "last_commit": "2026-08-28T04:49:17Z",
+  "stars": 21825,
+  "last_commit": "2026-08-29T01:46:33Z",
   "latest_release": {
     "tag": "5.13.0",
     "published_at": "2026-08-16T22:17:30Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 2571,
-  "fetched_at": "2026-08-28T06:01:28.069Z"
+  "fetched_at": "2026-08-29T03:30:04.932Z"
 }

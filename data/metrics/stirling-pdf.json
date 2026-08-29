@@ -1,13 +1,13 @@
 {
   "id": "stirling-pdf",
-  "stars": 90779,
-  "last_commit": "2026-08-28T00:58:31Z",
+  "stars": 90865,
+  "last_commit": "2026-08-29T00:59:14Z",
   "latest_release": {
     "tag": "v2.14.3",
     "published_at": "2026-08-06T18:48:12Z",
     "url": "https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v2.14.3"
   },
   "docker_pulls": null,
-  "open_issues": 592,
-  "fetched_at": "2026-08-28T06:01:34.920Z"
+  "open_issues": 595,
+  "fetched_at": "2026-08-29T03:30:10.467Z"
 }
