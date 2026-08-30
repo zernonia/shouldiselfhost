@@ -1,9 +1,9 @@
 {
   "id": "castopod",
-  "stars": 870,
+  "stars": 871,
   "last_commit": "2026-06-05T19:47:06Z",
   "latest_release": null,
-  "docker_pulls": 174527,
+  "docker_pulls": 174801,
   "open_issues": 0,
-  "fetched_at": "2026-08-29T03:29:55.811Z"
+  "fetched_at": "2026-08-30T03:32:35.352Z"
 }

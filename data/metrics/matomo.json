@@ -1,6 +1,6 @@
 {
   "id": "matomo",
-  "stars": 21825,
+  "stars": 21827,
   "last_commit": "2026-08-29T01:46:33Z",
   "latest_release": {
     "tag": "5.13.0",
@@ -8,6 +8,6 @@
     "url": "https://github.com/matomo-org/matomo/releases/tag/5.13.0"
   },
   "docker_pulls": null,
-  "open_issues": 2571,
-  "fetched_at": "2026-08-29T03:30:04.932Z"
+  "open_issues": 2572,
+  "fetched_at": "2026-08-30T03:32:46.824Z"
 }

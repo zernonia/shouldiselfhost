@@ -1,6 +1,6 @@
 {
   "id": "wger",
-  "stars": 6791,
+  "stars": 6795,
   "last_commit": "2026-08-28T18:09:13Z",
   "latest_release": {
     "tag": "2.6",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 269,
-  "fetched_at": "2026-08-29T03:30:13.412Z"
+  "fetched_at": "2026-08-30T03:32:56.479Z"
 }
