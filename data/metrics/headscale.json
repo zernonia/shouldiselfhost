@@ -1,6 +1,6 @@
 {
   "id": "headscale",
-  "stars": 43315,
+  "stars": 43357,
   "last_commit": "2026-08-29T16:30:43Z",
   "latest_release": {
     "tag": "v0.29.3",
@@ -8,6 +8,6 @@
     "url": "https://github.com/juanfont/headscale/releases/tag/v0.29.3"
   },
   "docker_pulls": null,
-  "open_issues": 143,
-  "fetched_at": "2026-08-30T03:32:41.348Z"
+  "open_issues": 146,
+  "fetched_at": "2026-08-31T03:35:49.895Z"
 }

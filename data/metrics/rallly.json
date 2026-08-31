@@ -1,13 +1,13 @@
 {
   "id": "rallly",
-  "stars": 5231,
-  "last_commit": "2026-08-29T17:18:35Z",
+  "stars": 5233,
+  "last_commit": "2026-08-30T22:41:54Z",
   "latest_release": {
     "tag": "v4.13.1",
     "published_at": "2026-08-25T20:29:38Z",
     "url": "https://github.com/lukevella/rallly/releases/tag/v4.13.1"
   },
   "docker_pulls": null,
-  "open_issues": 5,
-  "fetched_at": "2026-08-30T03:32:51.845Z"
+  "open_issues": 6,
+  "fetched_at": "2026-08-31T03:35:58.839Z"
 }

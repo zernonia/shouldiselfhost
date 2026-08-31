@@ -1,13 +1,13 @@
 {
   "id": "wallabag",
-  "stars": 12940,
-  "last_commit": "2026-08-24T05:35:25Z",
+  "stars": 12941,
+  "last_commit": "2026-08-31T02:16:53Z",
   "latest_release": {
     "tag": "2.6.14",
     "published_at": "2025-10-07T08:06:17Z",
     "url": "https://github.com/wallabag/wallabag/releases/tag/2.6.14"
   },
   "docker_pulls": null,
-  "open_issues": 761,
-  "fetched_at": "2026-08-30T03:32:55.583Z"
+  "open_issues": 763,
+  "fetched_at": "2026-08-31T03:36:01.902Z"
 }

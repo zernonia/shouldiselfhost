@@ -1,7 +1,7 @@
 {
   "id": "mattermost",
-  "stars": 38940,
-  "last_commit": "2026-08-29T18:45:38Z",
+  "stars": 38942,
+  "last_commit": "2026-08-31T02:11:41Z",
   "latest_release": {
     "tag": "v11.10.1",
     "published_at": "2026-08-24T07:07:00Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 1000,
-  "fetched_at": "2026-08-30T03:32:47.102Z"
+  "fetched_at": "2026-08-31T03:35:55.113Z"
 }

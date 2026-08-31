@@ -1,6 +1,6 @@
 {
   "id": "drawio",
-  "stars": 7793,
+  "stars": 7814,
   "last_commit": "2026-08-28T11:39:47Z",
   "latest_release": {
     "tag": "v31.4.1",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 101,
-  "fetched_at": "2026-08-30T03:32:37.821Z"
+  "fetched_at": "2026-08-31T03:35:47.288Z"
 }
