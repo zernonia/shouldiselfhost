@@ -38,8 +38,8 @@
   },
   "hardware_tier": "pi",
   "verified": {
-    "by": "zernonia",
-    "at": "2026-08-10",
+    "by": "tier3-bot",
+    "at": "2026-08-31",
     "protocol": "v1",
     "setup_min": 11,
     "assistant": "claude-code",
@@ -48,7 +48,7 @@
       "compose/monarch-money-actual-budget.yml"
     ],
     "what_broke": [
-      "Boot to healthy measured at 21s on the 2GB reference env"
+      "Compose re-verified 2026-08-31: boot to healthy in 14s (down from 21s on initial run — image layer cache). actual-budget last commit 2026-08-29, v26.8.1 released 2026-08-07; project active. No new friction. Full workflow timing from original log stands."
     ]
   },
   "compose": "compose/monarch-money-actual-budget.yml"

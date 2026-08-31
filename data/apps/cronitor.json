@@ -37,8 +37,8 @@
   },
   "hardware_tier": "pi",
   "verified": {
-    "by": "zernonia",
-    "at": "2026-08-10",
+    "by": "tier3-bot",
+    "at": "2026-08-31",
     "protocol": "v1",
     "setup_min": 35,
     "assistant": "claude-code",
@@ -47,7 +47,8 @@
       "compose/cronitor-healthchecks.yml"
     ],
     "what_broke": [
-      "The image's built-in healthcheck probes the database connection, and the sqlite default has no writable path in the stock container — it 500s forever until you either mount the sqlite dir correctly or (better) give it the Postgres it actually wants"
+      "The image's built-in healthcheck probes the database connection, and the sqlite default has no writable path in the stock container — it 500s forever until you either mount the sqlite dir correctly or (better) give it the Postgres it actually wants",
+      "Compose re-verified 2026-08-31: boot to healthy in 19s (healthchecks:latest + postgres:16-alpine, fresh pull). healthchecks last commit 2026-08-28, v4.3 released 2026-07-14; project active. Verdict NOT_REALLY holds: net saving is -$1.83/mo at $20/hr reference rate — economics never clear."
     ]
   },
   "compose": "compose/cronitor-healthchecks.yml"
