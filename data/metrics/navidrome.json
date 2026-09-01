@@ -1,7 +1,7 @@
 {
   "id": "navidrome",
-  "stars": 23238,
-  "last_commit": "2026-08-31T02:20:52Z",
+  "stars": 23268,
+  "last_commit": "2026-09-01T03:24:14Z",
   "latest_release": {
     "tag": "v0.63.2",
     "published_at": "2026-07-11T13:42:52Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 267,
-  "fetched_at": "2026-08-31T03:35:56.061Z"
+  "fetched_at": "2026-09-01T03:36:02.358Z"
 }

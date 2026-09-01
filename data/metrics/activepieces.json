@@ -1,13 +1,13 @@
 {
   "id": "activepieces",
-  "stars": 24134,
-  "last_commit": "2026-08-30T23:25:12Z",
+  "stars": 24155,
+  "last_commit": "2026-08-31T22:54:38Z",
   "latest_release": {
-    "tag": "0.88.4-hotfix.1",
-    "published_at": "2026-08-25T15:38:21Z",
-    "url": "https://github.com/activepieces/activepieces/releases/tag/0.88.4-hotfix.1"
+    "tag": "0.89.0",
+    "published_at": "2026-08-31T20:03:04Z",
+    "url": "https://github.com/activepieces/activepieces/releases/tag/0.89.0"
   },
   "docker_pulls": null,
-  "open_issues": 507,
-  "fetched_at": "2026-08-31T03:35:42.281Z"
+  "open_issues": 511,
+  "fetched_at": "2026-09-01T03:35:46.012Z"
 }

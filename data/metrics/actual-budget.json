@@ -1,7 +1,7 @@
 {
   "id": "actual-budget",
-  "stars": 28475,
-  "last_commit": "2026-08-30T09:05:34Z",
+  "stars": 28498,
+  "last_commit": "2026-09-01T02:32:49Z",
   "latest_release": {
     "tag": "v26.8.1",
     "published_at": "2026-08-07T21:17:24Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 229,
-  "fetched_at": "2026-08-31T03:35:42.493Z"
+  "fetched_at": "2026-09-01T03:35:46.285Z"
 }

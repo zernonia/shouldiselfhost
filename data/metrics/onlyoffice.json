@@ -1,6 +1,6 @@
 {
   "id": "onlyoffice",
-  "stars": 6862,
+  "stars": 6866,
   "last_commit": "2026-07-22T09:43:52Z",
   "latest_release": {
     "tag": "v9.4.0",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 1130,
-  "fetched_at": "2026-08-31T03:35:56.568Z"
+  "fetched_at": "2026-09-01T03:36:03.022Z"
 }

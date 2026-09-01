@@ -1,13 +1,13 @@
 {
   "id": "ghost",
-  "stars": 55089,
-  "last_commit": "2026-08-31T03:34:56Z",
+  "stars": 55093,
+  "last_commit": "2026-09-01T03:35:15Z",
   "latest_release": {
     "tag": "v6.61.0",
     "published_at": "2026-08-27T10:12:47Z",
     "url": "https://github.com/TryGhost/Ghost/releases/tag/v6.61.0"
   },
   "docker_pulls": null,
-  "open_issues": 133,
-  "fetched_at": "2026-08-31T03:35:49.145Z"
+  "open_issues": 137,
+  "fetched_at": "2026-09-01T03:35:54.090Z"
 }
