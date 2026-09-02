@@ -1,7 +1,7 @@
 {
   "id": "vikunja",
-  "stars": 5224,
-  "last_commit": "2026-09-01T01:43:16Z",
+  "stars": 5237,
+  "last_commit": "2026-09-02T02:17:33Z",
   "latest_release": {
     "tag": "v2.6.0",
     "published_at": "2026-08-31T18:13:15Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 218,
-  "fetched_at": "2026-09-01T03:36:09.651Z"
+  "fetched_at": "2026-09-02T03:34:08.927Z"
 }

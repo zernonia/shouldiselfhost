@@ -1,6 +1,6 @@
 {
   "id": "healthchecks",
-  "stars": 10294,
+  "stars": 10297,
   "last_commit": "2026-08-31T10:29:05Z",
   "latest_release": {
     "tag": "v4.4",
@@ -8,6 +8,6 @@
     "url": "https://github.com/healthchecks/healthchecks/releases/tag/v4.4"
   },
   "docker_pulls": null,
-  "open_issues": 54,
-  "fetched_at": "2026-09-01T03:35:55.513Z"
+  "open_issues": 55,
+  "fetched_at": "2026-09-02T03:33:57.468Z"
 }
