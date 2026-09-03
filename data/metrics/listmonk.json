@@ -1,6 +1,6 @@
 {
   "id": "listmonk",
-  "stars": 23214,
+  "stars": 23225,
   "last_commit": "2026-09-02T01:55:43Z",
   "latest_release": {
     "tag": "v6.2.0",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 117,
-  "fetched_at": "2026-09-02T03:34:01.592Z"
+  "fetched_at": "2026-09-03T04:48:46.564Z"
 }

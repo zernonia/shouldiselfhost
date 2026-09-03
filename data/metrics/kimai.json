@@ -1,6 +1,6 @@
 {
   "id": "kimai",
-  "stars": 4953,
+  "stars": 4954,
   "last_commit": "2026-08-31T03:32:35Z",
   "latest_release": {
     "tag": "2.65.0",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 344,
-  "fetched_at": "2026-09-02T03:33:59.574Z"
+  "fetched_at": "2026-09-03T04:48:44.395Z"
 }
