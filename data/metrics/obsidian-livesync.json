@@ -1,13 +1,13 @@
 {
   "id": "obsidian-livesync",
-  "stars": 12221,
-  "last_commit": "2026-09-03T04:32:19Z",
+  "stars": 12226,
+  "last_commit": "2026-09-04T02:43:08Z",
   "latest_release": {
-    "tag": "1.0.23",
-    "published_at": "2026-09-02T06:43:38Z",
-    "url": "https://github.com/vrtmrz/obsidian-livesync/releases/tag/1.0.23"
+    "tag": "1.0.24",
+    "published_at": "2026-09-03T05:22:04Z",
+    "url": "https://github.com/vrtmrz/obsidian-livesync/releases/tag/1.0.24"
   },
   "docker_pulls": null,
   "open_issues": 347,
-  "fetched_at": "2026-09-03T04:48:48.603Z"
+  "fetched_at": "2026-09-04T03:33:21.943Z"
 }

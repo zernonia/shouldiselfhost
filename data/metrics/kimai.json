@@ -1,13 +1,13 @@
 {
   "id": "kimai",
-  "stars": 4954,
-  "last_commit": "2026-08-31T03:32:35Z",
+  "stars": 4955,
+  "last_commit": "2026-09-03T17:04:26Z",
   "latest_release": {
     "tag": "2.65.0",
     "published_at": "2026-08-11T15:26:06Z",
     "url": "https://github.com/kimai/kimai/releases/tag/2.65.0"
   },
   "docker_pulls": null,
-  "open_issues": 344,
-  "fetched_at": "2026-09-03T04:48:44.395Z"
+  "open_issues": 340,
+  "fetched_at": "2026-09-04T03:33:17.557Z"
 }

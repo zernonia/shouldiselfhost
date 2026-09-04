@@ -1,6 +1,6 @@
 {
   "id": "kener",
-  "stars": 5141,
+  "stars": 5142,
   "last_commit": "2026-08-31T17:17:07Z",
   "latest_release": {
     "tag": "v4.1.3",
@@ -8,6 +8,6 @@
     "url": "https://github.com/rajnandan1/kener/releases/tag/v4.1.3"
   },
   "docker_pulls": null,
-  "open_issues": 66,
-  "fetched_at": "2026-09-03T04:48:44.203Z"
+  "open_issues": 68,
+  "fetched_at": "2026-09-04T03:33:17.324Z"
 }

@@ -1,6 +1,6 @@
 {
   "id": "headscale",
-  "stars": 43504,
+  "stars": 43528,
   "last_commit": "2026-09-02T11:34:04Z",
   "latest_release": {
     "tag": "v0.29.3",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 149,
-  "fetched_at": "2026-09-03T04:48:42.001Z"
+  "fetched_at": "2026-09-04T03:33:15.096Z"
 }

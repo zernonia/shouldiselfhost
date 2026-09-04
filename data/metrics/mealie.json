@@ -1,13 +1,13 @@
 {
   "id": "mealie",
-  "stars": 13130,
-  "last_commit": "2026-09-03T03:28:58Z",
+  "stars": 13134,
+  "last_commit": "2026-09-04T03:31:40Z",
   "latest_release": {
-    "tag": "v3.25.0",
-    "published_at": "2026-09-02T19:03:27Z",
-    "url": "https://github.com/mealie-recipes/mealie/releases/tag/v3.25.0"
+    "tag": "v3.25.1",
+    "published_at": "2026-09-04T03:22:44Z",
+    "url": "https://github.com/mealie-recipes/mealie/releases/tag/v3.25.1"
   },
   "docker_pulls": null,
-  "open_issues": 217,
-  "fetched_at": "2026-09-03T04:48:47.536Z"
+  "open_issues": 225,
+  "fetched_at": "2026-09-04T03:33:20.786Z"
 }

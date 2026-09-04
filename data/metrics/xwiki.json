@@ -1,13 +1,13 @@
 {
   "id": "xwiki",
   "stars": 1302,
-  "last_commit": "2026-09-03T01:40:35Z",
+  "last_commit": "2026-09-04T01:41:49Z",
   "latest_release": {
     "tag": "xwiki-platform-18.7.0",
     "published_at": "2026-08-31T10:30:06Z",
     "url": "https://github.com/xwiki/xwiki-platform/releases/tag/xwiki-platform-18.7.0"
   },
   "docker_pulls": null,
-  "open_issues": 217,
-  "fetched_at": "2026-09-03T04:48:56.168Z"
+  "open_issues": 218,
+  "fetched_at": "2026-09-04T03:33:30.432Z"
 }
