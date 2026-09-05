@@ -1,13 +1,13 @@
 {
   "id": "collabora",
-  "stars": 3336,
-  "last_commit": "2026-08-31T19:58:22Z",
+  "stars": 3338,
+  "last_commit": "2026-09-04T09:05:16Z",
   "latest_release": {
     "tag": "25.04.7-mobile",
     "published_at": "2025-12-05T16:41:36Z",
     "url": "https://github.com/CollaboraOnline/online/releases/tag/25.04.7-mobile"
   },
   "docker_pulls": null,
-  "open_issues": 898,
-  "fetched_at": "2026-09-04T03:33:09.737Z"
+  "open_issues": 889,
+  "fetched_at": "2026-09-05T03:31:52.128Z"
 }

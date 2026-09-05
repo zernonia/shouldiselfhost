@@ -1,13 +1,13 @@
 {
   "id": "baserow",
-  "stars": 5780,
-  "last_commit": "2026-09-03T21:44:50Z",
+  "stars": 5783,
+  "last_commit": "2026-09-04T17:14:14Z",
   "latest_release": {
     "tag": "2.3.3",
     "published_at": "2026-07-21T15:58:18Z",
     "url": "https://github.com/baserow/baserow/releases/tag/2.3.3"
   },
   "docker_pulls": null,
-  "open_issues": 1239,
-  "fetched_at": "2026-09-04T03:33:08.219Z"
+  "open_issues": 1240,
+  "fetched_at": "2026-09-05T03:31:50.536Z"
 }

@@ -1,13 +1,13 @@
 {
   "id": "countly",
-  "stars": 5896,
-  "last_commit": "2026-09-04T01:22:46Z",
+  "stars": 5897,
+  "last_commit": "2026-09-04T17:43:34Z",
   "latest_release": {
     "tag": "25.03.53-LTS",
     "published_at": "2026-09-03T15:37:33Z",
     "url": "https://github.com/Countly/countly-server/releases/tag/25.03.53-LTS"
   },
   "docker_pulls": null,
-  "open_issues": 19,
-  "fetched_at": "2026-09-04T03:33:10.213Z"
+  "open_issues": 15,
+  "fetched_at": "2026-09-05T03:31:52.580Z"
 }
