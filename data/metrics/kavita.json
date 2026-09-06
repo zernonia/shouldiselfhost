@@ -1,7 +1,7 @@
 {
   "id": "kavita",
-  "stars": 11609,
-  "last_commit": "2026-09-04T16:39:18Z",
+  "stars": 11611,
+  "last_commit": "2026-09-05T13:07:05Z",
   "latest_release": {
     "tag": "v0.9.1.4",
     "published_at": "2026-09-02T21:07:38Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 163,
-  "fetched_at": "2026-09-05T03:31:59.245Z"
+  "fetched_at": "2026-09-06T03:33:01.434Z"
 }

@@ -1,7 +1,7 @@
 {
   "id": "adventurelog",
-  "stars": 3644,
-  "last_commit": "2026-09-03T18:55:05Z",
+  "stars": 3653,
+  "last_commit": "2026-09-05T18:01:28Z",
   "latest_release": {
     "tag": "v0.13.0",
     "published_at": "2026-08-12T00:29:25Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 219,
-  "fetched_at": "2026-09-05T03:31:49.095Z"
+  "fetched_at": "2026-09-06T03:32:51.415Z"
 }
