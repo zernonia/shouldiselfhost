@@ -1,13 +1,13 @@
 {
   "id": "pocketbase",
-  "stars": 60954,
-  "last_commit": "2026-09-05T21:45:26Z",
+  "stars": 60971,
+  "last_commit": "2026-09-06T17:25:19Z",
   "latest_release": {
-    "tag": "v0.40.2",
-    "published_at": "2026-09-02T13:18:16Z",
-    "url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.40.2"
+    "tag": "v0.40.3",
+    "published_at": "2026-09-06T17:33:10Z",
+    "url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.40.3"
   },
   "docker_pulls": null,
-  "open_issues": 19,
-  "fetched_at": "2026-09-06T03:33:09.234Z"
+  "open_issues": 20,
+  "fetched_at": "2026-09-07T03:35:57.454Z"
 }

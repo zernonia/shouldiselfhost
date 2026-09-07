@@ -1,7 +1,7 @@
 {
   "id": "siyuan",
-  "stars": 46186,
-  "last_commit": "2026-09-06T03:31:15Z",
+  "stars": 46206,
+  "last_commit": "2026-09-07T03:11:04Z",
   "latest_release": {
     "tag": "v3.8.2",
     "published_at": "2026-08-30T04:36:15Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 28,
-  "fetched_at": "2026-09-06T03:33:10.685Z"
+  "fetched_at": "2026-09-07T03:35:58.914Z"
 }

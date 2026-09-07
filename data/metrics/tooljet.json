@@ -1,7 +1,7 @@
 {
   "id": "tooljet",
-  "stars": 40848,
-  "last_commit": "2026-09-06T03:31:11Z",
+  "stars": 40858,
+  "last_commit": "2026-09-07T01:03:54Z",
   "latest_release": {
     "tag": "v3.20.222-lts",
     "published_at": "2026-09-03T16:48:51Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 1203,
-  "fetched_at": "2026-09-06T03:33:11.828Z"
+  "fetched_at": "2026-09-07T03:36:00.038Z"
 }
