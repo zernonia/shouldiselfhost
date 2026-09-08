@@ -1,6 +1,6 @@
 {
   "id": "tabby",
-  "stars": 33869,
+  "stars": 33867,
   "last_commit": "2026-06-30T20:38:02Z",
   "latest_release": {
     "tag": "v0.32.0",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 335,
-  "fetched_at": "2026-09-07T03:35:59.609Z"
+  "fetched_at": "2026-09-08T03:33:36.678Z"
 }
