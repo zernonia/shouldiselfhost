@@ -28,3 +28,16 @@
 - Short links, analytics, QR codes, API: the whole Core-plan job list is covered.
 - The honest tradeoff is the redirect server's uptime — every link you ever shared depends on
   it. Put it on your most boring, most stable box.
+
+---
+
+## Re-verification 2026-09-08 (tier3-bot)
+
+- Compose boot: `scripts/check-compose.sh compose/bitly-shlink.yml` → **12s to healthy** (down from 20s)
+- Image pulled: `shlinkio/shlink:stable` → resolved to v5.1.6 (released 2026-09-06, one day old)
+- Alternative health: shlink v5.1.6, last commit 2026-09-06, 5.3k stars — actively maintained
+- Days since last commit: 2 — well within 365d health threshold
+- REST `/rest/health` confirmed via container healthcheck reaching healthy state
+- No compose changes required
+- DEFAULT_DOMAIN caveat unchanged and documented
+- Verdict unchanged: **YES**
