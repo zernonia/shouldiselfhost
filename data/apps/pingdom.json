@@ -38,8 +38,8 @@
   },
   "hardware_tier": "pi",
   "verified": {
-    "by": "zernonia",
-    "at": "2026-08-10",
+    "by": "tier3-bot",
+    "at": "2026-09-08",
     "protocol": "v1",
     "setup_min": 11,
     "assistant": "claude-code",
@@ -48,7 +48,7 @@
       "compose/pingdom-uptime-kuma.yml"
     ],
     "what_broke": [
-      "Boot to healthy measured at 25s on the 2GB reference env"
+      "Boot to healthy: 19s (improved from 25s). No new friction — compose and workflow unchanged."
     ]
   },
   "compose": "compose/pingdom-uptime-kuma.yml"

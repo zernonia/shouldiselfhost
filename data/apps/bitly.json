@@ -32,14 +32,15 @@
     "decision_layer": "original"
   },
   "verified": {
-    "by": "zernonia",
-    "at": "2026-08-10",
+    "by": "tier3-bot",
+    "at": "2026-09-08",
     "protocol": "v1",
     "setup_min": 35,
     "assistant": "claude-code",
     "evidence": ["logs/bitly-shlink.md", "compose/bitly-shlink.yml"],
     "what_broke": [
-      "Shlink wants DEFAULT_DOMAIN set at first boot; changing it later means regenerating existing short URLs"
+      "Boot to healthy: 12s (improved from 20s) — shlink v5.1.6 pulled cleanly.",
+      "DEFAULT_DOMAIN commitment unchanged: set it before creating links, changing it later orphans old short URLs."
     ]
   },
   "compose": "compose/bitly-shlink.yml",
