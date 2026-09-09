@@ -1,13 +1,13 @@
 {
   "id": "nextcloud",
-  "stars": 36747,
-  "last_commit": "2026-09-08T02:28:48Z",
+  "stars": 36760,
+  "last_commit": "2026-09-09T02:59:06Z",
   "latest_release": {
     "tag": "v34.0.3",
     "published_at": "2026-08-13T10:48:44Z",
     "url": "https://github.com/nextcloud/server/releases/tag/v34.0.3"
   },
   "docker_pulls": null,
-  "open_issues": 3633,
-  "fetched_at": "2026-09-08T03:33:32.311Z"
+  "open_issues": 3640,
+  "fetched_at": "2026-09-09T03:34:04.153Z"
 }

@@ -1,13 +1,13 @@
 {
   "id": "formbricks",
-  "stars": 12906,
-  "last_commit": "2026-09-07T18:07:56Z",
+  "stars": 12912,
+  "last_commit": "2026-09-09T00:56:06Z",
   "latest_release": {
     "tag": "5.4.2",
     "published_at": "2026-09-03T11:01:26Z",
     "url": "https://github.com/formbricks/formbricks/releases/tag/5.4.2"
   },
   "docker_pulls": null,
-  "open_issues": 242,
-  "fetched_at": "2026-09-08T03:33:24.523Z"
+  "open_issues": 263,
+  "fetched_at": "2026-09-09T03:33:56.983Z"
 }

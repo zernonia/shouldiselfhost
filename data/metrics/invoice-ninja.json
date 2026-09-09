@@ -1,13 +1,13 @@
 {
   "id": "invoice-ninja",
-  "stars": 10060,
-  "last_commit": "2026-09-07T21:36:48Z",
+  "stars": 10065,
+  "last_commit": "2026-09-08T22:41:35Z",
   "latest_release": {
     "tag": "v5.13.37",
     "published_at": "2026-09-02T03:58:43Z",
     "url": "https://github.com/invoiceninja/invoiceninja/releases/tag/v5.13.37"
   },
   "docker_pulls": null,
-  "open_issues": 940,
-  "fetched_at": "2026-09-08T03:33:27.088Z"
+  "open_issues": 944,
+  "fetched_at": "2026-09-09T03:33:59.289Z"
 }

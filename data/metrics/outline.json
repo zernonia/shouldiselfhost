@@ -1,13 +1,13 @@
 {
   "id": "outline",
-  "stars": 40484,
-  "last_commit": "2026-09-08T02:03:40Z",
+  "stars": 40496,
+  "last_commit": "2026-09-08T15:20:41Z",
   "latest_release": {
     "tag": "v1.10.0",
     "published_at": "2026-09-02T00:05:15Z",
     "url": "https://github.com/outline/outline/releases/tag/v1.10.0"
   },
-  "docker_pulls": 14570500,
+  "docker_pulls": 14602531,
   "open_issues": 73,
-  "fetched_at": "2026-09-08T03:33:33.128Z"
+  "fetched_at": "2026-09-09T03:34:05.030Z"
 }

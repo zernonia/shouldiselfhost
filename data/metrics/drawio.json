@@ -1,13 +1,13 @@
 {
   "id": "drawio",
-  "stars": 7972,
-  "last_commit": "2026-09-07T07:30:28Z",
+  "stars": 8006,
+  "last_commit": "2026-09-08T15:03:26Z",
   "latest_release": {
-    "tag": "v31.4.4",
-    "published_at": "2026-09-06T09:57:44Z",
-    "url": "https://github.com/jgraph/drawio/releases/tag/v31.4.4"
+    "tag": "v31.4.5",
+    "published_at": "2026-09-08T15:04:34Z",
+    "url": "https://github.com/jgraph/drawio/releases/tag/v31.4.5"
   },
   "docker_pulls": null,
   "open_issues": 94,
-  "fetched_at": "2026-09-08T03:33:23.092Z"
+  "fetched_at": "2026-09-09T03:33:55.611Z"
 }

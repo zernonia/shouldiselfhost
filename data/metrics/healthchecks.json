@@ -1,7 +1,7 @@
 {
   "id": "healthchecks",
-  "stars": 10310,
-  "last_commit": "2026-09-02T11:14:54Z",
+  "stars": 10313,
+  "last_commit": "2026-09-08T12:15:00Z",
   "latest_release": {
     "tag": "v4.4",
     "published_at": "2026-08-31T08:32:16Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 53,
-  "fetched_at": "2026-09-08T03:33:26.278Z"
+  "fetched_at": "2026-09-09T03:33:58.452Z"
 }
