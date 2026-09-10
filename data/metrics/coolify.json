@@ -1,13 +1,13 @@
 {
   "id": "coolify",
-  "stars": 61580,
-  "last_commit": "2026-09-09T03:14:49Z",
+  "stars": 61628,
+  "last_commit": "2026-09-09T20:08:46Z",
   "latest_release": {
     "tag": "v4.3.18",
     "published_at": "2026-09-08T08:36:32Z",
     "url": "https://github.com/coollabsio/coolify/releases/tag/v4.3.18"
   },
   "docker_pulls": null,
-  "open_issues": 653,
-  "fetched_at": "2026-09-09T03:33:54.471Z"
+  "open_issues": 654,
+  "fetched_at": "2026-09-10T03:33:38.357Z"
 }
