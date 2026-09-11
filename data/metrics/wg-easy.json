@@ -1,6 +1,6 @@
 {
   "id": "wg-easy",
-  "stars": 26895,
+  "stars": 26900,
   "last_commit": "2026-09-09T09:07:42Z",
   "latest_release": {
     "tag": "v15.4.0",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 50,
-  "fetched_at": "2026-09-10T03:33:55.928Z"
+  "fetched_at": "2026-09-11T03:33:53.774Z"
 }

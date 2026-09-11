@@ -1,7 +1,7 @@
 {
   "id": "appsmith",
-  "stars": 40849,
-  "last_commit": "2026-09-09T19:23:51Z",
+  "stars": 40857,
+  "last_commit": "2026-09-10T19:31:20Z",
   "latest_release": {
     "tag": "v2.4",
     "published_at": "2026-09-09T17:59:30Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 4467,
-  "fetched_at": "2026-09-10T03:33:35.804Z"
+  "fetched_at": "2026-09-11T03:33:30.428Z"
 }
