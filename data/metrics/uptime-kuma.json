@@ -1,13 +1,13 @@
 {
   "id": "uptime-kuma",
-  "stars": 91233,
-  "last_commit": "2026-09-11T00:07:11Z",
+  "stars": 91282,
+  "last_commit": "2026-09-12T00:06:24Z",
   "latest_release": {
-    "tag": "2.5.3",
-    "published_at": "2026-08-22T09:20:48Z",
-    "url": "https://github.com/louislam/uptime-kuma/releases/tag/2.5.3"
+    "tag": "2.5.4",
+    "published_at": "2026-09-11T10:09:10Z",
+    "url": "https://github.com/louislam/uptime-kuma/releases/tag/2.5.4"
   },
   "docker_pulls": null,
-  "open_issues": 805,
-  "fetched_at": "2026-09-11T03:33:52.367Z"
+  "open_issues": 804,
+  "fetched_at": "2026-09-12T03:32:37.508Z"
 }

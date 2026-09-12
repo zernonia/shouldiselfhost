@@ -1,13 +1,13 @@
 {
   "id": "vaultwarden",
-  "stars": 67148,
+  "stars": 67187,
   "last_commit": "2026-09-09T16:24:34Z",
   "latest_release": {
     "tag": "1.37.2",
     "published_at": "2026-08-22T12:29:13Z",
     "url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.37.2"
   },
-  "docker_pulls": 328561317,
+  "docker_pulls": 329019753,
   "open_issues": 77,
-  "fetched_at": "2026-09-11T03:33:52.612Z"
+  "fetched_at": "2026-09-12T03:32:37.680Z"
 }

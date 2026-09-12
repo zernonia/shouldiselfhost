@@ -1,6 +1,6 @@
 {
   "id": "docuseal",
-  "stars": 18497,
+  "stars": 18502,
   "last_commit": "2026-09-07T10:02:39Z",
   "latest_release": {
     "tag": "3.2.4",
@@ -8,6 +8,6 @@
     "url": "https://github.com/docusealco/docuseal/releases/tag/3.2.4"
   },
   "docker_pulls": null,
-  "open_issues": 121,
-  "fetched_at": "2026-09-11T03:33:34.298Z"
+  "open_issues": 122,
+  "fetched_at": "2026-09-12T03:32:22.604Z"
 }

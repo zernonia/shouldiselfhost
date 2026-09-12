@@ -1,13 +1,13 @@
 {
   "id": "firefly-iii",
-  "stars": 24573,
-  "last_commit": "2026-09-10T05:34:27Z",
+  "stars": 24585,
+  "last_commit": "2026-09-11T15:46:54Z",
   "latest_release": {
     "tag": "v6.6.6",
     "published_at": "2026-07-01T19:09:14Z",
     "url": "https://github.com/firefly-iii/firefly-iii/releases/tag/v6.6.6"
   },
   "docker_pulls": null,
-  "open_issues": 169,
-  "fetched_at": "2026-09-11T03:33:36.118Z"
+  "open_issues": 171,
+  "fetched_at": "2026-09-12T03:32:24.097Z"
 }

@@ -1,7 +1,7 @@
 {
   "id": "akaunting",
-  "stars": 10117,
-  "last_commit": "2026-09-09T23:58:42Z",
+  "stars": 10119,
+  "last_commit": "2026-09-11T21:44:01Z",
   "latest_release": {
     "tag": "3.2.3",
     "published_at": "2026-08-31T12:22:52Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 14,
-  "fetched_at": "2026-09-11T03:33:30.112Z"
+  "fetched_at": "2026-09-12T03:32:19.174Z"
 }
