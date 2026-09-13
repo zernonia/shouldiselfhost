@@ -1,7 +1,7 @@
 {
   "id": "docmost",
-  "stars": 21652,
-  "last_commit": "2026-09-11T23:07:41Z",
+  "stars": 21661,
+  "last_commit": "2026-09-12T13:25:29Z",
   "latest_release": {
     "tag": "v0.96.0",
     "published_at": "2026-09-08T14:18:03Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 327,
-  "fetched_at": "2026-09-12T03:32:22.141Z"
+  "fetched_at": "2026-09-13T03:33:57.501Z"
 }

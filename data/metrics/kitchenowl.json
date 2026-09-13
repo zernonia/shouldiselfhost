@@ -1,6 +1,6 @@
 {
   "id": "kitchenowl",
-  "stars": 3676,
+  "stars": 3678,
   "last_commit": "2026-08-29T00:23:02Z",
   "latest_release": {
     "tag": "v0.7.10",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 339,
-  "fetched_at": "2026-09-12T03:32:28.579Z"
+  "fetched_at": "2026-09-13T03:34:04.757Z"
 }
