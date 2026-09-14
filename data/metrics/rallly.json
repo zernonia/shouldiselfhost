@@ -1,13 +1,13 @@
 {
   "id": "rallly",
   "stars": 5256,
-  "last_commit": "2026-09-12T22:03:45Z",
+  "last_commit": "2026-09-13T23:44:10Z",
   "latest_release": {
-    "tag": "v4.15.0",
-    "published_at": "2026-09-09T16:34:27Z",
-    "url": "https://github.com/lukevella/rallly/releases/tag/v4.15.0"
+    "tag": "v4.15.1",
+    "published_at": "2026-09-13T21:38:57Z",
+    "url": "https://github.com/lukevella/rallly/releases/tag/v4.15.1"
   },
   "docker_pulls": null,
-  "open_issues": 9,
-  "fetched_at": "2026-09-13T03:34:13.136Z"
+  "open_issues": 5,
+  "fetched_at": "2026-09-14T03:37:08.891Z"
 }
