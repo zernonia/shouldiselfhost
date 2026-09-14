@@ -36,15 +36,16 @@
     "decision_layer": "original"
   },
   "verified": {
-    "by": "zernonia",
-    "at": "2026-08-10",
+    "by": "tier3-bot",
+    "at": "2026-09-14",
     "protocol": "v1",
     "setup_min": 75,
-    "assistant": "claude-code",
+    "assistant": "tier3-bot (claude-code)",
     "evidence": ["logs/notion-outline.md", "compose/notion-outline.yml"],
     "what_broke": [
-      "maildev (the first mail catcher we tried) crash-loops wherever IPv6 is disabled — it insists on binding '::'; swapped to mailpit",
-      "Outline boots healthy without SMTP but magic-link sign-in silently goes nowhere — the compose ships mailpit so the workflow is completable locally"
+      "maildev crashes where IPv6 is disabled; compose ships mailpit instead (unchanged from initial verification)",
+      "Outline without SMTP is a locked door: boots healthy but magic-link sign-in silently fails until SMTP_* is configured (unchanged)",
+      "Bot re-verification 2026-09-14: all 4 services healthy in 52 s (cold pull). Full workflow not re-timed by bot. Outline v1.10.1 now current."
     ]
   },
   "compose": "compose/notion-outline.yml",

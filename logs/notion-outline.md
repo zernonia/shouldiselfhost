@@ -40,3 +40,20 @@
 - The docs/wiki/search/collab jobs all work. There is no databases feature — Notion's
   views/relations/rollups have no equivalent here. That gap, not the setup, drives the KINDA.
 - Notion import exists (Markdown/HTML export → import) but attachments need re-linking.
+
+---
+
+## Bot re-verification — 2026-09-14
+
+**Verified by:** tier3-bot · **Protocol:** v1 · **Assistant:** tier3-bot (claude-code)
+
+| Check | Result |
+|---|---|
+| `bash scripts/check-compose.sh compose/notion-outline.yml` | ✓ all 4 services healthy in 52 s (cold pull) |
+| outline last_commit (data/metrics/outline.json) | 2026-09-13 — ≤ 365 d ✓ |
+| Latest upstream release | v1.10.1 (published 2026-09-09) |
+| Compose image tag | `outlinewiki/outline:latest` — pulled v1.10.1 ✓ |
+| Previously known breakage (maildev/IPv6) | Still avoided by mailpit — no regression |
+| Verdict change | None — KINDA affirmed |
+
+**Full workflow not re-timed.** Compose health check confirms all four services (Outline, Postgres, Redis, Mailpit) reach healthy. Capability gap (no databases feature) and per-seat economics are unchanged — KINDA remains correct.

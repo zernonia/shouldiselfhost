@@ -31,13 +31,16 @@
     "decision_layer": "original"
   },
   "verified": {
-    "by": "zernonia",
-    "at": "2026-08-10",
+    "by": "tier3-bot",
+    "at": "2026-09-14",
     "protocol": "v1",
     "setup_min": 25,
-    "assistant": "claude-code",
+    "assistant": "tier3-bot (claude-code)",
     "evidence": ["logs/uptimerobot-uptime-kuma.md", "compose/uptimerobot-uptime-kuma.yml"],
-    "what_broke": []
+    "what_broke": [
+      "Bot re-verification 2026-09-14: compose healthy in 20 s (cold pull). Full workflow not re-timed by bot.",
+      "Compose pins louislam/uptime-kuma:1 (v1); latest upstream release is 2.5.4 (v2). v2 image not yet tested — compose update should be a separate human PR."
+    ]
   },
   "compose": "compose/uptimerobot-uptime-kuma.yml",
   "links": {
