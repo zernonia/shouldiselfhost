@@ -1,13 +1,13 @@
 {
   "id": "typebot",
-  "stars": 10318,
-  "last_commit": "2026-09-09T14:11:42Z",
+  "stars": 10324,
+  "last_commit": "2026-09-14T14:26:25Z",
   "latest_release": {
-    "tag": "v3.18.0",
-    "published_at": "2026-08-21T16:59:33Z",
-    "url": "https://github.com/baptisteArno/typebot.io/releases/tag/v3.18.0"
+    "tag": "v3.19.0",
+    "published_at": "2026-09-14T14:43:53Z",
+    "url": "https://github.com/baptisteArno/typebot.io/releases/tag/v3.19.0"
   },
   "docker_pulls": null,
-  "open_issues": 23,
-  "fetched_at": "2026-09-14T03:37:11.108Z"
+  "open_issues": 22,
+  "fetched_at": "2026-09-15T03:34:54.466Z"
 }

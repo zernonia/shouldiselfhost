@@ -1,13 +1,13 @@
 {
   "id": "espocrm",
-  "stars": 3349,
-  "last_commit": "2026-09-11T14:52:20Z",
+  "stars": 3354,
+  "last_commit": "2026-09-14T20:11:04Z",
   "latest_release": {
     "tag": "10.0.8",
     "published_at": "2026-09-08T12:05:05Z",
     "url": "https://github.com/espocrm/espocrm/releases/tag/10.0.8"
   },
   "docker_pulls": null,
-  "open_issues": 69,
-  "fetched_at": "2026-09-14T03:36:56.714Z"
+  "open_issues": 65,
+  "fetched_at": "2026-09-15T03:34:41.215Z"
 }

@@ -1,6 +1,6 @@
 {
   "id": "heyform",
-  "stars": 8971,
+  "stars": 8973,
   "last_commit": "2026-09-09T07:29:46Z",
   "latest_release": {
     "tag": "v3.0.3",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 10,
-  "fetched_at": "2026-09-14T03:36:59.967Z"
+  "fetched_at": "2026-09-15T03:34:44.093Z"
 }
