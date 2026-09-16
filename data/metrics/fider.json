@@ -1,6 +1,6 @@
 {
   "id": "fider",
-  "stars": 4522,
+  "stars": 4525,
   "last_commit": "2026-09-12T07:22:07Z",
   "latest_release": {
     "tag": "v0.36.1",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 60,
-  "fetched_at": "2026-09-15T03:34:41.614Z"
+  "fetched_at": "2026-09-16T03:34:29.018Z"
 }

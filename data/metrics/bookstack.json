@@ -1,7 +1,7 @@
 {
   "id": "bookstack",
   "stars": 19041,
-  "last_commit": "2026-09-15T03:06:37Z",
+  "last_commit": "2026-09-15T18:20:35Z",
   "latest_release": {
     "tag": "v26.05.5",
     "published_at": "2026-09-14T14:02:55Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 3,
-  "fetched_at": "2026-09-15T03:34:38.494Z"
+  "fetched_at": "2026-09-16T03:34:25.318Z"
 }

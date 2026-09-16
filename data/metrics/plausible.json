@@ -1,7 +1,7 @@
 {
   "id": "plausible",
-  "stars": 29078,
-  "last_commit": "2026-09-14T15:11:35Z",
+  "stars": 29094,
+  "last_commit": "2026-09-15T17:08:05Z",
   "latest_release": {
     "tag": "v3.2.1",
     "published_at": "2026-05-15T09:15:56Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 61,
-  "fetched_at": "2026-09-15T03:34:51.689Z"
+  "fetched_at": "2026-09-16T03:34:40.459Z"
 }

@@ -1,13 +1,13 @@
 {
   "id": "excalidraw",
-  "stars": 131940,
-  "last_commit": "2026-09-14T17:29:34Z",
+  "stars": 132064,
+  "last_commit": "2026-09-15T12:12:56Z",
   "latest_release": {
     "tag": "v0.18.1",
     "published_at": "2026-04-21T08:43:20Z",
     "url": "https://github.com/excalidraw/excalidraw/releases/tag/v0.18.1"
   },
   "docker_pulls": null,
-  "open_issues": 3472,
-  "fetched_at": "2026-09-15T03:34:41.413Z"
+  "open_issues": 3475,
+  "fetched_at": "2026-09-16T03:34:28.818Z"
 }
