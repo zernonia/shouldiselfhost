@@ -1,9 +1,9 @@
 {
   "id": "zammad",
-  "stars": 5916,
-  "last_commit": "2026-09-15T13:49:46Z",
+  "stars": 5921,
+  "last_commit": "2026-09-16T14:04:37Z",
   "latest_release": null,
   "docker_pulls": null,
-  "open_issues": 448,
-  "fetched_at": "2026-09-16T03:34:46.517Z"
+  "open_issues": 450,
+  "fetched_at": "2026-09-17T03:34:54.290Z"
 }

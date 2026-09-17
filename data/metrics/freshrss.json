@@ -1,6 +1,6 @@
 {
   "id": "freshrss",
-  "stars": 16035,
+  "stars": 16047,
   "last_commit": "2026-09-14T18:50:09Z",
   "latest_release": {
     "tag": "1.30.0",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 672,
-  "fetched_at": "2026-09-16T03:34:29.970Z"
+  "fetched_at": "2026-09-17T03:34:38.732Z"
 }

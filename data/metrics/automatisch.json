@@ -1,6 +1,6 @@
 {
   "id": "automatisch",
-  "stars": 13969,
+  "stars": 13970,
   "last_commit": "2026-02-11T19:53:04Z",
   "latest_release": {
     "tag": "v0.15.0",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 289,
-  "fetched_at": "2026-09-16T03:34:24.708Z"
+  "fetched_at": "2026-09-17T03:34:33.723Z"
 }

@@ -1,13 +1,13 @@
 {
   "id": "documenso",
-  "stars": 15040,
-  "last_commit": "2026-09-16T02:11:30Z",
+  "stars": 15052,
+  "last_commit": "2026-09-17T03:15:04Z",
   "latest_release": {
     "tag": "v2.18.0",
     "published_at": "2026-09-09T01:35:09Z",
     "url": "https://github.com/documenso/documenso/releases/tag/v2.18.0"
   },
   "docker_pulls": null,
-  "open_issues": 232,
-  "fetched_at": "2026-09-16T03:34:27.515Z"
+  "open_issues": 220,
+  "fetched_at": "2026-09-17T03:34:36.264Z"
 }
