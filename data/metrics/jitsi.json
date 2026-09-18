@@ -1,6 +1,6 @@
 {
   "id": "jitsi",
-  "stars": 3607,
+  "stars": 3608,
   "last_commit": "2026-09-16T18:55:34Z",
   "latest_release": {
     "tag": "stable-11248",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 13,
-  "fetched_at": "2026-09-17T03:34:41.635Z"
+  "fetched_at": "2026-09-18T03:33:43.857Z"
 }

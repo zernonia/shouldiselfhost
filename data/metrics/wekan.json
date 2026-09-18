@@ -1,13 +1,13 @@
 {
   "id": "wekan",
-  "stars": 21088,
-  "last_commit": "2026-09-16T18:52:37Z",
+  "stars": 21089,
+  "last_commit": "2026-09-17T15:19:07Z",
   "latest_release": {
-    "tag": "v11.83",
-    "published_at": "2026-09-15T23:56:29Z",
-    "url": "https://github.com/wekan/wekan/releases/tag/v11.83"
+    "tag": "v11.85",
+    "published_at": "2026-09-17T15:26:19Z",
+    "url": "https://github.com/wekan/wekan/releases/tag/v11.85"
   },
   "docker_pulls": null,
-  "open_issues": 167,
-  "fetched_at": "2026-09-17T03:34:53.096Z"
+  "open_issues": 164,
+  "fetched_at": "2026-09-18T03:33:55.025Z"
 }

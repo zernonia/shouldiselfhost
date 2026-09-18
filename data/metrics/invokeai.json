@@ -1,6 +1,6 @@
 {
   "id": "invokeai",
-  "stars": 28234,
+  "stars": 28237,
   "last_commit": "2026-09-15T12:27:03Z",
   "latest_release": {
     "tag": "v6.14.1",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 371,
-  "fetched_at": "2026-09-17T03:34:41.434Z"
+  "fetched_at": "2026-09-18T03:33:43.639Z"
 }

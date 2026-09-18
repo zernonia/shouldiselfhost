@@ -1,7 +1,7 @@
 {
   "id": "peertube",
-  "stars": 15315,
-  "last_commit": "2026-09-16T12:00:09Z",
+  "stars": 15318,
+  "last_commit": "2026-09-17T13:45:26Z",
   "latest_release": {
     "tag": "v8.3.0",
     "published_at": "2026-09-15T08:43:24Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 689,
-  "fetched_at": "2026-09-17T03:34:47.672Z"
+  "fetched_at": "2026-09-18T03:33:49.594Z"
 }
