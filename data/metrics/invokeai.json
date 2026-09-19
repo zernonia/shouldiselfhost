@@ -1,6 +1,6 @@
 {
   "id": "invokeai",
-  "stars": 28237,
+  "stars": 28239,
   "last_commit": "2026-09-15T12:27:03Z",
   "latest_release": {
     "tag": "v6.14.1",
@@ -8,6 +8,6 @@
     "url": "https://github.com/invoke-ai/InvokeAI/releases/tag/v6.14.1"
   },
   "docker_pulls": null,
-  "open_issues": 371,
-  "fetched_at": "2026-09-18T03:33:43.639Z"
+  "open_issues": 369,
+  "fetched_at": "2026-09-19T03:33:16.707Z"
 }

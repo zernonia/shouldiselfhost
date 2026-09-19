@@ -1,13 +1,13 @@
 {
   "id": "navidrome",
-  "stars": 23636,
-  "last_commit": "2026-09-18T03:23:29Z",
+  "stars": 23652,
+  "last_commit": "2026-09-18T13:52:27Z",
   "latest_release": {
     "tag": "v0.64.0",
     "published_at": "2026-09-12T20:56:20Z",
     "url": "https://github.com/navidrome/navidrome/releases/tag/v0.64.0"
   },
   "docker_pulls": null,
-  "open_issues": 277,
-  "fetched_at": "2026-09-18T03:33:48.376Z"
+  "open_issues": 281,
+  "fetched_at": "2026-09-19T03:33:20.949Z"
 }

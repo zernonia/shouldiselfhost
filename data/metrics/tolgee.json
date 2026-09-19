@@ -1,7 +1,7 @@
 {
   "id": "tolgee",
-  "stars": 4102,
-  "last_commit": "2026-09-17T21:40:29Z",
+  "stars": 4103,
+  "last_commit": "2026-09-18T15:07:33Z",
   "latest_release": {
     "tag": "v3.224.2",
     "published_at": "2026-09-17T13:20:31Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 196,
-  "fetched_at": "2026-09-18T03:33:52.878Z"
+  "fetched_at": "2026-09-19T03:33:24.994Z"
 }
