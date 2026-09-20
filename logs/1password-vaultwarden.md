@@ -37,3 +37,18 @@ Nothing during setup. Both findings are about year two, not day one:
   comes from economics ($3.99/mo never breaks even against valued maintenance time) plus
   maximum-stakes failure modes. Bitwarden's free hosted tier escapes the invoice without
   inheriting the pager — that's the honest alternative.
+
+---
+
+## Bot re-verification — 2026-09-20
+
+**By:** tier3-bot · **Protocol:** v1 · **Assistant:** claude-code
+
+| Check | Result |
+|---|---|
+| `scripts/check-compose.sh compose/1password-vaultwarden.yml` | ✓ healthy in **69 s** (cold pull) |
+| vaultwarden last commit | 2026-09-18 — active ✓ |
+| vaultwarden latest release | 1.37.3 (2026-09-13) — recent ✓ |
+| Verdict rubric re-run | NOT_REALLY confirmed — economics still negative ($−3.18/mo net saving at $20/h reference rate) |
+
+No changes to verdict, what_broke, or economics inputs. Compose boot 69 s vs 72 s original (image layer cache variance). SIGNUPS_ALLOWED open-registration note remains applicable.
