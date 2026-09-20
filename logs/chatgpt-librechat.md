@@ -33,3 +33,19 @@
   UI, your history in your Mongo. That's the KINDA hiding inside the NOT REALLY.
 - For replacing a normal ChatGPT subscription: the model is the product; the UI was never
   what the money bought.
+
+---
+
+## Bot re-verification — 2026-09-20
+
+**By:** tier3-bot · **Protocol:** v1 · **Assistant:** claude-code
+
+| Check | Result |
+|---|---|
+| `scripts/check-compose.sh compose/chatgpt-librechat.yml` | ✓ healthy in **99 s** (cold pull, 2 containers) |
+| librechat last commit | 2026-09-18 — active ✓ |
+| librechat latest release | none tagged (rolling main) — project health OK ✓ |
+| ghcr.io image pull | Succeeded in this runner environment — previous ghcr.io block lifted |
+| Verdict rubric re-run | NOT_REALLY confirmed — capability <80% without API keys; break-even ~50 months at $20/h |
+
+No changes to verdict or economics inputs. First direct compose boot measurement for this pair: 99 s (previously CI-only). ghcr.io pull now succeeds in the standard runner environment.

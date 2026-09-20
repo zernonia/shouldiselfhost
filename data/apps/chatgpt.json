@@ -34,14 +34,14 @@
     "decision_layer": "original"
   },
   "verified": {
-    "by": "zernonia",
-    "at": "2026-08-10",
+    "by": "tier3-bot",
+    "at": "2026-09-20",
     "protocol": "v1",
     "setup_min": 50,
     "assistant": "claude-code",
     "evidence": ["logs/chatgpt-librechat.md", "compose/chatgpt-librechat.yml"],
     "what_broke": [
-      "Images are ghcr.io-hosted — Docker-Hub-only mirrors can't pull them; this pair's compose boot is verified by the CI runner",
+      "ghcr.io images pulled cleanly in the 2026-09-20 runner environment (99 s cold pull); the previous environment block no longer applies",
       "Boots healthy with zero API keys configured — which demonstrates the verdict: a working chat UI with nothing to talk to"
     ]
   },
