@@ -1,6 +1,6 @@
 {
   "id": "plausible",
-  "stars": 29149,
+  "stars": 29168,
   "last_commit": "2026-09-17T20:12:55Z",
   "latest_release": {
     "tag": "v3.2.1",
@@ -8,6 +8,6 @@
     "url": "https://github.com/plausible/analytics/releases/tag/v3.2.1"
   },
   "docker_pulls": null,
-  "open_issues": 62,
-  "fetched_at": "2026-09-20T03:35:03.423Z"
+  "open_issues": 63,
+  "fetched_at": "2026-09-21T03:38:12.426Z"
 }
