@@ -1,13 +1,13 @@
 {
   "id": "photoprism",
-  "stars": 40211,
-  "last_commit": "2026-09-21T03:25:13Z",
+  "stars": 40215,
+  "last_commit": "2026-09-21T23:34:14Z",
   "latest_release": {
     "tag": "260919-28c46a116",
     "published_at": "2026-09-19T16:55:25Z",
     "url": "https://github.com/photoprism/photoprism/releases/tag/260919-28c46a116"
   },
   "docker_pulls": null,
-  "open_issues": 465,
-  "fetched_at": "2026-09-21T03:38:11.982Z"
+  "open_issues": 466,
+  "fetched_at": "2026-09-22T03:35:10.368Z"
 }

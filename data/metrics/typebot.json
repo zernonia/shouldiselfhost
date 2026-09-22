@@ -1,6 +1,6 @@
 {
   "id": "typebot",
-  "stars": 10345,
+  "stars": 10350,
   "last_commit": "2026-09-14T14:26:25Z",
   "latest_release": {
     "tag": "v3.19.0",
@@ -8,6 +8,6 @@
     "url": "https://github.com/baptisteArno/typebot.io/releases/tag/v3.19.0"
   },
   "docker_pulls": null,
-  "open_issues": 22,
-  "fetched_at": "2026-09-21T03:38:15.571Z"
+  "open_issues": 23,
+  "fetched_at": "2026-09-22T03:35:13.480Z"
 }

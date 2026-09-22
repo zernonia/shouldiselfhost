@@ -1,7 +1,7 @@
 {
   "id": "wekan",
-  "stars": 21091,
-  "last_commit": "2026-09-20T23:33:15Z",
+  "stars": 21094,
+  "last_commit": "2026-09-21T22:03:49Z",
   "latest_release": {
     "tag": "v11.90",
     "published_at": "2026-09-20T23:39:58Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 164,
-  "fetched_at": "2026-09-21T03:38:17.553Z"
+  "fetched_at": "2026-09-22T03:35:14.945Z"
 }
