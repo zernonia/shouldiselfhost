@@ -1,13 +1,13 @@
 {
   "id": "home-assistant",
-  "stars": 90984,
-  "last_commit": "2026-09-22T01:36:48Z",
+  "stars": 91082,
+  "last_commit": "2026-09-23T03:33:21Z",
   "latest_release": {
     "tag": "2026.9.3",
     "published_at": "2026-09-18T12:11:05Z",
     "url": "https://github.com/home-assistant/core/releases/tag/2026.9.3"
   },
   "docker_pulls": null,
-  "open_issues": 3576,
-  "fetched_at": "2026-09-22T03:35:03.554Z"
+  "open_issues": 3608,
+  "fetched_at": "2026-09-23T03:35:36.169Z"
 }

@@ -1,13 +1,13 @@
 {
   "id": "wger",
-  "stars": 6949,
-  "last_commit": "2026-09-13T19:20:42Z",
+  "stars": 6954,
+  "last_commit": "2026-09-22T23:22:42Z",
   "latest_release": {
     "tag": "2.7",
     "published_at": "2026-09-03T09:33:59Z",
     "url": "https://github.com/wger-project/wger/releases/tag/2.7"
   },
   "docker_pulls": null,
-  "open_issues": 250,
-  "fetched_at": "2026-09-22T03:35:15.305Z"
+  "open_issues": 252,
+  "fetched_at": "2026-09-23T03:35:50.417Z"
 }

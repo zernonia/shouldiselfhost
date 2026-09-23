@@ -1,7 +1,7 @@
 {
   "id": "photoprism",
-  "stars": 40215,
-  "last_commit": "2026-09-21T23:34:14Z",
+  "stars": 40225,
+  "last_commit": "2026-09-22T12:36:48Z",
   "latest_release": {
     "tag": "260919-28c46a116",
     "published_at": "2026-09-19T16:55:25Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 466,
-  "fetched_at": "2026-09-22T03:35:10.368Z"
+  "fetched_at": "2026-09-23T03:35:44.455Z"
 }
