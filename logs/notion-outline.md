@@ -40,3 +40,26 @@
 - The docs/wiki/search/collab jobs all work. There is no databases feature — Notion's
   views/relations/rollups have no equivalent here. That gap, not the setup, drives the KINDA.
 - Notion import exists (Markdown/HTML export → import) but attachments need re-linking.
+
+---
+
+## Re-verification — 2026-09-23
+
+**By:** tier3-bot · **Protocol:** v1 · **Assistant:** claude-code
+
+### Health check (via metrics, fetched 2026-09-22)
+
+| Signal | Value | Pass? |
+|---|---|---|
+| Last commit | 2026-09-22T03:18:18Z | ✓ (< 365 days) |
+| Latest release | v1.10.1 (2026-09-09) | ✓ |
+| Stars | 40,655 | — |
+| Docker pulls | 15,025,791 | — |
+
+### Compose boot
+
+Not re-timed: Docker was unavailable in this CI runner. No changes detected in `compose/notion-outline.yml` since 2026-08-10.
+
+### Verdict
+
+**KINDA — unchanged.** Rubric inputs are stable: capability gap (no databases/rollups in Outline) persists, project health is strong, economics hold at 3+ seats. No rubric-changing information surfaced.
