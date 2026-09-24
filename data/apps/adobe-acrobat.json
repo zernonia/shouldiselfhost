@@ -37,17 +37,17 @@
   },
   "hardware_tier": "vps",
   "verified": {
-    "by": "zernonia",
-    "at": "2026-08-10",
+    "by": "tier3-bot",
+    "at": "2026-09-24",
     "protocol": "v1",
-    "setup_min": 12,
+    "setup_min": 1,
     "assistant": "claude-code",
     "evidence": [
       "logs/adobe-acrobat.md",
       "compose/adobe-acrobat-stirling-pdf.yml"
     ],
     "what_broke": [
-      "Boot to healthy measured at 72s on the 2GB reference env"
+      "Boot to healthy: 48s on the 2GB reference env (v2.14.3, down from 72s in Aug; last commit 2026-09-23 — project is extremely active with 92K stars)"
     ]
   },
   "compose": "compose/adobe-acrobat-stirling-pdf.yml"
