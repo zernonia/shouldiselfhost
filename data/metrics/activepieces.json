@@ -1,13 +1,13 @@
 {
   "id": "activepieces",
-  "stars": 24673,
-  "last_commit": "2026-09-23T00:37:08Z",
+  "stars": 24700,
+  "last_commit": "2026-09-24T01:23:53Z",
   "latest_release": {
-    "tag": "0.91.1",
-    "published_at": "2026-09-21T19:24:08Z",
-    "url": "https://github.com/activepieces/activepieces/releases/tag/0.91.1"
+    "tag": "0.91.2",
+    "published_at": "2026-09-23T16:06:22Z",
+    "url": "https://github.com/activepieces/activepieces/releases/tag/0.91.2"
   },
   "docker_pulls": null,
-  "open_issues": 588,
-  "fetched_at": "2026-09-23T03:35:26.776Z"
+  "open_issues": 592,
+  "fetched_at": "2026-09-24T03:35:01.883Z"
 }

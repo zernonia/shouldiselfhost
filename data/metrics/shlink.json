@@ -1,6 +1,6 @@
 {
   "id": "shlink",
-  "stars": 5302,
+  "stars": 5303,
   "last_commit": "2026-09-21T15:56:08Z",
   "latest_release": {
     "tag": "v5.1.7",
@@ -8,6 +8,6 @@
     "url": "https://github.com/shlinkio/shlink/releases/tag/v5.1.7"
   },
   "docker_pulls": null,
-  "open_issues": 22,
-  "fetched_at": "2026-09-23T03:35:46.312Z"
+  "open_issues": 23,
+  "fetched_at": "2026-09-24T03:35:21.538Z"
 }
