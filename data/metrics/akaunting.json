@@ -1,13 +1,13 @@
 {
   "id": "akaunting",
-  "stars": 10133,
-  "last_commit": "2026-09-21T11:04:59Z",
+  "stars": 10138,
+  "last_commit": "2026-09-24T11:23:43Z",
   "latest_release": {
     "tag": "3.2.4",
     "published_at": "2026-09-17T13:09:14Z",
     "url": "https://github.com/akaunting/akaunting/releases/tag/3.2.4"
   },
   "docker_pulls": null,
-  "open_issues": 10,
-  "fetched_at": "2026-09-24T03:35:02.547Z"
+  "open_issues": 12,
+  "fetched_at": "2026-09-25T03:34:13.086Z"
 }

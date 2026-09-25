@@ -1,13 +1,13 @@
 {
   "id": "appsmith",
-  "stars": 40931,
-  "last_commit": "2026-09-23T14:00:46Z",
+  "stars": 40936,
+  "last_commit": "2026-09-25T01:32:52Z",
   "latest_release": {
-    "tag": "v2.4.1",
-    "published_at": "2026-09-17T07:47:01Z",
-    "url": "https://github.com/appsmithorg/appsmith/releases/tag/v2.4.1"
+    "tag": "v2.4.2",
+    "published_at": "2026-09-24T08:31:01Z",
+    "url": "https://github.com/appsmithorg/appsmith/releases/tag/v2.4.2"
   },
   "docker_pulls": null,
-  "open_issues": 4485,
-  "fetched_at": "2026-09-24T03:35:02.774Z"
+  "open_issues": 4488,
+  "fetched_at": "2026-09-25T03:34:13.417Z"
 }

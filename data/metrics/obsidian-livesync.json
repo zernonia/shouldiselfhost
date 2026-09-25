@@ -1,6 +1,6 @@
 {
   "id": "obsidian-livesync",
-  "stars": 12405,
+  "stars": 12416,
   "last_commit": "2026-09-18T10:24:22Z",
   "latest_release": {
     "tag": "1.0.30",
@@ -8,6 +8,6 @@
     "url": "https://github.com/vrtmrz/obsidian-livesync/releases/tag/1.0.30"
   },
   "docker_pulls": null,
-  "open_issues": 359,
-  "fetched_at": "2026-09-24T03:35:18.095Z"
+  "open_issues": 360,
+  "fetched_at": "2026-09-25T03:34:28.947Z"
 }
