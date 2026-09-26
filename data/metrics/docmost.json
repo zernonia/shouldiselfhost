@@ -1,6 +1,6 @@
 {
   "id": "docmost",
-  "stars": 21784,
+  "stars": 21792,
   "last_commit": "2026-09-22T02:23:21Z",
   "latest_release": {
     "tag": "v0.96.0",
@@ -8,6 +8,6 @@
     "url": "https://github.com/docmost/docmost/releases/tag/v0.96.0"
   },
   "docker_pulls": null,
-  "open_issues": 347,
-  "fetched_at": "2026-09-25T03:34:16.635Z"
+  "open_issues": 351,
+  "fetched_at": "2026-09-26T03:33:43.312Z"
 }

@@ -1,6 +1,6 @@
 {
   "id": "leantime",
-  "stars": 11653,
+  "stars": 11659,
   "last_commit": "2026-09-24T19:15:32Z",
   "latest_release": {
     "tag": "v3.10.0",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 335,
-  "fetched_at": "2026-09-25T03:34:24.747Z"
+  "fetched_at": "2026-09-26T03:33:49.442Z"
 }

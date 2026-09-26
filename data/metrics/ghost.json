@@ -1,7 +1,7 @@
 {
   "id": "ghost",
-  "stars": 55424,
-  "last_commit": "2026-09-24T23:29:45Z",
+  "stars": 55434,
+  "last_commit": "2026-09-26T03:32:51Z",
   "latest_release": {
     "tag": "v6.65.0",
     "published_at": "2026-09-22T15:28:40Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 209,
-  "fetched_at": "2026-09-25T03:34:20.236Z"
+  "fetched_at": "2026-09-26T03:33:45.957Z"
 }
