@@ -1,7 +1,7 @@
 {
   "id": "openproject",
-  "stars": 16213,
-  "last_commit": "2026-09-27T03:16:02Z",
+  "stars": 16229,
+  "last_commit": "2026-09-28T03:18:42Z",
   "latest_release": {
     "tag": "v17.8.0",
     "published_at": "2026-09-02T06:46:44Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 233,
-  "fetched_at": "2026-09-27T03:37:13.398Z"
+  "fetched_at": "2026-09-28T03:42:17.734Z"
 }

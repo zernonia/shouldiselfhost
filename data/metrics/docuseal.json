@@ -1,6 +1,6 @@
 {
   "id": "docuseal",
-  "stars": 18623,
+  "stars": 18629,
   "last_commit": "2026-09-21T12:25:09Z",
   "latest_release": {
     "tag": "3.2.6",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 125,
-  "fetched_at": "2026-09-27T03:37:03.571Z"
+  "fetched_at": "2026-09-28T03:42:06.436Z"
 }

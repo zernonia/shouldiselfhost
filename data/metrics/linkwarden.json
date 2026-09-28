@@ -1,6 +1,6 @@
 {
   "id": "linkwarden",
-  "stars": 19846,
+  "stars": 19855,
   "last_commit": "2026-09-10T18:53:30Z",
   "latest_release": {
     "tag": "v2.16.3",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 668,
-  "fetched_at": "2026-09-27T03:37:11.031Z"
+  "fetched_at": "2026-09-28T03:42:15.102Z"
 }

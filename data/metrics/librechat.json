@@ -1,9 +1,9 @@
 {
   "id": "librechat",
-  "stars": 44981,
-  "last_commit": "2026-09-27T03:31:06Z",
+  "stars": 45007,
+  "last_commit": "2026-09-28T03:19:09Z",
   "latest_release": null,
   "docker_pulls": null,
-  "open_issues": 789,
-  "fetched_at": "2026-09-27T03:37:09.991Z"
+  "open_issues": 788,
+  "fetched_at": "2026-09-28T03:42:13.640Z"
 }
