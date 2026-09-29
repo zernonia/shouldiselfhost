@@ -1,6 +1,6 @@
 {
   "id": "easyappointments",
-  "stars": 4395,
+  "stars": 4396,
   "last_commit": "2026-09-25T14:45:55Z",
   "latest_release": {
     "tag": "1.6.0",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 166,
-  "fetched_at": "2026-09-28T03:42:07.065Z"
+  "fetched_at": "2026-09-29T03:37:55.410Z"
 }

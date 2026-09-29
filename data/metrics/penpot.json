@@ -1,13 +1,13 @@
 {
   "id": "penpot",
-  "stars": 60453,
-  "last_commit": "2026-09-27T14:40:41Z",
+  "stars": 60482,
+  "last_commit": "2026-09-28T20:50:45Z",
   "latest_release": {
     "tag": "2.18.0",
     "published_at": "2026-09-23T09:02:03Z",
     "url": "https://github.com/penpot/penpot/releases/tag/2.18.0"
   },
   "docker_pulls": null,
-  "open_issues": 754,
-  "fetched_at": "2026-09-28T03:42:18.458Z"
+  "open_issues": 753,
+  "fetched_at": "2026-09-29T03:38:07.353Z"
 }
