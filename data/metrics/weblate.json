@@ -1,13 +1,13 @@
 {
   "id": "weblate",
-  "stars": 6094,
-  "last_commit": "2026-09-29T01:40:30Z",
+  "stars": 6099,
+  "last_commit": "2026-09-30T01:30:59Z",
   "latest_release": {
     "tag": "weblate-2026.9.1",
     "published_at": "2026-09-08T07:30:50Z",
     "url": "https://github.com/WeblateOrg/weblate/releases/tag/weblate-2026.9.1"
   },
   "docker_pulls": null,
-  "open_issues": 478,
-  "fetched_at": "2026-09-29T03:38:13.239Z"
+  "open_issues": 461,
+  "fetched_at": "2026-09-30T03:38:47.689Z"
 }

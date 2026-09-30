@@ -1,9 +1,9 @@
 {
   "id": "wordpress",
   "stars": 21445,
-  "last_commit": "2026-09-29T01:36:06Z",
+  "last_commit": "2026-09-30T02:35:06Z",
   "latest_release": null,
   "docker_pulls": null,
   "open_issues": 3,
-  "fetched_at": "2026-09-29T03:38:14.295Z"
+  "fetched_at": "2026-09-30T03:38:48.598Z"
 }
