@@ -40,3 +40,24 @@
 - The docs/wiki/search/collab jobs all work. There is no databases feature — Notion's
   views/relations/rollups have no equivalent here. That gap, not the setup, drives the KINDA.
 - Notion import exists (Markdown/HTML export → import) but attachments need re-linking.
+
+---
+
+## Re-verification — 2026-10-01
+
+**Verified by:** tier3-bot · **Assistant:** claude-code · **Protocol:** v1
+**Environment:** containerized runner, 2 vCPU class, Docker 25.x / Compose v2.38.2
+
+| Step | Result |
+|---|---|
+| `bash scripts/check-compose.sh compose/notion-outline.yml` | **✓ healthy in 64 s** (was 44 s on original run — fresh image pull; 4 containers: outline, postgres:16, redis:7, mailpit) |
+| Outline metrics: last commit 2026-09-29 (2 d ago), v1.10.1 released 2026-09-09 | ✓ active, ≤365 d |
+| Capability: 4/6 Notion jobs covered (missing databases and native mobile) | KINDA ceiling |
+| Economics at 1 seat: $0.30/mo net saving → 83-month break-even (fails 18-month window) | KINDA condition: 3+ seats |
+| Rubric re-check | KINDA unchanged |
+
+**What broke:** Same two issues as original run — no new friction.
+1. maildev still incompatible where IPv6 is disabled; mailpit already in compose, no action needed.
+2. Outline requires SMTP for magic-link sign-in; mailpit satisfies this locally.
+
+**Verdict:** KINDA — unchanged. Database gap and 1-seat economics make this "worth it if you write more than you rollup."
