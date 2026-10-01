@@ -1,6 +1,6 @@
 {
   "id": "jitsi",
-  "stars": 3613,
+  "stars": 3614,
   "last_commit": "2026-09-29T21:51:20Z",
   "latest_release": {
     "tag": "stable-11248",
@@ -8,6 +8,6 @@
     "url": "https://github.com/jitsi/docker-jitsi-meet/releases/tag/stable-11248"
   },
   "docker_pulls": null,
-  "open_issues": 16,
-  "fetched_at": "2026-09-30T03:38:36.367Z"
+  "open_issues": 15,
+  "fetched_at": "2026-10-01T03:42:45.960Z"
 }

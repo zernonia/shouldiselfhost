@@ -1,6 +1,6 @@
 {
   "id": "drawio",
-  "stars": 8483,
+  "stars": 8506,
   "last_commit": "2026-09-25T23:21:57Z",
   "latest_release": {
     "tag": "v31.5.3",
@@ -8,6 +8,6 @@
     "url": "https://github.com/jgraph/drawio/releases/tag/v31.5.3"
   },
   "docker_pulls": null,
-  "open_issues": 58,
-  "fetched_at": "2026-09-30T03:38:31.957Z"
+  "open_issues": 56,
+  "fetched_at": "2026-10-01T03:42:41.029Z"
 }

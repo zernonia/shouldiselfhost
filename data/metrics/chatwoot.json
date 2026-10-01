@@ -1,13 +1,13 @@
 {
   "id": "chatwoot",
-  "stars": 37336,
-  "last_commit": "2026-09-30T02:10:46Z",
+  "stars": 37377,
+  "last_commit": "2026-10-01T01:28:29Z",
   "latest_release": {
     "tag": "v4.18.0",
     "published_at": "2026-09-18T00:02:33Z",
     "url": "https://github.com/chatwoot/chatwoot/releases/tag/v4.18.0"
   },
   "docker_pulls": null,
-  "open_issues": 1515,
-  "fetched_at": "2026-09-30T03:38:30.093Z"
+  "open_issues": 1522,
+  "fetched_at": "2026-10-01T03:42:39.015Z"
 }

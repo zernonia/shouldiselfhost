@@ -1,6 +1,6 @@
 {
   "id": "linkding",
-  "stars": 11262,
+  "stars": 11264,
   "last_commit": "2026-09-18T01:31:35Z",
   "latest_release": {
     "tag": "v1.47.0",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 215,
-  "fetched_at": "2026-09-30T03:38:38.887Z"
+  "fetched_at": "2026-10-01T03:42:48.596Z"
 }

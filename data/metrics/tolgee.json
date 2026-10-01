@@ -1,13 +1,13 @@
 {
   "id": "tolgee",
-  "stars": 4117,
-  "last_commit": "2026-09-29T12:45:01Z",
+  "stars": 4116,
+  "last_commit": "2026-09-30T09:26:20Z",
   "latest_release": {
-    "tag": "v3.224.9",
-    "published_at": "2026-09-28T09:15:09Z",
-    "url": "https://github.com/tolgee/tolgee-platform/releases/tag/v3.224.9"
+    "tag": "v3.224.10",
+    "published_at": "2026-09-30T09:26:40Z",
+    "url": "https://github.com/tolgee/tolgee-platform/releases/tag/v3.224.10"
   },
   "docker_pulls": null,
   "open_issues": 204,
-  "fetched_at": "2026-09-30T03:38:45.701Z"
+  "fetched_at": "2026-10-01T03:42:56.001Z"
 }

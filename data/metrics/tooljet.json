@@ -1,13 +1,13 @@
 {
   "id": "tooljet",
-  "stars": 41015,
-  "last_commit": "2026-09-30T03:30:21Z",
+  "stars": 41018,
+  "last_commit": "2026-10-01T03:28:59Z",
   "latest_release": {
-    "tag": "v3.20.235-lts",
-    "published_at": "2026-09-29T12:16:47Z",
-    "url": "https://github.com/ToolJet/ToolJet/releases/tag/v3.20.235-lts"
+    "tag": "v3.20.236-lts",
+    "published_at": "2026-09-30T14:37:03Z",
+    "url": "https://github.com/ToolJet/ToolJet/releases/tag/v3.20.236-lts"
   },
   "docker_pulls": null,
-  "open_issues": 1279,
-  "fetched_at": "2026-09-30T03:38:45.937Z"
+  "open_issues": 1282,
+  "fetched_at": "2026-10-01T03:42:56.228Z"
 }
