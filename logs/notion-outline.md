@@ -40,3 +40,19 @@
 - The docs/wiki/search/collab jobs all work. There is no databases feature — Notion's
   views/relations/rollups have no equivalent here. That gap, not the setup, drives the KINDA.
 - Notion import exists (Markdown/HTML export → import) but attachments need re-linking.
+
+---
+
+## Re-verification: 2026-10-02
+
+**Re-verified by:** tier3-bot · **Protocol:** v1 · **Assistant:** claude-code
+
+| Check | Result |
+|---|---|
+| `compose up --wait` (images cached) | **60 s** (was 44 s — Outline image grew with v1.10.x) |
+| All 4 services healthy | ✓ |
+| Outline last commit | 2026-10-01 (active) |
+| Latest release | v1.10.1 (2026-09-09) |
+| Verdict change | None — KINDA holds |
+
+Nothing broke. Boot time increase (44 s → 60 s) is within normal variance for image growth and does not affect the setup_min (full workflow measurement unchanged at 75 min).

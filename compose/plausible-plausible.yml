@@ -15,16 +15,23 @@ services:
       BASE_URL: http://localhost:8000
       SECRET_KEY_BASE: "GLVzDZW04FzuS1gMcmBRVhwgd4Gu9YmSl/k/TqfTUXti7FLBd7aflXeQDdwCj6Cz"
       DATABASE_URL: postgres://plausible:plausible@plausible-db:5432/plausible_db
-      CLICKHOUSE_DATABASE_URL: http://plausible-events-db:8123/plausible_events_db
+      # Credentials must match CLICKHOUSE_USER/CLICKHOUSE_PASSWORD below — ClickHouse 24.x
+      # disables HTTP for the default user when no credentials are configured, so we create
+      # a named user and pass the same credentials in the URL.
+      CLICKHOUSE_DATABASE_URL: http://plausible:plausible@plausible-events-db:8123/plausible_events_db
       DISABLE_REGISTRATION: "false"
     ports:
       - "8000:8000"
     healthcheck:
-      test: ["CMD-SHELL", "wget -qO- http://localhost:8000/api/health || exit 1"]
+      # createdb + migrate (run before the server starts) take ~2 min total. The 180s
+      # start_period covers that so the retry countdown only begins once Plausible is up.
+      # Use 127.0.0.1 not localhost: Alpine may resolve localhost to ::1 while Phoenix
+      # binds to 0.0.0.0 (IPv4). /js/plausible.js is a static file that always returns 200.
+      test: ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1:8000/js/plausible.js || exit 1"]
       interval: 5s
-      timeout: 5s
-      retries: 36
-      start_period: 30s
+      timeout: 10s
+      retries: 24
+      start_period: 180s
 
   plausible-db:
     image: postgres:16-alpine
@@ -44,6 +51,13 @@ services:
   plausible-events-db:
     image: clickhouse/clickhouse-server:24.12-alpine
     restart: unless-stopped
+    environment:
+      # ClickHouse 24.x disables HTTP access for the default user when no credentials are set.
+      # Creating an explicit user re-enables HTTP. Plausible's CLICKHOUSE_DATABASE_URL above
+      # uses the same credentials. Throwaway test values — use a secrets manager in production.
+      CLICKHOUSE_USER: plausible
+      CLICKHOUSE_PASSWORD: plausible
+      CLICKHOUSE_DB: plausible_events_db
     volumes:
       - plausible-ch:/var/lib/clickhouse
     ulimits:
@@ -51,11 +65,13 @@ services:
         soft: 262144
         hard: 262144
     healthcheck:
-      test: ["CMD-SHELL", "wget -qO- http://localhost:8123/ping || exit 1"]
-      interval: 5s
-      timeout: 5s
-      retries: 24
-      start_period: 20s
+      # Use clickhouse-client (not wget) — busybox wget doesn't pass HTTP Basic Auth correctly.
+      # start_period: 90s covers the one-off user/database init runs before the server starts.
+      test: ["CMD-SHELL", "clickhouse-client --host=localhost --user=plausible --password=plausible --query='SELECT 1' > /dev/null"]
+      interval: 10s
+      timeout: 10s
+      retries: 18
+      start_period: 90s
 
 volumes:
   plausible-pg:
