@@ -1,6 +1,6 @@
 {
   "id": "linkstack",
-  "stars": 3890,
+  "stars": 3889,
   "last_commit": "2026-07-21T12:40:17Z",
   "latest_release": {
     "tag": "v4.8.6",
@@ -8,6 +8,6 @@
     "url": "https://github.com/LinkStackOrg/LinkStack/releases/tag/v4.8.6"
   },
   "docker_pulls": null,
-  "open_issues": 53,
-  "fetched_at": "2026-10-01T03:42:48.898Z"
+  "open_issues": 54,
+  "fetched_at": "2026-10-02T03:37:18.619Z"
 }

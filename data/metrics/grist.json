@@ -1,7 +1,7 @@
 {
   "id": "grist",
-  "stars": 11882,
-  "last_commit": "2026-10-01T02:01:19Z",
+  "stars": 11884,
+  "last_commit": "2026-10-01T22:16:16Z",
   "latest_release": {
     "tag": "v1.7.20",
     "published_at": "2026-09-28T23:04:24Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 734,
-  "fetched_at": "2026-10-01T03:42:44.090Z"
+  "fetched_at": "2026-10-02T03:37:13.869Z"
 }

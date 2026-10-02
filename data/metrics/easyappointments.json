@@ -1,13 +1,13 @@
 {
   "id": "easyappointments",
-  "stars": 4397,
-  "last_commit": "2026-09-25T14:45:55Z",
+  "stars": 4401,
+  "last_commit": "2026-10-01T06:55:41Z",
   "latest_release": {
     "tag": "1.6.0",
     "published_at": "2026-05-27T12:45:42Z",
     "url": "https://github.com/alextselegidis/easyappointments/releases/tag/1.6.0"
   },
   "docker_pulls": null,
-  "open_issues": 165,
-  "fetched_at": "2026-10-01T03:42:41.245Z"
+  "open_issues": 166,
+  "fetched_at": "2026-10-02T03:37:11.109Z"
 }
