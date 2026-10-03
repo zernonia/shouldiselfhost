@@ -1,6 +1,6 @@
 {
   "id": "wallabag",
-  "stars": 12994,
+  "stars": 12992,
   "last_commit": "2026-09-28T06:48:52Z",
   "latest_release": {
     "tag": "2.6.14",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 768,
-  "fetched_at": "2026-10-02T03:37:27.510Z"
+  "fetched_at": "2026-10-03T03:45:28.620Z"
 }

@@ -1,13 +1,13 @@
 {
   "id": "vikunja",
-  "stars": 5579,
-  "last_commit": "2026-10-02T00:11:31Z",
+  "stars": 5593,
+  "last_commit": "2026-10-03T00:10:39Z",
   "latest_release": {
-    "tag": "v2.6.0",
-    "published_at": "2026-08-31T18:13:15Z",
-    "url": "https://github.com/go-vikunja/vikunja/releases/tag/v2.6.0"
+    "tag": "v2.7.0",
+    "published_at": "2026-10-02T21:18:37Z",
+    "url": "https://github.com/go-vikunja/vikunja/releases/tag/v2.7.0"
   },
   "docker_pulls": null,
-  "open_issues": 244,
-  "fetched_at": "2026-10-02T03:37:27.287Z"
+  "open_issues": 236,
+  "fetched_at": "2026-10-03T03:45:28.391Z"
 }

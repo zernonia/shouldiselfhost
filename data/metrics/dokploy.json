@@ -1,6 +1,6 @@
 {
   "id": "dokploy",
-  "stars": 37609,
+  "stars": 37630,
   "last_commit": "2026-10-01T14:35:33Z",
   "latest_release": {
     "tag": "v0.30.8",
@@ -8,6 +8,6 @@
     "url": "https://github.com/Dokploy/dokploy/releases/tag/v0.30.8"
   },
   "docker_pulls": null,
-  "open_issues": 736,
-  "fetched_at": "2026-10-02T03:37:10.696Z"
+  "open_issues": 739,
+  "fetched_at": "2026-10-03T03:45:09.737Z"
 }

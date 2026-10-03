@@ -1,6 +1,6 @@
 {
   "id": "shlink",
-  "stars": 5311,
+  "stars": 5312,
   "last_commit": "2026-09-21T15:56:08Z",
   "latest_release": {
     "tag": "v5.1.7",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 23,
-  "fetched_at": "2026-10-02T03:37:24.351Z"
+  "fetched_at": "2026-10-03T03:45:25.293Z"
 }

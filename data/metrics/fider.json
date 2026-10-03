@@ -1,13 +1,13 @@
 {
   "id": "fider",
-  "stars": 4554,
-  "last_commit": "2026-10-01T20:27:39Z",
+  "stars": 4557,
+  "last_commit": "2026-10-02T09:06:38Z",
   "latest_release": {
     "tag": "v0.38.1",
     "published_at": "2026-10-01T07:41:33Z",
     "url": "https://github.com/getfider/fider/releases/tag/v0.38.1"
   },
   "docker_pulls": null,
-  "open_issues": 50,
-  "fetched_at": "2026-10-02T03:37:11.791Z"
+  "open_issues": 48,
+  "fetched_at": "2026-10-03T03:45:11.056Z"
 }

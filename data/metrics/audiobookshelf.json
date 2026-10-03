@@ -1,13 +1,13 @@
 {
   "id": "audiobookshelf",
-  "stars": 14524,
-  "last_commit": "2026-10-01T23:13:31Z",
+  "stars": 14533,
+  "last_commit": "2026-10-02T22:19:38Z",
   "latest_release": {
     "tag": "v2.37.1",
     "published_at": "2026-09-29T23:13:50Z",
     "url": "https://github.com/advplyr/audiobookshelf/releases/tag/v2.37.1"
   },
   "docker_pulls": null,
-  "open_issues": 1208,
-  "fetched_at": "2026-10-02T03:37:07.440Z"
+  "open_issues": 1207,
+  "fetched_at": "2026-10-03T03:45:05.346Z"
 }

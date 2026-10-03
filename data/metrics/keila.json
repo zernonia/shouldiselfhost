@@ -1,13 +1,13 @@
 {
   "id": "keila",
   "stars": 2225,
-  "last_commit": "2026-10-01T14:16:19Z",
+  "last_commit": "2026-10-02T08:40:04Z",
   "latest_release": {
     "tag": "0.30.3",
     "published_at": "2026-09-06T09:30:31Z",
     "url": "https://github.com/pentacent/keila/releases/tag/0.30.3"
   },
   "docker_pulls": null,
-  "open_issues": 82,
-  "fetched_at": "2026-10-02T03:37:16.017Z"
+  "open_issues": 83,
+  "fetched_at": "2026-10-03T03:45:15.807Z"
 }

@@ -1,7 +1,7 @@
 {
   "id": "memos",
-  "stars": 63475,
-  "last_commit": "2026-10-02T03:35:01Z",
+  "stars": 63474,
+  "last_commit": "2026-10-02T22:17:54Z",
   "latest_release": {
     "tag": "v0.31.0",
     "published_at": "2026-09-19T16:50:57Z",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 89,
-  "fetched_at": "2026-10-02T03:37:20.208Z"
+  "fetched_at": "2026-10-03T03:45:20.501Z"
 }

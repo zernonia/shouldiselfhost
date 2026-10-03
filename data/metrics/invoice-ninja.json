@@ -1,6 +1,6 @@
 {
   "id": "invoice-ninja",
-  "stars": 10194,
+  "stars": 10207,
   "last_commit": "2026-10-01T19:13:29Z",
   "latest_release": {
     "tag": "v5.13.43",
@@ -9,5 +9,5 @@
   },
   "docker_pulls": null,
   "open_issues": 211,
-  "fetched_at": "2026-10-02T03:37:15.211Z"
+  "fetched_at": "2026-10-03T03:45:14.832Z"
 }
