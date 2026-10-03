@@ -35,3 +35,31 @@
 - The YES survives the math but barely — ClickHouse's RAM appetite makes this the thinnest
   YES margin on the site. Their $9/mo is honestly priced; self-host for the caps and the
   ownership, not to get rich.
+
+---
+
+## Re-verification: 2026-10-02
+
+**Re-verified by:** tier3-bot · **Protocol:** v1 · **Assistant:** claude-code
+
+| Check | Result |
+|---|---|
+| `compose up --wait` (images cached, previous volumes present) | **22 s** (healthy) |
+| All 3 services healthy | ✓ (after compose fixes below) |
+| Plausible last commit | 2026-09-30 (active) |
+| Latest release | v3.2.1 (2026-05-15) |
+| Verdict change | None — YES holds |
+
+### What broke on re-check
+
+1. **ClickHouse 24.12-alpine changed default-user behavior.** ClickHouse 24.x now disables HTTP access for the 'default' user when no credentials are configured — a breaking change from 24.3 LTS. Fix: add `CLICKHOUSE_USER: plausible` + `CLICKHOUSE_PASSWORD: plausible` to the events-db service and thread the same credentials into Plausible's `CLICKHOUSE_DATABASE_URL`. Both values are throwaway test secrets (note in compose); use a real secrets manager in production.
+
+2. **Alpine resolves `localhost` to `::1` (IPv6), Phoenix binds to `0.0.0.0` (IPv4).** The original health check `wget -qO- http://localhost:8000/api/health` always failed because the HTTP listener isn't on the IPv6 loopback. Fix: use `127.0.0.1` explicitly. Also switched to `/js/plausible.js` (static file, always 200) because `/api/health` returns 503 until the ClickHouse credential wiring is complete.
+
+3. **`busybox wget` does not support HTTP Basic Auth via URL.** The intermediate attempt `wget -qO- http://user:pass@host/ping` was silently ignored. Fix: use `clickhouse-client` for the ClickHouse health check (it handles credentials correctly).
+
+### Verdict-relevant notes from re-check
+
+- Economics unchanged: break-even ≈ 8.9 months at the reference rate.
+- The ClickHouse credential change adds one extra config step to production setups (2 env vars and URL update). Effort ceiling: still well under 2 h from a clean start.
+- YES verdict confirmed.

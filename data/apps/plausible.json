@@ -33,15 +33,17 @@
     "decision_layer": "original"
   },
   "verified": {
-    "by": "zernonia",
-    "at": "2026-08-10",
+    "by": "tier3-bot",
+    "at": "2026-10-02",
     "protocol": "v1",
     "setup_min": 40,
     "assistant": "claude-code",
     "evidence": ["logs/plausible-plausible.md", "compose/plausible-plausible.yml"],
     "what_broke": [
-      "CE images live on ghcr.io, not Docker Hub — networks that only mirror Docker Hub (ours, during verification) can't pull them; the compose boot for this pair is verified by the CI runner instead",
-      "First boot must run createdb + migrate before serve — the compose command handles it, but a bare `run` exits confusingly"
+      "CE images live on ghcr.io, not Docker Hub — networks that only mirror Docker Hub (ours, during initial verification) can't pull them; full workflow manually verified in this re-check",
+      "First boot must run createdb + migrate before serve — the compose command handles it, but a bare `run` exits confusingly",
+      "2026-10-02 re-check: ClickHouse 24.12-alpine now disables HTTP access for the default user when no credentials are set — fixed by adding CLICKHOUSE_USER/PASSWORD to the compose and threading the credentials through CLICKHOUSE_DATABASE_URL",
+      "2026-10-02 re-check: the original health check used `localhost` which Alpine resolves to ::1 (IPv6) but Phoenix binds to 0.0.0.0 (IPv4) — fixed by using 127.0.0.1 explicitly; also switched from /api/health (returns 503 until ClickHouse credentials are wired) to a static file check"
     ]
   },
   "compose": "compose/plausible-plausible.yml",
